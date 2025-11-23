@@ -1,0 +1,408 @@
+/* ----------------------- BASE ----------------------- */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #e9f4f5;
+  color: #334;
+}
+
+header {
+  background: #0097A7;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  font-family: Helvetica, Verdana, Arial;
+  position: relative;
+  z-index: 1000;
+}
+
+header nav a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+  font-family: Calibri;
+  font-size: large;
+}
+
+.logo img {
+  width: 80px;
+  height: auto;
+}
+
+.idioma {
+  display: inline-block;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.idioma label {
+  font-weight: bold;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.idioma select {
+  font-size: 16px;
+  margin-top: 5px;
+  padding: 8px;
+  border: 2px solid #00707d;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #003a3f;
+}
+
+/* --------------------- CONTENEDOR PRINCIPAL --------------------- */
+.container {
+  display: grid;
+  grid-template-columns: 3fr 1fr; /* Main 3/4, Aside 1/4 */
+  gap: 20px;
+  padding: 20px;
+  align-items: start; /* Para que aside esté arriba */
+}
+
+/* --------------------- BARRA DE BÚSQUEDA --------------------- */
+.search-section {
+  background: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.search-section h3 {
+  margin-bottom: 15px;
+  color: #00707d;
+}
+
+.search-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-form label {
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+.search-form input, 
+.search-form select, 
+.search-form button {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  font-size: 14px;
+}
+
+.search-form button {
+  background: #0097A7;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.search-form button:hover {
+  background: #00707d;
+}
+
+/* --------------------- CARDS / CARRUSELES --------------------- */
+.carousel-container {
+  position: relative;
+  margin: 20px 0;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 10px 40px; /* espacio para flechas */
+  scroll-behavior: smooth;
+  position: relative;
+}
+
+.card {
+  flex: 0 0 70%; /* ocupa más ancho del viewport */
+  max-width: 800px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  position: relative;
+  height: 400px; /* más alto */
+  transition: transform 0.3s;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card .destino-nombre {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  color: white;
+  font-weight: bold;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
+
+.card .ver-destino {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  padding: 5px 10px;
+  background: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.card .ver-destino:hover {
+  transform: scale(1.1);
+  background: #0056b3;
+}
+
+/* Flechas laterales del carrusel */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 112, 125, 0.8);
+  color: white;
+  font-size: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 10;
+  user-select: none;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.carousel-arrow:hover {
+  background: rgba(0, 112, 125, 1);
+  transform: scale(1.2);
+}
+
+.carousel-arrow.left {
+  left: 5px;
+}
+
+.carousel-arrow.right {
+  right: 5px;
+}
+
+/* --------------------- ASIDE --------------------- */
+aside {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 280px;
+}
+
+/* --------------------- RESEÑAS EN ASIDE --------------------- */
+.review-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  background: #f7f9fa;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 10px;
+  gap: 5px;
+}
+
+.review-card .usuario-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.review-card .usuario-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.review-card .usuario-datos p {
+  margin: 0;
+  font-size: 12px;
+}
+
+.review-card .texto-review {
+  font-size: 14px;
+}
+
+.review-card .estrellas {
+  color: #FFD700;
+}
+
+.review-card .imagen-viaje {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-top: 5px;
+}
+
+/* --------------------- TOP VIAJEROS EN ASIDE --------------------- */
+.top-list ol {
+  padding-left: 20px;
+}
+
+.top-list li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.top-list li img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* --------------------- MAPA INTERACTIVO --------------------- */
+.mapa-interactivo {
+  margin: 20px 0;
+  height: 300px;
+  background: #cce5ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  font-weight: bold;
+  color: #00707d;
+}
+
+/* --------------------- FOOTER --------------------- */
+footer {
+  background: #0097A7;
+  color: #fff;
+  padding: 20px;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px; 
+}
+
+.footer-left {
+  flex: 0 0 auto;
+  font-weight: bold;
+}
+
+.footer-center {
+  flex: 1;
+  text-align: center;
+}
+
+.footer-socials a {
+  margin: 0 10px;
+}
+
+.footer-socials .social {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s;
+}
+
+.footer-socials .social:hover {
+  transform: scale(1.2);
+}
+
+.footer-right {
+  flex: 0 0 auto;
+  text-align: right;
+}
+
+.footer-right .newsletter input[type="email"] {
+  margin-top: 5px;
+  padding: 8px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+.footer-right .newsletter button {
+  padding: 5px 10px;
+  margin-left: 5px;
+  border: 2px solid #00707d;
+  background: white;
+  color: #005b65;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+/* --------------------- RESPONSIVE --------------------- */
+@media (max-width: 900px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  aside {
+    width: 100%;
+  }
+
+  .carousel {
+    padding: 10px 20px;
+  }
+
+  .card {
+    flex: 0 0 80%;
+    height: 300px;
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    flex: 0 0 90%;
+    height: 250px;
+  }
+
+  .review-card {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+
+  .top-list li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Scroll oculto para carruseles en móvil */
+.carousel {
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
