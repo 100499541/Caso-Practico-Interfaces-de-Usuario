@@ -1,0 +1,119 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #e9f4f5;
+  margin: 0;
+  padding: 0;
+  color: #334;
+}
+
+.registro-container {
+  max-width: 500px;
+  margin: 50px auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.registro-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.registro-header h2 {
+  font-size: 1.6em;
+  margin: 0;
+}
+
+.registro-header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* ----------------- LOGO ----------------- */
+.registro-header-right .logo img {
+  width: 80px;      
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* ----------------- IDIOMA ----------------- */
+.idioma select {
+  padding: 5px;
+  font-size: 15px;
+}
+
+.registro-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.registro-form label {
+  font-weight: bold;
+  margin-bottom: -10px;
+}
+
+.registro-form input[type="text"],
+.registro-form input[type="password"],
+.registro-form input[type="email"],
+.registro-form input[type="date"],
+.registro-form input[type="file"],
+.registro-form select {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.privacidad {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+button#crearCuenta {
+  padding: 10px;
+  background: #0097A7;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+
+button#crearCuenta:hover {
+  background: #00707d;
+  transform: scale(1.02);
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .registro-container {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .registro-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .registro-header-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .registro-header-right .logo img {
+    width: 80px;  /* un poco más pequeño en móvil */
+  }
+}   

@@ -4,38 +4,85 @@ body {
   margin: 0;
   background: #e9f4f5;
   color: #334;
+  overflow-x: hidden; /* Evita desplazamiento horizontal */
 }
 
 header {
   background: #0097A7;
   color: #fff;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  justify-content: flex-start;
+  padding: 8px 15px;
   font-family: Helvetica, Verdana, Arial;
   position: relative;
   z-index: 1000;
+  flex-wrap: wrap;
+  text-align: center;
+  height: auto;
+  gap: 40px; /* Mayor espacio entre elementos del header */
+}
+
+/* MENU ICONO DE TRES LINEAS */
+.menu-btn {
+  display: none; /* solo visible en móvil */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.menu-btn span {
+  display: block;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+}
+
+/* TITULO */
+header h2 {
+  order: 1; /* Escritorio: primero */
+  margin: 0;
+  flex: 0 0 auto;
+  font-size: 1.2em;
+}
+
+/* NAV */
+header nav {
+  order: 2; /* Escritorio: segundo */
+  display: flex; 
+  gap: 50px; /* Aumentamos el espacio entre enlaces */
+  flex: 1;
+  justify-content: flex-start;
 }
 
 header nav a {
   color: #fff;
-  margin: 0 10px;
+  margin: 0;
   text-decoration: none;
   font-family: Calibri;
   font-size: large;
 }
 
 /* LOGO */
+.logo {
+  order: 5; /* Escritorio: último */
+  margin-left: auto; /* empuja a la derecha */
+}
+
 .logo img {
-  width: 80px;
+  width: 80px; /* tamaño reducido */
   height: auto;
+  margin: 5px 0;
 }
 
 /* BOTÓN INICIAR SESIÓN EN HEADER */
 .login-btn {
+  order: 3;
   display: inline-block;
-  margin-left: 15px;
+  margin-left: 30px; /* mayor separación */
 }
 
 .login-btn a {
@@ -55,11 +102,12 @@ header nav a {
 }
 
 /* DESPLEGABLE DE CAMBIO DE IDIOMA */
-
 .idioma {
+  order: 4;
   display: inline-block;
   text-align: center;
   font-family: Arial, sans-serif;
+  margin: 5px 0 5px 20px; /* mayor separación */
 }
 
 .idioma label {
@@ -69,22 +117,21 @@ header nav a {
 }
 
 .idioma select {
-  font-size: 16px;
+  font-size: 14px;
   margin-top: 5px;
   padding: 8px;
   border: 2px solid #00707d;
   border-radius: 5px;
-  font-size: 14px;
   color: #003a3f;
 }
 
 /* --------------------- CONTENEDOR PRINCIPAL --------------------- */
 .container {
   display: grid;
-  grid-template-columns: 3fr 1fr; /* Main 3/4, Aside 1/4 */
+  grid-template-columns: 3fr 1fr;
   gap: 20px;
   padding: 20px;
-  align-items: start; /* Para que aside esté arriba */
+  align-items: start;
 }
 
 /* --------------------- BARRA DE BÚSQUEDA --------------------- */
@@ -134,6 +181,34 @@ header nav a {
   background: #00707d;
 }
 
+/* Placeholder móvil para inputs de fechas y destino */
+@media (max-width: 600px) {
+  #destino::placeholder {
+    text-align: center;
+    content: "Quiero ir a...";
+  }
+
+  #inicio-viaje::placeholder {
+    text-align: center;
+    content: "Saldría el...";
+  }
+
+  #fin-viaje::placeholder {
+    text-align: center;
+    content: "Volvería el...";
+  }
+
+  .search-form select,
+  .search-form input[type="text"],
+  .search-form input[type="date"] {
+    font-size: 14px;
+    padding: 6px 8px;
+    width: 90%;
+    max-width: 250px;
+    text-align: center;
+  }
+}
+
 /* --------------------- CARDS / CARRUSELES --------------------- */
 .carousel-container {
   position: relative;
@@ -144,19 +219,20 @@ header nav a {
   display: flex;
   overflow-x: auto;
   gap: 20px;
-  padding: 10px 40px; /* espacio para flechas */
+  padding: 10px 40px;
   scroll-behavior: smooth;
   position: relative;
 }
 
+/* --- Nuevo: para carrusel normal desplazamiento 1 elemento --- */
 .card {
-  flex: 0 0 50%; /* ocupa más ancho del viewport */
+  flex: 0 0 50%;
   max-width: 800px;
   border-radius: 12px;
   background: #fff;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   position: relative;
-  height: 400px; /* más alto */
+  height: 400px;
   transition: transform 0.3s;
 }
 
@@ -232,7 +308,7 @@ header nav a {
   right: 5px;
 }
 
-/* Flechas laterales para carrusel pequeño (reseñas) */
+/* Flechas para carrusel reseñas y rankings */
 .carousel-arrow-small {
   position: absolute;
   top: 45%;
@@ -262,6 +338,28 @@ header nav a {
 
 .carousel-arrow-small.right {
   right: 5px;
+}
+
+/* --- NUEVO: Carrusel de reseñas 1 elemento --- */
+.reseñas .carousel {
+  gap: 0;
+  padding: 0 40px;
+}
+
+.reseñas .review-card {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+/* --- NUEVO: Carrusel top viajeros 1 elemento --- */
+.top-viajeros .top-list {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+}
+
+.top-viajeros .top-list li {
+  flex: 0 0 100%;
 }
 
 /* --------------------- ASIDE --------------------- */
@@ -416,6 +514,54 @@ footer {
 
 /* --------------------- RESPONSIVE --------------------- */
 @media (max-width: 900px) {
+  .menu-btn {
+    display: flex; /* solo aparece en móvil */
+  }
+
+  header nav {
+    display: none; /* ocultamos barra de secciones en móvil */
+  }
+
+  header {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px 10px;
+    gap: 5px;
+  }
+
+  .menu-btn {
+    order: 1;
+  }
+
+  header h2 {
+    order: 2;
+    font-size: 1.1em;
+    margin: 0 5px;
+  }
+
+  .login-btn {
+    order: 3;
+    margin-left: 5px;
+    width: auto;
+  }
+
+  .idioma {
+    order: 4;
+    margin-left: 0;
+  }
+
+  .idioma label {
+    font-size: 12px;
+    margin-bottom: 2px;
+  }
+
+  .idioma select {
+    padding: 4px;
+    font-size: 12px;
+  }
+
   .container {
     display: flex;
     flex-direction: column;
@@ -423,6 +569,23 @@ footer {
 
   aside {
     width: 100%;
+    margin: 0 auto; /* centra en pantalla */
+  }
+
+  .search-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-form input,
+  .search-form select,
+  .search-form button {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .campo-hotel input {
+    margin-bottom: 10px;
   }
 
   .carousel {
@@ -432,6 +595,40 @@ footer {
   .card {
     flex: 0 0 80%;
     height: 300px;
+  }
+
+  /* Ocultar flechas en móviles */
+  .carousel-arrow,
+  .carousel-arrow-small {
+    display: none !important;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right,
+  .footer-socials {
+    text-align: center;
+    width: 100%;
+  }
+
+  .footer-right .newsletter input[type="email"] {
+    width: 80%;
+    margin-bottom: 10px;
+  }
+
+  /* Centrar carruseles del aside */
+  .reviews-carousel,
+  .top-list,
+  .mapa-interactivo {
+    margin: 0 auto !important;
+    width: 100% !important;
+    display: block;
   }
 }
 

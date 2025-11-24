@@ -15,10 +15,22 @@ document.addEventListener("DOMContentLoaded", function () {
     var leftArrow = wrapper.querySelector(".carousel-arrow.left");
     var rightArrow = wrapper.querySelector(".carousel-arrow.right");
 
+    // Detectar si es carrusel de reseñas o top viajeros
+    var isSmallCarousel = wrapper.closest(".reseñas") || wrapper.closest(".top-viajeros");
+
+    // Calcular ancho de desplazamiento: 1 elemento
+    function getScrollAmount() {
+      var firstChild = carousel.children[0];
+      if (!firstChild) return 0;
+      var style = window.getComputedStyle(firstChild);
+      var marginRight = parseInt(style.marginRight) || 0;
+      return firstChild.offsetWidth + marginRight;
+    }
+
     // Mover carrusel a la izquierda
     leftArrow.addEventListener("click", function() {
       carousel.scrollBy({
-        left: -carousel.offsetWidth * 0.8, 
+        left: -getScrollAmount(),
         behavior: "smooth"
       });
     });
@@ -26,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Mover carrusel a la derecha
     rightArrow.addEventListener("click", function() {
       carousel.scrollBy({
-        left: carousel.offsetWidth * 0.8,
+        left: getScrollAmount(),
         behavior: "smooth"
       });
     });
