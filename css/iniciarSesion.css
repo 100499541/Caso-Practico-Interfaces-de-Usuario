@@ -1,0 +1,170 @@
+/* -------------------- BASE -------------------- */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #e9f4f5;
+  color: #334;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-container {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* -------------------- TITULO Y LOGO -------------------- */
+.titulo-web {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #00707d;
+}
+
+.logo-login img {
+  width: 120px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* -------------------- FORMULARIO -------------------- */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-form input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+}
+
+/* -------------------- BOTONES -------------------- */
+.botonera {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: flex-end; /* Alinea los botones por la base */
+}
+
+.btn-login, .btn-registrar {
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s, transform 0.2s;
+  height: 45px; /* Mismo alto para ambos */
+}
+
+.btn-login {
+  background: #0097A7;
+  color: white;
+}
+
+.btn-login:hover {
+  background: #00707d;
+  transform: scale(1.02);
+}
+
+.registro-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.registro-section p {
+  margin: 0 0 5px 0;
+  font-size: 14px;
+}
+
+.btn-registrar {
+  background: #f0f0f0;
+  color: #334;
+  border: 1px solid #ccc;
+}
+
+.btn-registrar:hover {
+  background: #ddd;
+  transform: scale(1.02);
+}
+
+/* -------------------- IDIOMA -------------------- */
+.idioma-login {
+  margin-top: 20px;
+}
+
+.idioma-login label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.idioma-login select {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #00707d;
+  font-size: 14px;
+  color: #003a3f;
+}
+
+/* -------------------- REDES SOCIALES -------------------- */
+.redes-login {
+  margin-top: 20px;
+}
+
+.redes-login .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 5px;
+}
+
+.redes-login .social-icons img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+
+.redes-login .social-icons img:hover {
+  transform: scale(1.2);
+}
+
+.redes-login p {
+  font-size: 12px;
+  color: #555;
+}
+
+/* -------------------- RESPONSIVE -------------------- */
+@media (max-width: 500px) {
+  .login-container {
+    padding: 20px 15px;
+  }
+
+  .titulo-web {
+    font-size: 1.7em;
+  }
+
+  .logo-login img {
+    width: 250px;
+  }
+
+  .botonera {
+    flex-direction: column; /* En móvil se apilan */
+    gap: 10px;
+    align-items: stretch;
+  }
+
+  .btn-login, .btn-registrar {
+    width: 100%;
+  }
+}

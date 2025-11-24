@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rutas del mundo - Iniciar Sesión</title>
+  <link rel="stylesheet" href="css/iniciarSesion.css">
+</head>
+<body>
+
+  <div class="login-container">
+    <h1 class="titulo-web">Rutas del mundo</h1>
+    <div class="logo-login">
+      <img src="/imagenes/logo.png" alt="Logo">
+    </div>
+
+    <form class="login-form">
+      <input type="text" id="usuario" placeholder="Usuario" required>
+      <input type="password" id="contraseña" placeholder="Contraseña" required>
+
+      <div class="botonera">
+        <button type="submit" class="btn-login">Iniciar sesión</button>
+        <div class="registro-section">
+          <p>¿No tienes cuenta?</p>
+          <button type="button" class="btn-registrar">Registrarme</button>
+        </div>
+      </div>
+    </form>
+
+    <div class="idioma-login">
+      <label for="IdiomaLogin">Idioma</label>
+      <select id="IdiomaLogin" name="IdiomaLogin">
+        <option value="ES">Español</option>
+        <option value="FR">Français</option>
+        <option value="EN">English</option>
+      </select>
+    </div>
+
+    <div class="redes-login">
+      <div class="social-icons">
+        <a href="#"><img src="/images/facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="/images/x.png" alt="X"></a>
+        <a href="#"><img src="/images/tiktok.png" alt="TikTok"></a>
+      </div>
+      <p>¡No te pierdas nada nuevo!</p>
+    </div>
+  </div>
+
+  <script src="js/iniciarSesion.js"></script>
+</body>
+</html>

@@ -26,10 +26,35 @@ header nav a {
   font-size: large;
 }
 
+/* LOGO */
 .logo img {
   width: 80px;
   height: auto;
 }
+
+/* BOTÓN INICIAR SESIÓN EN HEADER */
+.login-btn {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.login-btn a {
+  display: inline-block;
+  padding: 8px 15px;
+  background: #FFD700;
+  color: #003a3f;
+  font-weight: bold;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.login-btn a:hover {
+  background: #FFC107;
+  transform: scale(1.05);
+}
+
+/* DESPLEGABLE DE CAMBIO DE IDIOMA */
 
 .idioma {
   display: inline-block;
@@ -125,7 +150,7 @@ header nav a {
 }
 
 .card {
-  flex: 0 0 70%; /* ocupa más ancho del viewport */
+  flex: 0 0 50%; /* ocupa más ancho del viewport */
   max-width: 800px;
   border-radius: 12px;
   background: #fff;
@@ -178,8 +203,7 @@ header nav a {
 /* Flechas laterales del carrusel */
 .carousel-arrow {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 45%;
   width: 50px;
   height: 50px;
   background: rgba(0, 112, 125, 0.8);
@@ -197,7 +221,7 @@ header nav a {
 
 .carousel-arrow:hover {
   background: rgba(0, 112, 125, 1);
-  transform: scale(1.2);
+  transform: scale(1.05);
 }
 
 .carousel-arrow.left {
@@ -205,6 +229,38 @@ header nav a {
 }
 
 .carousel-arrow.right {
+  right: 5px;
+}
+
+/* Flechas laterales para carrusel pequeño (reseñas) */
+.carousel-arrow-small {
+  position: absolute;
+  top: 45%;
+  width: 30px;
+  height: 30px;
+  background: rgba(0, 112, 125, 0.8);
+  color: white;
+  font-size: 18px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 10;
+  user-select: none;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.carousel-arrow-small:hover {
+  background: rgba(0, 112, 125, 1);
+  transform: scale(1.05);
+}
+
+.carousel-arrow-small.left {
+  left: 5px;
+}
+
+.carousel-arrow-small.right {
   right: 5px;
 }
 
@@ -405,4 +461,24 @@ footer {
 
 .carousel::-webkit-scrollbar {
   display: none;
+}
+
+/* --------------------- NUEVO: FLECHAS FUNCIONALES --------------------- */
+.carousel-wrapper {
+  position: relative;
+}
+
+.carousel-wrapper .carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+}
+
+.carousel-wrapper .carousel-arrow.left {
+  left: 0;
+}
+
+.carousel-wrapper .carousel-arrow.right {
+  right: 0;
 }
