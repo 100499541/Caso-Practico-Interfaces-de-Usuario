@@ -39,9 +39,17 @@
       <a href="#"><h4>Inicio</h4></a>
       <a href="#"><h4>Destinos</h4></a>
       <a href="#"><h4>Viajes Compartidos</h4></a>
-      <a href="#"><h4>Social</h4></a>
+      <a href="perfil.html">Social</a>
     </nav>
   </header>
+
+  <!-- Menú móvil desplegable -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Inicio</a>
+    <a href="destinos.html">Destinos</a>
+    <a href="viajes-compartidos.html">Viajes Compartidos</a>
+    <a href="perfil.html">Social</a>
+  </div>
 
   <!-- CONTENEDOR PRINCIPAL -->
   <div class="container">
@@ -209,13 +217,42 @@
       <!-- TOP VIAJEROS -->
       <section class="top-viajeros">
         <h3>Nuestros viajeros más expertos</h3>
-        <div class="top-list">
-          <h4>Top viajeros con más viajes</h4>
-          <ol>
-            <li>User123 - 15 viajes <img src="/images/user123.jpg" alt="User123"></li>
-            <li>User257 - 12 viajes <img src="/images/user257.jpg" alt="User257"></li>
-            <li>User841 - 10 viajes <img src="/images/user841.jpg" alt="User841"></li>
-          </ol>
+        <div class="carousel-wrapper">
+          <div class="carousel-arrow left">&#10094;</div>
+          <div class="carousel">
+            
+            <!-- Ranking 1 -->
+            <div class="ranking-card">
+              <h4>Top viajeros con más viajes</h4>
+              <ol>
+                <li>User123 - 15 viajes <img src="/images/user123.jpg" alt="User123"></li>
+                <li>User257 - 12 viajes <img src="/images/user257.jpg" alt="User257"></li>
+                <li>User841 - 10 viajes <img src="/images/user841.jpg" alt="User841"></li>
+              </ol>
+            </div>
+
+            <!-- Ranking 2 -->
+            <div class="ranking-card">
+              <h4>Top viajeros con más amigos</h4>
+              <ol>
+                <li>User555 - 50 amigos <img src="/images/user555.jpg" alt="User555"></li>
+                <li>User777 - 45 amigos <img src="/images/user777.jpg" alt="User777"></li>
+                <li>User888 - 40 amigos <img src="/images/user888.jpg" alt="User888"></li>
+              </ol>
+            </div>
+
+            <!-- Ranking 3 -->
+            <div class="ranking-card">
+              <h4>Top destinos más visitados</h4>
+              <ol>
+                <li>París - 120 visitas <img src="/images/paris.jpg" alt="París"></li>
+                <li>Roma - 95 visitas <img src="/images/roma.jpg" alt="Roma"></li>
+                <li>Tokio - 80 visitas <img src="/images/tokio.jpg" alt="Tokio"></li>
+              </ol>
+            </div>
+
+          </div>
+          <div class="carousel-arrow right">&#10095;</div>
         </div>
       </section>
 

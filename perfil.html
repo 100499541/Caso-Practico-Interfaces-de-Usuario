@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rutas del mundo — Perfil</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/perfil.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <img src="logo.svg" alt="Rutas del mundo" class="logo" />
+      <span class="site-name">Rutas del mundo</span>
+    </div>
+    <div class="actions">
+      <button class="lang-btn" aria-haspopup="listbox" aria-expanded="false">
+        Español
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5"/></svg>
+      </button>
+      <ul class="lang-menu" role="listbox" aria-label="Idioma">
+        <li role="option" aria-selected="true">Español</li>
+        <li role="option">English</li>
+        <li role="option">Français</li>
+      </ul>
+    </div>
+  </header>
+
+  <nav class="breadcrumbs" aria-label="Migas de pan">
+    <a href="index.html">Página principal</a>
+    <span aria-hidden="true">›</span>
+    <span class="current">Perfil</span>
+  </nav>
+
+  <main class="profile">
+    <section class="profile-card">
+      <button class="avatar-btn" aria-label="Editar avatar">
+        <img src="avatar-placeholder.png" alt="Avatar del usuario" class="avatar" />
+        <span class="edit-icon">✎</span>
+      </button>
+      <div class="user-info">
+        <h1 class="username">USUARIO</h1>
+        <p class="bio">Texto de ejemplo con información del usuario: viajes favoritos, destinos soñados y últimas rutas.</p>
+      </div>
+      <a class="settings-btn" href="configuracion.html">Configuración de Usuario</a>
+    </section>
+
+    <section class="content-section">
+      <h2>Favoritos</h2>
+      <div class="card-list">
+        <article class="card">
+          <img src="placeholder1.jpg" alt="Destino favorito" />
+          <div class="card-body">
+            <h3 class="card-title">Nombre del destino</h3>
+            <p class="card-text">Pequeña descripción del lugar.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="placeholder2.jpg" alt="Destino favorito" />
+          <div class="card-body">
+            <h3 class="card-title">Nombre del destino</h3>
+            <p class="card-text">Pequeña descripción del lugar.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Mis Viajes</h2>
+      <div class="card-list">
+        <article class="card">
+          <img src="trip1.jpg" alt="Mi viaje" />
+          <div class="card-body">
+            <h3 class="card-title">Ruta Larga 1</h3>
+            <p class="card-text">Fecha, duración y resumen.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="trip2.jpg" alt="Mi viaje" />
+          <div class="card-body">
+            <h3 class="card-title">Ruta Larga 2</h3>
+            <p class="card-text">Fecha, duración y resumen.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2>Historial de Compras</h2>
+      <div class="card-list">
+        <article class="card">
+          <img src="order1.jpg" alt="Compra realizada" />
+          <div class="card-body">
+            <h3 class="card-title">Billete Madrid–Seúl</h3>
+            <p class="card-text">Comprado el 15/10/2025 — Nº pedido #12345</p>
+            <button class="review-btn">Escribir Reseña</button>
+          </div>
+        </article>
+        <article class="card">
+          <img src="order2.jpg" alt="Compra realizada" />
+          <div class="card-body">
+            <h3 class="card-title">Tour Transiberiano</h3>
+            <p class="card-text">Comprado el 02/11/2025 — Nº pedido #12346</p>
+            <button class="review-btn">Escribir Reseña</button>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>© 2025 Rutas del mundo</small>
+  </footer>
+
+  <script src="perfil.js"></script>
+</body>
+</html>

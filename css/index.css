@@ -43,7 +43,7 @@ header {
 
 /* TITULO */
 header h2 {
-  order: 1; /* Escritorio: primero */
+  order: 1;
   margin: 0;
   flex: 0 0 auto;
   font-size: 1.2em;
@@ -51,7 +51,7 @@ header h2 {
 
 /* NAV */
 header nav {
-  order: 2; /* Escritorio: segundo */
+  order: 2;
   display: flex; 
   gap: 50px; /* Aumentamos el espacio entre enlaces */
   flex: 1;
@@ -279,7 +279,7 @@ header nav a {
 /* Flechas laterales del carrusel */
 .carousel-arrow {
   position: absolute;
-  top: 45%;
+  top: 50%;
   width: 50px;
   height: 50px;
   background: rgba(0, 112, 125, 0.8);
@@ -290,7 +290,8 @@ header nav a {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  z-index: 10;
+  z-index: 1000;
+  pointer-events: auto;
   user-select: none;
   transition: transform 0.2s, background 0.2s;
 }
@@ -301,11 +302,11 @@ header nav a {
 }
 
 .carousel-arrow.left {
-  left: 5px;
+  left: 10px;
 }
 
 .carousel-arrow.right {
-  right: 5px;
+  right: 10px;
 }
 
 /* Flechas para carrusel reseñas y rankings */
@@ -322,7 +323,8 @@ header nav a {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  z-index: 10;
+  z-index: 1000;
+  pointer-events: auto;
   user-select: none;
   transition: transform 0.2s, background 0.2s;
 }
@@ -349,17 +351,6 @@ header nav a {
 .reseñas .review-card {
   flex: 0 0 100%;
   max-width: 100%;
-}
-
-/* --- NUEVO: Carrusel top viajeros 1 elemento --- */
-.top-viajeros .top-list {
-  display: flex;
-  overflow-x: auto;
-  gap: 20px;
-}
-
-.top-viajeros .top-list li {
-  flex: 0 0 100%;
 }
 
 /* --------------------- ASIDE --------------------- */
@@ -415,24 +406,6 @@ aside {
   object-fit: cover;
   border-radius: 8px;
   margin-top: 5px;
-}
-
-/* --------------------- TOP VIAJEROS EN ASIDE --------------------- */
-.top-list ol {
-  padding-left: 20px;
-}
-
-.top-list li {
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.top-list li img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
 }
 
 /* --------------------- MAPA INTERACTIVO --------------------- */
@@ -562,9 +535,23 @@ footer {
     font-size: 12px;
   }
 
+  /* CENTRADO DEL CUERPO EN MÓVIL */
   .container {
     display: flex;
     flex-direction: column;
+    align-items: center;     /* centra horizontalmente */
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;         /* margen lateral uniforme */
+    box-sizing: border-box;
+  }
+
+  .main-section,
+  .sidebar {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
   }
 
   aside {
@@ -575,6 +562,11 @@ footer {
   .search-form {
     flex-direction: column;
     align-items: stretch;
+    width: 100%;
+    max-width: 500px;        /* limita ancho para centrado visual */
+    margin: 0 auto;
+    text-align: center;
+    box-sizing: border-box;
   }
 
   .search-form input,
@@ -582,25 +574,31 @@ footer {
   .search-form button {
     width: 100%;
     max-width: 100%;
+    margin: 10px auto;       /* centra cada control */
+    text-align: center;
+    box-sizing: border-box;
   }
 
-  .campo-hotel input {
-    margin-bottom: 10px;
+  .campo-hotel {
+    width: 100%;
+    text-align: center;
   }
 
   .carousel {
-    padding: 10px 20px;
+    padding: 10px 0;         /* quita padding lateral excesivo */
+    justify-content: flex-start; /* centra las cards */
   }
 
   .card {
     flex: 0 0 80%;
     height: 300px;
+    margin: 0;          /* centra cada tarjeta */
   }
 
-  /* Ocultar flechas en móviles */
+  /* Flechas visibles en móviles (si las usas) */
   .carousel-arrow,
   .carousel-arrow-small {
-    display: none !important;
+    display: none;
   }
 
   .footer-container {
@@ -636,6 +634,7 @@ footer {
   .card {
     flex: 0 0 90%;
     height: 250px;
+    margin: 0; /* refuerzo de centrado */
   }
 
   .review-card {
@@ -647,6 +646,21 @@ footer {
   .top-list li {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .top-viajeros .carousel {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .ranking-card {
+    flex: 0 0 90%;
+    margin: 0 auto;
+  }
+
+  /* Ocultar flechas en móvil, solo swipe táctil */
+  .top-viajeros .carousel-arrow {
+    display: none !important;
   }
 }
 
@@ -669,13 +683,134 @@ footer {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 100;
+  z-index: 100; /* ya elevadas las flechas base a 1000 */
 }
 
 .carousel-wrapper .carousel-arrow.left {
-  left: 0;
+  left: 10px;
 }
 
 .carousel-wrapper .carousel-arrow.right {
-  right: 0;
+  right: 10px;
+}
+
+/* --------------------- MENÚ DESPLEGABLE MÓVIL --------------------- */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: #00707d;
+  position: fixed;
+  top: 60px; /* ajusta según altura del header */
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  padding: 10px 0;
+  margin-top: 80px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.mobile-menu a {
+  color: white;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.mobile-menu a:hover {
+  background: #005b65;
+}
+
+/* --------------------- CARRUSEL DE RANKINGS --------------------- */
+.top-viajeros {
+  margin: 40px 0;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.top-viajeros h3 {
+  text-align: center;
+  color: #00707d;
+  margin-bottom: 20px;
+}
+
+.top-viajeros .carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 10px 40px;
+  scroll-behavior: smooth;
+}
+
+.ranking-card {
+  flex: 0 0 100%;
+  max-width: 100%;
+  background: #f7f9fa;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 15px;
+}
+
+.ranking-card h4 {
+  margin-bottom: 10px;
+  color: #00707d;
+  text-align: center;
+}
+
+.ranking-card ol {
+  padding-left: 20px;
+}
+
+.ranking-card li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.ranking-card li img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* Flechas del carrusel de rankings */
+.top-viajeros .carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 112, 125, 0.8);
+  color: white;
+  font-size: 24px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.top-viajeros .carousel-arrow:hover {
+  background: rgba(0, 112, 125, 1);
+}
+
+.top-viajeros .carousel-arrow.left { left: -10px; }
+.top-viajeros .carousel-arrow.right { right: -10px; }
+
+/* Mostrar menú solo en móvil */
+@media (max-width: 900px) {
+  .mobile-menu.visible {
+    display: flex;
+  }
+}
+
+/* Refuerzo para no desplazar horizontalmente */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
 }

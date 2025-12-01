@@ -1,0 +1,183 @@
+/* Variables de diseño */
+:root {
+  --bg: #0d0f13;
+  --surface: #151922;
+  --surface-2: #1b2130;
+  --text: #e8ecf2;
+  --muted: #a9b4c7;
+  --primary: #2dd4bf;
+  --primary-600: #14b8a6;
+  --border: #253043;
+  --radius: 14px;
+}
+
+/* Reset básico */
+* { box-sizing: border-box }
+html, body { height: 100% }
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Encabezado */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.brand { display: flex; align-items: center; gap: 10px }
+.logo { width: 28px; height: 28px }
+.site-name { font-weight: 600 }
+
+.actions { position: relative }
+.lang-btn {
+  display: flex; align-items: center; gap: 6px;
+  padding: 8px 10px;
+  background: var(--surface-2);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+.lang-btn svg { width: 18px; height: 18px; fill: currentColor }
+.lang-menu {
+  position: absolute; right: 0; top: calc(100% + 6px);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  min-width: 160px;
+  padding: 6px;
+  list-style: none;
+  display: none;
+}
+.lang-menu li {
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.lang-menu li[aria-selected="true"] { background: #243043 }
+.lang-menu li:hover { background: #202736 }
+
+/* Migas de pan */
+.breadcrumbs {
+  display: flex; align-items: center; gap: 6px;
+  padding: 10px 16px;
+  color: var(--muted);
+  font-size: 14px;
+}
+.breadcrumbs a { color: var(--muted); text-decoration: none }
+.breadcrumbs .current { color: var(--text) }
+
+/* Perfil */
+.profile { padding: 0 16px 24px }
+.profile-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  grid-template-areas:
+    "avatar info"
+    "settings settings";
+  gap: 12px 14px;
+  margin-bottom: 16px;
+}
+.avatar-btn {
+  grid-area: avatar;
+  position: relative;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+.avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--border);
+}
+.edit-icon {
+  position: absolute;
+  right: -6px;
+  bottom: -6px;
+  background: var(--primary);
+  color: #062320;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: grid;
+  place-items: center;
+  font-size: 13px;
+  font-weight: 700;
+  border: 2px solid #083a36;
+}
+.user-info { grid-area: info }
+.username { margin: 0 0 6px; font-size: 18px }
+.bio { margin: 0; color: var(--muted); font-size: 14px }
+.settings-btn {
+  grid-area: settings;
+  display: inline-block;
+  margin-top: 4px;
+  padding: 10px 12px;
+  background: var(--primary);
+  color: #062320;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+/* Secciones */
+.content-section { margin-bottom: 18px }
+.content-section h2 {
+  margin: 0 0 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.card-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  display: block;
+}
+.card-body { padding: 12px }
+.card-title { margin: 0 0 6px; font-size: 15px }
+.card-text { margin: 0; color: var(--muted); font-size: 14px }
+.review-btn {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px 12px;
+  background: var(--surface-2);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.review-btn:hover { background: #21293a }
+
+/* Pie de página */
+.site-footer {
+  padding: 20px 16px;
+  color: var(--muted);
+  font-size: 13px;
+  border-top: 1px solid var(--border);
+}

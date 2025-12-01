@@ -1,46 +1,75 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // ---------------------- MENÚ RESPONSIVE ----------------------
-  var menuBtn = document.getElementById("menu-btn");
-  var nav = document.getElementById("nav");
+// /js/index.js
+document.addEventListener('DOMContentLoaded', () => {
+  // Menú móvil
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      mobileMenu.classList.toggle('visible');
+      const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
+      menuBtn.setAttribute('aria-expanded', String(!expanded));
+    });
+    document.addEventListener('click', (e) => {
+      if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+        mobileMenu.classList.remove('visible');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
 
-  menuBtn.addEventListener("click", function () {
-    nav.classList.toggle("active");
-  });
+  // Carruseles
+  const wrappers = document.querySelectorAll('.carousel-wrapper');
 
-  // ---------------------- CARRUSELES ----------------------
-  var carousels = document.querySelectorAll(".carousel-wrapper");
+  wrappers.forEach((wrapper) => {
+    const carousel = wrapper.querySelector('.carousel');
+    const leftArrow = wrapper.querySelector('.carousel-arrow.left');
+    const rightArrow = wrapper.querySelector('.carousel-arrow.right');
 
-  carousels.forEach(function(wrapper) {
-    var carousel = wrapper.querySelector(".carousel");
-    var leftArrow = wrapper.querySelector(".carousel-arrow.left");
-    var rightArrow = wrapper.querySelector(".carousel-arrow.right");
+    if (!carousel) return;
 
-    // Detectar si es carrusel de reseñas o top viajeros
-    var isSmallCarousel = wrapper.closest(".reseñas") || wrapper.closest(".top-viajeros");
+    // Garantiza que las flechas capten el clic
+    [leftArrow, rightArrow].forEach((arrow) => {
+      if (!arrow) return;
+      arrow.style.pointerEvents = 'auto';
+      arrow.style.zIndex = '1000';
+    });
 
-    // Calcular ancho de desplazamiento: 1 elemento
-    function getScrollAmount() {
-      var firstChild = carousel.children[0];
-      if (!firstChild) return 0;
-      var style = window.getComputedStyle(firstChild);
-      var marginRight = parseInt(style.marginRight) || 0;
-      return firstChild.offsetWidth + marginRight;
+    // Desplazamiento: ancho de la primera card + gap del carrusel
+    const getScrollAmount = () => {
+      const first = carousel.children[0];
+      if (!first) return 0;
+      const cardWidth = first.getBoundingClientRect().width;
+      const gap = parseFloat(getComputedStyle(carousel).gap) || 0;
+      return cardWidth + gap;
+    };
+
+    if (leftArrow) {
+      leftArrow.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        carousel.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
+      });
     }
 
-    // Mover carrusel a la izquierda
-    leftArrow.addEventListener("click", function() {
-      carousel.scrollBy({
-        left: -getScrollAmount(),
-        behavior: "smooth"
+    if (rightArrow) {
+      rightArrow.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        carousel.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
       });
-    });
+    }
 
-    // Mover carrusel a la derecha
-    rightArrow.addEventListener("click", function() {
-      carousel.scrollBy({
-        left: getScrollAmount(),
-        behavior: "smooth"
-      });
-    });
+    // Swipe táctil (móvil)
+    let startX = 0;
+    let startScroll = 0;
+    carousel.addEventListener('touchstart', (e) => {
+      startX = e.touches[0].clientX;
+      startScroll = carousel.scrollLeft;
+    }, { passive: true });
+    carousel.addEventListener('touchmove', (e) => {
+      const dx = e.touches[0].clientX - startX;
+      carousel.scrollLeft = startScroll - dx;
+    }, { passive: true });
   });
 });
