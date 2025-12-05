@@ -1,0 +1,260 @@
+/* css/social.css */
+
+.container-social {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 80vh;
+}
+
+.breadcrumbs {
+    margin-bottom: 20px;
+    color: #666;
+    font-size: 0.9em;
+}
+.breadcrumbs a { text-decoration: none; color: #0097A7; }
+
+/* --- GRID LAYOUT PRINCIPAL --- */
+.social-layout {
+    display: grid;
+    grid-template-columns: 2fr 1.2fr; /* Columna Feed mas ancha, Sidebar mas estrecha */
+    gap: 40px;
+    align-items: start;
+}
+
+/* --- ESTILOS COMUNES --- */
+.container-social h3, 
+.container-social h4 {
+    margin-top: 0;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* --- COLUMNA IZQUIERDA (FEED) --- */
+.feed-column {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.search-bar-social {
+    position: relative;
+    width: 100%;
+}
+
+.search-bar-social input {
+    width: 100%;
+    padding: 12px 15px 12px 40px; /* Espacio para el icono */
+    border: 2px solid #333; /* Estilo borde grueso */
+    border-radius: 25px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.search-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.6;
+}
+
+.feed-section {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+/* Wireframe Cards (Estilo X) */
+.cards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.wireframe-card {
+    padding: 10px;
+    background: white;
+}
+
+.wf-image-box {
+    height: 120px;
+    background: #f4f4f4;
+    border: 1px solid #999;
+    margin-bottom: 10px;
+    /* Efecto X */
+    background-image: linear-gradient(to top right, transparent 48%, #999 50%, transparent 52%),
+                      linear-gradient(to top left, transparent 48%, #999 50%, transparent 52%);
+    background-size: 100% 100%;
+}
+
+.large .wf-image-box {
+    height: 150px; /* Más altos para anuncios */
+}
+
+/* Líneas de texto simuladas */
+.wf-text-lines {
+    display: flex; flex-direction: column; gap: 5px;
+}
+.line { height: 8px; background: #ddd; border-radius: 4px; }
+.line.full { width: 100%; }
+.line.medium { width: 70%; }
+.line.short { width: 40%; }
+.line.long { width: 90%; }
+
+/* Avatares Similares */
+.avatars-row {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+.avatar-item {
+    text-align: center;
+    min-width: 60px;
+}
+.avatar-circle {
+    width: 60px; height: 60px;
+    background: #333;
+    border-radius: 50%;
+    margin-bottom: 5px;
+    overflow: hidden;
+}
+.avatar-circle img { width: 100%; height: 100%; object-fit: cover; }
+.avatar-placeholder-lines {
+    width: 40px; height: 6px; background: #ccc; margin: 2px auto;
+}
+
+
+/* --- COLUMNA DERECHA (SIDEBAR) --- */
+.interaction-sidebar {
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Botones de acción (Círculos) */
+.action-buttons-row {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.action-btn {
+    background: none; border: none;
+    display: flex; flex-direction: column; align-items: center;
+    cursor: pointer; gap: 5px;
+}
+
+.icon-circle {
+    width: 50px; height: 50px;
+    border-radius: 50%;
+    background: #eee;
+    border: 2px solid #333;
+    display: flex; justify-content: center; align-items: center;
+    font-size: 20px;
+    transition: transform 0.2s;
+}
+
+.action-btn:hover .icon-circle {
+    background: #0097A7; color: white; border-color: #00707d; transform: scale(1.1);
+}
+.action-btn span { font-size: 0.8em; font-weight: bold; color: #333; }
+
+
+/* Lista Amigos Horizontal */
+.friends-horizontal-list {
+    display: flex; gap: 15px; overflow-x: auto; padding-bottom: 10px;
+}
+
+/* Chat List Vertical */
+.chat-list-container {
+    border: 2px solid #333;
+    border-radius: 8px;
+    height: 400px; /* Altura fija según wireframe */
+    position: relative;
+    background: #fff;
+    display: flex; flex-direction: column;
+}
+
+.chat-list-scroll {
+    overflow-y: auto;
+    flex: 1;
+    padding: 10px;
+}
+
+/* Scrollbar personalizada */
+.chat-list-scroll::-webkit-scrollbar { width: 6px; }
+.chat-list-scroll::-webkit-scrollbar-thumb { background: #999; border-radius: 3px; }
+
+.chat-item {
+    display: flex; align-items: center; gap: 10px;
+    padding: 10px 0; border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+.chat-item:hover { background: #f9f9f9; }
+
+.chat-avatar { width: 40px; height: 40px; border-radius: 50%; border: 1px solid #333; overflow: hidden; }
+.chat-avatar img { width: 100%; height: 100%; object-fit: cover; }
+
+.chat-info { flex: 1; }
+.chat-name { font-weight: bold; font-size: 0.9em; display: block; }
+.chat-preview { 
+    height: 6px; width: 80%; background: #ccc; margin-top: 5px; border-radius: 3px; 
+    /* Simula texto garabateado */
+    background-image: repeating-linear-gradient(90deg, #ccc, #ccc 2px, transparent 2px, transparent 4px);
+}
+
+/* Botón Nuevo Grupo (Pegado abajo) */
+.btn-nuevo-grupo {
+    width: 100%;
+    padding: 12px;
+    background: #fff;
+    border-top: 2px solid #333;
+    border: none; border-top: 2px solid #333;
+    cursor: pointer; text-align: left;
+    font-weight: bold; font-size: 1em;
+}
+.btn-nuevo-grupo:hover { background: #f0f0f0; }
+
+
+/* --- RESPONSIVE --- */
+
+/* Tablet y Móvil (Stacked) */
+@media (max-width: 900px) {
+    .social-layout {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    /* TRUCO: Movemos los botones de acción ARRIBA del todo usando order */
+    .interaction-sidebar {
+        order: -1; /* Sube arriba */
+        border-left: none;
+        padding-left: 0;
+        gap: 20px;
+    }
+
+    /* Ocultamos los chats en móvil si queremos simplificar, 
+       o los dejamos abajo. Según tu wireframe móvil, 
+       primero van los botones. */
+    
+    .sidebar-section {
+        /* En móvil quizás queremos ocultar la lista vertical de chats 
+           y dejar solo el botón de mensajes, pero para este MVP
+           lo dejaremos visible debajo de los botones */
+        margin-top: 10px;
+    }
+
+    /* Ajuste de grids en móvil */
+    .cards-grid {
+        grid-template-columns: 1fr; /* 1 sola columna para cards */
+    }
+
+    .chat-list-container {
+        height: 300px; /* Un poco menos alto en móvil */
+    }
+}

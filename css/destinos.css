@@ -1,0 +1,174 @@
+/* css/destinos.css */
+
+/* --- BASE (MÓVIL < 600px) --- */
+.container-destinos {
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    min-height: 80vh;
+}
+
+/* Ocultar breadcrumbs generales en detalle, usaremos los internos */
+.detalle-container .breadcrumbs { display: none; }
+.breadcrumbs-detalle { margin-bottom: 10px; color: #0097A7; font-weight: bold; }
+.breadcrumbs-detalle a { text-decoration: none; color: #00707d; }
+
+.hidden { display: none !important; }
+
+/* Selector */
+.selector-container h1 { text-align: center; color: #333; margin-bottom: 20px; }
+.hero-selector {
+    background: #f4f4f4;
+    border: 2px solid #333; /* Estilo wireframe: bordes oscuros */
+    background-image: linear-gradient(to top right, transparent 49%, #ccc 50%, transparent 51%),
+                      linear-gradient(to top left, transparent 49%, #ccc 50%, transparent 51%);
+    background-size: 100% 100%;
+    height: 300px;
+    display: flex; justify-content: center; align-items: center;
+    border-radius: 4px;
+}
+.selector-box {
+    background: white; padding: 20px; border: 2px solid #333; border-radius: 4px;
+    display: flex; flex-direction: column; gap: 10px; width: 100%; max-width: 300px;
+}
+
+/* --- DETALLE PAÍS (Layout Móvil) --- */
+.btn-back { background: none; border: none; color: #0097A7; cursor: pointer; margin-bottom: 10px; font-weight: bold; }
+
+.pais-header h1, #pais-nombre {
+    font-size: 2.2em; margin-bottom: 15px; color: #000;
+}
+
+/* Contenedor Imagen + Stats */
+.pais-visual-block { margin-bottom: 20px; }
+
+.pais-hero-image {
+    width: 100%; height: 200px;
+    background: white; border: 2px solid #333;
+    /* X Gigante */
+    background-image: linear-gradient(to top right, transparent 49%, #333 50%, transparent 51%),
+                      linear-gradient(to top left, transparent 49%, #333 50%, transparent 51%);
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+.pais-hero-image img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Stats (Debajo de la imagen, estilo tabla limpia) */
+.pais-stats {
+    display: flex; justify-content: space-between;
+    padding: 10px 0; border-bottom: 2px solid #333; /* Linea inferior */
+}
+.stat-item { display: flex; flex-direction: column; align-items: center; width: 33%; }
+.stat-label { font-size: 0.8em; color: #555; }
+.stat-value { font-weight: bold; font-size: 0.95em; }
+
+/* Descripción */
+.texto-intro { font-family: 'Courier New', Courier, monospace; line-height: 1.4; color: #555; }
+
+/* Experiencias Grid */
+.titulo-seccion { border-bottom: 2px solid #333; padding-bottom: 5px; margin-top: 30px; margin-bottom: 15px; }
+.gallery-grid { display: grid; grid-template-columns: 1fr; gap: 15px; }
+.card-simple {
+    border: 2px solid #333; height: 150px; background: #fff;
+    /* X Pequeña */
+    background-image: linear-gradient(to top right, transparent 45%, #ccc 50%, transparent 55%),
+                      linear-gradient(to top left, transparent 45%, #ccc 50%, transparent 55%);
+    position: relative; overflow: hidden;
+}
+.card-simple img { width: 100%; height: 100%; object-fit: cover; }
+.card-simple h4 {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    background: rgba(255,255,255,0.8); margin: 0; padding: 5px; font-size: 0.9em;
+}
+.card-simple p { display: none; } /* En este diseño wireframe no parece haber descripción en las cards */
+
+/* Sidebar (Calendario) */
+.widget-sidebar h4 { margin-top: 0; margin-bottom: 10px; font-size: 1em; }
+.calendar-widget { border: 2px solid #333; padding: 10px; background: #fff; font-family: sans-serif; }
+.month-header { border: 1px solid #333; padding: 2px; text-align: center; margin-bottom: 5px; font-weight: bold; display: flex; justify-content: space-between; padding: 0 10px; }
+.days-grid { display: grid; grid-template-columns: repeat(7, 1fr); text-align: center; font-size: 0.8em; gap: 4px; }
+.event { background: #4a90e2; color: white; }
+.calendar-footer { text-align: center; text-decoration: underline; color: blue; font-size: 0.8em; margin-top: 10px; }
+
+.texto-relleno { font-family: 'Courier New', monospace; font-size: 0.85em; color: #666; margin-top: 15px; text-align: justify; }
+
+/* --- TABLET (min-width: 600px) --- */
+@media (min-width: 600px) {
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    .pais-hero-image { height: 300px; }
+}
+
+/* --- DESKTOP (Wireframe Exacto > 1024px) --- */
+@media (min-width: 1024px) {
+    .container-destinos { max-width: 1200px; margin: 0 auto; }
+
+    /* LAYOUT PRINCIPAL: 2 Columnas separadas por línea */
+    .layout-pais-body {
+        display: grid;
+        grid-template-columns: 2fr 1fr; /* 66% izq - 33% der */
+        gap: 0; /* Sin gap porque usaremos padding y borde */
+    }
+
+    /* COLUMNA IZQUIERDA */
+    .columna-principal {
+        padding-right: 40px; /* Espacio antes de la línea */
+    }
+
+    /* DIVISIÓN SUPERIOR: Imagen | Texto */
+    .pais-top-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* 50% Imagen - 50% Texto */
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+    
+    .pais-visual-block {
+        /* La imagen y los stats van juntos a la izquierda */
+        display: flex; flex-direction: column;
+    }
+
+    /* Stats integrados en la caja visual */
+    .pais-stats {
+        border: none; /* Quitamos borde inferior global */
+        padding-top: 10px;
+    }
+    .stat-item {
+        align-items: flex-start; /* Alinear a la izquierda */
+    }
+    .stat-label { font-size: 0.7em; }
+    .stat-value { font-size: 1em; }
+
+    /* Texto garabateado a la derecha */
+    .pais-description-block {
+        display: flex; align-items: center;
+    }
+    .texto-intro {
+        font-size: 1.1em;
+        /* Efecto visual de "texto escrito" */
+        background: repeating-linear-gradient(
+            transparent,
+            transparent 29px,
+            #eee 30px
+        );
+        line-height: 30px;
+    }
+
+    /* Grid Experiencias */
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+        gap: 20px;
+    }
+
+    /* COLUMNA DERECHA (SIDEBAR) */
+    .columna-lateral {/* LA LÍNEA VERTICAL DEL WIREFRAME */
+        padding-left: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    /* El calendario no necesita cambios, solo su contenedor */
+    .calendar-widget {
+        box-shadow: 3px 3px 0px rgba(0,0,0,0.1); /* Toque visual */
+    }
+}

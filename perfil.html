@@ -1,118 +1,164 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Rutas del mundo — Perfil</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/perfil.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rutas del mundo - Perfil</title>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/perfil.css"> <!-- CSS Específico -->
 </head>
 <body>
-  <header class="site-header">
-    <div class="brand">
-      <img src="logo.svg" alt="Rutas del mundo" class="logo" />
-      <span class="site-name">Rutas del mundo</span>
+
+  <!-- HEADER -->
+  <header>
+    <div class="menu-btn" id="menu-btn">
+      <span></span><span></span><span></span>
     </div>
-    <div class="actions">
-      <button class="lang-btn" aria-haspopup="listbox" aria-expanded="false">
-        Español
-        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5"/></svg>
-      </button>
-      <ul class="lang-menu" role="listbox" aria-label="Idioma">
-        <li role="option" aria-selected="true">Español</li>
-        <li role="option">English</li>
-        <li role="option">Français</li>
-      </ul>
+    <h2 class="titulo-header">Rutas del mundo</h2>
+    <div class="login-btn"><a href="inicioSesion.html">Iniciar sesión</a></div>
+    
+    <div class="idioma">
+        <label for="Idioma">Idioma</label>
+        <select id="Idioma"><option>Español</option><option>English</option></select>
     </div>
+
+    <div class="logo"><img src="/imagenes/logo.png" alt="Logo"></div>
+
+    <nav id="nav">
+      <a href="index.html"><h4>Inicio</h4></a>
+      <a href="destinos.html"><h4>Destinos</h4></a>
+      <a href="viajesCompartidos.html"><h4>Viajes Compartidos</h4></a>
+      <a href="social.html"><h4>Social</h4></a>
+    </nav>
   </header>
 
-  <nav class="breadcrumbs" aria-label="Migas de pan">
-    <a href="index.html">Página principal</a>
-    <span aria-hidden="true">›</span>
-    <span class="current">Perfil</span>
-  </nav>
+  <!-- MENU MOVIL -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Inicio</a>
+    <a href="destinos.html">Destinos</a>
+    <a href="viajesCompartidos.html">Viajes Compartidos</a>
+    <a href="social.html">Social</a>
+  </div>
 
-  <main class="profile">
-    <section class="profile-card">
-      <button class="avatar-btn" aria-label="Editar avatar">
-        <img src="avatar-placeholder.png" alt="Avatar del usuario" class="avatar" />
-        <span class="edit-icon">✎</span>
-      </button>
-      <div class="user-info">
-        <h1 class="username">USUARIO</h1>
-        <p class="bio">Texto de ejemplo con información del usuario: viajes favoritos, destinos soñados y últimas rutas.</p>
+  <!-- CONTENEDOR PRINCIPAL -->
+  <div class="container-perfil">
+    
+    <!-- Miga de pan -->
+    <div class="breadcrumbs">
+        <a href="index.html">Página principal</a> > <span>Perfil</span>
+    </div>
+
+    <!-- LAYOUT PRINCIPAL (Grid) -->
+    <div class="perfil-layout">
+
+        <!-- COLUMNA IZQUIERDA (INFO + GRIDS) -->
+        <main class="perfil-main">
+            
+            <!-- Cabecera de Usuario -->
+            <div class="user-header">
+                <div class="avatar-container">
+                    <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=200" alt="Avatar Usuario">
+                </div>
+                <div class="user-info">
+                    <div class="user-title-row">
+                        <h2>USUARIO</h2>
+                        <button class="btn-edit-pencil" title="Editar biografía">✏️</button>
+                    </div>
+                    <!-- Texto simulado "escrito a mano" -->
+                    <div class="user-bio">
+                        <p class="handwritten-text">Amante de la fotografía y los viajes de mochilero.</p>
+                        <p class="handwritten-text">Buscando nuevas aventuras en Asia y Sudamérica.</p>
+                        <p class="handwritten-text">Siempre listo para un café.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botón visible en móvil para ir a configuración -->
+            <a href="#config-section" class="btn-config-mobile">⚙️ Configuración de Usuario</a>
+
+            <!-- Sección: Favoritos / Mis Viajes -->
+            <section class="grid-section">
+                <div class="section-title-row">
+                    <h3>Favoritos</h3>
+                    <h3 class="secondary-title">Mis Viajes</h3>
+                </div>
+                
+                <div class="grid-cards" id="grid-favoritos">
+                    <!-- Se llena con JS -->
+                </div>
+            </section>
+
+            <!-- Sección: Historial de Compras -->
+            <section class="grid-section">
+                <h3>Historial de Compras</h3>
+                <div class="grid-cards" id="grid-historial">
+                    <!-- Se llena con JS -->
+                </div>
+            </section>
+
+        </main>
+
+        <!-- COLUMNA DERECHA (CONFIGURACIÓN) -->
+        <aside class="config-sidebar" id="config-section">
+            
+            <ul class="config-list">
+                <li>
+                    <a href="#">
+                        <span class="icon">✏️</span> Editar tu perfil
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">🔒</span> Privacidad y seguridad
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">🔔</span> Notificaciones
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">♿</span> Accesibilidad
+                    </a>
+                </li>
+                <li class="delete-account">
+                    <a href="#">
+                        <span class="icon">🗑️</span> Eliminar cuenta
+                    </a>
+                </li>
+            </ul>
+
+        </aside>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-left"><p>© 2025 Rutas del mundo</p></div>
+      <div class="footer-center"><p>Sobre Nosotros | Política de Privacidad | Ayuda</p></div>
+      <div class="footer-socials">
+          <a href="#"><svg class="social" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="30" height="30"><path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z"/></svg></a>
+          <a href="#"><svg class="social" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="30" height="30"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+          <a href="#" aria-label="Instagram">
+            <svg class="social" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="30" height="30">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+            </svg>
+          </a>
       </div>
-      <a class="settings-btn" href="configuracion.html">Configuración de Usuario</a>
-    </section>
-
-    <section class="content-section">
-      <h2>Favoritos</h2>
-      <div class="card-list">
-        <article class="card">
-          <img src="placeholder1.jpg" alt="Destino favorito" />
-          <div class="card-body">
-            <h3 class="card-title">Nombre del destino</h3>
-            <p class="card-text">Pequeña descripción del lugar.</p>
-          </div>
-        </article>
-        <article class="card">
-          <img src="placeholder2.jpg" alt="Destino favorito" />
-          <div class="card-body">
-            <h3 class="card-title">Nombre del destino</h3>
-            <p class="card-text">Pequeña descripción del lugar.</p>
-          </div>
-        </article>
+      <div class="footer-right">
+        <form class="newsletter">
+          <label>¿Quieres suscribirte al newsletter?</label><br>
+          <input type="email" placeholder="Introduce tu correo">
+          <button type="submit">Suscribirse</button>
+        </form>
       </div>
-    </section>
-
-    <section class="content-section">
-      <h2>Mis Viajes</h2>
-      <div class="card-list">
-        <article class="card">
-          <img src="trip1.jpg" alt="Mi viaje" />
-          <div class="card-body">
-            <h3 class="card-title">Ruta Larga 1</h3>
-            <p class="card-text">Fecha, duración y resumen.</p>
-          </div>
-        </article>
-        <article class="card">
-          <img src="trip2.jpg" alt="Mi viaje" />
-          <div class="card-body">
-            <h3 class="card-title">Ruta Larga 2</h3>
-            <p class="card-text">Fecha, duración y resumen.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="content-section">
-      <h2>Historial de Compras</h2>
-      <div class="card-list">
-        <article class="card">
-          <img src="order1.jpg" alt="Compra realizada" />
-          <div class="card-body">
-            <h3 class="card-title">Billete Madrid–Seúl</h3>
-            <p class="card-text">Comprado el 15/10/2025 — Nº pedido #12345</p>
-            <button class="review-btn">Escribir Reseña</button>
-          </div>
-        </article>
-        <article class="card">
-          <img src="order2.jpg" alt="Compra realizada" />
-          <div class="card-body">
-            <h3 class="card-title">Tour Transiberiano</h3>
-            <p class="card-text">Comprado el 02/11/2025 — Nº pedido #12346</p>
-            <button class="review-btn">Escribir Reseña</button>
-          </div>
-        </article>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <small>© 2025 Rutas del mundo</small>
+    </div>
   </footer>
 
-  <script src="perfil.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/perfil.js"></script>
 </body>
 </html>
