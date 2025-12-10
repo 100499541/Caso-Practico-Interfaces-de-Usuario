@@ -1,4 +1,3 @@
-// /js/index.js
 document.addEventListener('DOMContentLoaded', () => {
   // Menú móvil
   const menuBtn = document.getElementById('menu-btn');
@@ -72,4 +71,11 @@ document.addEventListener('DOMContentLoaded', () => {
       carousel.scrollLeft = startScroll - dx;
     }, { passive: true });
   });
+
+  // Reemplazar botón de login si hay sesión activa
+  const usuario = JSON.parse(localStorage.getItem("usuarioActivo"));
+  if (usuario && usuario.foto) {
+    const loginBtn = document.querySelector(".login-btn");
+    loginBtn.innerHTML = `<img src="${usuario.foto}" alt="Perfil" class="perfil-mini">`;
+  }
 });

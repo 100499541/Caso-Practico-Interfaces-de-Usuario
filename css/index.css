@@ -101,6 +101,15 @@ header nav a {
   transform: scale(1.05);
 }
 
+/* FOTO DE PERFIL QUE INTERCAMBIA AL BOTON INICIAR SESION CUANDO YA HAY UNA SESION INICIADA */
+.perfil-mini {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
 /* DESPLEGABLE DE CAMBIO DE IDIOMA */
 .idioma {
   order: 4;
