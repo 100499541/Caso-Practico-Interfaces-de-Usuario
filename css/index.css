@@ -103,12 +103,36 @@ header nav a {
 
 /* FOTO DE PERFIL QUE INTERCAMBIA AL BOTON INICIAR SESION CUANDO YA HAY UNA SESION INICIADA */
 .perfil-mini {
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 5px;
   border-radius: 50%;
   object-fit: cover;
+  display: block;
 }
 
+.perfil-contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* BOTON DE CERRAR SESION DEBAJO DE LA IMAGEN DE FOTO DE PERFIL */
+.cerrar-sesion {
+  padding: 6px 12px;
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.cerrar-sesion:hover {
+  background: #c9302c;
+}
 
 /* DESPLEGABLE DE CAMBIO DE IDIOMA */
 .idioma {

@@ -1,8 +1,6 @@
-// /js/registro.js
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("registroForm");
 
-  // Inputs según tu HTML
   const usuario = document.getElementById("usuario");
   const nombre = document.getElementById("nombre");
   const apellidos = document.getElementById("apellidos");
@@ -15,13 +13,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const politica = document.getElementById("acepto");
   const crearBtn = document.getElementById("crearCuenta");
 
-  // Deshabilitar botón hasta marcar la política
   crearBtn.disabled = true;
   politica.addEventListener("change", () => {
     crearBtn.disabled = !politica.checked;
   });
 
-  // Helpers
   const isEmpty = (v) => !v || v.trim() === "";
   const soloLetras = /^[A-Za-zÁÉÍÓÚáéíóúÑñ]+$/;
 
@@ -108,78 +104,84 @@ document.addEventListener("DOMContentLoaded", () => {
     input.classList.remove("error");
   }
 
-  // Validar y mostrar errores en submit
+  // Convertir imagen a Base64
+  function convertirImagenABase64(file, callback) {
+    const reader = new FileReader();
+    reader.onload = () => callback(reader.result);
+    reader.readAsDataURL(file);
+  }
+
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
     let firstInvalid = null;
 
-    // Usuario
     const uErr = validarUsuario(usuario.value);
     if (uErr) { setError(usuario, uErr); firstInvalid ||= usuario; } else clearError(usuario);
 
-    // Nombre
     const nErr = validarNombre(nombre.value);
     if (nErr) { setError(nombre, nErr); firstInvalid ||= nombre; } else clearError(nombre);
 
-    // Apellidos
     const aErr = validarApellidos(apellidos.value);
     if (aErr) { setError(apellidos, aErr); firstInvalid ||= apellidos; } else clearError(apellidos);
 
-    // Contraseña
     const cErr = validarContrasena(contrasena.value);
     if (cErr) { setError(contrasena, cErr); firstInvalid ||= contrasena; } else clearError(contrasena);
 
-    // Repetir contraseña
     const rcErr = validarRepetirContrasena(repetirContrasena.value, contrasena.value);
     if (rcErr) { setError(repetirContrasena, rcErr); firstInvalid ||= repetirContrasena; } else clearError(repetirContrasena);
 
-    // Correo
     const coErr = validarCorreo(correo.value);
     if (coErr) { setError(correo, coErr); firstInvalid ||= correo; } else clearError(correo);
 
-    // Repetir correo
     const rcoErr = validarRepetirCorreo(repetirCorreo.value, correo.value);
     if (rcoErr) { setError(repetirCorreo, rcoErr); firstInvalid ||= repetirCorreo; } else clearError(repetirCorreo);
 
-    // Fecha
     const fErr = validarFecha(nacimiento.value);
     if (fErr) { setError(nacimiento, fErr); firstInvalid ||= nacimiento; } else clearError(nacimiento);
 
-    // Foto (opcional)
     const fotoErr = validarFoto(foto.files[0]);
     if (fotoErr) { setError(foto, fotoErr); firstInvalid ||= foto; } else clearError(foto);
 
-    // Política
     if (!politica.checked) {
       alert("Debes aceptar la política de privacidad y uso.");
       crearBtn.disabled = true;
       if (!firstInvalid) firstInvalid = politica;
     }
 
-    // Si hay algún error, enfocar el primero y no continuar
     if (firstInvalid) {
       firstInvalid.focus();
       form.reportValidity();
       return;
     }
 
-    // Guardar y redirigir
-    const usuarioObj = {
-      usuario: usuario.value.trim(),
-      nombre: nombre.value.trim(),
-      apellidos: apellidos.value.trim(),
-      contrasena: contrasena.value,
-      correo: correo.value.trim(),
-      nacimiento: nacimiento.value,
-      foto: foto.files[0] ? URL.createObjectURL(foto.files[0]) : null
+    // Guardar usuario con foto en Base64 o por defecto
+    const guardarUsuario = (fotoFinal) => {
+      const nuevoUsuario = {
+        usuario: usuario.value.trim(),
+        nombre: nombre.value.trim(),
+        apellidos: apellidos.value.trim(),
+        contrasena: contrasena.value,
+        correo: correo.value.trim(),
+        nacimiento: nacimiento.value,
+        foto: fotoFinal
+      };
+
+      const usuariosPrevios = JSON.parse(localStorage.getItem("usuariosRegistrados")) || [];
+      usuariosPrevios.push(nuevoUsuario);
+      localStorage.setItem("usuariosRegistrados", JSON.stringify(usuariosPrevios));
+      localStorage.setItem("usuarioActivo", JSON.stringify(nuevoUsuario));
+
+      window.location.href = "index.html";
     };
 
-    localStorage.setItem("usuarioActivo", JSON.stringify(usuarioObj));
-    window.location.href = "index.html";
+    if (foto.files[0]) {
+      convertirImagenABase64(foto.files[0], guardarUsuario);
+    } else {
+      guardarUsuario("/imagenes/default-profile.jpg");
+    }
   });
 
-  // Validación inmediata en blur para mejor feedback
   [
     [usuario, validarUsuario],
     [nombre, validarNombre],

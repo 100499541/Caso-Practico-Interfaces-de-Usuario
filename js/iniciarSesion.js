@@ -1,27 +1,41 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const loginForm = document.querySelector(".login-form");
-  const btnRegistrar = document.querySelector(".btn-registrar");
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector(".login-form");
   const usuarioInput = document.getElementById("usuario");
-  const passwordInput = document.getElementById("contraseña");
+  const contrasenaInput = document.getElementById("contraseña");
 
-  // Manejar inicio de sesión
-  loginForm.addEventListener("submit", function (e) {
+  // Crear contenedor de mensajes de error
+  const errorMsg = document.createElement("p");
+  errorMsg.classList.add("error-msg");
+  form.appendChild(errorMsg);
+
+  form.addEventListener("submit", (e) => {
     e.preventDefault();
-    const usuario = usuarioInput.value.trim();
-    const contraseña = passwordInput.value.trim();
 
-    if(usuario === "" || contraseña === "") {
-      alert("Por favor, rellena ambos campos.");
+    const usuario = usuarioInput.value.trim();
+    const contrasena = contrasenaInput.value;
+
+    // Caso 1: campos vacíos
+    if (!usuario || !contrasena) {
+      errorMsg.textContent = "Por favor, introduce usuario y contraseña.";
       return;
     }
 
-    // Aquí iría la lógica de login (API, localStorage, etc.)
-    alert(`Bienvenido, ${usuario}!`);
-  });
+    // Recuperar lista de usuarios registrados
+    const usuariosRegistrados = JSON.parse(localStorage.getItem("usuariosRegistrados")) || [];
 
-  // Manejar botón de registrarse
-  btnRegistrar.addEventListener("click", function () {
-    alert("Redirigiendo a la página de registro...");
-    // Aquí se podría hacer window.location.href = "/registro.html";
+    // Buscar coincidencia
+    const usuarioEncontrado = usuariosRegistrados.find(
+      u => u.usuario === usuario && u.contrasena === contrasena
+    );
+
+    // Caso 2: datos incorrectos
+    if (!usuarioEncontrado) {
+      errorMsg.textContent = "Usuario o contraseña incorrectos.";
+      return;
+    }
+
+    // Caso 3: login correcto
+    localStorage.setItem("usuarioActivo", JSON.stringify(usuarioEncontrado));
+    window.location.href = "index.html";
   });
 });

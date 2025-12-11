@@ -93,6 +93,14 @@ body {
   font-size: 14px;
 }
 
+/* MENSAJES DE ERROR */
+.error-msg {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
+
 /* -------------------- IDIOMA -------------------- */
 .idioma-login {
   margin-top: 20px;

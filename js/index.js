@@ -72,10 +72,31 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
   });
 
-  // Reemplazar botón de login si hay sesión activa
-  const usuario = JSON.parse(localStorage.getItem("usuarioActivo"));
-  if (usuario && usuario.foto) {
-    const loginBtn = document.querySelector(".login-btn");
-    loginBtn.innerHTML = `<img src="${usuario.foto}" alt="Perfil" class="perfil-mini">`;
+// Reemplazar enlace de login si hay sesión activa
+const usuario = JSON.parse(localStorage.getItem("usuarioActivo"));
+if (usuario && usuario.foto) {
+  const loginDiv = document.querySelector(".login-btn");
+  if (loginDiv) {
+    // Mostrar foto + botón de cerrar sesión
+    loginDiv.innerHTML = `
+      <div class="perfil-contenedor">
+        <img src="${usuario.foto}" alt="Perfil" class="perfil-mini">
+        <button id="cerrarSesionBtn" class="cerrar-sesion">Cerrar sesión</button>
+      </div>
+    `;
+
+
+    // Evento para cerrar sesión
+    const cerrarBtn = document.getElementById("cerrarSesionBtn");
+    cerrarBtn.addEventListener("click", () => {
+      const confirmacion = confirm("¿Estás seguro de que quieres cerrar sesión?");
+      if (confirmacion) {
+        // Eliminar usuario activo
+        localStorage.removeItem("usuarioActivo");
+        // Volver a mostrar el enlace de iniciar sesión
+        loginDiv.innerHTML = `<a href="/inicioSesion.html">Iniciar sesión</a>`;
+      }
+    });
   }
-});
+}
+})
