@@ -80,11 +80,12 @@ if (usuario && usuario.foto) {
     // Mostrar foto + botón de cerrar sesión
     loginDiv.innerHTML = `
       <div class="perfil-contenedor">
-        <img src="${usuario.foto}" alt="Perfil" class="perfil-mini">
+        <a href="perfil.html">
+          <img src="${usuario.foto}" alt="Perfil" class="perfil-mini">
+        </a>
         <button id="cerrarSesionBtn" class="cerrar-sesion">Cerrar sesión</button>
       </div>
     `;
-
 
     // Evento para cerrar sesión
     const cerrarBtn = document.getElementById("cerrarSesionBtn");
