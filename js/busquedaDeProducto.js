@@ -30,15 +30,16 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       });
 
-      // Renderizar cards
+      // Renderizar cards con enlace a producto.html
       if (resultados.length === 0) {
         contenedor.innerHTML = "<p>No se encontraron alojamientos para este destino.</p>";
         return;
       }
 
       resultados.forEach(a => {
-        const card = document.createElement("div");
+        const card = document.createElement("a");
         card.classList.add("resultado-card");
+        card.href = `producto.html?ciudad=${encodeURIComponent(destino)}&nombre=${encodeURIComponent(a.nombre)}`;
         card.innerHTML = `
           <img src="${a.imagen}" alt="${a.nombre}">
           <div class="resultado-info">
@@ -56,6 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+// Consola para pruebas
 document.addEventListener("DOMContentLoaded", () => {
   const params = new URLSearchParams(window.location.search);
   const tipo = params.get("tipo");
@@ -63,13 +65,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const inicio = params.get("inicio");
   const fin = params.get("fin");
 
-  // Mostrar los datos en consola (para pruebas)
   console.log("Tipo:", tipo);
   console.log("Destino:", destino);
   console.log("Inicio:", inicio);
   console.log("Fin:", fin);
 
-  // Ejemplo: mostrar destino en el título
   const resultados = document.querySelector(".resultados-scroll h3");
   if (destino) {
     resultados.textContent = `Resultados para ${destino} (${inicio} - ${fin})`;

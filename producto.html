@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Búsqueda de producto</title>
-  <link rel="stylesheet" href="css/index.css">
-  <link rel="stylesheet" href="css/busquedaDeProducto.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Producto</title>
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/producto.css" />
 </head>
 <body>
 
   <!-- HEADER -->
   <header>
-    <div class="menu-btn">
-      <span></span><span></span><span></span>
-    </div>
     <h2>Rutas del mundo</h2>
     <nav>
       <a href="index.html">Inicio</a>
@@ -28,34 +25,60 @@
         <option value="en">English</option>
       </select>
     </div>
-    <div class="login-btn">
-      <a href="inicioSesion.html" class="btn-login">Iniciar sesión</a>
-    </div>
     <div class="logo">
-      <img src="imagenes/logo.png" alt="Logo">
+      <img src="imagenes/logo.png" alt="Logo" />
     </div>
   </header>
 
     <!-- Miga de pan -->
-   <div class="breadcrumbs">
-    <a href="index.html">Página principal</a> > <span>Busqueda</span>
-   </div>
+    <div class="breadcrumbs">
+    <a href="index.html">Página principal</a> >
+    <a href="busquedaDeProducto.html?destino=Barcelona">Búsqueda de producto</a> >
+    <span>Producto</span>
+    </div>
+
 
   <!-- CONTENIDO PRINCIPAL -->
-  <main>
-    <div class="busqueda-layout">
+  <main class="producto-layout">
+    <div class="imagen-principal">
+      <img id="imagen-principal" src="" alt="Imagen del alojamiento" />
+    </div>
 
-      <!-- RESULTADOS ALOJAMIENTO -->
-      <section class="resultados-scroll">
-        <h3></h3>
-        <!-- Aquí se insertarán dinámicamente las cards de alojamientos -->
-      </section>
+    <div class="descripcion">
+      <h3 id="nombre"></h3>
+      <p id="descripcion"></p>
+    </div>
 
-      <!-- MAPA INTERACTIVO -->
-      <aside class="mapa-interactivo">
-        <p>Mapa interactivo (próximamente)</p>
-        <button class="mostrar-aeropuertos">Mostrar aeropuertos</button>
-      </aside>
+    <div class="valoracion-precio">
+      <div class="rating-box">
+        <span id="puntuacion" class="puntuacion"></span>
+        <span id="rating-text"></span>
+        <span id="valoraciones"></span>
+        <button id="ver-reseñas">Ver reseñas</button>
+      </div>
+      <div class="precio-box">
+        <span id="precio"></span>
+      </div>
+    </div>
+
+    <div class="info-servicios">
+      <h4>Servicios</h4>
+      <ul id="servicios-lista"></ul>
+      <div class="checkin-checkout">
+        <label>Check-in:</label> <span id="checkin">14:00</span><br />
+        <label>Check-out:</label> <span id="checkout">11:00</span>
+      </div>
+    </div>
+
+    <div class="incluye">
+      <h4>Qué se incluye</h4>
+      <div class="incluye-imagenes" id="incluye-imagenes">
+      </div>
+    </div>
+
+    <div class="acciones">
+      <button id="elegir-estancia">Elegir estancia</button>
+      <button id="guardar-favorito">Guardar en favorito</button>
     </div>
   </main>
 
@@ -95,7 +118,6 @@
     </div>
   </footer>
 
-  <script src="js/index.js"></script>
-  <script src="js/busquedaDeProducto.js"></script>
+  <script src="js/producto.js"></script>
 </body>
 </html>
