@@ -949,6 +949,777 @@
               ]
             }
           ]
+        },
+        {
+          "name": "Laos",
+          "cities": [
+            {
+              "name": "Luang Prabang",
+              "alojamientos": [
+                {
+                  "nombre": "Hotel Mekong View",
+                  "tipo": "hotel",
+                  "rating": "Muy bueno",
+                  "puntuacion": 8.4,
+                  "valoraciones": 95,
+                  "precio": 140,
+                  "moneda": "LAK",
+                  "imagen": "imagenes/luangprabang-hotel.jpg",
+                  "direccion": "Riverside, Luang Prabang",
+                  "coordenadas": { "lat": 19.8841, "lng": 102.1416 },
+                  "servicios": ["WiFi", "Desayuno incluido"]
+                },
+                {
+                  "nombre": "Hostal Monje",
+                  "tipo": "hostal",
+                  "rating": "Decente",
+                  "puntuacion": 6.9,
+                  "valoraciones": 40,
+                  "precio": 70,
+                  "moneda": "LAK",
+                  "imagen": "imagenes/luangprabang-hostal.jpg",
+                  "direccion": "Old Quarter, Luang Prabang",
+                  "coordenadas": { "lat": 19.8860, "lng": 102.1350 },
+                  "servicios": ["WiFi"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Líbano",
+          "cities": [
+            {
+              "name": "Beirut",
+              "alojamientos": [
+                {
+                  "nombre": "Hotel Mediterráneo",
+                  "tipo": "hotel",
+                  "rating": "Muy bueno",
+                  "puntuacion": 8.3,
+                  "valoraciones": 120,
+                  "precio": 180,
+                  "moneda": "LBP",
+                  "imagen": "imagenes/beirut-hotel.jpg",
+                  "direccion": "Corniche, Beirut",
+                  "coordenadas": { "lat": 33.8938, "lng": 35.5018 },
+                  "servicios": ["WiFi", "Restaurante"]
+                },
+                {
+                  "nombre": "Hostal Zoco",
+                  "tipo": "hostal",
+                  "rating": "Bueno",
+                  "puntuacion": 7.0,
+                  "valoraciones": 60,
+                  "precio": 90,
+                  "moneda": "LBP",
+                  "imagen": "imagenes/beirut-hostal.jpg",
+                  "direccion": "Souq, Beirut",
+                  "coordenadas": { "lat": 33.8945, "lng": 35.5050 },
+                  "servicios": ["WiFi"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Omán",
+          "cities": [
+            {
+              "name": "Mascate",
+              "alojamientos": [
+                {
+                  "nombre": "Hotel Golfo de Omán",
+                  "tipo": "hotel",
+                  "rating": "Muy bueno",
+                  "puntuacion": 8.5,
+                  "valoraciones": 140,
+                  "precio": 200,
+                  "moneda": "OMR",
+                  "imagen": "imagenes/mascate-hotel.jpg",
+                  "direccion": "Corniche, Mascate",
+                  "coordenadas": { "lat": 23.5880, "lng": 58.3829 },
+                  "servicios": ["WiFi", "Desayuno incluido"]
+                },
+                {
+                  "nombre": "Hostal Zoco Mascate",
+                  "tipo": "hostal",
+                  "rating": "Decente",
+                  "puntuacion": 6.8,
+                  "valoraciones": 50,
+                  "precio": 80,
+                  "moneda": "OMR",
+                  "imagen": "imagenes/mascate-hostal.jpg",
+                  "direccion": "Old Souq, Mascate",
+                  "coordenadas": { "lat": 23.5900, "lng": 58.3850 },
+                  "servicios": ["WiFi"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Qatar",
+          "cities": [
+            {
+              "name": "Doha",
+              "alojamientos": [
+                {
+                  "nombre": "Hotel Corniche",
+                  "tipo": "hotel",
+                  "rating": "Excelente",
+                  "puntuacion": 9.0,
+                  "valoraciones": 200,
+                  "precio": 250,
+                  "moneda": "QAR",
+                  "imagen": "imagenes/doha-hotel.jpg",
+                  "direccion": "Corniche, Doha",
+                  "coordenadas": { "lat": 25.2854, "lng": 51.5310 },
+                  "servicios": ["WiFi", "Restaurante"]
+                },
+                {
+                  "nombre": "Hostal Souq Waqif",
+                  "tipo": "hostal",
+                  "rating": "Bueno",
+                  "puntuacion": 7.2,
+                  "valoraciones": 80,
+                  "precio": 110,
+                  "moneda": "QAR",
+                  "imagen": "imagenes/doha-hostal.jpg",
+                  "direccion": "Souq Waqif, Doha",
+                  "coordenadas": { "lat": 25.2870, "lng": 51.5330 },
+                  "servicios": ["WiFi"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Tailandia",
+          "cities": [
+            {
+              "name": "Chiang Mai",
+              "alojamientos": [
+                {
+                  "nombre": "Hotel Doi Suthep",
+                  "tipo": "hotel",
+                  "rating": "Muy bueno",
+                  "puntuacion": 8.6,
+                  "valoraciones": 150,
+                  "precio": 160,
+                  "moneda": "THB",
+                  "imagen": "imagenes/chiangmai-hotel.jpg",
+                  "direccion": "Old City, Chiang Mai",
+                  "coordenadas": { "lat": 18.7883, "lng": 98.9853 },
+                  "servicios": ["WiFi", "Desayuno incluido"]
+                },
+                {
+                  "nombre": "Hostal Night Bazaar",
+                  "tipo": "hostal",
+                  "rating": "Bueno",
+                  "puntuacion": 7.1,
+                  "valoraciones": 70,
+                  "precio": 90,
+                  "moneda": "THB",
+                  "imagen": "imagenes/chiangmai-hostal.jpg",
+                  "direccion": "Night Bazaar, Chiang Mai",
+                  "coordenadas": { "lat": 18.7870, "lng": 98.9900 },
+                  "servicios": ["WiFi"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Vietnam",
+          "cities": [
+            {
+              "name": "Hanoi",
+              "alojamientos": [
+                {
+                  "nombre": "Hotel Lago Hoan Kiem",
+                  "tipo": "hotel",
+                  "rating": "Muy bueno",
+                  "puntuacion": 8.4,
+                  "valoraciones": 130,
+                  "precio": 150,
+                  "moneda": "VND",
+                  "imagen": "imagenes/hanoi-hotel.jpg",
+                  "direccion": "Hoan Kiem, Hanoi",
+                  "coordenadas": { "lat": 21.0278, "lng": 105.8342 },
+                  "servicios": ["WiFi", "Restaurante"]
+                },
+                {
+                  "nombre": "Hostal Barrio Antiguo",
+                  "tipo": "hostal",
+                  "rating": "Decente",
+                  "puntuacion": 6.9,
+                  "valoraciones": 60,
+                  "precio": 80,
+                  "moneda": "VND",
+                  "imagen": "imagenes/hanoi-hostal.jpg",
+                  "direccion": "Old Quarter, Hanoi",
+                  "coordenadas": { "lat": 21.0300, "lng": 105.8350 },
+                  "servicios": ["WiFi"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Singapur",
+          "cities": [
+            {
+              "name": "Singapur",
+              "alojamientos": [
+                {
+                  "nombre": "Hotel Marina Bay",
+                  "tipo": "hotel",
+                  "rating": "Excelente",
+                  "puntuacion": 9.1,
+                  "valoraciones": 300,
+                  "precio": 280,
+                  "moneda": "SGD",
+                  "imagen": "imagenes/singapur-hotel.jpg",
+                  "direccion": "Marina Bay, Singapur",
+                  "coordenadas": { "lat": 1.2830, "lng": 103.8600 },
+                  "servicios": ["WiFi", "Piscina", "Restaurante"]
+                },
+                {
+                  "nombre": "Hostal Chinatown",
+                  "tipo": "hostal",
+                  "rating": "Bueno",
+                  "puntuacion": 7.2,
+                  "valoraciones": 100,
+                  "precio": 90,
+                  "moneda": "SGD",
+                  "imagen": "imagenes/singapur-hostal.jpg",
+                  "direccion": "Chinatown, Singapur",
+                  "coordenadas": { "lat": 1.2840, "lng": 103.8430 },
+                  "servicios": ["WiFi"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "África",
+      "countries": [
+        {
+          "name": "Marruecos",
+          "cities": [
+            {
+              "name": "Chefchaouen",
+              "alojamientos": [
+                {
+                  "nombre": "Hotel Medina Azul",
+                  "tipo": "hotel",
+                  "rating": "Muy bueno",
+                  "puntuacion": 8.5,
+                  "valoraciones": 110,
+                  "precio": 130,
+                  "moneda": "MAD",
+                  "imagen": "imagenes/chefchaouen-hotel.jpg",
+                  "direccion": "Medina, Chefchaouen",
+                  "coordenadas": { "lat": 35.1680, "lng": -5.2697 },
+                  "servicios": ["WiFi", "Desayuno incluido"]
+                },
+                {
+                  "nombre": "Hostal Rif",
+                  "tipo": "hostal",
+                  "rating": "Decente",
+                  "puntuacion": 6.9,
+                  "valoraciones": 60,
+                  "precio": 70,
+                  "moneda": "MAD",
+                  "imagen": "imagenes/chefchaouen-hostal.jpg",
+                  "direccion": "Barrio Azul, Chefchaouen",
+                  "coordenadas": { "lat": 35.1700, "lng": -5.2650 },
+                  "servicios": ["WiFi"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Sudáfrica",
+          "cities": [
+            {
+              "name": "Ciudad del Cabo",
+              "alojamientos": [
+                {
+                  "nombre": "Hotel Table Mountain",
+                  "tipo": "hotel",
+                  "rating": "Excelente",
+                  "puntuacion": 9.0,
+                  "valoraciones": 200,
+                  "precio": 220,
+                  "moneda": "ZAR",
+                  "imagen": "imagenes/ciudaddelcabo-hotel.jpg",
+                  "direccion": "Waterfront, Ciudad del Cabo",
+                  "coordenadas": { "lat": -33.9249, "lng": 18.4241 },
+                  "servicios": ["WiFi", "Restaurante"]
+                },
+                {
+                  "nombre": "Hostal Bo-Kaap",
+                  "tipo": "hostal",
+                  "rating": "Bueno",
+                  "puntuacion": 7.2,
+                  "valoraciones": 80,
+                  "precio": 100,
+                  "moneda": "ZAR",
+                  "imagen": "imagenes/ciudaddelcabo-hostal.jpg",
+                  "direccion": "Bo-Kaap, Ciudad del Cabo",
+                  "coordenadas": { "lat": -33.9255, "lng": 18.4170 },
+                  "servicios": ["WiFi"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Oceanía",
+      "countries": [
+        {
+          "name": "Australia",
+          "cities": [
+            {
+              "name": "Sídney",
+              "alojamientos": [
+                {
+                  "nombre": "Hotel Opera House",
+                  "tipo": "hotel",
+                  "rating": "Excelente",
+                  "puntuacion": 9.1,
+                  "valoraciones": 250,
+                  "precio": 300,
+                  "moneda": "AUD",
+                  "imagen": "imagenes/sidney-hotel.jpg",
+                  "direccion": "Circular Quay, Sídney",
+                  "coordenadas": { "lat": -33.8568, "lng": 151.2153 },
+                  "servicios": ["WiFi", "Piscina", "Restaurante"]
+                },
+                {
+                  "nombre": "Hostal Bondi",
+                  "tipo": "hostal",
+                  "rating": "Bueno",
+                  "puntuacion": 7.3,
+                  "valoraciones": 90,
+                  "precio": 120,
+                  "moneda": "AUD",
+                  "imagen": "imagenes/sidney-hostal.jpg",
+                  "direccion": "Bondi Beach, Sídney",
+                  "coordenadas": { "lat": -33.8908, "lng": 151.2743 },
+                  "servicios": ["WiFi"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Nueva Zelanda",
+          "cities": [
+            {
+              "name": "Queenstown",
+              "alojamientos": [
+                {
+                  "nombre": "Hotel Lago Wakatipu",
+                  "tipo": "hotel",
+                  "rating": "Muy bueno",
+                  "puntuacion": 8.7,
+                  "valoraciones": 140,
+                  "precio": 180,
+                  "moneda": "NZD",
+                  "imagen": "imagenes/queenstown-hotel.jpg",
+                  "direccion": "Lago Wakatipu, Queenstown",
+                  "coordenadas": { "lat": -45.0312, "lng": 168.6626 },
+                  "servicios": ["WiFi", "Desayuno incluido"]
+                },
+                {
+                  "nombre": "Hostal Remarkables",
+                  "tipo": "hostal",
+                  "rating": "Bueno",
+                  "puntuacion": 7.0,
+                  "valoraciones": 70,
+                  "precio": 95,
+                  "moneda": "NZD",
+                  "imagen": "imagenes/queenstown-hostal.jpg",
+                  "direccion": "The Remarkables, Queenstown",
+                  "coordenadas": { "lat": -45.0330, "lng": 168.6500 },
+                  "servicios": ["WiFi"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "América del Norte",
+      "countries": [
+        {
+          "name": "Canadá",
+          "cities": [
+            {
+              "name": "Ciudad de Quebec",
+              "alojamientos": [
+                {
+                  "nombre": "Hotel Viejo Quebec",
+                  "tipo": "hotel",
+                  "rating": "Muy bueno",
+                  "puntuacion": 8.5,
+                  "valoraciones": 120,
+                  "precio": 190,
+                  "moneda": "CAD",
+                  "imagen": "imagenes/quebec-hotel.jpg",
+                  "direccion": "Casco histórico, Quebec",
+                  "coordenadas": { "lat": 46.8139, "lng": -71.2080 },
+                  "servicios": ["WiFi", "Desayuno incluido"]
+                },
+                {
+                  "nombre": "Hostal San Lorenzo",
+                  "tipo": "hostal",
+                  "rating": "Bueno",
+                  "puntuacion": 7.2,
+                  "valoraciones": 60,
+                  "precio": 95,
+                  "moneda": "CAD",
+                  "imagen": "imagenes/quebec-hostal.jpg",
+                  "direccion": "Barrio Petit Champlain, Quebec",
+                  "coordenadas": { "lat": 46.8150, "lng": -71.2050 },
+                  "servicios": ["WiFi"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Cuba",
+          "cities": [
+            {
+              "name": "La Habana",
+              "alojamientos": [
+                {
+                  "nombre": "Hotel Malecón",
+                  "tipo": "hotel",
+                  "rating": "Muy bueno",
+                  "puntuacion": 8.4,
+                  "valoraciones": 100,
+                  "precio": 150,
+                  "moneda": "CUP",
+                  "imagen": "imagenes/lahabana-hotel.jpg",
+                  "direccion": "Malecón, La Habana",
+                  "coordenadas": { "lat": 23.1136, "lng": -82.3666 },
+                  "servicios": ["WiFi", "Restaurante"]
+                },
+                {
+                  "nombre": "Hostal Vieja Habana",
+                  "tipo": "hostal",
+                  "rating": "Decente",
+                  "puntuacion": 6.9,
+                  "valoraciones": 50,
+                  "precio": 80,
+                  "moneda": "CUP",
+                  "imagen": "imagenes/lahabana-hostal.jpg",
+                  "direccion": "Habana Vieja, La Habana",
+                  "coordenadas": { "lat": 23.1150, "lng": -82.3640 },
+                  "servicios": ["WiFi"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Estados Unidos",
+          "cities": [
+            {
+              "name": "Nueva York",
+              "alojamientos": [
+                {
+                  "nombre": "Hotel Central Park",
+                  "tipo": "hotel",
+                  "rating": "Excelente",
+                  "puntuacion": 9.1,
+                  "valoraciones": 300,
+                  "precio": 280,
+                  "moneda": "USD",
+                  "imagen": "imagenes/nuevayork-hotel.jpg",
+                  "direccion": "Manhattan, Nueva York",
+                  "coordenadas": { "lat": 40.7128, "lng": -74.0060 },
+                  "servicios": ["WiFi", "Restaurante"]
+                },
+                {
+                  "nombre": "Hostal Brooklyn",
+                  "tipo": "hostal",
+                  "rating": "Bueno",
+                  "puntuacion": 7.3,
+                  "valoraciones": 90,
+                  "precio": 120,
+                  "moneda": "USD",
+                  "imagen": "imagenes/nuevayork-hostal.jpg",
+                  "direccion": "Brooklyn, Nueva York",
+                  "coordenadas": { "lat": 40.6782, "lng": -73.9442 },
+                  "servicios": ["WiFi"]
+                }
+              ]
+            },
+            {
+              "name": "San Francisco",
+              "alojamientos": [
+                {
+                  "nombre": "Hotel Golden Gate",
+                  "tipo": "hotel",
+                  "rating": "Muy bueno",
+                  "puntuacion": 8.6,
+                  "valoraciones": 150,
+                  "precio": 220,
+                  "moneda": "USD",
+                  "imagen": "imagenes/sanfrancisco-hotel.jpg",
+                  "direccion": "Golden Gate, San Francisco",
+                  "coordenadas": { "lat": 37.7749, "lng": -122.4194 },
+                  "servicios": ["WiFi", "Desayuno incluido"]
+                },
+                {
+                  "nombre": "Hostal Fisherman",
+                  "tipo": "hostal",
+                  "rating": "Bueno",
+                  "puntuacion": 7.0,
+                  "valoraciones": 70,
+                  "precio": 100,
+                  "moneda": "USD",
+                  "imagen": "imagenes/sanfrancisco-hostal.jpg",
+                  "direccion": "Fisherman's Wharf, San Francisco",
+                  "coordenadas": { "lat": 37.8080, "lng": -122.4177 },
+                  "servicios": ["WiFi"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "México",
+          "cities": [
+            {
+              "name": "San Miguel de Allende",
+              "alojamientos": [
+                {
+                  "nombre": "Hotel Parroquia",
+                  "tipo": "hotel",
+                  "rating": "Muy bueno",
+                  "puntuacion": 8.5,
+                  "valoraciones": 110,
+                  "precio": 140,
+                  "moneda": "MXN",
+                  "imagen": "imagenes/sanmiguel-hotel.jpg",
+                  "direccion": "Centro histórico, San Miguel de Allende",
+                  "coordenadas": { "lat": 20.9140, "lng": -100.7430 },
+                  "servicios": ["WiFi", "Desayuno incluido"]
+                },
+                {
+                  "nombre": "Hostal Colonial",
+                  "tipo": "hostal",
+                  "rating": "Bueno",
+                  "puntuacion": 7.1,
+                  "valoraciones": 60,
+                  "precio": 90,
+                  "moneda": "MXN",
+                  "imagen": "imagenes/sanmiguel-hostal.jpg",
+                  "direccion": "Barrio Colonial, San Miguel de Allende",
+                  "coordenadas": { "lat": 20.9150, "lng": -100.7400 },
+                  "servicios": ["WiFi"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "América del Sur",
+      "countries": [
+        {
+          "name": "Argentina",
+          "cities": [
+            {
+              "name": "Buenos Aires",
+              "alojamientos": [
+                {
+                  "nombre": "Hotel Obelisco",
+                  "tipo": "hotel",
+                  "rating": "Excelente",
+                  "puntuacion": 9.0,
+                  "valoraciones": 250,
+                  "precio": 200,
+                  "moneda": "ARS",
+                  "imagen": "imagenes/buenosaires-hotel.jpg",
+                  "direccion": "Avenida 9 de Julio, Buenos Aires",
+                  "coordenadas": { "lat": -34.6037, "lng": -58.3816 },
+                  "servicios": ["WiFi", "Restaurante"]
+                },
+                {
+                  "nombre": "Hostal San Telmo",
+                  "tipo": "hostal",
+                  "rating": "Bueno",
+                  "puntuacion": 7.2,
+                  "valoraciones": 80,
+                  "precio": 90,
+                  "moneda": "ARS",
+                  "imagen": "imagenes/buenosaires-hostal.jpg",
+                  "direccion": "Barrio San Telmo, Buenos Aires",
+                  "coordenadas": { "lat": -34.6210, "lng": -58.3730 },
+                  "servicios": ["WiFi"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Brasil",
+          "cities": [
+            {
+              "name": "Río de Janeiro",
+              "alojamientos": [
+                {
+                  "nombre": "Hotel Copacabana",
+                  "tipo": "hotel",
+                  "rating": "Excelente",
+                  "puntuacion": 9.1,
+                  "valoraciones": 300,
+                  "precio": 250,
+                  "moneda": "BRL",
+                  "imagen": "imagenes/rio-hotel.jpg",
+                  "direccion": "Copacabana, Río de Janeiro",
+                  "coordenadas": { "lat": -22.9711, "lng": -43.1822 },
+                  "servicios": ["WiFi", "Piscina", "Restaurante"]
+                },
+                {
+                  "nombre": "Hostal Lapa",
+                  "tipo": "hostal",
+                  "rating": "Bueno",
+                  "puntuacion": 7.3,
+                  "valoraciones": 100,
+                  "precio": 120,
+                  "moneda": "BRL",
+                  "imagen": "imagenes/rio-hostal.jpg",
+                  "direccion": "Barrio Lapa, Río de Janeiro",
+                  "coordenadas": { "lat": -22.9122, "lng": -43.1790 },
+                  "servicios": ["WiFi"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Colombia",
+          "cities": [
+            {
+              "name": "Cartagena",
+              "alojamientos": [
+                {
+                  "nombre": "Hotel Murallas",
+                  "tipo": "hotel",
+                  "rating": "Muy bueno",
+                  "puntuacion": 8.4,
+                  "valoraciones": 130,
+                  "precio": 160,
+                  "moneda": "COP",
+                  "imagen": "imagenes/cartagena-hotel.jpg",
+                  "direccion": "Ciudad Amurallada, Cartagena",
+                  "coordenadas": { "lat": 10.3910, "lng": -75.4794 },
+                  "servicios": ["WiFi", "Restaurante"]
+                },
+                {
+                  "nombre": "Hostal Getsemaní",
+                  "tipo": "hostal",
+                  "rating": "Bueno",
+                  "puntuacion": 7.0,
+                  "valoraciones": 60,
+                  "precio": 90,
+                  "moneda": "COP",
+                  "imagen": "imagenes/cartagena-hostal.jpg",
+                  "direccion": "Barrio Getsemaní, Cartagena",
+                  "coordenadas": { "lat": 10.4230, "lng": -75.5470 },
+                  "servicios": ["WiFi"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Ecuador",
+          "cities": [
+            {
+              "name": "Quito",
+              "alojamientos": [
+                {
+                  "nombre": "Hotel Centro Histórico",
+                  "tipo": "hotel",
+                  "rating": "Muy bueno",
+                  "puntuacion": 8.5,
+                  "valoraciones": 100,
+                  "precio": 140,
+                  "moneda": "USD",
+                  "imagen": "imagenes/quito-hotel.jpg",
+                  "direccion": "Casco Histórico, Quito",
+                  "coordenadas": { "lat": -0.2200, "lng": -78.5120 },
+                  "servicios": ["WiFi", "Desayuno incluido"]
+                },
+                {
+                  "nombre": "Hostal El Panecillo",
+                  "tipo": "hostal",
+                  "rating": "Decente",
+                  "puntuacion": 6.9,
+                  "valoraciones": 50,
+                  "precio": 70,
+                  "moneda": "USD",
+                  "imagen": "imagenes/quito-hostal.jpg",
+                  "direccion": "Cerca del Panecillo, Quito",
+                  "coordenadas": { "lat": -0.2340, "lng": -78.5180 },
+                  "servicios": ["WiFi"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Perú",
+          "cities": [
+            {
+              "name": "Cuzco",
+              "alojamientos": [
+                {
+                  "nombre": "Hotel Plaza de Armas",
+                  "tipo": "hotel",
+                  "rating": "Muy bueno",
+                  "puntuacion": 8.6,
+                  "valoraciones": 160,
+                  "precio": 150,
+                  "moneda": "PEN",
+                  "imagen": "imagenes/cusco-hotel.jpg",
+                  "direccion": "Plaza de Armas, Cuzco",
+                  "coordenadas": { "lat": -13.5320, "lng": -71.9675 },
+                  "servicios": ["WiFi", "Desayuno incluido"]
+                },
+                {
+                  "nombre": "Hostal San Blas",
+                  "tipo": "hostal",
+                  "rating": "Bueno",
+                  "puntuacion": 7.1,
+                  "valoraciones": 70,
+                  "precio": 80,
+                  "moneda": "PEN",
+                  "imagen": "imagenes/cusco-hostal.jpg",
+                  "direccion": "Barrio San Blas, Cuzco",
+                  "coordenadas": { "lat": -13.5280, "lng": -71.9630 },
+                  "servicios": ["WiFi"]
+                }
+              ]
+            }
+          ]
         }
       ]
     }
