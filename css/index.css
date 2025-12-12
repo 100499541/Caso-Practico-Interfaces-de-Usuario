@@ -216,6 +216,28 @@ header nav a {
   background: #00707d;
 }
 
+/* Ayuda de completado de busquedas */
+
+.sugerencias {
+  position: absolute;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  max-height: 200px;
+  overflow-y: auto;
+  width: 250px;
+  z-index: 1000;
+}
+
+.sugerencias div {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.sugerencias div:hover {
+  background: #f0f0f0;
+}
+
 /* Placeholder móvil para inputs de fechas y destino */
 @media (max-width: 600px) {
   #destino::placeholder {
