@@ -1,25 +1,59 @@
 document.addEventListener("DOMContentLoaded", () => {
   const contenedor = document.querySelector(".resultados-scroll");
 
-  const alojamientos = [
-    { nombre: "Hotel Sol", rating: "Muy bueno", puntuacion: 8.6, precio: 321, imagen: "/imagenes/hotel1.jpg" },
-    { nombre: "Hotel Luna", rating: "Bueno", puntuacion: 7.2, precio: 260, imagen: "/imagenes/hotel2.jpg" },
-    { nombre: "Hostal Estrella", rating: "Decente", puntuacion: 5.9, precio: 182, imagen: "/imagenes/hotel3.jpg" }
-  ];
+  const params = new URLSearchParams(window.location.search);
+  const tipo = params.get("tipo");
+  const destino = params.get("destino"); // ciudad
+  const inicio = params.get("inicio");
+  const fin = params.get("fin");
 
-  alojamientos.forEach(a => {
-    const card = document.createElement("div");
-    card.classList.add("resultado-card");
-    card.innerHTML = `
-      <img src="${a.imagen}" alt="${a.nombre}">
-      <div class="resultado-info">
-        <h4>${a.nombre}</h4>
-        <div class="rating">${a.rating} (${a.puntuacion})</div>
-        <div class="precio">${a.precio}€ pp</div>
-      </div>
-    `;
-    contenedor.appendChild(card);
-  });
+  // Mostrar destino en título
+  const titulo = document.querySelector(".resultados-scroll h3");
+  if (destino) {
+    titulo.textContent = `Resultados para ${destino} (${inicio} - ${fin})`;
+  }
+
+  // Cargar alojamientos desde el JSON
+  fetch("/js/alojamientos-del-mundo.json")
+    .then(res => res.json())
+    .then(data => {
+      let resultados = [];
+
+      // Recorrer continentes → países → ciudades
+      data.continents.forEach(cont => {
+        cont.countries.forEach(country => {
+          country.cities.forEach(city => {
+            if (city.name.toLowerCase() === destino.toLowerCase()) {
+              resultados = city.alojamientos;
+            }
+          });
+        });
+      });
+
+      // Renderizar cards
+      if (resultados.length === 0) {
+        contenedor.innerHTML = "<p>No se encontraron alojamientos para este destino.</p>";
+        return;
+      }
+
+      resultados.forEach(a => {
+        const card = document.createElement("div");
+        card.classList.add("resultado-card");
+        card.innerHTML = `
+          <img src="${a.imagen}" alt="${a.nombre}">
+          <div class="resultado-info">
+            <h4>${a.nombre}</h4>
+            <div class="rating">${a.rating} (${a.puntuacion})</div>
+            <div class="precio">${a.precio} ${a.moneda} pp</div>
+          </div>
+        `;
+        contenedor.appendChild(card);
+      });
+    })
+    .catch(err => {
+      console.error("Error cargando alojamientos:", err);
+      contenedor.innerHTML = "<p>Error al cargar los alojamientos.</p>";
+    });
 });
 
 document.addEventListener("DOMContentLoaded", () => {
