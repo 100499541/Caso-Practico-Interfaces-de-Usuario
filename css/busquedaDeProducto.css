@@ -1,0 +1,62 @@
+.busqueda-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  min-height: 600px;
+}
+
+.resultados-scroll {
+  overflow-y: auto;
+  max-height: 80vh;
+  padding-right: 10px;
+}
+
+.resultado-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  padding: 15px;
+  display: flex;
+  gap: 15px;
+}
+
+.resultado-card img {
+  width: 120px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.resultado-info {
+  flex: 1;
+}
+
+.resultado-info h4 {
+  margin: 0;
+  font-size: 16px;
+  color: #00707d;
+}
+
+.resultado-info .rating {
+  font-size: 14px;
+  color: #555;
+}
+
+.resultado-info .precio {
+  font-weight: bold;
+  color: #0097A7;
+  margin-top: 5px;
+}
+
+.mapa-interactivo {
+  background: #cce5ff;
+  border-radius: 12px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #00707d;
+}

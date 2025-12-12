@@ -1,0 +1,956 @@
+{
+  "continents": [
+    {
+      "name": "Europa",
+      "countries": [
+        {
+          "name": "Austria",
+          "cities": [
+            {
+              "name": "Viena",
+              "alojamientos": [
+                {
+                  "nombre": "Hotel Imperial",
+                  "tipo": "hotel",
+                  "rating": "Excelente",
+                  "puntuacion": 9.1,
+                  "valoraciones": 320,
+                  "precio": 420,
+                  "moneda": "EUR",
+                  "imagen": "imagenes/viena-hotel1.jpg",
+                  "direccion": "Ringstrasse 10, Viena",
+                  "coordenadas": { "lat": 48.2082, "lng": 16.3738 },
+                  "servicios": ["WiFi", "Spa", "Desayuno incluido"]
+                },
+                {
+                  "nombre": "Hostal Mozart",
+                  "tipo": "hostal",
+                  "rating": "Bueno",
+                  "puntuacion": 7.4,
+                  "valoraciones": 120,
+                  "precio": 180,
+                  "moneda": "EUR",
+                  "imagen": "imagenes/viena-hostal.jpg",
+                  "direccion": "Mariahilfer Strasse 50, Viena",
+                  "coordenadas": { "lat": 48.2100, "lng": 16.3600 },
+                  "servicios": ["WiFi"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Bélgica",
+          "cities": [
+            {
+              "name": "Brujas",
+              "alojamientos": [
+                {
+                  "nombre": "Hotel Markt",
+                  "tipo": "hotel",
+                  "rating": "Muy bueno",
+                  "puntuacion": 8.7,
+                  "valoraciones": 190,
+                  "precio": 260,
+                  "moneda": "EUR",
+                  "imagen": "imagenes/brujas-hotel.jpg",
+                  "direccion": "Plaza Markt 1, Brujas",
+                  "coordenadas": { "lat": 51.2093, "lng": 3.2247 },
+                  "servicios": ["WiFi", "Desayuno incluido", "Parking"]
+                },
+                {
+                  "nombre": "Hostal Canales",
+                  "tipo": "hostal",
+                  "rating": "Bueno",
+                  "puntuacion": 7.5,
+                  "valoraciones": 85,
+                  "precio": 140,
+                  "moneda": "EUR",
+                  "imagen": "imagenes/brujas-hostal.jpg",
+                  "direccion": "Calle del Rosario 12, Brujas",
+                  "coordenadas": { "lat": 51.2080, "lng": 3.2260 },
+                  "servicios": ["WiFi"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Dinamarca",
+          "cities": [
+            {
+              "name": "Copenhague",
+              "alojamientos": [
+                {
+                  "nombre": "Hotel Nyhavn",
+                  "tipo": "hotel",
+                  "rating": "Excelente",
+                  "puntuacion": 9.0,
+                  "valoraciones": 250,
+                  "precio": 350,
+                  "moneda": "EUR",
+                  "imagen": "imagenes/copenhague-hotel.jpg",
+                  "direccion": "Nyhavn 20, Copenhague",
+                  "coordenadas": { "lat": 55.6761, "lng": 12.5683 },
+                  "servicios": ["WiFi", "Restaurante", "Spa"]
+                },
+                {
+                  "nombre": "Hostal Tivoli",
+                  "tipo": "hostal",
+                  "rating": "Bueno",
+                  "puntuacion": 7.6,
+                  "valoraciones": 95,
+                  "precio": 160,
+                  "moneda": "EUR",
+                  "imagen": "imagenes/copenhague-hostal.jpg",
+                  "direccion": "Vesterbrogade 3, Copenhague",
+                  "coordenadas": { "lat": 55.6750, "lng": 12.5650 },
+                  "servicios": ["WiFi"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Eslovenia",
+          "cities": [
+            {
+              "name": "Liubliana",
+              "alojamientos": [
+                {
+                  "nombre": "Hotel Castillo",
+                  "tipo": "hotel",
+                  "rating": "Muy bueno",
+                  "puntuacion": 8.4,
+                  "valoraciones": 130,
+                  "precio": 220,
+                  "moneda": "EUR",
+                  "imagen": "imagenes/liubliana-hotel.jpg",
+                  "direccion": "Calle del Castillo 5, Liubliana",
+                  "coordenadas": { "lat": 46.0569, "lng": 14.5058 },
+                  "servicios": ["WiFi", "Desayuno incluido"]
+                },
+                {
+                  "nombre": "Hostal Río",
+                  "tipo": "hostal",
+                  "rating": "Decente",
+                  "puntuacion": 6.8,
+                  "valoraciones": 60,
+                  "precio": 120,
+                  "moneda": "EUR",
+                  "imagen": "imagenes/liubliana-hostal.jpg",
+                  "direccion": "Riverside 12, Liubliana",
+                  "coordenadas": { "lat": 46.0575, "lng": 14.5080 },
+                  "servicios": ["WiFi"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "España",
+          "cities": [
+            {
+              "name": "Barcelona",
+              "alojamientos": [
+                {
+                  "nombre": "Hotel Mediterráneo",
+                  "tipo": "hotel",
+                  "rating": "Muy bueno",
+                  "puntuacion": 8.5,
+                  "valoraciones": 210,
+                  "precio": 280,
+                  "moneda": "EUR",
+                  "imagen": "imagenes/barcelona-hotel.jpg",
+                  "direccion": "Passeig de Gràcia 100, Barcelona",
+                  "coordenadas": { "lat": 41.3851, "lng": 2.1734 },
+                  "servicios": ["WiFi", "Parking", "Restaurante"]
+                },
+                {
+                  "nombre": "Hostal Born",
+                  "tipo": "hostal",
+                  "rating": "Bueno",
+                  "puntuacion": 7.3,
+                  "valoraciones": 95,
+                  "precio": 140,
+                  "moneda": "EUR",
+                  "imagen": "imagenes/barcelona-hostal.jpg",
+                  "direccion": "Carrer del Rec 25, Barcelona",
+                  "coordenadas": { "lat": 41.3870, "lng": 2.1800 },
+                  "servicios": ["WiFi"]
+                }
+              ]
+            },
+            {
+              "name": "Sevilla",
+              "alojamientos": [
+                {
+                  "nombre": "Hotel Giralda",
+                  "tipo": "hotel",
+                  "rating": "Muy bueno",
+                  "puntuacion": 8.2,
+                  "valoraciones": 150,
+                  "precio": 240,
+                  "moneda": "EUR",
+                  "imagen": "imagenes/sevilla-hotel.jpg",
+                  "direccion": "Calle Mateos Gago 15, Sevilla",
+                  "coordenadas": { "lat": 37.3861, "lng": -5.9929 },
+                  "servicios": ["WiFi", "Desayuno incluido"]
+                },
+                {
+                  "nombre": "Hostal Santa Cruz",
+                  "tipo": "hostal",
+                  "rating": "Bueno",
+                  "puntuacion": 7.1,
+                  "valoraciones": 80,
+                  "precio": 120,
+                  "moneda": "EUR",
+                  "imagen": "imagenes/sevilla-hostal.jpg",
+                  "direccion": "Barrio Santa Cruz, Sevilla",
+                  "coordenadas": { "lat": 37.3865, "lng": -5.9910 },
+                  "servicios": ["WiFi"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Estonia",
+          "cities": [
+            {
+              "name": "Tallin",
+              "alojamientos": [
+                {
+                  "nombre": "Hotel Toompea",
+                  "tipo": "hotel",
+                  "rating": "Muy bueno",
+                  "puntuacion": 8.3,
+                  "valoraciones": 110,
+                  "precio": 200,
+                  "moneda": "EUR",
+                  "imagen": "imagenes/tallin-hotel.jpg",
+                  "direccion": "Toompea Hill 8, Tallin",
+                  "coordenadas": { "lat": 59.4370, "lng": 24.7536 },
+                  "servicios": ["WiFi", "Desayuno incluido"]
+                },
+                {
+                  "nombre": "Hostal Medieval",
+                  "tipo": "hostal",
+                  "rating": "Decente",
+                  "puntuacion": 6.9,
+                  "valoraciones": 70,
+                  "precio": 110,
+                  "moneda": "EUR",
+                  "imagen": "imagenes/tallin-hostal.jpg",
+                  "direccion": "Old Town 15, Tallin",
+                  "coordenadas": { "lat": 59.4365, "lng": 24.7520 },
+                  "servicios": ["WiFi"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Francia",
+          "cities": [
+            {
+              "name": "París",
+              "alojamientos": [
+                {
+                  "nombre": "Hotel Eiffel",
+                  "tipo": "hotel",
+                  "rating": "Excelente",
+                  "puntuacion": 9.2,
+                  "valoraciones": 500,
+                  "precio": 450,
+                  "moneda": "EUR",
+                  "imagen": "imagenes/paris-hotel.jpg",
+                  "direccion": "Rue de Rivoli 100, París",
+                  "coordenadas": { "lat": 48.8566, "lng": 2.3522 },
+                  "servicios": ["WiFi", "Restaurante", "Vistas a la Torre Eiffel"]
+                },
+                {
+                  "nombre": "Hostal Montmartre",
+                  "tipo": "hostal",
+                  "rating": "Bueno",
+                  "puntuacion": 7.4,
+                  "valoraciones": 130,
+                  "precio": 160,
+                  "moneda": "EUR",
+                  "imagen": "imagenes/paris-hostal.jpg",
+                  "direccion": "Rue Lepic 25, París",
+                  "coordenadas": { "lat": 48.8867, "lng": 2.3431 },
+                  "servicios": ["WiFi"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Hungría",
+          "cities": [
+            {
+              "name": "Budapest",
+              "alojamientos": [
+                {
+                  "nombre": "Hotel Danubio",
+                  "tipo": "hotel",
+                  "rating": "Muy bueno",
+                  "puntuacion": 8.6,
+                  "valoraciones": 210,
+                  "precio": 230,
+                  "moneda": "EUR",
+                  "imagen": "imagenes/budapest-hotel.jpg",
+                  "direccion": "Danube Promenade, Budapest",
+                  "coordenadas": { "lat": 47.4979, "lng": 19.0402 },
+                  "servicios": ["WiFi", "Spa", "Desayuno incluido"]
+                },
+                {
+                  "nombre": "Hostal Puente de las Cadenas",
+                  "tipo": "hostal",
+                  "rating": "Bueno",
+                  "puntuacion": 7.2,
+                  "valoraciones": 90,
+                  "precio": 100,
+                  "moneda": "EUR",
+                  "imagen": "imagenes/budapest-hostal.jpg",
+                  "direccion": "Széchenyi Lánchíd 3, Budapest",
+                  "coordenadas": { "lat": 47.4986, "lng": 19.0450 },
+                  "servicios": ["WiFi"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Italia",
+          "cities": [
+            {
+              "name": "Florencia",
+              "alojamientos": [
+                {
+                  "nombre": "Hotel Duomo",
+                  "tipo": "hotel",
+                  "rating": "Excelente",
+                  "puntuacion": 9.0,
+                  "valoraciones": 320,
+                  "precio": 300,
+                  "moneda": "EUR",
+                  "imagen": "imagenes/florencia-hotel.jpg",
+                  "direccion": "Piazza del Duomo 1, Florencia",
+                  "coordenadas": { "lat": 43.7731, "lng": 11.2556 },
+                  "servicios": ["WiFi", "Desayuno incluido"]
+                },
+                {
+                  "nombre": "Hostal Oltrarno",
+                  "tipo": "hostal",
+                  "rating": "Bueno",
+                  "puntuacion": 7.3,
+                  "valoraciones": 100,
+                  "precio": 120,
+                  "moneda": "EUR",
+                  "imagen": "imagenes/florencia-hostal.jpg",
+                  "direccion": "Via dei Serragli 20, Florencia",
+                  "coordenadas": { "lat": 43.7696, "lng": 11.2460 },
+                  "servicios": ["WiFi"]
+                }
+              ]
+            },
+            {
+              "name": "Roma",
+              "alojamientos": [
+                {
+                  "nombre": "Hotel Panteón",
+                  "tipo": "hotel",
+                  "rating": "Excelente",
+                  "puntuacion": 9.1,
+                  "valoraciones": 410,
+                  "precio": 340,
+                  "moneda": "EUR",
+                  "imagen": "imagenes/roma-hotel.jpg",
+                  "direccion": "Piazza della Rotonda 5, Roma",
+                  "coordenadas": { "lat": 41.8986, "lng": 12.4769 },
+                  "servicios": ["WiFi", "Restaurante"]
+                },
+                {
+                  "nombre": "Hostal Trevi",
+                  "tipo": "hostal",
+                  "rating": "Bueno",
+                  "puntuacion": 7.0,
+                  "valoraciones": 140,
+                  "precio": 130,
+                  "moneda": "EUR",
+                  "imagen": "imagenes/roma-hostal.jpg",
+                  "direccion": "Via del Lavatore 50, Roma",
+                  "coordenadas": { "lat": 41.9009, "lng": 12.4833 },
+                  "servicios": ["WiFi"]
+                }
+              ]
+            },
+            {
+              "name": "Venecia",
+              "alojamientos": [
+                {
+                  "nombre": "Hotel San Marcos",
+                  "tipo": "hotel",
+                  "rating": "Muy bueno",
+                  "puntuacion": 8.4,
+                  "valoraciones": 260,
+                  "precio": 310,
+                  "moneda": "EUR",
+                  "imagen": "imagenes/venecia-hotel.jpg",
+                  "direccion": "Piazza San Marco, Venecia",
+                  "coordenadas": { "lat": 45.4340, "lng": 12.3380 },
+                  "servicios": ["WiFi", "Desayuno incluido"]
+                },
+                {
+                  "nombre": "Hostal Puente Rialto",
+                  "tipo": "hostal",
+                  "rating": "Decente",
+                  "puntuacion": 6.9,
+                  "valoraciones": 85,
+                  "precio": 140,
+                  "moneda": "EUR",
+                  "imagen": "imagenes/venecia-hostal.jpg",
+                  "direccion": "Sestiere San Polo, Venecia",
+                  "coordenadas": { "lat": 45.4370, "lng": 12.3350 },
+                  "servicios": ["WiFi"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Malta",
+          "cities": [
+            {
+              "name": "La Valeta",
+              "alojamientos": [
+                {
+                  "nombre": "Hotel Gran Puerto",
+                  "tipo": "hotel",
+                  "rating": "Muy bueno",
+                  "puntuacion": 8.3,
+                  "valoraciones": 180,
+                  "precio": 220,
+                  "moneda": "EUR",
+                  "imagen": "imagenes/lavaleta-hotel.jpg",
+                  "direccion": "Triq ir-Repubblika 12, La Valeta",
+                  "coordenadas": { "lat": 35.8989, "lng": 14.5146 },
+                  "servicios": ["WiFi", "Restaurante"]
+                },
+                {
+                  "nombre": "Hostal Barakka",
+                  "tipo": "hostal",
+                  "rating": "Bueno",
+                  "puntuacion": 7.2,
+                  "valoraciones": 70,
+                  "precio": 95,
+                  "moneda": "EUR",
+                  "imagen": "imagenes/lavaleta-hostal.jpg",
+                  "direccion": "Upper Barrakka Gardens, La Valeta",
+                  "coordenadas": { "lat": 35.8960, "lng": 14.5110 },
+                  "servicios": ["WiFi"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Noruega",
+          "cities": [
+            {
+              "name": "Bergen",
+              "alojamientos": [
+                {
+                  "nombre": "Hotel Bryggen",
+                  "tipo": "hotel",
+                  "rating": "Muy bueno",
+                  "puntuacion": 8.5,
+                  "valoraciones": 200,
+                  "precio": 260,
+                  "moneda": "EUR",
+                  "imagen": "imagenes/bergen-hotel.jpg",
+                  "direccion": "Bryggen Wharf, Bergen",
+                  "coordenadas": { "lat": 60.3971, "lng": 5.3243 },
+                  "servicios": ["WiFi", "Desayuno incluido"]
+                },
+                {
+                  "nombre": "Hostal Fiordo",
+                  "tipo": "hostal",
+                  "rating": "Bueno",
+                  "puntuacion": 7.0,
+                  "valoraciones": 90,
+                  "precio": 110,
+                  "moneda": "EUR",
+                  "imagen": "imagenes/bergen-hostal.jpg",
+                  "direccion": "Nordnes, Bergen",
+                  "coordenadas": { "lat": 60.3950, "lng": 5.3170 },
+                  "servicios": ["WiFi"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Países Bajos",
+          "cities": [
+            {
+              "name": "Ámsterdam",
+              "alojamientos": [
+                {
+                  "nombre": "Hotel Canal Ring",
+                  "tipo": "hotel",
+                  "rating": "Excelente",
+                  "puntuacion": 9.0,
+                  "valoraciones": 300,
+                  "precio": 320,
+                  "moneda": "EUR",
+                  "imagen": "imagenes/amsterdam-hotel.jpg",
+                  "direccion": "Herengracht 200, Ámsterdam",
+                  "coordenadas": { "lat": 52.3702, "lng": 4.8952 },
+                  "servicios": ["WiFi", "Restaurante"]
+                },
+                {
+                  "nombre": "Hostal Jordaan",
+                  "tipo": "hostal",
+                  "rating": "Bueno",
+                  "puntuacion": 7.2,
+                  "valoraciones": 110,
+                  "precio": 120,
+                  "moneda": "EUR",
+                  "imagen": "imagenes/amsterdam-hostal.jpg",
+                  "direccion": "Jordaan, Ámsterdam",
+                  "coordenadas": { "lat": 52.3730, "lng": 4.8820 },
+                  "servicios": ["WiFi"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Portugal",
+          "cities": [
+            {
+              "name": "Oporto",
+              "alojamientos": [
+                {
+                  "nombre": "Hotel Ribeira",
+                  "tipo": "hotel",
+                  "rating": "Muy bueno",
+                  "puntuacion": 8.4,
+                  "valoraciones": 170,
+                  "precio": 210,
+                  "moneda": "EUR",
+                  "imagen": "imagenes/oporto-hotel.jpg",
+                  "direccion": "Praça da Ribeira, Oporto",
+                  "coordenadas": { "lat": 41.1413, "lng": -8.6110 },
+                  "servicios": ["WiFi", "Desayuno incluido"]
+                },
+                {
+                  "nombre": "Hostal Gaia",
+                  "tipo": "hostal",
+                  "rating": "Decente",
+                  "puntuacion": 6.8,
+                  "valoraciones": 75,
+                  "precio": 85,
+                  "moneda": "EUR",
+                  "imagen": "imagenes/oporto-hostal.jpg",
+                  "direccion": "Vila Nova de Gaia, Oporto",
+                  "coordenadas": { "lat": 41.1330, "lng": -8.6170 },
+                  "servicios": ["WiFi"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Reino Unido",
+          "cities": [
+            {
+              "name": "Londres",
+              "alojamientos": [
+                {
+                  "nombre": "Hotel Thames View",
+                  "tipo": "hotel",
+                  "rating": "Excelente",
+                  "puntuacion": 9.1,
+                  "valoraciones": 420,
+                  "precio": 380,
+                  "moneda": "EUR",
+                  "imagen": "imagenes/londres-hotel.jpg",
+                  "direccion": "South Bank, Londres",
+                  "coordenadas": { "lat": 51.5074, "lng": -0.1278 },
+                  "servicios": ["WiFi", "Restaurante"]
+                },
+                {
+                  "nombre": "Hostal Camden",
+                  "tipo": "hostal",
+                  "rating": "Bueno",
+                  "puntuacion": 7.4,
+                  "valoraciones": 160,
+                  "precio": 130,
+                  "moneda": "EUR",
+                  "imagen": "imagenes/londres-hostal.jpg",
+                  "direccion": "Camden Town, Londres",
+                  "coordenadas": { "lat": 51.5390, "lng": -0.1420 },
+                  "servicios": ["WiFi"]
+                }
+              ]
+            },
+            {
+              "name": "Edimburgo",
+              "alojamientos": [
+                {
+                  "nombre": "Hotel Royal Mile",
+                  "tipo": "hotel",
+                  "rating": "Muy bueno",
+                  "puntuacion": 8.6,
+                  "valoraciones": 230,
+                  "precio": 270,
+                  "moneda": "EUR",
+                  "imagen": "imagenes/edimburgo-hotel.jpg",
+                  "direccion": "Royal Mile, Edimburgo",
+                  "coordenadas": { "lat": 55.9497, "lng": -3.1910 },
+                  "servicios": ["WiFi", "Desayuno incluido"]
+                },
+                {
+                  "nombre": "Hostal Calton Hill",
+                  "tipo": "hostal",
+                  "rating": "Bueno",
+                  "puntuacion": 7.1,
+                  "valoraciones": 90,
+                  "precio": 115,
+                  "moneda": "EUR",
+                  "imagen": "imagenes/edimburgo-hostal.jpg",
+                  "direccion": "Calton Hill, Edimburgo",
+                  "coordenadas": { "lat": 55.9550, "lng": -3.1820 },
+                  "servicios": ["WiFi"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "República Checa",
+          "cities": [
+            {
+              "name": "Praga",
+              "alojamientos": [
+                {
+                  "nombre": "Hotel Puente de Carlos",
+                  "tipo": "hotel",
+                  "rating": "Excelente",
+                  "puntuacion": 9.0,
+                  "valoraciones": 310,
+                  "precio": 290,
+                  "moneda": "EUR",
+                  "imagen": "imagenes/praga-hotel.jpg",
+                  "direccion": "Karlův most, Praga",
+                  "coordenadas": { "lat": 50.0865, "lng": 14.4114 },
+                  "servicios": ["WiFi", "Restaurante"]
+                },
+                {
+                  "nombre": "Hostal Malá Strana",
+                  "tipo": "hostal",
+                  "rating": "Bueno",
+                  "puntuacion": 7.2,
+                  "valoraciones": 120,
+                  "precio": 105,
+                  "moneda": "EUR",
+                  "imagen": "imagenes/praga-hostal.jpg",
+                  "direccion": "Malá Strana, Praga",
+                  "coordenadas": { "lat": 50.0860, "lng": 14.4040 },
+                  "servicios": ["WiFi"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Suiza",
+          "cities": [
+            {
+              "name": "Lucerna",
+              "alojamientos": [
+                {
+                  "nombre": "Hotel Kapellbrücke",
+                  "tipo": "hotel",
+                  "rating": "Muy bueno",
+                  "puntuacion": 8.5,
+                  "valoraciones": 190,
+                  "precio": 280,
+                  "moneda": "EUR",
+                  "imagen": "imagenes/lucerna-hotel.jpg",
+                  "direccion": "Kapellbrücke, Lucerna",
+                  "coordenadas": { "lat": 47.0510, "lng": 8.3070 },
+                  "servicios": ["WiFi", "Desayuno incluido"]
+                },
+                {
+                  "nombre": "Hostal Lago de los Cuatro Cantones",
+                  "tipo": "hostal",
+                  "rating": "Bueno",
+                  "puntuacion": 7.0,
+                  "valoraciones": 80,
+                  "precio": 120,
+                  "moneda": "EUR",
+                  "imagen": "imagenes/lucerna-hostal.jpg",
+                  "direccion": "Seebrücke, Lucerna",
+                  "coordenadas": { "lat": 47.0525, "lng": 8.3110 },
+                  "servicios": ["WiFi"]
+                }
+              ]
+            },
+            {
+              "name": "Zúrich",
+              "alojamientos": [
+                {
+                  "nombre": "Hotel Limmatquai",
+                  "tipo": "hotel",
+                  "rating": "Muy bueno",
+                  "puntuacion": 8.4,
+                  "valoraciones": 220,
+                  "precio": 300,
+                  "moneda": "EUR",
+                  "imagen": "imagenes/zurich-hotel.jpg",
+                  "direccion": "Limmatquai 90, Zúrich",
+                  "coordenadas": { "lat": 47.3720, "lng": 8.5420 },
+                  "servicios": ["WiFi", "Restaurante"]
+                },
+                {
+                  "nombre": "Hostal Altstadt",
+                  "tipo": "hostal",
+                  "rating": "Bueno",
+                  "puntuacion": 7.1,
+                  "valoraciones": 95,
+                  "precio": 130,
+                  "moneda": "EUR",
+                  "imagen": "imagenes/zurich-hostal.jpg",
+                  "direccion": "Neumarkt, Zúrich",
+                  "coordenadas": { "lat": 47.3735, "lng": 8.5450 },
+                  "servicios": ["WiFi"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Islandia",
+          "cities": [
+            {
+              "name": "Reikiavik",
+              "alojamientos": [
+                {
+                  "nombre": "Hotel Harpa",
+                  "tipo": "hotel",
+                  "rating": "Muy bueno",
+                  "puntuacion": 8.3,
+                  "valoraciones": 160,
+                  "precio": 260,
+                  "moneda": "EUR",
+                  "imagen": "imagenes/reikiavik-hotel.jpg",
+                  "direccion": "Harpa Concert Hall, Reikiavik",
+                  "coordenadas": { "lat": 64.1500, "lng": -21.9320 },
+                  "servicios": ["WiFi", "Desayuno incluido"]
+                },
+                {
+                  "nombre": "Hostal Laugavegur",
+                  "tipo": "hostal",
+                  "rating": "Bueno",
+                  "puntuacion": 7.0,
+                  "valoraciones": 85,
+                  "precio": 120,
+                  "moneda": "EUR",
+                  "imagen": "imagenes/reikiavik-hostal.jpg",
+                  "direccion": "Laugavegur 50, Reikiavik",
+                  "coordenadas": { "lat": 64.1410, "lng": -21.9130 },
+                  "servicios": ["WiFi"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Asia",
+      "countries": [
+        {
+          "name": "China",
+          "cities": [
+            {
+              "name": "Beijing",
+              "alojamientos": [
+                {
+                  "nombre": "Hotel Ciudad Prohibida",
+                  "tipo": "hotel",
+                  "rating": "Excelente",
+                  "puntuacion": 9.0,
+                  "valoraciones": 300,
+                  "precio": 280,
+                  "moneda": "CNY",
+                  "imagen": "imagenes/beijing-hotel.jpg",
+                  "direccion": "Dongcheng, Beijing",
+                  "coordenadas": { "lat": 39.9042, "lng": 116.4074 },
+                  "servicios": ["WiFi", "Restaurante"]
+                },
+                {
+                  "nombre": "Hostal Hutong",
+                  "tipo": "hostal",
+                  "rating": "Bueno",
+                  "puntuacion": 7.2,
+                  "valoraciones": 120,
+                  "precio": 90,
+                  "moneda": "CNY",
+                  "imagen": "imagenes/beijing-hostal.jpg",
+                  "direccion": "Xicheng, Beijing",
+                  "coordenadas": { "lat": 39.9130, "lng": 116.3900 },
+                  "servicios": ["WiFi"]
+                }
+              ]
+            },
+            {
+              "name": "Hong Kong",
+              "alojamientos": [
+                {
+                  "nombre": "Hotel Victoria Harbour",
+                  "tipo": "hotel",
+                  "rating": "Excelente",
+                  "puntuacion": 9.1,
+                  "valoraciones": 250,
+                  "precio": 300,
+                  "moneda": "HKD",
+                  "imagen": "imagenes/hongkong-hotel.jpg",
+                  "direccion": "Tsim Sha Tsui, Hong Kong",
+                  "coordenadas": { "lat": 22.3193, "lng": 114.1694 },
+                  "servicios": ["WiFi", "Vistas al puerto"]
+                },
+                {
+                  "nombre": "Hostal Kowloon",
+                  "tipo": "hostal",
+                  "rating": "Bueno",
+                  "puntuacion": 7.0,
+                  "valoraciones": 100,
+                  "precio": 120,
+                  "moneda": "HKD",
+                  "imagen": "imagenes/hongkong-hostal.jpg",
+                  "direccion": "Nathan Road, Kowloon",
+                  "coordenadas": { "lat": 22.3160, "lng": 114.1700 },
+                  "servicios": ["WiFi"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Corea del Sur",
+          "cities": [
+            {
+              "name": "Seúl",
+              "alojamientos": [
+                {
+                  "nombre": "Hotel Gangnam",
+                  "tipo": "hotel",
+                  "rating": "Muy bueno",
+                  "puntuacion": 8.7,
+                  "valoraciones": 200,
+                  "precio": 220,
+                  "moneda": "KRW",
+                  "imagen": "imagenes/seul-hotel.jpg",
+                  "direccion": "Gangnam-gu, Seúl",
+                  "coordenadas": { "lat": 37.5665, "lng": 126.9780 },
+                  "servicios": ["WiFi", "Restaurante"]
+                },
+                {
+                  "nombre": "Hostal Bukchon",
+                  "tipo": "hostal",
+                  "rating": "Bueno",
+                  "puntuacion": 7.3,
+                  "valoraciones": 80,
+                  "precio": 100,
+                  "moneda": "KRW",
+                  "imagen": "imagenes/seul-hostal.jpg",
+                  "direccion": "Bukchon Hanok Village, Seúl",
+                  "coordenadas": { "lat": 37.5820, "lng": 126.9830 },
+                  "servicios": ["WiFi"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "India",
+          "cities": [
+            {
+              "name": "Jaipur",
+              "alojamientos": [
+                {
+                  "nombre": "Hotel Hawa Mahal",
+                  "tipo": "hotel",
+                  "rating": "Muy bueno",
+                  "puntuacion": 8.5,
+                  "valoraciones": 180,
+                  "precio": 150,
+                  "moneda": "INR",
+                  "imagen": "imagenes/jaipur-hotel.jpg",
+                  "direccion": "Hawa Mahal Road, Jaipur",
+                  "coordenadas": { "lat": 26.9124, "lng": 75.7873 },
+                  "servicios": ["WiFi", "Desayuno incluido"]
+                },
+                {
+                  "nombre": "Hostal Pink City",
+                  "tipo": "hostal",
+                  "rating": "Decente",
+                  "puntuacion": 6.9,
+                  "valoraciones": 70,
+                  "precio": 80,
+                  "moneda": "INR",
+                  "imagen": "imagenes/jaipur-hostal.jpg",
+                  "direccion": "Old City, Jaipur",
+                  "coordenadas": { "lat": 26.9150, "lng": 75.7850 },
+                  "servicios": ["WiFi"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Japón",
+          "cities": [
+            {
+              "name": "Kioto",
+              "alojamientos": [
+                {
+                  "nombre": "Hotel Gion",
+                  "tipo": "hotel",
+                  "rating": "Excelente",
+                  "puntuacion": 9.0,
+                  "valoraciones": 220,
+                  "precio": 260,
+                  "moneda": "JPY",
+                  "imagen": "imagenes/kioto-hotel.jpg",
+                  "direccion": "Distrito Gion, Kioto",
+                  "coordenadas": { "lat": 35.0116, "lng": 135.7681 },
+                  "servicios": ["WiFi", "Restaurante"]
+                },
+                {
+                  "nombre": "Hostal Arashiyama",
+                  "tipo": "hostal",
+                  "rating": "Bueno",
+                  "puntuacion": 7.2,
+                  "valoraciones": 90,
+                  "precio": 100,
+                  "moneda": "JPY",
+                  "imagen": "imagenes/kioto-hostal.jpg",
+                  "direccion": "Arashiyama, Kioto",
+                  "coordenadas": { "lat": 35.0090, "lng": 135.6660 },
+                  "servicios": ["WiFi"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -80,12 +80,13 @@ if (usuario && usuario.foto) {
     // Mostrar foto + botón de cerrar sesión
     loginDiv.innerHTML = `
       <div class="perfil-contenedor">
-        <a href="perfil.html">
+        <a href="perfil.html" style="background:none; padding:0;">
           <img src="${usuario.foto}" alt="Perfil" class="perfil-mini">
         </a>
         <button id="cerrarSesionBtn" class="cerrar-sesion">Cerrar sesión</button>
       </div>
     `;
+
 
     // Evento para cerrar sesión
     const cerrarBtn = document.getElementById("cerrarSesionBtn");
@@ -101,3 +102,91 @@ if (usuario && usuario.foto) {
   }
 }
 })
+
+// Redireccionamiento a busquedaDeProducto.html segun los datos introducidos
+
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector(".search-form");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault(); // evita que recargue la página
+
+    const tipoProducto = document.getElementById("tipo-producto").value;
+    const destino = document.getElementById("destino").value.trim();
+    const inicio = document.getElementById("inicio-viaje").value;
+    const fin = document.getElementById("fin-viaje").value;
+
+    // Validación básica
+    if (!destino || !inicio || !fin) {
+      alert("Por favor, completa todos los campos de búsqueda.");
+      return;
+    }
+
+    // Si es hotel o hotel+avión → redirige a busquedaDeProducto.html
+    if (tipoProducto === "hotel" || tipoProducto === "hotel-avion") {
+      // Pasamos los datos por querystring para usarlos en la otra página
+      const url = `busquedaDeProducto.html?tipo=${tipoProducto}&destino=${encodeURIComponent(destino)}&inicio=${inicio}&fin=${fin}`;
+      window.location.href = url;
+    } else {
+      // Si es solo avión, de momento mostramos alerta (luego se hará otra sección)
+      alert("La búsqueda de vuelos se implementará más adelante.");
+    }
+  });
+});
+
+// Autocompletado y consejos de busquedas
+
+document.addEventListener("DOMContentLoaded", () => {
+  const destinoInput = document.getElementById("destino");
+  const sugerenciasDiv = document.getElementById("sugerencias");
+  let ciudades = [];
+
+  // Cargar el JSON con continentes, países y ciudades
+  fetch("/js/ciudades-del-mundo.json")
+    .then(res => res.json())
+    .then(data => {
+      data.continents.forEach(cont => {
+        cont.countries.forEach(country => {
+          country.cities.forEach(city => {
+            ciudades.push({
+              ciudad: city.name,
+              pais: country.name,
+              continente: cont.name
+            });
+          });
+        });
+      });
+    });
+
+  // Escuchar lo que escribe el usuario
+  destinoInput.addEventListener("input", () => {
+    const texto = destinoInput.value.toLowerCase();
+    sugerenciasDiv.innerHTML = "";
+
+    if (texto.length < 2) return;
+
+    const coincidencias = ciudades.filter(c =>
+      c.ciudad.toLowerCase().startsWith(texto) ||
+      c.pais.toLowerCase().startsWith(texto)
+    );
+
+    coincidencias.slice(0, 5).forEach(c => {
+      const opcion = document.createElement("div");
+      opcion.textContent = `${c.ciudad}, ${c.pais}`;
+      opcion.addEventListener("click", () => {
+        destinoInput.value = c.ciudad;
+        sugerenciasDiv.innerHTML = "";
+      });
+      sugerenciasDiv.appendChild(opcion);
+    });
+  });
+
+  // Ocultar sugerencias si se hace clic fuera
+  document.addEventListener("click", (e) => {
+    if (!sugerenciasDiv.contains(e.target) && e.target !== destinoInput) {
+      sugerenciasDiv.innerHTML = "";
+    }
+  });
+});
+
+
