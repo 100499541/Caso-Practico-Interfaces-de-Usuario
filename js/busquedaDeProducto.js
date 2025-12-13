@@ -13,6 +13,12 @@ document.addEventListener("DOMContentLoaded", () => {
     titulo.textContent = `Resultados para ${destino} (${inicio} - ${fin})`;
   }
 
+  // Función para calcular estrellas según la puntuación
+  function generarEstrellas(puntuacion) {
+    const estrellas = Math.round(puntuacion / 2);
+    return "★".repeat(estrellas) + "☆".repeat(5 - estrellas);
+  }
+
   // Cargar alojamientos desde el JSON
   fetch("/js/alojamientos-del-mundo.json")
     .then(res => res.json())
@@ -37,6 +43,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       resultados.forEach(a => {
+        const estrellas = generarEstrellas(a.puntuacion);
+
         const card = document.createElement("a");
         card.classList.add("resultado-card");
         card.href = `producto.html?ciudad=${encodeURIComponent(destino)}&nombre=${encodeURIComponent(a.nombre)}`;
@@ -44,8 +52,14 @@ document.addEventListener("DOMContentLoaded", () => {
           <img src="${a.imagen}" alt="${a.nombre}">
           <div class="resultado-info">
             <h4>${a.nombre}</h4>
-            <div class="rating">${a.rating} (${a.puntuacion})</div>
+            <div class="rating">
+              <span class="estrellas">${estrellas}</span>
+              <span class="valor-numerica">${a.puntuacion}</span>
+              <span class="valor-texto">${a.rating}</span>
+              <span class="valoraciones">(${a.valoraciones} valoraciones)</span>
+            </div>
             <div class="precio">${a.precio} ${a.moneda} pp</div>
+            <p class="descripcion">${a.descripcion}</p>
           </div>
         `;
         contenedor.appendChild(card);

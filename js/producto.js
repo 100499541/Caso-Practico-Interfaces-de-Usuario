@@ -82,3 +82,17 @@ seleccionadas.forEach((src, i) => {
   contenedorIncluye.appendChild(img);
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const btnEstancia = document.getElementById("elegir-estancia");
+  if (btnEstancia) {
+    btnEstancia.addEventListener("click", () => {
+      const params = new URLSearchParams(window.location.search);
+      const ciudad = params.get("ciudad");
+      const nombre = params.get("nombre");
+
+      // Redirige a la página de compra con los datos del producto
+      window.location.href = `compraProducto.html?ciudad=${encodeURIComponent(ciudad)}&nombre=${encodeURIComponent(nombre)}`;
+    });
+  }
+});
+

@@ -21,6 +21,8 @@
   display: flex;
   gap: 20px;
   min-height: 140px;
+  text-decoration: none;
+  color: inherit;
 }
 
 .resultado-card img {

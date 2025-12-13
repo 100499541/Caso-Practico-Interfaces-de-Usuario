@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compra del producto</title>
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/producto.css" />
+  <link rel="stylesheet" href="css/compraProducto.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h2>Rutas del mundo</h2>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="destinos.html">Destinos</a>
+      <a href="viajesCompartidos.html">Viajes Compartidos</a>
+      <a href="social.html">Social</a>
+    </nav>
+    <div class="idioma">
+      <label for="idioma-select">Idioma</label>
+      <select id="idioma-select">
+        <option value="es">Español</option>
+        <option value="en">English</option>
+      </select>
+    </div>
+    <div class="logo">
+      <img src="imagenes/logo.png" alt="Logo" />
+    </div>
+  </header>
+
+  <!-- Miga de pan -->
+  <div class="breadcrumbs">
+    <a href="index.html">Página principal</a> >
+    <a href="busquedaDeProducto.html">Búsqueda de producto</a> >
+    <span>Compra</span>
+  </div>
+
+  <!-- Título contextual -->
+  <h2 class="titulo-producto">Compra del alojamiento</h2>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="producto-layout">
+
+    <!-- Columna izquierda -->
+    <div class="columna-izquierda">
+      <div class="imagen-principal">
+        <img id="imagen-principal" src="" alt="Imagen del alojamiento" />
+      </div>
+
+      <div class="descripcion">
+        <h3 id="nombre"></h3>
+        <p id="descripcion"></p>
+      </div>
+
+      <div class="info-servicios">
+        <h4>Información y comodidades</h4>
+        <ul id="servicios-lista"></ul>
+        <div class="checkin-checkout">
+          <label>Check-in:</label> <span id="checkin">14:00</span><br />
+          <label>Check-out:</label> <span id="checkout">11:00</span>
+        </div>
+      </div>
+
+      <div class="precio-box">
+        <span id="precio"></span>
+      </div>
+    </div>
+
+    <!-- Columna derecha: formulario de compra -->
+    <div class="columna-derecha">
+      <h4>Formulario de compra</h4>
+      <form class="formulario-compra">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required />
+
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" required />
+
+        <label for="tipo-tarjeta">Tipo de tarjeta:</label>
+        <select id="tipo-tarjeta" required>
+          <option value="">Seleccione</option>
+          <option value="visa">Visa</option>
+          <option value="mastercard">Mastercard</option>
+          <option value="amex">American Express</option>
+        </select>
+
+        <label for="numero-tarjeta">Número de tarjeta:</label>
+        <input type="text" id="numero-tarjeta" maxlength="16" required />
+
+        <label for="titular">Nombre del titular:</label>
+        <input type="text" id="titular" required />
+
+        <label for="caducidad">Fecha de caducidad:</label>
+        <input type="month" id="caducidad" required />
+
+        <label for="cvv">CVV:</label>
+        <input type="text" id="cvv" maxlength="4" required />
+
+        <div class="acciones">
+          <button type="submit">Comprar</button>
+          <button type="reset">Borrar</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-left">
+        <p>© 2025 Rutas del mundo</p>
+      </div>
+      <div class="footer-center">
+        <p>Sobre Nosotros | Política de Privacidad | Ayuda</p>
+      </div>
+      <div class="footer-socials">
+        <a href="https://www.facebook.com" aria-label="Facebook">
+          <!-- SVG Facebook -->
+        </a>
+        <a href="https://twitter.com" aria-label="Twitter">
+          <!-- SVG Twitter -->
+        </a>
+        <a href="https://www.instagram.com" aria-label="Instagram">
+          <!-- SVG Instagram -->
+        </a>
+      </div>
+      <div class="footer-right">
+        <form class="newsletter">
+          <label for="email">¿Quieres suscribirte al newsletter?</label><br>
+          <input type="email" id="email" placeholder="Introduce tu correo">
+          <button type="submit">Suscribirse</button>
+        </form>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/compraProducto.js"></script>
+</body>
+</html>
