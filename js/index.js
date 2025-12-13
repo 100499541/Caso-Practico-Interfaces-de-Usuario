@@ -189,4 +189,55 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const carousel = document.querySelector(".destinos-famosos .carousel");
+
+  fetch("/js/ciudades-del-mundo.json")
+    .then(res => res.json())
+    .then(data => {
+      let ciudades = [];
+
+      // Recorrer continentes → países → ciudades
+      data.continents.forEach(cont => {
+        cont.countries.forEach(country => {
+          country.cities.forEach(city => {
+            ciudades.push({
+              nombre: city.name,
+              pais: country.name,
+              imagen: city.image?.url || "imagenes/default.jpg",
+              alt: city.image?.alt || city.name
+            });
+          });
+        });
+      });
+
+      // Seleccionar 4 aleatorias
+      const aleatorias = [];
+      while (aleatorias.length < 4 && ciudades.length > 0) {
+        const idx = Math.floor(Math.random() * ciudades.length);
+        aleatorias.push(ciudades.splice(idx, 1)[0]);
+      }
+
+      // Renderizar cards
+      aleatorias.forEach(c => {
+        const card = document.createElement("div");
+        card.classList.add("card");
+        card.innerHTML = `
+          <img src="${c.imagen}" alt="${c.alt}">
+          <button class="ver-destino">Ver destino</button>
+          <div class="destino-nombre">${c.nombre}, ${c.pais}</div>
+        `;
+        // Acción del botón
+        card.querySelector(".ver-destino").addEventListener("click", () => {
+          window.location.href = `destinos.html?ciudad=${encodeURIComponent(c.nombre)}&pais=${encodeURIComponent(c.pais)}`;
+        });
+        carousel.appendChild(card);
+      });
+    })
+    .catch(err => {
+      console.error("Error cargando ciudades:", err);
+      carousel.innerHTML = "<p>Error al cargar destinos.</p>";
+    });
+});
+
 
