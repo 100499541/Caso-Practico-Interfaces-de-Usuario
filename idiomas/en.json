@@ -1,0 +1,10 @@
+{
+    "header": {
+        "home": "Home",
+        "destinations": "Destinations",
+        "shared-trips": "Shared Trips",
+        "social": "Social",
+        "login": "Log In",
+        "language": "Language"
+    }
+}

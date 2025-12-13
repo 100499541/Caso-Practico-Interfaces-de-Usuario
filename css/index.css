@@ -485,8 +485,8 @@ header nav a {
 
 /* --- NUEVO: Carrusel de reseñas 1 elemento --- */
 .reseñas .carousel {
-  gap: 0;
-  padding: 0 40px;
+  padding: 10px;
+  gap: 10px;
 }
 
 .reseñas .review-card {
@@ -531,6 +531,7 @@ aside {
 .review-card .usuario-datos p {
   margin: 0;
   font-size: 12px;
+  color: #00707d;
 }
 
 .review-card .texto-review {
@@ -668,7 +669,7 @@ footer {
 
   .idioma label {
     font-size: 12px;
-    margin-bottom: 2px;
+    margin-bottom: 2px; 
   }
 
   .idioma select {

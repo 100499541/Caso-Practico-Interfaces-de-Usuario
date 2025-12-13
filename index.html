@@ -9,25 +9,26 @@
 <body>
 
   <!-- HEADER -->
-  <header>
+  <header class="header">
     <div class="menu-btn" id="menu-btn">
       <span></span>
       <span></span>
       <span></span>
     </div>
 
-    <h2 class="titulo-header">Rutas del mundo</h2>
+    <h2 class="titulo">Rutas del mundo</h2>
 
     <div class="login-btn">
-      <a href="/inicioSesion.html">Iniciar sesión</a>
+      <a href="/inicioSesion.html" 
+      data-section="header" data-value="login">Iniciar sesión</a>
     </div>
 
     <div class="idioma">
-      <label for="Idioma">Idioma</label>
-      <select id="Idioma" name="Idioma">
-        <option value="ES">Español</option>
+      <label for="Idioma" data-section="header" data-value="language">Idioma</label>
+      <select id="Idioma" name="Idioma" data-language-selector>
+        <option value="ES" data-language="es">Español</option>
         <option value="FR">Français</option>
-        <option value="EN">English</option>
+        <option value="EN" data-language="en">English</option>
       </select>
     </div>
 
@@ -36,10 +37,10 @@
     </div>
 
     <nav id="nav">
-      <a href="#"><h4>Inicio</h4></a>
-      <a href="destinos.html"><h4>Destinos</h4></a>
-      <a href="viajesCompartidos.html"><h4>Viajes Compartidos</h4></a>
-      <a href="social.html"><h4>Social</h4></a>
+      <a href="#" data-section="header" data-value="home"><h4>Inicio</h4></a>
+      <a href="destinos.html" data-section="header" data-value="destinations"><h4>Destinos</h4></a>
+      <a href="viajesCompartidos.html" data-section="header" data-value="shared-trips"><h4>Viajes Compartidos</h4></a>
+      <a href="social.html" data-section="header" data-value="social"><h4>Social</h4></a>
     </nav>
   </header>
 
@@ -152,7 +153,7 @@
           <div class="carousel">
             <div class="review-card">
               <div class="usuario-info">
-                <img src="/images/user1.jpg" alt="Usuario 1">
+                <img src="/imagenes/default_user.png" alt="Usuario 1">
                 <div class="usuario-datos">
                   <p class="nombre">Ana, 28</p>
                   <p class="ciudad">Madrid, España</p>
@@ -164,7 +165,7 @@
             </div>
             <div class="review-card">
               <div class="usuario-info">
-                <img src="/images/user2.jpg" alt="Usuario 2">
+                <img src="/imagenes/default_user.png" alt="Usuario 2">
                 <div class="usuario-datos">
                   <p class="nombre">Luis, 34</p>
                   <p class="ciudad">Barcelona, España</p>
@@ -190,9 +191,9 @@
             <div class="ranking-card">
               <h4>Top viajeros con más viajes</h4>
               <ol>
-                <li>User123 - 15 viajes <img src="/images/user123.jpg" alt="User123"></li>
-                <li>User257 - 12 viajes <img src="/images/user257.jpg" alt="User257"></li>
-                <li>User841 - 10 viajes <img src="/images/user841.jpg" alt="User841"></li>
+                <li>User123 - 15 viajes <img src="/imagenes/default_user.png" alt="User123"></li>
+                <li>User257 - 12 viajes <img src="/imagenes/default_user.png" alt="User257"></li>
+                <li>User841 - 10 viajes <img src="/imagenes/default_user.png" alt="User841"></li>
               </ol>
             </div>
 
@@ -200,9 +201,9 @@
             <div class="ranking-card">
               <h4>Top viajeros con más amigos</h4>
               <ol>
-                <li>User555 - 50 amigos <img src="/images/user555.jpg" alt="User555"></li>
-                <li>User777 - 45 amigos <img src="/images/user777.jpg" alt="User777"></li>
-                <li>User888 - 40 amigos <img src="/images/user888.jpg" alt="User888"></li>
+                <li>User555 - 50 amigos <img src="/imagenes/default_user.png" alt="User555"></li>
+                <li>User777 - 45 amigos <img src="/imagenes/default_user.png" alt="User777"></li>
+                <li>User888 - 40 amigos <img src="/imagenes/default_user.png" alt="User888"></li>
               </ol>
             </div>
 
@@ -267,5 +268,6 @@
   </footer>
 
   <script src="/js/index.js"></script>
+  <script src="/js/cambiar-idioma.js"></script>
 </body>
 </html>
