@@ -84,6 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Descripción del país
     document.getElementById("pais-descripcion").textContent = pais.description || "";
+    document.getElementById("texto-eventos-pais").textContent = pais.calendarInfo || "";
 
     // Datos estadísticos
     document.getElementById("dato-capital").textContent = pais.capital || "-";
