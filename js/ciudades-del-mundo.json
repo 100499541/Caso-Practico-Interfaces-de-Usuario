@@ -8,6 +8,7 @@
           "capital": "Viena",
           "population": "9M",
           "language": "Alemán",
+          "calendarInfo": "Austria brilla en invierno con sus mercados navideños en Viena y Salzburgo, ideales entre noviembre y diciembre. En verano, los Alpes ofrecen rutas de senderismo y festivales musicales como el de Salzburgo en julio y agosto. La primavera es perfecta para disfrutar de Viena en flor y conciertos al aire libre. El otoño, con sus viñedos y paisajes dorados, invita a recorrer el valle del Danubio. El mejor momento para visitar depende de si buscas nieve, cultura o naturaleza.",
           "description": "Austria combina paisajes alpinos espectaculares con ciudades elegantes como Viena y Salzburgo. Es famosa por su herencia musical, arquitectura imperial y actividades al aire libre en los Alpes.",
           "image": {
             "url": "https://static1.evcdn.net/images/reduction/354894_w-3840_h-2160_q-70_m-crop.jpg",
@@ -29,6 +30,7 @@
           "capital": "Bruselas",
           "population": "11.6M",
           "language": "Neerlandés, Francés, Alemán",
+          "calendarInfo": "Bélgica es famosa por sus festivales de música como Tomorrowland en julio y sus mercados navideños en Bruselas y Brujas en diciembre. La primavera, entre abril y junio, es ideal para recorrer sus ciudades medievales y probar la cerveza belga en terrazas soleadas. En otoño, destacan las fiestas gastronómicas y el ambiente acogedor en sus cafés. El verano ofrece un clima agradable para explorar Gante y Amberes junto a sus canales.",
           "description": "Bélgica destaca por su arquitectura medieval, ciudades vibrantes como Bruselas, Brujas y Gante, y su reconocida gastronomía con chocolates y cervezas. Es un país multicultural en el corazón de Europa.",
           "image": {
             "url": "https://abruselas.com/wp-content/uploads/2017/10/grand-place-bruselas.jpeg",
@@ -50,6 +52,7 @@
           "capital": "Copenhague",
           "population": "5.9M",
           "language": "Danés",
+          "calendarInfo": "Dinamarca se disfruta especialmente en verano, entre junio y agosto, cuando Copenhague vibra con festivales como el Jazz Festival y los días largos permiten recorrer sus costas. En diciembre, los mercados navideños y la tradición del hygge llenan de encanto las ciudades. La primavera es ideal para visitar castillos y parques en flor, mientras que el otoño ofrece paisajes cálidos y menos turistas. El mejor momento depende de si buscas ambiente festivo o tranquilidad escandinava.",
           "description": "Dinamarca combina diseño moderno con tradiciones históricas, ciudades acogedoras como Copenhague y paisajes costeros únicos. Es reconocida por su calidad de vida, gastronomía nórdica y castillos que evocan su pasado vikingo.",
           "image": {
             "url": "https://editorialpuskas.com/wp-content/uploads/2021/06/Copenhague-.jpg",
@@ -71,6 +74,7 @@
           "capital": "Liubliana",
           "population": "2.1M",
           "language": "Esloveno",
+          "calendarInfo": "Eslovenia sorprende con el lago Bled y sus montañas, ideales en verano para senderismo y deportes al aire libre. En invierno, las estaciones de esquí como Kranjska Gora cobran protagonismo. La primavera y el otoño son perfectos para explorar Liubliana y sus festivales culturales, con menos turistas y clima templado. Destacan eventos como el Festival de Cine de Liubliana en noviembre y celebraciones tradicionales en verano. Es un destino versátil todo el año.",
           "description": "Eslovenia es un país verde y montañoso, famoso por el lago Bled, cuevas impresionantes como Postojna y su capital Ljubljana. Combina naturaleza intacta, arquitectura histórica y una fuerte tradición cultural.",
           "image": {
             "url": "https://content-viajes.nationalgeographic.com.es/medio/2024/07/29/liubliana_51c54351_240729153611_1280x853.jpg",
@@ -92,6 +96,7 @@
           "capital": "Madrid",
           "population": "48.5M",
           "language": "Español",
+          "calendarInfo": "España ofrece fiestas únicas como las Fallas de Valencia en marzo, la Feria de Abril en Sevilla y San Fermín en Pamplona en julio. El verano es ideal para disfrutar de sus playas, aunque el calor puede ser intenso en el interior. La primavera y el otoño son los mejores momentos para recorrer ciudades como Madrid y Barcelona con clima agradable. En diciembre, los mercados navideños y celebraciones llenan de vida las plazas. Cada estación tiene su encanto propio.",
           "description": "España es un país diverso y vibrante, famoso por su historia, arquitectura única, gastronomía mediterránea y tradiciones culturales como el flamenco y las fiestas populares. Sus ciudades como Madrid, Barcelona y Sevilla reflejan una mezcla de modernidad y patrimonio.",
           "image": {
             "url": "https://media.admagazine.com/photos/63c9a4f6c0e0d93372ff71f8/master/w_1600%2Cc_limit/que-lugares-visitar-en-barcelona.jpg",
@@ -121,6 +126,7 @@
           "capital": "Tallin",
           "population": "1.3M",
           "language": "Estonio",
+          "calendarInfo": "Estonia combina historia medieval y naturaleza. En invierno, Tallin se ilumina con su mercado navideño, uno de los más pintorescos de Europa. El verano, entre junio y agosto, es perfecto para explorar sus islas y bosques con largas horas de luz. La primavera trae festivales culturales y el despertar de la naturaleza, mientras que el otoño ofrece tranquilidad y paisajes dorados. Destacan eventos como el Festival de Canciones de Tallin, celebrado cada cinco años en julio.",
           "description": "Estonia es un país báltico innovador y digital, con una rica historia medieval en Tallin, naturaleza intacta y una fuerte identidad cultural. Destaca por su arquitectura histórica, bosques extensos y liderazgo en tecnología.",
           "image": {
             "url": "https://www.atrapalo.com/common/photo/vv/66222/9/ticr_640_350.jpg",
@@ -142,6 +148,7 @@
           "capital": "París",
           "population": "67M",
           "language": "Francés",
+          "calendarInfo": "Francia deslumbra con celebraciones como el Día Nacional el 14 de julio en París y el Festival de Cannes en mayo. La primavera es ideal para recorrer la Provenza en flor y disfrutar de los viñedos. El verano ofrece playas en la Costa Azul y festivales en todo el país. El otoño es perfecto para degustar vinos en Burdeos y Borgoña, mientras que el invierno invita a esquiar en los Alpes y visitar mercados navideños en Estrasburgo. Cada estación tiene su magia.",
           "description": "Francia es reconocida por su patrimonio cultural, artístico y gastronómico. Desde París con la Torre Eiffel y el Louvre, hasta regiones como la Provenza y la Costa Azul, ofrece una mezcla única de historia, paisajes y estilo de vida sofisticado.",
           "image": {
             "url": "https://content.amimir.com/img/geo/cities/francia_p_3/ile_de_france_r_101/paris_c_1967/paris-default.jpg",
@@ -163,6 +170,7 @@
           "capital": "Budapest",
           "population": "9.6M",
           "language": "Húngaro",
+          "calendarInfo": "Hungría destaca por sus baños termales en Budapest y festivales culturales como el de Primavera en abril. El verano, entre junio y agosto, es ideal para pasear por el Danubio y disfrutar de conciertos al aire libre. En otoño, los viñedos ofrecen catas y paisajes dorados, mientras que en diciembre la ciudad se llena de mercados navideños. El mejor momento para visitar es primavera u otoño, con clima templado y menos turistas.",
           "description": "Hungría es conocida por su capital Budapest, con el Danubio dividiendo Buda y Pest, sus balnearios termales y su rica herencia cultural. El país combina arquitectura histórica, música tradicional y paisajes naturales como la llanura de Panonia.",
           "image": {
             "url": "https://cdn.prod.website-files.com/66c59bb6ecf662630baf4355/67baf9cf84b37ae060a9c589_que%20ver%20en%20hungria.jpg",
@@ -184,6 +192,7 @@
           "capital": "Roma",
           "population": "59M",
           "language": "Italiano",
+          "calendarInfo": "Italia ofrece celebraciones como el Carnaval de Venecia en febrero y la Semana Santa en Roma. La primavera es perfecta para recorrer Florencia y la Toscana en flor, mientras que el verano invita a disfrutar de la Costa Amalfitana y Sicilia. El otoño es ideal para degustar vinos en la región de Piamonte y asistir a festivales gastronómicos. En invierno, los mercados navideños y el esquí en los Alpes completan su encanto. Cada estación tiene su atractivo único.",
           "description": "Italia es un país lleno de historia, arte y gastronomía. Desde Roma con el Coliseo y el Vaticano, hasta Florencia y Venecia, ofrece una riqueza cultural incomparable junto a paisajes mediterráneos y alpinos.",
           "image": {
             "url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Trevi_Fountain%2C_Rome%2C_Italy_2_-_May_2007.jpg",
@@ -221,6 +230,7 @@
           "capital": "La Valeta",
           "population": "0.5M",
           "language": "Maltés, Inglés",
+          "calendarInfo": "Malta brilla en verano con sus playas y festivales como el Isle of MTV en junio. La primavera y el otoño son ideales para explorar templos megalíticos y ciudades históricas como La Valeta con clima agradable. En invierno, las celebraciones navideñas llenan de luz las calles y se disfruta de un ambiente tranquilo. Destacan también las fiestas patronales en pueblos malteses durante todo el año. El mejor momento para visitarla es entre abril y octubre.",
           "description": "Malta es un archipiélago mediterráneo con una rica historia que incluye templos prehistóricos, fortalezas medievales y una vibrante vida costera. Sus ciudades como La Valeta destacan por su arquitectura barroca y su mezcla cultural.",
           "image": {
             "url": "https://www.autopista.es/uploads/s1/99/61/05/3/hermoso-paisaje-y-murallas-defensivas-medievales-alrededor-de-la-valeta-en-malta.jpeg",
@@ -242,6 +252,7 @@
           "capital": "Oslo",
           "population": "5.5M",
           "language": "Noruego",
+          "calendarInfo": "Noruega deslumbra con auroras boreales entre septiembre y marzo, especialmente en Tromsø y el norte. El verano, de junio a agosto, ofrece días interminables y fiordos espectaculares para recorrer en barco. La primavera trae festivales culturales en Oslo y Bergen, mientras que el otoño regala paisajes de colores intensos. En invierno, además del esquí, destacan celebraciones navideñas acogedoras. Cada estación muestra una cara distinta del país escandinavo.",
           "description": "Noruega es famosa por sus fiordos espectaculares, paisajes naturales impresionantes y ciudades modernas como Oslo y Bergen. Combina tradición vikinga, innovación contemporánea y una fuerte conexión con la naturaleza.",
           "image": {
             "url": "https://imagenes.20minutos.es/files/image_1920_1080/uploads/imagenes/2024/10/25/fiordo-de-geiranger.jpeg",
@@ -263,6 +274,7 @@
           "capital": "Ámsterdam",
           "population": "17.5M",
           "language": "Neerlandés",
+          "calendarInfo": "Los Países Bajos son famosos por sus campos de tulipanes en primavera, especialmente en abril y mayo. El Día del Rey, celebrado el 27 de abril, llena las calles de música y color. El verano es ideal para recorrer Ámsterdam y sus canales, mientras que el otoño ofrece tranquilidad y festivales culturales. En diciembre, los mercados navideños y la tradición de Sinterklaas crean un ambiente único. La mejor época para visitar es primavera u otoño.",
           "description": "Países Bajos es reconocido por sus canales, molinos de viento y campos de tulipanes, además de ciudades dinámicas como Ámsterdam y Róterdam. Destaca por su cultura ciclista, arte histórico y espíritu innovador.",
           "image": {
             "url": "https://media.istockphoto.com/id/937057490/es/foto/molinos-de-viento-holandeses-tradicionales-y-casas-cerca-del-canal-en-zaanstad-aldea-zaanse.jpg?s=612x612&w=0&k=20&c=ZI-ftDaFzNgYzbCOsNKJN0ttEApwmPEy9Hz2OrXqVaw=",
@@ -284,6 +296,7 @@
           "capital": "Lisboa",
           "population": "10.3M",
           "language": "Portugués",
+          "calendarInfo": "Portugal ofrece celebraciones como las Fiestas de Lisboa en junio y el Carnaval de Torres Vedras en febrero. La primavera y el otoño son los mejores momentos para recorrer ciudades como Oporto y Lisboa con clima suave. El verano invita a disfrutar de las playas del Algarve y festivales de música. En invierno, los mercados navideños y la tranquilidad de sus pueblos ofrecen otra perspectiva. Cada estación tiene su encanto, pero primavera y otoño destacan por su equilibrio.",
           "description": "Portugal es famoso por sus ciudades históricas como Lisboa y Oporto, sus paisajes costeros en el Algarve y su tradición marítima. Destaca por su gastronomía, fados y una rica herencia cultural.",
           "image": {
             "url": "https://res.cloudinary.com/worldpackers/image/upload/c_limit,f_auto,q_auto,w_1140/d3dgetk0mffm21hmy0zc",
@@ -305,6 +318,7 @@
           "capital": "Londres",
           "population": "67M",
           "language": "Inglés",
+          "calendarInfo": "El Reino Unido celebra eventos como el Trooping the Colour en junio y el Festival de Edimburgo en agosto. La primavera es ideal para visitar Londres y sus parques en flor, mientras que el verano ofrece festivales musicales y días largos. El otoño trae paisajes dorados en Escocia y fiestas tradicionales, y el invierno se llena de mercados navideños y celebraciones en ciudades históricas. El mejor momento para visitar es entre mayo y septiembre.",
           "description": "Reino Unido combina historia y modernidad, con Londres como centro cultural y financiero, además de ciudades como Edimburgo y Manchester. Es reconocido por su patrimonio, literatura y diversidad cultural.",
           "image": {
             "url": "https://i.ytimg.com/vi/TR2GqI3cfcY/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDJVFP3AgqqKPlCKO8AJVOhNWJ1SQ",
@@ -334,6 +348,7 @@
           "capital": "Praga",
           "population": "10.7M",
           "language": "Checo",
+          "calendarInfo": "La República Checa es famosa por el Festival de Primavera de Praga en mayo y sus mercados navideños en diciembre. El verano invita a recorrer castillos y pueblos medievales con clima agradable. La primavera y el otoño son perfectos para disfrutar de la ciudad con menos turistas y paisajes coloridos. En invierno, además de la Navidad, se puede disfrutar del ambiente acogedor de sus cafés. El mejor momento para visitar es primavera u otoño.",
           "description": "República Checa es conocida por su capital Praga, con un casco histórico medieval y arquitectura gótica y barroca. El país ofrece castillos, paisajes naturales y una fuerte tradición cervecera.",
           "image": {
             "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8JFNxLp8AlNVikD7BDIeD2yKP9PHsp9DCSQ&s",
@@ -355,6 +370,7 @@
           "capital": "Berna",
           "population": "8.8M",
           "language": "Alemán, Francés, Italiano, Romanche",
+          "calendarInfo": "Suiza es ideal para visitar en invierno, con estaciones de esquí como Zermatt y St. Moritz entre diciembre y marzo. En verano, los Alpes ofrecen rutas de senderismo y lagos cristalinos, mientras que la primavera y el otoño son perfectos para recorrer ciudades como Lucerna y Ginebra con menos turistas. Destacan eventos como el Montreux Jazz Festival en julio y los mercados navideños en diciembre. Cada estación muestra una faceta distinta del país alpino.",
           "description": "Suiza es reconocida por sus paisajes alpinos, lagos cristalinos y ciudades como Zúrich y Ginebra. Combina tradición, innovación y una gran calidad de vida, además de ser famosa por su chocolate y relojes.",
           "image": {
             "url": "https://kamaleon.viajes/wp-content/uploads/2017/11/MQF1720.jpg",
@@ -384,6 +400,7 @@
           "capital": "Reikiavik",
           "population": "0.38M",
           "language": "Islandés",
+          "calendarInfo": "Islandia deslumbra con auroras boreales entre septiembre y marzo, especialmente en el norte. El verano, de junio a agosto, ofrece días interminables y paisajes volcánicos únicos, ideales para recorrer cascadas y glaciares. La primavera y el otoño son perfectos para disfrutar de menos turistas y festivales culturales en Reikiavik. Destacan celebraciones como el Festival de las Artes de Reikiavik en junio. El mejor momento depende de si buscas auroras o naturaleza vibrante.",
           "description": "Islandia ofrece paisajes volcánicos, glaciares y géiseres únicos, junto con una cultura ligada a la naturaleza. Su capital Reikiavik es vibrante y el país es famoso por la aurora boreal y sus aguas termales.",
           "image": {
             "url": "https://www.reykjavikcars.com/assets/img/blog/702.png",
@@ -410,6 +427,7 @@
           "capital": "Beijing",
           "population": "1410M",
           "language": "Mandarín",
+          "calendarInfo": "China ofrece celebraciones como el Año Nuevo Chino en enero o febrero y el Festival de Medio Otoño en septiembre. La primavera y el otoño son los mejores momentos para recorrer Pekín, Shanghái y la Gran Muralla con clima templado. El verano es ideal para explorar regiones montañosas, aunque puede ser caluroso en las ciudades. En invierno, destacan las celebraciones tradicionales y paisajes nevados en el norte. Cada estación aporta una experiencia distinta.",
           "description": "China combina una historia milenaria con modernidad, desde la Gran Muralla y la Ciudad Prohibida hasta ciudades dinámicas como Pekín y Shanghái. Es un país de gran diversidad cultural y geográfica.",
           "image": {
             "url": "https://media.istockphoto.com/id/899508826/es/foto/la-gran-muralla-china.jpg?s=612x612&w=0&k=20&c=wEu4vohXyNE29zOpcZ-xrPiNAbOuL8Vcw1atWhfLZa8=",
@@ -439,6 +457,7 @@
           "capital": "Seúl",
           "population": "52M",
           "language": "Coreano",
+          "calendarInfo": "Corea del Sur celebra el Chuseok en septiembre y el Seollal en enero o febrero, fiestas tradicionales llenas de cultura. La primavera, entre abril y mayo, es ideal para disfrutar de los cerezos en flor en Seúl y Busan. El verano ofrece festivales de música y playas, mientras que el otoño regala paisajes montañosos de colores intensos. En invierno, destacan las estaciones de esquí y las celebraciones navideñas. Es un destino vibrante todo el año.",
           "description": "Corea del Sur es un país moderno y tecnológico, con Seúl como centro cultural y económico. Destaca por su gastronomía, tradiciones, paisajes montañosos y una vibrante escena musical y artística.",
           "image": {
             "url": "https://www.bharad.es/wp-content/uploads/2019/05/Corea-del-Sur-Paisajes.jpg",
@@ -460,6 +479,7 @@
           "capital": "Nueva Delhi",
           "population": "1420M",
           "language": "Hindi, Inglés",
+          "calendarInfo": "India deslumbra con festivales como Diwali en octubre o noviembre y Holi en marzo, llenos de color y tradición. La mejor época para visitar es entre noviembre y marzo, cuando el clima es más templado. El verano puede ser muy caluroso, pero es ideal para explorar regiones montañosas como el Himalaya. El monzón, entre junio y septiembre, transforma los paisajes en verdes intensos. Cada estación ofrece experiencias únicas en su diversidad cultural.",
           "description": "India es un país diverso con una rica herencia cultural, espiritual y arquitectónica. Desde el Taj Mahal hasta ciudades como Delhi y Mumbai, ofrece tradiciones milenarias, gastronomía variada y paisajes impresionantes.",
           "image": {
             "url": "https://images.adsttc.com/media/images/6486/f324/7870/7215/2fd6/dbf5/newsletter/varanasis-ghats-the-adaptable-riverscapes-of-india_1.jpg?1686565718",
@@ -481,6 +501,7 @@
           "capital": "Tokio",
           "population": "125M",
           "language": "Japonés",
+          "calendarInfo": "Japón es famoso por la floración de los cerezos en abril y los festivales de verano como el Gion Matsuri en Kioto en julio. El otoño, entre octubre y noviembre, ofrece paisajes de hojas rojas espectaculares. El invierno invita a disfrutar de onsen y estaciones de esquí en Hokkaido, mientras que la primavera es la época más popular para visitar Tokio y Kioto. Cada estación tiene celebraciones únicas, desde Año Nuevo hasta festivales de fuegos artificiales.",
           "description": "Japón combina tradición y modernidad, con templos antiguos, jardines zen y ciudades futuristas como Tokio y Osaka. Es famoso por su cultura, tecnología avanzada y paisajes naturales como el Monte Fuji.",
           "image": {
             "url": "https://imagenes.20minutos.es/files/image_640_auto/uploads/imagenes/2022/11/22/lago-kawaguchiko.jpeg",
@@ -502,6 +523,7 @@
           "capital": "Vientián",
           "population": "7.7M",
           "language": "Lao",
+          "calendarInfo": "Laos ofrece un ambiente tranquilo y espiritual, con celebraciones como el Pi Mai (Año Nuevo Lao) en abril. La mejor época para visitar es entre noviembre y febrero, cuando el clima es más fresco y seco. El verano y el monzón, de mayo a octubre, traen lluvias intensas pero paisajes verdes y menos turistas. Destacan festivales budistas como el That Luang en noviembre en Vientián. Es un destino ideal para quienes buscan autenticidad y calma.",
           "description": "Laos es un país del sudeste asiático con paisajes montañosos, templos budistas y una vida tranquila junto al río Mekong. Destaca por su naturaleza intacta y su herencia cultural.",
           "image": {
             "url": "https://content-viajes.nationalgeographic.com.es/medio/2020/11/30/aventura-en-vang-vieng_fa33a0dc_1256x835.jpg",
@@ -523,6 +545,7 @@
           "capital": "Beirut",
           "population": "5.5M",
           "language": "Árabe",
+          "calendarInfo": "Líbano ofrece celebraciones como el Festival Internacional de Baalbek en verano, con música y cultura en ruinas romanas. La primavera y el otoño son los mejores momentos para recorrer Beirut y los viñedos del valle de Bekaa con clima templado. En invierno, las montañas del país permiten esquiar cerca de la costa mediterránea. Destacan también las fiestas religiosas y mercados tradicionales que llenan de vida sus ciudades. Cada estación muestra una faceta distinta de su diversidad cultural.",
           "description": "Líbano es un país mediterráneo con una rica historia, ruinas antiguas como Baalbek y una vibrante vida urbana en Beirut. Combina tradición cultural, gastronomía reconocida y paisajes montañosos.",
           "image": {
             "url": "https://www.clarin.com/2017/03/09/BkZu-M1il_1200x0.jpg",
@@ -544,6 +567,7 @@
           "capital": "Mascate",
           "population": "4.7M",
           "language": "Árabe",
+          "calendarInfo": "Omán deslumbra con su Festival Muscat en enero y febrero, lleno de música y tradiciones. La mejor época para visitar es entre octubre y abril, cuando el clima es más fresco y agradable. El verano puede ser muy caluroso, pero ofrece paisajes únicos en la región de Dhofar durante el monzón khareef. Destacan también celebraciones religiosas y mercados tradicionales en Mascate y Nizwa. Es un destino que combina desierto, montañas y costa en cualquier estación.",
           "description": "Omán ofrece desiertos, montañas y costas espectaculares, junto con fortalezas históricas y una cultura hospitalaria. Su capital Mascate refleja tradición árabe y modernidad.",
           "image": {
             "url": "https://www.viajesbilbaoexpress.com/wp-content/uploads/2019/12/oman-la-perla-de-oriente-destacada.jpg",
@@ -565,6 +589,7 @@
           "capital": "Doha",
           "population": "3M",
           "language": "Árabe",
+          "calendarInfo": "Qatar celebra su Día Nacional el 18 de diciembre con desfiles y eventos culturales. La mejor época para visitar es entre noviembre y marzo, cuando el clima es más suave y agradable. El verano es muy caluroso, pero los centros comerciales y museos ofrecen alternativas frescas. Destacan también festivales deportivos y culturales en Doha, como el Qatar International Food Festival en marzo. Es un destino moderno que combina tradición y lujo.",
           "description": "Qatar combina modernidad y tradición, con Doha como centro cultural y económico. Es famoso por su arquitectura futurista, museos y su papel en el mundo árabe contemporáneo.",
           "image": {
             "url": "https://ambitointernacional.com/wp-content/uploads/2020/03/qatar-5.jpg",
@@ -586,6 +611,7 @@
           "capital": "Bangkok",
           "population": "71M",
           "language": "Tailandés",
+          "calendarInfo": "Tailandia es famosa por el Songkran, su Año Nuevo en abril, con celebraciones de agua en todo el país. El Loy Krathong en noviembre ilumina ríos y templos con farolillos flotantes. La mejor época para visitar es entre noviembre y febrero, cuando el clima es más fresco y seco. El verano y el monzón traen lluvias intensas, pero también paisajes verdes y menos turistas. Cada estación ofrece experiencias únicas, desde playas hasta templos históricos.",
           "description": "Tailandia es conocida por sus templos budistas, playas paradisíacas y una vibrante vida urbana en Bangkok. Destaca por su gastronomía, cultura y paisajes tropicales.",
           "image": {
             "url": "https://d2l4159s3q6ni.cloudfront.net/dam/photos/49/67/9a/cf/a06c6be676b245b31c5be1c9ac4f4cf7d6bf6b5e827e160f4f8b18e4.jpg",
@@ -607,6 +633,7 @@
           "capital": "Hanói",
           "population": "100M",
           "language": "Vietnamita",
+          "calendarInfo": "Vietnam celebra el Tet, su Año Nuevo Lunar, en enero o febrero, con festivales y tradiciones familiares. La mejor época para visitar es entre noviembre y abril, cuando el clima es más templado y seco. El verano y el monzón, de mayo a octubre, traen lluvias pero también paisajes verdes y arrozales espectaculares. Destacan también festivales culturales en Hue y Hanoi. Es un destino vibrante con historia, gastronomía y naturaleza todo el año.",
           "description": "Vietnam ofrece paisajes naturales como la bahía de Ha Long, ciudades históricas como Hanoi y una rica tradición cultural. Es famoso por su gastronomía y su historia milenaria.",
           "image": {
             "url": "https://cdn.inteligenciaviajera.com/wp-content/uploads/2019/11/viajar-a-vietnam-que-ver-en-el-sudeste-asiatico.jpg",
@@ -628,6 +655,7 @@
           "capital": "Singapur",
           "population": "5.9M",
           "language": "Inglés, Mandarín, Malayo, Tamil",
+          "calendarInfo": "Singapur celebra el Año Nuevo Chino en enero o febrero y el Festival de Luces Deepavali en octubre o noviembre. El clima es cálido y húmedo todo el año, pero la mejor época para visitar es entre febrero y abril, cuando hay menos lluvias. Destacan también el Gran Premio de Fórmula 1 en septiembre y festivales gastronómicos. Es un destino moderno y multicultural que siempre ofrece eventos y experiencias únicas.",
           "description": "Singapur es una ciudad-estado moderna y multicultural, reconocida por su arquitectura futurista, jardines y eficiencia urbana. Combina tradición asiática con innovación tecnológica.",
           "image": {
             "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSyRsxcvEmlml3_Ty11kINJgsj_Hy2MRx_Zg&s",
@@ -654,6 +682,7 @@
           "capital": "Rabat",
           "population": "37M",
           "language": "Árabe, Bereber",
+          "calendarInfo": "Marruecos ofrece celebraciones como el Festival de Fez de Músicas Sagradas en junio y el Festival de Cine de Marrakech en diciembre. La mejor época para visitar es en primavera y otoño, cuando el clima es templado y agradable para recorrer ciudades como Marrakech y Fez. El verano puede ser muy caluroso en el interior, pero ideal para la costa atlántica. El invierno invita a explorar el desierto y las montañas del Atlas. Cada estación tiene su encanto propio.",
           "description": "Marruecos destaca por sus ciudades imperiales como Marrakech y Fez, sus mercados tradicionales y paisajes que van desde el desierto del Sahara hasta las montañas del Atlas.",
           "image": {
             "url": "https://www.turismomarruecos.net/wp-content/uploads/2022/03/paisajes-naturaleza-marruecos.jpg",
@@ -675,6 +704,7 @@
           "capital": "Pretoria",
           "population": "60M",
           "language": "Inglés, Zulú, Afrikáans",
+          "calendarInfo": "Sudáfrica es ideal para safaris entre mayo y septiembre, cuando la fauna es más visible en parques como Kruger. El verano, de noviembre a marzo, ofrece playas y festivales culturales en Ciudad del Cabo y Durban. Destacan eventos como el Cape Town Jazz Festival en marzo y celebraciones navideñas en diciembre. El otoño y la primavera son perfectos para recorrer viñedos y rutas panorámicas con clima templado. Es un destino diverso que combina naturaleza, cultura y aventura.",
           "description": "Sudáfrica es un país diverso con paisajes impresionantes, desde la Ciudad del Cabo y la Ruta Jardín hasta safaris en Kruger. Combina culturas variadas y una rica biodiversidad.",
           "image": {
             "url": "https://viajesbeagle.com/wp-content/uploads/2020/09/Canon-Rio-Blyde.jpg",
@@ -701,6 +731,7 @@
           "capital": "Canberra",
           "population": "26M",
           "language": "Inglés",
+          "calendarInfo": "Australia celebra el Día de Australia el 26 de enero y eventos como el Vivid Sydney en mayo y junio. El verano, de diciembre a febrero, es ideal para disfrutar de sus playas y festivales al aire libre. La primavera y el otoño ofrecen clima templado para recorrer ciudades como Melbourne y Brisbane. En invierno, destacan las estaciones de esquí en Nueva Gales del Sur y festivales culturales. Es un destino vibrante todo el año, con naturaleza y cultura únicas.",
           "description": "Australia es famosa por su Gran Barrera de Coral, desiertos como el Outback y ciudades modernas como Sídney y Melbourne. Combina naturaleza única, playas espectaculares y una rica cultura aborigen.",
           "image": {
             "url": "https://planesturisticos.com/c/u/2020/04/Sydney-Harbour-Bridge-australia.jpg",
@@ -722,6 +753,7 @@
           "capital": "Wellington",
           "population": "5.2M",
           "language": "Inglés, Maorí",
+          "calendarInfo": "Nueva Zelanda deslumbra con celebraciones como el Waitangi Day el 6 de febrero y festivales culturales maoríes. El verano, entre diciembre y febrero, es ideal para recorrer sus paisajes y practicar deportes de aventura. La primavera y el otoño ofrecen clima suave y menos turistas, perfectos para explorar fiordos y montañas. En invierno, destacan las estaciones de esquí en Queenstown y Wanaka. Cada estación muestra una faceta distinta de su naturaleza espectacular.",
           "description": "Nueva Zelanda ofrece paisajes impresionantes con montañas, lagos y fiordos, además de una fuerte cultura maorí. Sus ciudades como Auckland y Wellington complementan su naturaleza intacta.",
           "image": {
             "url": "https://muyinteresante.okdiario.com/wp-content/uploads/sites/5/2023/09/07/64f9ebef2c150.jpeg",
@@ -748,6 +780,7 @@
           "capital": "Ottawa",
           "population": "40M",
           "language": "Inglés, Francés",
+          "calendarInfo": "Canadá celebra el Día de Canadá el 1 de julio y festivales como el de Jazz de Montreal en verano. El invierno, de diciembre a marzo, es ideal para esquiar en Whistler y disfrutar de paisajes nevados. La primavera y el otoño ofrecen colores vibrantes, desde cerezos en flor en Vancouver hasta el follaje otoñal en Quebec. El verano es perfecto para explorar parques nacionales y lagos. Es un destino diverso con experiencias únicas en cada estación.",
           "description": "Canadá es un país vasto con paisajes naturales como las Montañas Rocosas y las Cataratas del Niágara. Sus ciudades como Toronto y Vancouver reflejan diversidad cultural y modernidad.",
           "image": {
             "url": "https://res.cloudinary.com/worldpackers/image/upload/c_limit,f_auto,q_auto,w_1140/t5m34w25vfkfvablddat",
@@ -769,6 +802,7 @@
           "capital": "La Habana",
           "population": "11.2M",
           "language": "Español",
+          "calendarInfo": "Cuba vibra con celebraciones como el Carnaval de Santiago de Cuba en julio y el Festival Internacional del Habano en febrero. El invierno y la primavera, entre noviembre y abril, son los mejores momentos para visitar con clima cálido y seco. El verano trae calor intenso y lluvias, pero también fiestas populares llenas de música y color. Destacan también eventos culturales en La Habana y tradiciones únicas en cada región. Es un destino alegre y acogedor todo el año.",
           "description": "Cuba es reconocida por su música, danza y arquitectura colonial en ciudades como La Habana. Combina playas caribeñas, historia y una vibrante vida cultural.",
           "image": {
             "url": "https://www.viajesyfotografia.com/wp-content/uploads/2022/06/vinales-20220228_181456.1024_result.jpg",
@@ -790,6 +824,7 @@
           "capital": "Washington D.C.",
           "population": "331M",
           "language": "Inglés",
+          "calendarInfo": "Estados Unidos celebra el Día de la Independencia el 4 de julio y eventos como el Mardi Gras en Nueva Orleans en febrero. El verano es ideal para recorrer parques nacionales y disfrutar de festivales musicales. La primavera y el otoño ofrecen clima templado y paisajes espectaculares, como los cerezos en flor en Washington D.C. o el follaje en Nueva Inglaterra. En invierno, destacan las celebraciones navideñas y las estaciones de esquí. Cada estación tiene su atractivo propio.",
           "description": "Estados Unidos combina diversidad cultural, paisajes icónicos y ciudades vibrantes como Nueva York, San Francisco y Los Ángeles. Es un país de innovación, entretenimiento y contrastes geográficos.",
           "image": {
             "url": "https://resizer.glanacion.com/resizer/v2/las-10-ciudades-mas-lindas-de-estados-unidos-2AE7UZZUEVB4RO5QNM2YEZHVCQ.jpg?auth=c3b55d47310e846898065eac1cc7b0d2dc084e375c69160a1f02e2d8adbda5ee&width=1200&quality=70&smart=false&height=794",
@@ -819,6 +854,7 @@
           "capital": "Ciudad de México",
           "population": "128M",
           "language": "Español",
+          "calendarInfo": "México celebra el Día de los Muertos el 1 y 2 de noviembre y la Guelaguetza en Oaxaca en julio. La primavera y el otoño son los mejores momentos para recorrer ciudades coloniales y sitios arqueológicos con clima templado. El verano ofrece playas y festivales, aunque con lluvias en algunas regiones. En invierno, destacan las celebraciones navideñas y el ambiente festivo en todo el país. Es un destino lleno de cultura, tradición y alegría durante todo el año.",
           "description": "México es un país rico en historia y tradiciones, con sitios arqueológicos como Teotihuacán y Chichén Itzá, además de ciudades modernas como Ciudad de México. Destaca por su gastronomía y diversidad cultural.",
           "image": {
             "url": "https://i0.wp.com/blog.vivaaerobus.com/wp-content/uploads/2020/04/paisaje-canon-del-sumidero.jpg?resize=650%2C365&ssl=1",
@@ -845,6 +881,7 @@
           "capital": "Buenos Aires",
           "population": "46M",
           "language": "Español",
+          "calendarInfo": "Argentina celebra el Carnaval en febrero y la Fiesta de la Vendimia en Mendoza en marzo. El verano, de diciembre a febrero, es ideal para recorrer la Patagonia y disfrutar de sus paisajes. La primavera y el otoño ofrecen clima templado para visitar Buenos Aires y el norte del país. En invierno, destacan las estaciones de esquí en Bariloche y festivales culturales. Cada estación brinda experiencias únicas, desde tango hasta naturaleza imponente.",
           "description": "Argentina es reconocida por su diversidad cultural y geográfica, desde Buenos Aires con su tango y vida urbana, hasta la Patagonia y las Cataratas del Iguazú. Destaca por su gastronomía, tradición futbolística y paisajes únicos.",
           "image": {
             "url": "https://lonelyplanetes.cdnstatics2.com/cdn/ff/APUK1gPYrKhhppgbE4mxd620Ju2oHrbZr-eImi6Y-mk/1726128082/public/styles/1536x864_scale_crop/public/media/argentina_bestintravel2019_nido_huebl_shutterstock_0.jpg?itok=tOvEu5I1",
@@ -866,6 +903,7 @@
           "capital": "Brasilia",
           "population": "203M",
           "language": "Portugués",
+          "calendarInfo": "Brasil es famoso por su Carnaval en febrero, especialmente en Río de Janeiro y Salvador. El verano, de diciembre a marzo, ofrece playas vibrantes y festivales musicales. La primavera y el otoño son ideales para recorrer ciudades como São Paulo y explorar la Amazonía con clima más suave. En junio, destacan las Fiestas Juninas con tradiciones populares. El invierno es perfecto para visitar el sur del país y disfrutar de festivales culturales.",
           "description": "Brasil es famoso por su carnaval, la música samba y paisajes naturales como la Amazonía y las playas de Río de Janeiro. Es un país vibrante con gran diversidad cultural y riqueza natural.",
           "image": {
             "url": "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YnJhemlsfGVufDB8fDB8fHww",
@@ -887,6 +925,7 @@
           "capital": "Bogotá",
           "population": "52M",
           "language": "Español",
+          "calendarInfo": "Colombia celebra el Carnaval de Barranquilla en febrero y la Feria de las Flores en Medellín en agosto. La mejor época para visitar es entre diciembre y marzo, cuando el clima es más seco. El verano ofrece playas en el Caribe y festivales culturales en Bogotá y Cali. En otoño, destacan celebraciones gastronómicas y paisajes verdes. Cada estación muestra la diversidad del país, desde montañas hasta costas tropicales.",
           "description": "Colombia combina ciudades modernas como Bogotá y Medellín con paisajes naturales como el Eje Cafetero y Cartagena. Es reconocida por su biodiversidad, música y hospitalidad.",
           "image": {
             "url": "https://img.freepik.com/foto-gratis/foto-panoramica-hermosa-naturaleza-isla-kauai-hawaii_181624-48159.jpg?semt=ais_hybrid&w=740&q=80",
@@ -908,6 +947,7 @@
           "capital": "Quito",
           "population": "18M",
           "language": "Español",
+          "calendarInfo": "Ecuador celebra el Carnaval en febrero y la Fiesta de la Mama Negra en Latacunga en noviembre. La mejor época para visitar es entre junio y septiembre, cuando el clima es más seco en la Sierra y la Costa. El verano es ideal para recorrer las Islas Galápagos y disfrutar de su biodiversidad. En invierno, destacan festivales religiosos y paisajes verdes. Es un destino diverso con cultura, naturaleza y tradiciones durante todo el año.",
           "description": "Ecuador ofrece una gran diversidad, desde las Islas Galápagos y la Amazonía hasta ciudades coloniales como Quito y Cuenca. Es un país rico en cultura y naturaleza.",
           "image": {
             "url": "https://media.istockphoto.com/id/1051413292/es/foto/volc%C3%A1n-quilotoa.jpg?s=612x612&w=0&k=20&c=r-IawyPGjcfwzOXfJ6TLEvBeKU4aiUEAPqQkw4BnGd4=",
@@ -929,6 +969,7 @@
           "capital": "Lima",
           "population": "34M",
           "language": "Español",
+          "calendarInfo": "Perú celebra la Fiesta de la Candelaria en Puno en febrero y el Inti Raymi en Cusco en junio. La mejor época para visitar es entre mayo y septiembre, cuando el clima es seco y perfecto para recorrer Machu Picchu y la Cordillera de los Andes. El verano ofrece playas en la costa y festivales gastronómicos. En invierno, destacan celebraciones religiosas y paisajes verdes en la selva. Cada estación aporta experiencias únicas de cultura y naturaleza.",
           "description": "Perú es conocido por Machu Picchu y su herencia inca, además de ciudades como Lima y Cusco. Combina historia milenaria, gastronomía reconocida y paisajes que van desde la costa hasta los Andes y la Amazonía.",
           "image": {
             "url": "https://trexperienceperu.com/sites/default/files/2023-10/rainbow-mountain-trexperience.jpg",
