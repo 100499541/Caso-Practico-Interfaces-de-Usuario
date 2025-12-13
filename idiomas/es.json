@@ -89,5 +89,16 @@
         "profile-picture": "Foto de Perfil*",
         "privacy-policy": "Acepto la política de privacidad y uso*",
         "create-account": "Crear Cuenta y acceder"
-    }
+    },
+
+        "product-result": {
+            "breadcrumbs-product": "Búsqueda de producto",
+            "title": "Detalles del alojamiento",
+            "info": "Información y comodidades",
+            "reviews": "Ver reseñas",
+            "whats-included": "Qué se incluye",
+            "book-now": "Reservar ahora",
+            "favourite": "Guardar en favoritos"
+
+        }
 }

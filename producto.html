@@ -12,17 +12,18 @@
   <!-- HEADER -->
   <header>
     <h2>Rutas del mundo</h2>
-    <nav>
-      <a href="index.html">Inicio</a>
-      <a href="destinos.html">Destinos</a>
-      <a href="viajesCompartidos.html">Viajes Compartidos</a>
-      <a href="social.html">Social</a>
+    <nav id="nav">
+      <a href="#" data-section="header" data-value="home"><h4>Inicio</h4></a>
+      <a href="destinos.html" data-section="header" data-value="destinations"><h4>Destinos</h4></a>
+      <a href="viajesCompartidos.html" data-section="header" data-value="shared-trips"><h4>Viajes Compartidos</h4></a>
+      <a href="social.html" data-section="header" data-value="social"><h4>Social</h4></a>
     </nav>
     <div class="idioma">
-      <label for="idioma-select">Idioma</label>
-      <select id="idioma-select">
-        <option value="es">Español</option>
-        <option value="en">English</option>
+      <label for="Idioma" data-section="header" data-value="language">Idioma</label>
+      <select id="Idioma" name="Idioma" data-language-selector>
+        <option value="ES" data-language="es">Español</option>
+        <option value="EN" data-language="en">English</option>
+        <option value="FR">Français</option>
       </select>
     </div>
     <div class="logo">
@@ -32,13 +33,13 @@
 
   <!-- Miga de pan -->
   <div class="breadcrumbs">
-    <a href="index.html">Página principal</a> >
-    <a id="breadcrumb-busqueda" href="#">Búsqueda de producto</a> >
+    <a href="index.html" data-section="destinations-page" data-value="breadcrumbs-main">Página principal</a> >
+    <a id="breadcrumb-busqueda" href="#" data-section="product-result" data-value="breadcrumbs-product">Búsqueda de producto</a> >
     <span id="breadcrumb-producto">Producto</span>
   </div>
 
   <!-- Título contextual -->
-  <h2 class="titulo-producto">Detalles del alojamiento</h2>
+  <h2 class="titulo-producto" data-section="product-result" data-value="title">Detalles del alojamiento</h2>
 
   <!-- CONTENIDO PRINCIPAL -->
   <main class="producto-layout">
@@ -55,7 +56,7 @@
       </div>
 
       <div class="info-servicios">
-        <h4>Información y comodidades</h4>
+        <h4 data-section="product-result" data-value="info">Información y comodidades</h4>
         <ul id="servicios-lista"></ul>
         <div class="checkin-checkout">
           <label>Check-in:</label> <span id="checkin">14:00</span><br />
@@ -71,7 +72,7 @@
           <span id="puntuacion" class="puntuacion"></span>
           <span id="rating-text"></span>
           <span id="valoraciones"></span>
-          <button id="ver-reseñas">Ver reseñas</button>
+          <button id="ver-reseñas" data-section="product-result" data-value="reviews">Ver reseñas</button>
         </div>
         <div class="precio-box">
           <span id="precio"></span>
@@ -79,13 +80,13 @@
       </div>
 
       <div class="incluye">
-        <h4>Qué se incluye</h4>
+        <h4 data-section="product-result" data-value="whats-included">Qué se incluye</h4>
         <div class="incluye-imagenes" id="incluye-imagenes"></div>
       </div>
 
       <div class="acciones">
-        <button id="elegir-estancia">Elegir estancia</button>
-        <button id="guardar-favorito">Guardar en favorito</button>
+        <button id="elegir-estancia" data-section="product-result" data-value="book-now">Reservar ahora</button>
+        <button id="guardar-favorito" data-section="product-result" data-value="favourite">Guardar en favoritos</button>
       </div>
     </div>
   </main>
@@ -121,5 +122,6 @@
   </footer>
 
   <script src="js/producto.js"></script>
+  <script src="js/cambiar-idioma.js"></script>
 </body>
 </html>

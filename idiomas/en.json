@@ -89,5 +89,15 @@
         "profile-picture": "Profile Picture*",
         "privacy-policy": "I accept the privacy and usage policy*",
         "create-account": "Create Account and Log In"
+    },
+
+    "product-result": {
+        "title": "Accommodation Details",
+        "breadcrumbs-product": "Product Search",
+        "info": "Information and Amenities",
+        "reviews": "See Reviews",
+        "whats-included": "What's Included",
+        "book-now": "Book Now",
+        "favourite": "Save to Favourites"
     }
 }
