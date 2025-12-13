@@ -1,0 +1,10 @@
+{
+    "header": {
+        "home": "Inicio",
+        "destinations": "Destinos",
+        "shared-trips": "Viajes Compartidos",
+        "social": "Social",
+        "login": "Iniciar Sesión",
+        "language": "Idioma"
+    }
+}
