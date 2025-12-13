@@ -1,0 +1,39 @@
+{
+  "anunciosOficiales": [
+    {
+      "id": "anuncio01",
+      "titulo": "¡Bienvenido a Rutas del Mundo!",
+      "descripcion": "Explora destinos, conecta con viajeros y comparte tus experiencias. ¡Tu aventura comienza aquí!",
+      "imagen": "/imagenes/anuncios/bienvenida.jpg",
+      "fecha": "2025-12-01"
+    },
+    {
+      "id": "anuncio02",
+      "titulo": "Actualización de seguridad",
+      "descripcion": "Hemos mejorado la protección de tus datos y chats. Consulta los cambios en tu perfil.",
+      "imagen": "/imagenes/anuncios/seguridad.jpg",
+      "fecha": "2025-11-28"
+    },
+    {
+      "id": "anuncio03",
+      "titulo": "Nuevo sistema de grupos",
+      "descripcion": "Crea grupos de viaje, invita amigos y organiza rutas compartidas con facilidad.",
+      "imagen": "/imagenes/anuncios/grupos.jpg",
+      "fecha": "2025-11-20"
+    },
+    {
+      "id": "anuncio04",
+      "titulo": "Concurso de fotos de viaje",
+      "descripcion": "Sube tus mejores fotos y gana premios. Participa hasta el 15 de enero.",
+      "imagen": "/imagenes/anuncios/concurso.jpg",
+      "fecha": "2025-12-10"
+    },
+    {
+      "id": "anuncio05",
+      "titulo": "Explora destinos de invierno",
+      "descripcion": "Descubre rutas nevadas, mercados navideños y escapadas invernales en Europa y Asia.",
+      "imagen": "/imagenes/anuncios/invierno.jpg",
+      "fecha": "2025-12-12"
+    }
+  ]
+}

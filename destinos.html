@@ -132,22 +132,14 @@
 
             <!-- COLUMNA DERECHA (Barra Lateral con Línea) -->
             <aside class="columna-lateral">
-                
-                <div class="widget-sidebar">
-                    <h4 data-section="destinations-page" data-value="events">Eventos y festivos más importantes del pais</h4>
-                    <div class="calendar-widget">
-                        <div class="month-header">May 2011 ▼</div> <!-- Estilo retro wireframe -->
-                        <div class="days-grid">
-                            <span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>
-                            <span class="empty"></span><span class="empty"></span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span>
-                            <span>6</span><span>7</span><span>8</span><span>9</span><span class="event">10</span><span>11</span><span>12</span>
-                            <span>13</span><span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span>19</span>
-                            <span>20</span><span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span>26</span>
-                            <span>27</span><span>28</span>
-                        </div>
-                        <div class="calendar-footer">Select Today</div>
-                    </div>
+                <h4>Fechas y eventos más importantes del país</h4>
+
+                <div class="month-header">
+                <button id="prev-month">←</button>
+                <span id="calendar-month-label">May</span>
+                <button id="next-month">→</button>
                 </div>
+                <div class="days-grid" id="calendar-days"></div>
 
                 <!-- Texto relleno sidebar (Dato curioso simulando el texto garabateado) -->
                 <div class="widget-sidebar text-only-widget">

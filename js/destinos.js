@@ -91,6 +91,9 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("dato-poblacion").textContent = pais.population || "-";
     document.getElementById("dato-idioma").textContent = pais.language || "-";
 
+    paisSeleccionado = pais; // Guardar país activo
+    actualizarCalendario(pais.highlightedDates || []);
+
     // Breadcrumb dinámico
     if (breadPaisName) breadPaisName.textContent = pais.name;
 
@@ -138,3 +141,42 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 });
+
+let mesActual = 5; // Mayo por defecto
+const meses = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
+
+function actualizarCalendario(fechasDestacadas = []) {
+  const diasGrid = document.getElementById("calendar-days");
+  diasGrid.innerHTML = "";
+
+  // Número de días por mes (simplificado, sin años bisiestos)
+  const diasPorMes = [31,28,31,30,31,30,31,31,30,31,30,31];
+  const diasEnMes = diasPorMes[mesActual-1];
+
+  // Actualizar etiqueta del mes
+  document.getElementById("calendar-month-label").textContent = meses[mesActual-1];
+
+  // Pintar días
+  for (let d = 1; d <= diasEnMes; d++) {
+    const span = document.createElement("span");
+    span.textContent = d;
+
+    const fechaFormateada = `${String(mesActual).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+    if (fechasDestacadas.includes(fechaFormateada)) {
+      span.classList.add("event");
+    }
+
+    diasGrid.appendChild(span);
+  }
+}
+
+document.getElementById("prev-month").addEventListener("click", () => {
+  mesActual = mesActual === 1 ? 12 : mesActual - 1;
+  actualizarCalendario(paisSeleccionado.highlightedDates || []);
+});
+
+document.getElementById("next-month").addEventListener("click", () => {
+  mesActual = mesActual === 12 ? 1 : mesActual + 1;
+  actualizarCalendario(paisSeleccionado.highlightedDates || []);
+});
+
