@@ -46,10 +46,10 @@
 
   <!-- Menú móvil desplegable -->
   <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html">Inicio</a>
-    <a href="destinos.html">Destinos</a>
-    <a href="viajesCompartidos.html">Viajes Compartidos</a>
-    <a href="social.html">Social</a>
+    <a href="index.html" data-section="header" data-value="home">Inicio</a>
+    <a href="destinos.html" data-section="header" data-value="destinations">Destinos</a>
+    <a href="viajesCompartidos.html" data-section="header" data-value="shared-trips">Viajes Compartidos</a>
+    <a href="social.html" data-section="header" data-value="social">Social</a>
   </div>
 
   <!-- CONTENEDOR PRINCIPAL -->
@@ -60,13 +60,13 @@
 
       <!-- BARRA DE BÚSQUEDA -->
       <section class="search-section">
-        <h2>Busca tu próximo destino</h2>
+        <h2 data-section="search-bar" data-value="title">Busca tu próximo destino</h2>
         <form class="search-form">
-          <label for="tipo-producto">Tipo de producto:</label>
+          <label for="tipo-producto" data-section="search-bar" data-value="type">Tipo de producto:</label>
           <select id="tipo-producto" name="tipo-producto">
-            <option value="hotel">Hotel</option>
-            <option value="avion">Avión</option>
-            <option value="hotel-avion">Hotel + Avión</option>
+            <option value="hotel" data-section="search-bar" data-value="hotel">Hotel</option>
+            <option value="avion" data-section="search-bar" data-value="flight">Vuelo</option>
+            <option value="hotel-avion" data-section="search-bar" data-value="hotel-flight">Hotel + Vuelo</option>
           </select>
 
           <div class="campo-hotel">

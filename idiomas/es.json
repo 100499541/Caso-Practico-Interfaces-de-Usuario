@@ -6,5 +6,13 @@
         "social": "Social",
         "login": "Iniciar Sesión",
         "language": "Idioma"
+    },
+
+    "search-bar": {
+        "title": "Encuentra tu próximo destino",
+        "type": "Tipo de producto",
+        "hotel": "Hotel",
+        "flight": "Vuelo",
+        "hotel-flight": "Hotel + Vuelo"
     }
 }

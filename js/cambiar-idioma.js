@@ -5,6 +5,8 @@ languageSelect.addEventListener("change", () => {
     const selectedOption =
         languageSelect.options[languageSelect.selectedIndex];
 
+    localStorage.setItem("language", selectedOption.dataset.language);
+
     fetch(`../idiomas/${selectedOption.dataset.language}.json`)
         .then(res => res.json())
         .then(data => {
@@ -16,3 +18,19 @@ languageSelect.addEventListener("change", () => {
             })
         })
 })
+
+document.addEventListener("DOMContentLoaded", () => {
+    const savedLanguage = localStorage.getItem("language");
+
+    if (savedLanguage) {
+        const option = languageSelect.querySelector(
+            `option[data-language="${savedLanguage}"]`
+        );
+
+        if (option) {
+            languageSelect.value = option.value;
+            languageSelect.dispatchEvent(new Event("change"));
+        }
+    }
+});
+
