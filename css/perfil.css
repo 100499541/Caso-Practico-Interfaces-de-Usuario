@@ -1,246 +1,84 @@
-/* css/perfil.css */
+/* AÑADIR AL FINAL DE css/perfil.css */
 
-.container-perfil {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    min-height: 80vh;
+/* --- MODAL EDICIÓN --- */
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 1;
+    transition: opacity 0.3s ease;
 }
 
-.breadcrumbs {
+.modal-overlay.hidden {
+    display: none;
+    opacity: 0;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.modal-content h3 {
+    margin-top: 0;
+    color: #0097A7;
     margin-bottom: 20px;
-    color: #666;
+}
+
+#form-editar-perfil {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#form-editar-perfil label {
+    font-weight: bold;
     font-size: 0.9em;
 }
-.breadcrumbs a { text-decoration: none; color: #0097A7; }
 
-/* --- ESTRUCTURA DE LA PÁGINA (MOBILE FIRST) --- */
-.perfil-layout {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-}
-
-/* --- COLUMNA IZQUIERDA: INFO USUARIO --- */
-.user-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centrado en móvil */
-    gap: 20px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 12px;
-    background: #fff;
-}
-
-.avatar-container {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%; /* Círculo en móvil */
-    overflow: hidden;
-    border: 2px solid #333;
-}
-.avatar-container img { width: 100%; height: 100%; object-fit: cover; }
-
-.user-info {
-    width: 100%;
-}
-
-.user-title-row {
-    display: flex;
-    justify-content: center; /* Centrado en móvil */
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 10px;
-}
-
-.user-title-row h2 {
-    margin: 0;
-    color: #333;
-    text-transform: uppercase;
-    font-size: 1.5em;
-}
-
-.btn-edit-pencil {
-    background: none; border: none; font-size: 1.2em; cursor: pointer;
-}
-
-/* Texto simulado "a mano" */
-.handwritten-text {
-    font-family: 'Courier New', monospace;
-    color: #666;
-    margin: 5px 0;
-    text-align: center; /* Centrado en móvil */
-    /* Efecto lineas */
-    background: repeating-linear-gradient(transparent, transparent 23px, #eee 24px);
-    line-height: 24px;
-}
-
-/* Botón Configuración (Móvil) */
-.btn-config-mobile {
-    display: block;
-    width: 100%;
+#form-editar-perfil input[type="text"],
+#form-editar-perfil textarea {
     padding: 10px;
-    background: #fff;
-    border: 2px solid #333;
-    border-radius: 8px;
-    text-align: center;
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    margin-bottom: 30px;
-}
-.btn-config-mobile:hover { background: #f0f0f0; }
-
-
-/* --- SECCIONES DE GRIDS (FAVORITOS / HISTORIAL) --- */
-.grid-section {
-    margin-bottom: 40px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: inherit;
 }
 
-.section-title-row {
+.modal-buttons {
     display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 15px;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
 }
 
-.grid-section h3 {
-    margin: 0;
-    color: #333;
-    font-size: 1.2em;
-}
-
-.secondary-title {
-    font-size: 1em;
-    color: #666;
-    font-weight: normal;
-}
-
-.grid-cards {
-    display: grid;
-    grid-template-columns: 1fr; /* 1 columna móvil */
-    gap: 20px;
-}
-
-.card-wireframe {
-    border: 2px solid #333;
-    padding: 0;
-    background: #fff;
-    /* Efecto X */
-    position: relative;
-    height: 180px;
-}
-
-/* Fondo X para Favoritos (Simulado) */
-.card-wireframe.bg-x {
-    background-image: linear-gradient(to top right, transparent 48%, #ccc 50%, transparent 52%),
-                      linear-gradient(to top left, transparent 48%, #ccc 50%, transparent 52%);
-    background-size: 100% 100%;
-}
-
-.card-wireframe img {
-    width: 100%; height: 100%; object-fit: cover;
-    /* Si queremos el estilo wireframe puro, podemos ocultar la imagen o ponerle opacidad */
-    /* opacity: 0.8; */
-}
-
-/* Botón "Escribir Reseña" dentro de la card de historial */
-.btn-review {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: white;
-    border: 1px solid #333;
-    padding: 5px 10px;
-    font-size: 0.8em;
+.btn-cancelar {
+    background: #ccc;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
     cursor: pointer;
     font-weight: bold;
 }
 
-
-/* --- COLUMNA DERECHA: CONFIGURACIÓN --- */
-.config-sidebar {
-    padding: 20px 0;
+.btn-guardar {
+    background: #0097A7;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
 }
 
-.config-list {
-    list-style: none;
-    padding: 0;
-    margin-top: 30px;
-}
-
-.config-list li {
-    margin-bottom: 20px;
-}
-
-.config-list a {
-    text-decoration: none;
-    color: #333;
-    font-size: 1.2em;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    transition: color 0.2s;
-}
-
-.config-list a:hover { color: #0097A7; }
-
-.config-list .icon {
-    font-size: 1.3em;
-    width: 30px;
-    text-align: center;
-}
-
-.delete-account a {
-    color: #d32f2f;
-}
-
-
-/* --- RESPONSIVE DESKTOP (Wireframe Style) --- */
-@media (min-width: 900px) {
-
-    .perfil-layout {
-        display: grid;
-        grid-template-columns: 2fr 1fr; /* 2/3 Izquierda, 1/3 Derecha */
-        gap: 0; /* Sin gap para usar border */
-    }
-
-    /* Ajustes Columna Izquierda */
-    .perfil-main {
-        padding-right: 40px;
-    }
-
-    .user-header {
-        flex-direction: row; /* Avatar izq, texto der */
-        align-items: flex-start;
-        border: 2px solid #333; /* Borde cuadro usuario */
-        text-align: left;
-    }
-
-    .user-title-row { justify-content: flex-start; }
-    .handwritten-text { text-align: left; }
-    
-    .avatar-container {
-        /* En escritorio el avatar suele ser cuadrado redondeado o circulo segun wireframe */
-        /* Wireframe escritorio muestra "nube" o circulo irregular, mantenemos circulo */
-        width: 150px; height: 150px;
-        flex-shrink: 0;
-    }
-
-    /* Ocultar botón config móvil en escritorio */
-    .btn-config-mobile { display: none; }
-
-    /* Grids a 2 columnas */
-    .grid-cards {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    /* Ajustes Columna Derecha (Config) */
-    .config-sidebar {
-        padding-left: 40px;
-        padding-top: 0;
-    }
-}
+.btn-guardar:hover { background: #00707d; }
