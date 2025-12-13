@@ -20,6 +20,47 @@ document.addEventListener("DOMContentLoaded", () => {
     function guardarMapa(key, obj) {
         localStorage.setItem(key, JSON.stringify(obj));
     }
+    function keyViaje(item) {
+    // clave estable para un alojamiento/viaje
+    return `${(item.ciudad || "").toLowerCase()}||${item.nombre || ""}`;
+    }
+
+    function cargarResenas() {
+    return cargarMapa("resenasViajes"); // { username: { keyViaje: {rating, texto, fecha} } }
+    }
+
+    function guardarResenas(obj) {
+    guardarMapa("resenasViajes", obj);
+    }
+
+    function escribirResena(item) {
+    const ratingStr = prompt("Puntuación (1 a 5):");
+    if (ratingStr === null) return;
+
+    const rating = parseInt(ratingStr, 10);
+    if (isNaN(rating) || rating < 1 || rating > 5) {
+        alert("La puntuación debe ser un número entre 1 y 5.");
+        return;
+    }
+
+    const texto = prompt("Escribe tu reseña (texto corto):");
+    if (texto === null) return;
+
+    const resenas = cargarResenas();
+    const user = usuarioActivo.usuario;
+    if (!resenas[user]) resenas[user] = {};
+
+    resenas[user][keyViaje(item)] = {
+        rating,
+        texto: texto.trim(),
+        fecha: new Date().toISOString()
+    };
+
+    guardarResenas(resenas);
+    alert("¡Reseña guardada!");
+    cargarMisViajes(); // refresca para mostrar estado “reseñado”
+    }
+
 
     // -------------------------------
     // 2) PERFIL (PINTAR)
@@ -55,70 +96,87 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function crearCardViaje(item, { modo }) {
-        // modo: "favorito" | "compra"
-        const card = document.createElement("div");
-        card.className = "card-wireframe bg-x";
+    const card = document.createElement("div");
+    card.className = "card-wireframe";
 
-        if (item?.imagen) {
-            const img = document.createElement("img");
-            img.src = item.imagen;
-            img.alt = item.nombre || "Viaje";
-            card.appendChild(img);
+    // Imagen
+    if (item?.imagen) {
+        const img = document.createElement("img");
+        img.src = item.imagen;
+        img.alt = item.nombre || "Viaje";
+        card.appendChild(img);
+    } else {
+        card.classList.add("bg-x");
+    }
+
+    // Acciones (botones)
+    const actions = document.createElement("div");
+    actions.className = "card-actions";
+    card.appendChild(actions);
+
+    // Botón principal
+    const btnMain = document.createElement("button");
+    btnMain.className = "card-btn primary";
+    btnMain.textContent = (modo === "favorito") ? "Quitar" : "Ver";
+    actions.appendChild(btnMain);
+
+    // Botón reseña SOLO en compras
+    if (modo === "compra") {
+        const resenas = cargarResenas();
+        const user = usuarioActivo.usuario;
+        const yaResenado = !!(resenas[user] && resenas[user][keyViaje(item)]);
+
+        const btnResena = document.createElement("button");
+        btnResena.className = "card-btn";
+        btnResena.textContent = yaResenado ? "Editar reseña" : "Escribir reseña";
+        actions.appendChild(btnResena);
+
+        btnResena.addEventListener("click", (e) => {
+        e.stopPropagation();
+        escribirResena(item);
+        });
+    }
+
+    // Clicks
+    btnMain.addEventListener("click", (e) => {
+        e.stopPropagation();
+
+        if (modo === "favorito") {
+        const favs = cargarMapa("viajesFavoritos");
+        const lista = favs[usuarioActivo.usuario] || [];
+        favs[usuarioActivo.usuario] = lista.filter(v =>
+            !(((v.ciudad || "").toLowerCase() === (item.ciudad || "").toLowerCase()) && v.nombre === item.nombre)
+        );
+        guardarMapa("viajesFavoritos", favs);
+        cargarMisViajes();
+        return;
         }
 
-        const btn = document.createElement("button");
-        btn.className = "btn-review";
-        btn.textContent = (modo === "favorito") ? "Quitar" : "Ver";
-        card.appendChild(btn);
+        // modo compra -> ver producto
+        abrirProducto(item);
+    });
 
-        btn.addEventListener("click", (e) => {
-            e.stopPropagation();
+    card.addEventListener("click", () => abrirProducto(item));
 
-            if (modo === "favorito") {
-                const favs = cargarMapa("viajesFavoritos");
-                const lista = favs[usuarioActivo.usuario] || [];
-                const nueva = lista.filter(v =>
-                    !(((v.ciudad || "").toLowerCase() === (item.ciudad || "").toLowerCase()) && v.nombre === item.nombre)
-                );
-                favs[usuarioActivo.usuario] = nueva;
-                guardarMapa("viajesFavoritos", favs);
-                cargarMisViajes();
-                return;
-            }
+    // Tooltip con info
+    const fechas = (item?.inicio || item?.fin) ? ` (${item.inicio || ""} - ${item.fin || ""})` : "";
+    const precio = (item?.precio != null) ? ` · ${item.precio} ${item.moneda || ""} pp` : "";
+    card.title = `${item.nombre || "Viaje"} · ${item.ciudad || ""}${fechas}${precio}`;
 
-            const ciudad = item.ciudad || "";
-            const nombre = item.nombre || "";
-            const tipo = item.tipo || "hotel";
-            const inicio = item.inicio || "";
-            const fin = item.fin || "";
-            window.location.href =
-                `producto.html?ciudad=${encodeURIComponent(ciudad)}&nombre=${encodeURIComponent(nombre)}` +
-                `&tipo=${encodeURIComponent(tipo)}&inicio=${encodeURIComponent(inicio)}&fin=${encodeURIComponent(fin)}`;
-        });
-
-        card.addEventListener("click", () => {
-            const ciudad = item.ciudad || "";
-            const nombre = item.nombre || "";
-            const tipo = item.tipo || "hotel";
-            const inicio = item.inicio || "";
-            const fin = item.fin || "";
-            window.location.href =
-                `producto.html?ciudad=${encodeURIComponent(ciudad)}&nombre=${encodeURIComponent(nombre)}` +
-                `&tipo=${encodeURIComponent(tipo)}&inicio=${encodeURIComponent(inicio)}&fin=${encodeURIComponent(fin)}`;
-        });
-
-        const titulo = item?.nombre ? `${item.nombre} · ${item.ciudad || ""}` : "Viaje";
-        const fechas = (item?.inicio || item?.fin) ? ` (${item.inicio || ""} - ${item.fin || ""})` : "";
-        const precio = (item?.precio != null) ? ` · ${item.precio} ${item.moneda || ""} pp` : "";
-        const when =
-            (modo === "compra")
-                ? (item?.compradoEn ? ` · comprado: ${formatearFechaIso(item.compradoEn)}` : "")
-                : (item?.guardadoEn ? ` · guardado: ${formatearFechaIso(item.guardadoEn)}` : "");
-
-        card.title = `${titulo}${fechas}${precio}${when}`;
-
-        return card;
+    return card;
     }
+
+    function abrirProducto(item) {
+    const ciudad = item.ciudad || "";
+    const nombre = item.nombre || "";
+    const tipo = item.tipo || "hotel";
+    const inicio = item.inicio || "";
+    const fin = item.fin || "";
+    window.location.href =
+        `producto.html?ciudad=${encodeURIComponent(ciudad)}&nombre=${encodeURIComponent(nombre)}` +
+        `&tipo=${encodeURIComponent(tipo)}&inicio=${encodeURIComponent(inicio)}&fin=${encodeURIComponent(fin)}`;
+    }
+
 
     function cargarMisViajes() {
         const favsGrid = document.getElementById("grid-favoritos");
@@ -135,18 +193,34 @@ document.addEventListener("DOMContentLoaded", () => {
         const listaCompras = compras[usuarioActivo.usuario] || [];
 
         if (listaFavs.length === 0) {
-            favsGrid.innerHTML = `<div class="card-wireframe bg-x" title="Sin favoritos todavía"></div>`;
+        favsGrid.innerHTML = `
+            <div class="empty-state">
+            <div class="empty-inner">
+                <div class="empty-icon">⭐</div>
+                <div class="empty-title">Aún no tienes favoritos</div>
+                <div class="empty-sub">Guarda alojamientos para planificar tu viaje más tarde.</div>
+            </div>
+            </div>
+        `;
         } else {
-            listaFavs.forEach(item => favsGrid.appendChild(crearCardViaje(item, { modo: "favorito" })));
+        listaFavs.forEach(item => favsGrid.appendChild(crearCardViaje(item, { modo: "favorito" })));
         }
 
         if (listaCompras.length === 0) {
-            histGrid.innerHTML = `<div class="card-wireframe bg-x" title="Sin compras todavía"></div>`;
+        histGrid.innerHTML = `
+            <div class="empty-state">
+            <div class="empty-inner">
+                <div class="empty-icon">🧾</div>
+                <div class="empty-title">Aún no tienes compras</div>
+                <div class="empty-sub">Cuando compres un alojamiento aparecerá aquí tu historial.</div>
+            </div>
+            </div>
+        `;
         } else {
-            listaCompras.forEach(item => histGrid.appendChild(crearCardViaje(item, { modo: "compra" })));
-        }
+        listaCompras.forEach(item => histGrid.appendChild(crearCardViaje(item, { modo: "compra" })));
     }
 
+    }
     // -------------------------------
     // 4) GESTIÓN DE VISTAS
     // -------------------------------
