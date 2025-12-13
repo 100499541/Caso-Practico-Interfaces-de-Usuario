@@ -13,6 +13,47 @@
         "type": "Tipo de producto",
         "hotel": "Hotel",
         "flight": "Vuelo",
-        "hotel-flight": "Hotel + Vuelo"
+        "hotel-flight": "Hotel + Vuelo",
+        "destination": "Destino",
+        "trip-period": "Período de viaje",
+        "search-button": "Buscar"
+    },
+
+    "carousel-1": {
+        "title": "Aprende sobre los destinos más famosos"
+
+    },
+
+    "carousel-2": {
+        "title": "Las mejores ofertas"
+
+    },
+
+    "carousel-3": {
+        "title": "Únete a otros aventureros",
+        "destination": "Ver destino",
+        "name-1": "Chiang Mai, Tailandia",
+        "name-2": "Hanoi, Vietnam",
+        "name-3": "Queenstown, N. Zelanda",
+        "name-4": "Reikiavik, Islandia"
+    },
+
+    "reviews": {
+        "title": "Mira qué dicen los demás",
+        "city-1": "Madrid, España",
+        "city-2": "Barcelona, España"
+    },
+
+    "tops": {
+        "title": "Nuestros viajeros más expertos",
+        "ranking-1": "Top viajeros con más viajes",
+        "ranking-2": "Top viajeros con más amigos",
+        "ranking-3": "Top destinos más visitados"
+    },
+
+    "footer": {
+        "text": "Sobre Nosotros | Política de Privacidad | Ayuda",
+        "newsletter": "¿Quieres suscribirte al newsletter?",
+        "subscribe-button": "Suscribirse"
     }
 }

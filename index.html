@@ -70,22 +70,22 @@
           </select>
 
           <div class="campo-hotel">
-            <label for="destino">Destino:</label>
-            <input type="text" id="destino" name="destino" placeholder="Quiero ir a...">
+            <label for="destino" data-section="search-bar" data-value="destination">Destino:</label>
+            <input type="text" id="destino" name="destino" placeholder="Paris, Tokio..." autocomplete="off">
             <div id="sugerencias" class="sugerencias"></div>
 
-            <label for="periodo">Periodo de viaje:</label>
+            <label for="periodo" data-section="search-bar" data-value="trip-period">Periodo de viaje:</label>
             <input type="date" id="inicio-viaje" name="inicio-viaje" placeholder="Saldría en...">
             <input type="date" id="fin-viaje" name="fin-viaje" placeholder="Volvería en...">
           </div>
 
-          <button type="submit">Buscar</button>
+          <button type="submit" data-section="search-bar" data-value="search-button">Buscar</button>
         </form>
       </section>
 
       <!-- CARRUSEL 1 - DESTINOS FAMOSOS -->
       <section class="destinos-famosos">
-        <h3>Aprende sobre los destinos más famosos</h3>
+        <h3 data-section="carousel-1" data-value="title">Aprende sobre los destinos más famosos</h3>
         <div class="carousel-wrapper">
           <div class="carousel-arrow left">&#10094;</div>
           <div class="carousel">
@@ -98,7 +98,7 @@
 
       <!-- CARRUSEL 2 - OFERTAS -->
       <section class="mejores-ofertas">
-        <h3>Las mejores ofertas</h3>
+        <h3 data-section="carousel-2" data-value="title">Las mejores ofertas</h3>
         <div class="carousel-wrapper">
           <div class="carousel-arrow left">&#10094;</div>
           <div class="carousel">
@@ -111,29 +111,29 @@
 
       <!-- CARRUSEL 3 - AVENTUREROS -->
       <section class="aventureros">
-        <h3>Únete a otros aventureros</h3>
+        <h3 data-section="carousel-3" data-value="title">Únete a otros aventureros</h3>
         <div class="carousel-wrapper">
           <div class="carousel-arrow left">&#10094;</div>
           <div class="carousel">
             <div class="card">
               <img src="https://plus.unsplash.com/premium_photo-1661929242720-140374d97c94?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Q2hpYW5nJTIwTWFpfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500" alt="Chiang Mai">
-              <button class="ver-destino">Ver destino</button>
-              <div class="destino-nombre">Chiang Mai, Tailandia</div>
+              <button class="ver-destino" data-section="carousel-3" data-value="destination">Ver destino</button>
+              <div class="destino-nombre" data-section="carousel-3" data-value="name-1">Chiang Mai, Tailandia</div>
             </div>
             <div class="card">
               <img src="https://plus.unsplash.com/premium_photo-1691960159290-6f4ace6e6c4c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8SGFub2l8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=500" alt="Hanoi">
-              <button class="ver-destino">Ver destino</button>
-              <div class="destino-nombre">Hanoi, Vietnam</div>
+              <button class="ver-destino" data-section="carousel-3" data-value="destination">Ver destino</button>
+              <div class="destino-nombre" data-section="carousel-3" data-value="name-2">Hanoi, Vietnam</div>
             </div>
             <div class="card">
               <img src="https://images.unsplash.com/photo-1600466403153-50193d187dde?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8UXVlZW5zdG93bnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=500" alt="Queenstown">
-              <button class="ver-destino">Ver destino</button>
-              <div class="destino-nombre">Queenstown, N. Zelanda</div>
+              <button class="ver-destino" data-section="carousel-3" data-value="destination">Ver destino</button>
+              <div class="destino-nombre" data-section="carousel-3" data-value="name-3">Queenstown, N. Zelanda</div>
             </div>
             <div class="card">
                 <img src="https://plus.unsplash.com/premium_photo-1661962984700-16b03ecda58a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8UmVpa2lhdmlrfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500" alt="Reykjavik">
-                <button class="ver-destino">Ver destino</button>
-                <div class="destino-nombre">Reikiavik, Islandia</div>
+                <button class="ver-destino" data-section="carousel-3" data-value="destination">Ver destino</button>
+                <div class="destino-nombre" data-section="carousel-3" data-value="name-4">Reikiavik, Islandia</div>
               </div>
             </div>
           <div class="carousel-arrow right">&#10095;</div>
@@ -147,7 +147,7 @@
 
       <!-- RESEÑAS -->
       <section class="reseñas">
-        <h3>Mira qué dicen los demás</h3>
+        <h3 data-section="reviews" data-value="title">Mira qué dicen los demás</h3>
         <div class="carousel-wrapper">
           <div class="carousel-arrow left">&#10094;</div>
           <div class="carousel">
@@ -156,7 +156,7 @@
                 <img src="/imagenes/default_user.png" alt="Usuario 1">
                 <div class="usuario-datos">
                   <p class="nombre">Ana, 28</p>
-                  <p class="ciudad">Madrid, España</p>
+                  <p class="ciudad" data-section="reviews" data-value="city-1">Madrid, España</p>
                 </div>
               </div>
               <p class="texto-review">¡Me encantó el viaje a París! Todo perfecto.</p>
@@ -168,7 +168,7 @@
                 <img src="/imagenes/default_user.png" alt="Usuario 2">
                 <div class="usuario-datos">
                   <p class="nombre">Luis, 34</p>
-                  <p class="ciudad">Barcelona, España</p>
+                  <p class="ciudad" data-section="reviews" data-value="city-2">Barcelona, España</p>
                 </div>
               </div>
               <p class="texto-review">Gran experiencia en Roma, muy recomendable.</p>
@@ -182,14 +182,14 @@
 
       <!-- TOP VIAJEROS -->
       <section class="top-viajeros">
-        <h3>Nuestros viajeros más expertos</h3>
+        <h3 data-section="tops" data-value="title">Nuestros viajeros más expertos</h3>
         <div class="carousel-wrapper">
           <div class="carousel-arrow left">&#10094;</div>
           <div class="carousel">
             
             <!-- Ranking 1 -->
             <div class="ranking-card">
-              <h4>Top viajeros con más viajes</h4>
+              <h4 data-section="tops" data-value="ranking-1">Top viajeros con más viajes</h4>
               <ol>
                 <li>User123 - 15 viajes <img src="/imagenes/default_user.png" alt="User123"></li>
                 <li>User257 - 12 viajes <img src="/imagenes/default_user.png" alt="User257"></li>
@@ -199,7 +199,7 @@
 
             <!-- Ranking 2 -->
             <div class="ranking-card">
-              <h4>Top viajeros con más amigos</h4>
+              <h4 data-section="tops" data-value="ranking-2">Top viajeros con más amigos</h4>
               <ol>
                 <li>User555 - 50 amigos <img src="/imagenes/default_user.png" alt="User555"></li>
                 <li>User777 - 45 amigos <img src="/imagenes/default_user.png" alt="User777"></li>
@@ -209,7 +209,7 @@
 
             <!-- Ranking 3 -->
             <div class="ranking-card">
-              <h4>Top destinos más visitados</h4>
+              <h4 data-section="tops" data-value="ranking-3">Top destinos más visitados</h4>
               <ol>
                 <li>París - 120 visitas <img src="/images/paris.jpg" alt="París"></li>
                 <li>Roma - 95 visitas <img src="/images/roma.jpg" alt="Roma"></li>
@@ -238,7 +238,7 @@
         <p>© 2025 Rutas del mundo</p>
       </div>
       <div class="footer-center">
-        <p>Sobre Nosotros | Política de Privacidad | Ayuda</p>
+        <p data-section="footer" data-value="text">Sobre Nosotros | Política de Privacidad | Ayuda</p>
       </div>
       <div class="footer-socials">
         <a href="https://www.facebook.com" aria-label="Facebook">
@@ -259,9 +259,9 @@
       </div>
       <div class="footer-right">
         <form class="newsletter">
-          <label for="email">¿Quieres suscribirte al newsletter?</label><br>
+          <label for="email" data-section="footer" data-value="newsletter">¿Quieres suscribirte al newsletter?</label><br>
           <input type="email" id="email" placeholder="Introduce tu correo">
-          <button type="submit">Suscribirse</button>
+          <button type="submit" data-section="footer" data-value="subscribe-button">Suscribirse</button>
         </form>
       </div>
     </div>

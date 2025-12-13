@@ -13,6 +13,47 @@
         "type": "Product Type",
         "hotel": "Hotel",
         "flight": "Flight",
-        "hotel-flight": "Hotel + Flight"
+        "hotel-flight": "Hotel + Flight",
+        "destination": "Destination",
+        "trip-period": "Trip Period",
+        "search-button": "Search"
+    },
+
+    "carousel-1": {
+        "title": "Learn about the most famous destinations"
+
+    },
+
+    "carousel-2": {
+        "title": "The best deals"
+
+    },
+
+    "carousel-3": {
+        "title": "Join other adventurers",
+        "destination": "See Destination",
+        "name-1": "Chiang Mai, Thailand",
+        "name-2": "Hanoi, Vietnam",
+        "name-3": "Queenstown, N. Zealand",
+        "name-4": "Reykjavik, Iceland"
+    },
+
+    "reviews": {
+        "title": "See what others are saying",
+        "city-1": "Madrid, Spain",
+        "city-2": "Barcelona, Spain"
+    },
+
+    "tops": {
+        "title": "Our most experienced travelers",
+        "ranking-1": "Top travelers with most trips",
+        "ranking-2": "Top travelers with most friends",
+        "ranking-3": "Top most visited destinations"
+    },
+
+    "footer": {
+        "text": "About Us | Privacy Policy | Help",
+        "newsletter": "Want to subscribe to the newsletter?",
+        "subscribe-button": "Subscribe"
     }
 }
