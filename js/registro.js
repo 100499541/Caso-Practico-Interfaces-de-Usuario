@@ -111,7 +111,19 @@ document.addEventListener("DOMContentLoaded", () => {
     reader.readAsDataURL(file);
   }
 
-  form.addEventListener("submit", (e) => {
+  // --- NUEVO: obtener amigos iniciales desde JSON externo ---
+  async function obtenerAmigosIniciales() {
+    try {
+      const res = await fetch("/js/usuarios.json"); // ruta al JSON ficticio
+      const data = await res.json();
+      return data.usuarios.filter(u => u.amigoInicial).map(u => u.id);
+    } catch (err) {
+      console.error("Error cargando usuarios.json", err);
+      return [];
+    }
+  }
+
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     let firstInvalid = null;
@@ -156,7 +168,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Guardar usuario con foto en Base64 o por defecto
-    const guardarUsuario = (fotoFinal) => {
+    const guardarUsuario = async (fotoFinal) => {
+      const amigosIniciales = await obtenerAmigosIniciales();
+
       const nuevoUsuario = {
         usuario: usuario.value.trim(),
         nombre: nombre.value.trim(),
@@ -164,7 +178,8 @@ document.addEventListener("DOMContentLoaded", () => {
         contrasena: contrasena.value,
         correo: correo.value.trim(),
         nacimiento: nacimiento.value,
-        foto: fotoFinal
+        foto: fotoFinal,
+        amigos: amigosIniciales // <-- añadimos amigos iniciales desde JSON
       };
 
       const usuariosPrevios = JSON.parse(localStorage.getItem("usuariosRegistrados")) || [];

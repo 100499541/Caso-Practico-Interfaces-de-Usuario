@@ -1,0 +1,22 @@
+{
+  "usuarios": [
+    {
+      "id": "usr01",
+      "nombre": "Carlos Viajero",
+      "foto": "/imagenes/hotel-1.jpg",
+      "amigoInicial": true
+    },
+    {
+      "id": "usr02",
+      "nombre": "Ana López",
+      "foto": "/imagenes/hotel-2.jpg",
+      "amigoInicial": true
+    },
+    {
+      "id": "usr03",
+      "nombre": "Marta Guía",
+      "foto": "/imagenes/usuarios/marta.jpg",
+      "amigoInicial": false
+    }
+  ]
+}
