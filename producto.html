@@ -10,25 +10,39 @@
 <body>
 
   <!-- HEADER -->
-  <header>
-    <h2>Rutas del mundo</h2>
+  <header class="header">
+    <div class="menu-btn" id="menu-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <h2 class="titulo">Rutas del mundo</h2>
+
+    <div class="login-btn">
+      <a href="/inicioSesion.html" 
+      data-section="header" data-value="login">Iniciar sesión</a>
+    </div>
+
+    <div class="idioma">
+      <label for="Idioma" data-section="header" data-value="language">Idioma</label>
+      <select id="Idioma" name="Idioma" data-language-selector>
+        <option value="ES" data-language="es">Español</option>
+        <option value="FR">Français</option>
+        <option value="EN" data-language="en">English</option>
+      </select>
+    </div>
+
+    <div class="logo">
+      <img src="/imagenes/logo.png" alt="Logo">
+    </div>
+
     <nav id="nav">
       <a href="#" data-section="header" data-value="home"><h4>Inicio</h4></a>
       <a href="destinos.html" data-section="header" data-value="destinations"><h4>Destinos</h4></a>
       <a href="viajesCompartidos.html" data-section="header" data-value="shared-trips"><h4>Viajes Compartidos</h4></a>
       <a href="social.html" data-section="header" data-value="social"><h4>Social</h4></a>
     </nav>
-    <div class="idioma">
-      <label for="Idioma" data-section="header" data-value="language">Idioma</label>
-      <select id="Idioma" name="Idioma" data-language-selector>
-        <option value="ES" data-language="es">Español</option>
-        <option value="EN" data-language="en">English</option>
-        <option value="FR">Français</option>
-      </select>
-    </div>
-    <div class="logo">
-      <img src="imagenes/logo.png" alt="Logo" />
-    </div>
   </header>
 
   <!-- Miga de pan -->
@@ -122,6 +136,7 @@
   </footer>
 
   <script src="js/producto.js"></script>
+  <script src="/js/index.js"></script>
   <script src="js/cambiar-idioma.js"></script>
 </body>
 </html>
