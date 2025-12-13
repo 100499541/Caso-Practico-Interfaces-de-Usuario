@@ -1,4 +1,8 @@
-/* css/perfil.css */
+/* css/perfil.css - COMPLETO */
+
+/* --------------------------------------------------------- */
+/* 1. ESTRUCTURA BASE Y LAYOUT */
+/* --------------------------------------------------------- */
 
 .container-perfil {
     max-width: 1200px;
@@ -12,16 +16,22 @@
     color: #666;
     font-size: 0.9em;
 }
-.breadcrumbs a { text-decoration: none; color: #0097A7; }
+.breadcrumbs a { 
+    text-decoration: none; 
+    color: #0097A7; 
+}
 
-/* --- ESTRUCTURA DE LA PÁGINA (MOBILE FIRST) --- */
+/* Layout Principal (Mobile First: Columna única) */
 .perfil-layout {
     display: flex;
     flex-direction: column;
     gap: 40px;
 }
 
-/* --- COLUMNA IZQUIERDA: INFO USUARIO --- */
+/* --------------------------------------------------------- */
+/* 2. COLUMNA IZQUIERDA: INFORMACIÓN DE USUARIO */
+/* --------------------------------------------------------- */
+
 .user-header {
     display: flex;
     flex-direction: column;
@@ -32,24 +42,33 @@
     padding: 20px;
     border-radius: 12px;
     background: #fff;
+    /* Sombra suave */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 .avatar-container {
     width: 120px;
     height: 120px;
-    border-radius: 50%; /* Círculo en móvil */
+    border-radius: 50%;
     overflow: hidden;
     border: 2px solid #333;
+    flex-shrink: 0;
 }
-.avatar-container img { width: 100%; height: 100%; object-fit: cover; }
+
+.avatar-container img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+}
 
 .user-info {
     width: 100%;
+    text-align: center; /* Centrado en móvil */
 }
 
 .user-title-row {
     display: flex;
-    justify-content: center; /* Centrado en móvil */
+    justify-content: center;
     align-items: center;
     gap: 10px;
     margin-bottom: 10px;
@@ -63,25 +82,30 @@
 }
 
 .btn-edit-pencil {
-    background: none; border: none; font-size: 1.2em; cursor: pointer;
+    background: none; 
+    border: none; 
+    font-size: 1.2em; 
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.btn-edit-pencil:hover {
+    transform: scale(1.2);
 }
 
-/* Texto simulado "a mano" */
+/* Texto simulado "a mano" para la biografía */
 .handwritten-text {
     font-family: 'Courier New', monospace;
     color: #666;
     margin: 5px 0;
-    text-align: center; /* Centrado en móvil */
-    /* Efecto lineas */
     background: repeating-linear-gradient(transparent, transparent 23px, #eee 24px);
     line-height: 24px;
 }
 
-/* Botón Configuración (Móvil) */
+/* Botón Configuración (Solo visible en Móvil) */
 .btn-config-mobile {
     display: block;
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     background: #fff;
     border: 2px solid #333;
     border-radius: 8px;
@@ -90,11 +114,16 @@
     color: #333;
     font-weight: bold;
     margin-bottom: 30px;
+    box-sizing: border-box;
 }
-.btn-config-mobile:hover { background: #f0f0f0; }
+.btn-config-mobile:hover { 
+    background: #f0f0f0; 
+}
 
+/* --------------------------------------------------------- */
+/* 3. SECCIONES DE GRIDS (FAVORITOS / HISTORIAL) */
+/* --------------------------------------------------------- */
 
-/* --- SECCIONES DE GRIDS (FAVORITOS / HISTORIAL) --- */
 .grid-section {
     margin-bottom: 40px;
 }
@@ -120,7 +149,7 @@
 
 .grid-cards {
     display: grid;
-    grid-template-columns: 1fr; /* 1 columna móvil */
+    grid-template-columns: 1fr; /* 1 columna en móvil */
     gap: 20px;
 }
 
@@ -128,25 +157,25 @@
     border: 2px solid #333;
     padding: 0;
     background: #fff;
-    /* Efecto X */
     position: relative;
     height: 180px;
+    overflow: hidden;
 }
 
-/* Fondo X para Favoritos (Simulado) */
+/* Fondo con X simulada (Wireframe style) */
 .card-wireframe.bg-x {
-    background-image: linear-gradient(to top right, transparent 48%, #ccc 50%, transparent 52%),
-                      linear-gradient(to top left, transparent 48%, #ccc 50%, transparent 52%);
+    background-image: linear-gradient(to top right, transparent 48%, #e0e0e0 50%, transparent 52%),
+                      linear-gradient(to top left, transparent 48%, #e0e0e0 50%, transparent 52%);
     background-size: 100% 100%;
 }
 
 .card-wireframe img {
-    width: 100%; height: 100%; object-fit: cover;
-    /* Si queremos el estilo wireframe puro, podemos ocultar la imagen o ponerle opacidad */
-    /* opacity: 0.8; */
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
 }
 
-/* Botón "Escribir Reseña" dentro de la card de historial */
+/* Botón "Escribir Reseña" dentro de la card */
 .btn-review {
     position: absolute;
     bottom: 10px;
@@ -154,14 +183,20 @@
     transform: translateX(-50%);
     background: white;
     border: 1px solid #333;
-    padding: 5px 10px;
+    padding: 6px 12px;
     font-size: 0.8em;
     cursor: pointer;
     font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.btn-review:hover {
+    background: #f9f9f9;
 }
 
+/* --------------------------------------------------------- */
+/* 4. COLUMNA DERECHA: BARRA LATERAL (SIDEBAR) */
+/* --------------------------------------------------------- */
 
-/* --- COLUMNA DERECHA: CONFIGURACIÓN --- */
 .config-sidebar {
     padding: 20px 0;
 }
@@ -169,7 +204,7 @@
 .config-list {
     list-style: none;
     padding: 0;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 .config-list li {
@@ -179,14 +214,16 @@
 .config-list a {
     text-decoration: none;
     color: #333;
-    font-size: 1.2em;
+    font-size: 1.1em;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
     transition: color 0.2s;
 }
 
-.config-list a:hover { color: #0097A7; }
+.config-list a:hover { 
+    color: #0097A7; 
+}
 
 .config-list .icon {
     font-size: 1.3em;
@@ -196,49 +233,148 @@
 
 .delete-account a {
     color: #d32f2f;
+    font-weight: bold;
+}
+.delete-account a:hover {
+    color: #b71c1c;
 }
 
+/* --------------------------------------------------------- */
+/* 5. NUEVOS ESTILOS PARA EDICIÓN (FUNCIONALIDAD 6) */
+/* --------------------------------------------------------- */
 
-/* --- RESPONSIVE DESKTOP (Wireframe Style) --- */
+/* Clase para ocultar elementos con JS */
+.hidden {
+    display: none !important;
+}
+
+/* Contenedor del formulario de edición */
+#seccion-configuracion {
+    background: #fff;
+    padding: 30px;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.form-config {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #333;
+    font-size: 0.95em;
+}
+
+.form-config input[type="text"],
+.form-config input[type="email"],
+.form-config input[type="password"],
+.form-config input[type="file"],
+.form-config textarea {
+    padding: 12px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.config-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.btn-save {
+    background: #0097A7;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    flex: 1; /* Ocupa espacio disponible */
+    font-size: 1em;
+}
+.btn-save:hover { background: #00707d; }
+
+.btn-cancel {
+    background: #e0e0e0;
+    color: #333;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1em;
+}
+.btn-cancel:hover { background: #d0d0d0; }
+
+/* --------------------------------------------------------- */
+/* 6. RESPONSIVE DESKTOP (Min-width: 900px) */
+/* --------------------------------------------------------- */
+
 @media (min-width: 900px) {
 
     .perfil-layout {
         display: grid;
         grid-template-columns: 2fr 1fr; /* 2/3 Izquierda, 1/3 Derecha */
-        gap: 0; /* Sin gap para usar border */
+        gap: 0; /* Sin gap porque usaremos padding interno */
     }
 
-    /* Ajustes Columna Izquierda */
+    /* Columna Izquierda */
     .perfil-main {
         padding-right: 40px;
+        border-right: 1px solid #eee; /* Línea divisoria opcional */
     }
 
+    /* Header de usuario horizontal */
     .user-header {
-        flex-direction: row; /* Avatar izq, texto der */
+        flex-direction: row; 
         align-items: flex-start;
-        border: 2px solid #333; /* Borde cuadro usuario */
+        border: 2px solid #333; 
         text-align: left;
     }
 
-    .user-title-row { justify-content: flex-start; }
-    .handwritten-text { text-align: left; }
-    
-    .avatar-container {
-        /* En escritorio el avatar suele ser cuadrado redondeado o circulo segun wireframe */
-        /* Wireframe escritorio muestra "nube" o circulo irregular, mantenemos circulo */
-        width: 150px; height: 150px;
-        flex-shrink: 0;
+    .user-info {
+        text-align: left;
     }
 
-    /* Ocultar botón config móvil en escritorio */
-    .btn-config-mobile { display: none; }
+    .user-title-row { 
+        justify-content: flex-start; 
+    }
+    
+    .handwritten-text { 
+        text-align: left; 
+    }
+    
+    .avatar-container {
+        width: 150px; 
+        height: 150px;
+        margin-right: 20px;
+    }
+
+    /* Ocultar botón config de móvil en escritorio */
+    .btn-config-mobile { 
+        display: none; 
+    }
 
     /* Grids a 2 columnas */
     .grid-cards {
         grid-template-columns: 1fr 1fr;
     }
 
-    /* Ajustes Columna Derecha (Config) */
+    /* Columna Derecha (Sidebar) */
     .config-sidebar {
         padding-left: 40px;
         padding-top: 0;

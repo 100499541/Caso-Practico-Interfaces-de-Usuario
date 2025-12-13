@@ -32,6 +32,7 @@
                   "precio": 180,
                   "moneda": "EUR",
                   "imagen": "imagenes/hotel-2.jpg",
+                  "descripcion": "El Hostal Mozart es una opción acogedora y económica situada en una zona céntrica de Viena, ideal para viajeros que buscan comodidad a buen precio. Ofrece habitaciones funcionales y bien cuidadas, con un ambiente tranquilo y familiar. Los huéspedes disponen de WiFi gratuito y acceso fácil al transporte público, lo que permite desplazarse rápidamente a los principales puntos de interés de la ciudad, como la Ópera Estatal o el centro histórico. Su relación calidad-precio y su ubicación práctica lo convierten en una alternativa perfecta para estancias urbanas sencillas y agradables.",
                   "direccion": "Mariahilfer Strasse 50, Viena",
                   "coordenadas": { "lat": 48.2100, "lng": 16.3600 },
                   "servicios": ["WiFi"]
@@ -56,6 +57,7 @@
                   "moneda": "EUR",
                   "imagen": "imagenes/hotel-3.jpg",
                   "direccion": "Plaza Markt 1, Brujas",
+                  "descripcion": "El Hotel Markt es un alojamiento confortable situado en una ubicación privilegiada, cerca de la plaza central y de las principales zonas comerciales de la ciudad. Destaca por su ambiente tranquilo y su atención cuidada, ofreciendo habitaciones luminosas y bien equipadas, ideales tanto para estancias cortas como para viajes de turismo. Los huéspedes pueden disfrutar de WiFi gratuito y de un acceso rápido a restaurantes, museos y puntos históricos, lo que permite descubrir fácilmente la esencia y el encanto de las ciudades belgas. Su equilibrio entre comodidad, ubicación y precio lo convierte en una opción muy recomendable para quienes desean explorar Bélgica con total comodidad.",
                   "coordenadas": { "lat": 51.2093, "lng": 3.2247 },
                   "servicios": ["WiFi", "Desayuno incluido", "Parking"]
                 },
@@ -69,6 +71,7 @@
                   "moneda": "EUR",
                   "imagen": "imagenes/hotel-4.jpg",
                   "direccion": "Calle del Rosario 12, Brujas",
+                  "descripcion": "El Hostal Canales es un alojamiento acogedor situado en el centro histórico de Brujas, Bélgica, ideal para viajeros que buscan una estancia cómoda y económica. Ofrece habitaciones sencillas y bien cuidadas, con un ambiente tranquilo y familiar. Su excelente ubicación permite recorrer a pie los famosos canales, plazas medievales y principales puntos de interés de la ciudad, así como acceder fácilmente a restaurantes y transporte público. Es una opción práctica para disfrutar del encanto de Brujas con una excelente relación calidad-precio.",
                   "coordenadas": { "lat": 51.2080, "lng": 3.2260 },
                   "servicios": ["WiFi"]
                 }
@@ -92,6 +95,7 @@
                   "moneda": "EUR",
                   "imagen": "imagenes/hotel-5.jpg",
                   "direccion": "Nyhavn 20, Copenhague",
+                  "descripcion": "El Hotel Nyhavn es un elegante alojamiento situado en una de las zonas más emblemáticas de Copenhague, junto al famoso canal Nyhavn. Ofrece habitaciones confortables con una decoración moderna y cuidada, ideales para disfrutar de una estancia relajante en el corazón de la ciudad. Su excelente ubicación permite acceder fácilmente a restaurantes, bares y principales atracciones turísticas, combinando comodidad, estilo y una experiencia urbana auténtica.",
                   "coordenadas": { "lat": 55.6761, "lng": 12.5683 },
                   "servicios": ["WiFi", "Restaurante", "Spa"]
                 },
@@ -105,6 +109,7 @@
                   "moneda": "EUR",
                   "imagen": "imagenes/hotel-1.jpg",
                   "direccion": "Vesterbrogade 3, Copenhague",
+                  "descripcion": "El Hostal Tivoli es una opción económica y funcional ubicada cerca de los Jardines de Tivoli y del centro de Copenhague. Dispone de habitaciones sencillas y prácticas, pensadas para viajeros que buscan comodidad a buen precio. Cuenta con un ambiente tranquilo y acceso sencillo al transporte público, lo que facilita explorar la ciudad y sus principales puntos de interés de forma cómoda y eficiente.",
                   "coordenadas": { "lat": 55.6750, "lng": 12.5650 },
                   "servicios": ["WiFi"]
                 }
@@ -128,6 +133,7 @@
                   "moneda": "EUR",
                   "imagen": "imagenes/hotel-2.jpg",
                   "direccion": "Calle del Castillo 5, Liubliana",
+                  "descripcion": "El Hotel Castillo en Liubliana combina encanto histórico y comodidades modernas, ofreciendo habitaciones elegantes y bien equipadas. Su ubicación céntrica permite explorar fácilmente el casco antiguo, los museos y los principales puntos de interés de la ciudad, haciendo de la estancia una experiencia cultural y confortable.",
                   "coordenadas": { "lat": 46.0569, "lng": 14.5058 },
                   "servicios": ["WiFi", "Desayuno incluido"]
                 },
@@ -141,6 +147,7 @@
                   "moneda": "EUR",
                   "imagen": "imagenes/hotel-3.jpg",
                   "direccion": "Riverside 12, Liubliana",
+                  "descripcion": "El Hostal Río en Liubliana es un alojamiento acogedor y económico, ideal para viajeros que buscan comodidad sin gastar demasiado. Sus habitaciones son sencillas pero funcionales, y su ubicación cerca del río y del centro histórico permite acceder fácilmente a bares, restaurantes y lugares turísticos de la ciudad.",
                   "coordenadas": { "lat": 46.0575, "lng": 14.5080 },
                   "servicios": ["WiFi"]
                 }
@@ -164,6 +171,7 @@
                   "moneda": "EUR",
                   "imagen": "imagenes/hotel-4.jpg",
                   "direccion": "Passeig de Gràcia 100, Barcelona",
+                  "descripcion": "El Hotel Mediterráneo en Barcelona ofrece una estancia moderna y confortable en pleno Passeig de Gràcia, con habitaciones amplias y bien equipadas. Sus servicios incluyen WiFi, restaurante y parking, siendo ideal para turistas que buscan explorar la ciudad con comodidad y estilo.",
                   "coordenadas": { "lat": 41.3851, "lng": 2.1734 },
                   "servicios": ["WiFi", "Parking", "Restaurante"]
                 },
@@ -177,6 +185,7 @@
                   "moneda": "EUR",
                   "imagen": "imagenes/hotel-5.jpg",
                   "direccion": "Carrer del Rec 25, Barcelona",
+                  "descripcion": "El Hostal Born en Barcelona es un alojamiento acogedor y económico, perfecto para viajeros que desean descubrir el casco antiguo de la ciudad. Sus habitaciones son funcionales y el hostal ofrece WiFi, estando ubicado cerca de bares, restaurantes y lugares de interés cultural.",
                   "coordenadas": { "lat": 41.3870, "lng": 2.1800 },
                   "servicios": ["WiFi"]
                 }
@@ -195,6 +204,7 @@
                   "moneda": "EUR",
                   "imagen": "imagenes/hotel-1.jpg",
                   "direccion": "Calle Mateos Gago 15, Sevilla",
+                  "descripcion": "El Hotel Giralda en Sevilla ofrece una experiencia confortable y elegante en el corazón del casco antiguo, cerca de la Catedral y la Giralda. Dispone de WiFi y desayuno incluido, ideal para viajeros que buscan comodidad y proximidad a los principales atractivos de la ciudad.",
                   "coordenadas": { "lat": 37.3861, "lng": -5.9929 },
                   "servicios": ["WiFi", "Desayuno incluido"]
                 },
@@ -208,6 +218,7 @@
                   "moneda": "EUR",
                   "imagen": "imagenes/hotel-2.jpg",
                   "direccion": "Barrio Santa Cruz, Sevilla",
+                  "descripcion": "El Hostal Santa Cruz en Sevilla es un alojamiento sencillo y acogedor, perfecto para explorar el barrio histórico de la ciudad. Ofrece habitaciones funcionales y WiFi, proporcionando una opción económica para turistas que desean descubrir Sevilla a pie.",
                   "coordenadas": { "lat": 37.3865, "lng": -5.9910 },
                   "servicios": ["WiFi"]
                 }
@@ -231,6 +242,7 @@
                   "moneda": "EUR",
                   "imagen": "imagenes/hotel-3.jpg",
                   "direccion": "Toompea Hill 8, Tallin",
+                  "descripcion": "El Hotel Toompea en Tallin combina elegancia y confort en el centro histórico de la ciudad, ofreciendo WiFi y desayuno incluido. Ideal para quienes desean explorar la arquitectura medieval y disfrutar de una estancia tranquila y cómoda.",
                   "coordenadas": { "lat": 59.4370, "lng": 24.7536 },
                   "servicios": ["WiFi", "Desayuno incluido"]
                 },
@@ -244,6 +256,7 @@
                   "moneda": "EUR",
                   "imagen": "imagenes/hotel-4.jpg",
                   "direccion": "Old Town 15, Tallin",
+                  "descripcion": "El Hostal Medieval en Tallin es un alojamiento económico y acogedor, ubicado cerca del casco antiguo. Cuenta con WiFi y proporciona un ambiente sencillo y práctico para viajeros que buscan conocer la ciudad sin gastar demasiado.",
                   "coordenadas": { "lat": 59.4365, "lng": 24.7520 },
                   "servicios": ["WiFi"]
                 }
@@ -267,6 +280,7 @@
                   "moneda": "EUR",
                   "imagen": "imagenes/hotel-5.jpg",
                   "direccion": "Rue de Rivoli 100, París",
+                  "descripcion": "El Hotel Eiffel en París ofrece una experiencia de lujo con vistas a la emblemática Torre Eiffel. Dispone de WiFi, restaurante y atención de primera, siendo ideal para quienes buscan confort y una ubicación céntrica para explorar la ciudad.",
                   "coordenadas": { "lat": 48.8566, "lng": 2.3522 },
                   "servicios": ["WiFi", "Restaurante", "Vistas a la Torre Eiffel"]
                 },
@@ -280,6 +294,7 @@
                   "moneda": "EUR",
                   "imagen": "imagenes/hotel-1.jpg",
                   "direccion": "Rue Lepic 25, París",
+                  "descripcion": "El Hostal Montmartre en París es un alojamiento acogedor y accesible situado en el pintoresco barrio de Montmartre. Cuenta con WiFi y ofrece una base cómoda para descubrir la vida cultural y artística de la ciudad.",
                   "coordenadas": { "lat": 48.8867, "lng": 2.3431 },
                   "servicios": ["WiFi"]
                 }
@@ -303,6 +318,7 @@
                   "moneda": "EUR",
                   "imagen": "imagenes/hotel-2.jpg",
                   "direccion": "Danube Promenade, Budapest",
+                  "descripcion": "El Hotel Danubio en Budapest combina comodidad y bienestar con su spa, WiFi y desayuno incluido. Situado en la Danube Promenade, permite disfrutar de vistas al río y un fácil acceso a los principales atractivos de la ciudad.",
                   "coordenadas": { "lat": 47.4979, "lng": 19.0402 },
                   "servicios": ["WiFi", "Spa", "Desayuno incluido"]
                 },
@@ -316,6 +332,7 @@
                   "moneda": "EUR",
                   "imagen": "imagenes/hotel-3.jpg",
                   "direccion": "Széchenyi Lánchíd 3, Budapest",
+                  "descripcion": "El Hostal Puente de las Cadenas en Budapest es un alojamiento económico y confortable cerca del famoso puente. Ofrece WiFi y sirve como punto de partida ideal para explorar la ciudad a pie.",
                   "coordenadas": { "lat": 47.4986, "lng": 19.0450 },
                   "servicios": ["WiFi"]
                 }
@@ -339,6 +356,7 @@
                   "moneda": "EUR",
                   "imagen": "imagenes/hotel-4.jpg",
                   "direccion": "Piazza del Duomo 1, Florencia",
+                  "descripcion": "El Hotel Duomo en Florencia ofrece una estancia de lujo con WiFi y desayuno incluido, ubicado frente a la icónica catedral, ideal para explorar el arte y la historia de la ciudad.",
                   "coordenadas": { "lat": 43.7731, "lng": 11.2556 },
                   "servicios": ["WiFi", "Desayuno incluido"]
                 },
@@ -352,6 +370,7 @@
                   "moneda": "EUR",
                   "imagen": "imagenes/hotel-5.jpg",
                   "direccion": "Via dei Serragli 20, Florencia",
+                  "descripcion": "El Hostal Oltrarno en Florencia proporciona un alojamiento acogedor y económico en el barrio artístico de Oltrarno. Cuenta con WiFi y permite disfrutar de la auténtica vida florentina.",
                   "coordenadas": { "lat": 43.7696, "lng": 11.2460 },
                   "servicios": ["WiFi"]
                 }
@@ -370,6 +389,7 @@
                   "moneda": "EUR",
                   "imagen": "imagenes/hotel-1.jpg",
                   "direccion": "Piazza della Rotonda 5, Roma",
+                  "descripcion": "El Hotel Panteón en Roma ofrece una experiencia excepcional con WiFi y restaurante, situado frente al histórico Panteón, ideal para explorar el centro histórico de la ciudad.",
                   "coordenadas": { "lat": 41.8986, "lng": 12.4769 },
                   "servicios": ["WiFi", "Restaurante"]
                 },
@@ -383,6 +403,7 @@
                   "moneda": "EUR",
                   "imagen": "imagenes/hotel-2.jpg",
                   "direccion": "Via del Lavatore 50, Roma",
+                  "descripcion": "El Hostal Trevi en Roma brinda un alojamiento cómodo y económico cerca de la Fontana di Trevi, con WiFi disponible y fácil acceso a los principales puntos turísticos.",
                   "coordenadas": { "lat": 41.9009, "lng": 12.4833 },
                   "servicios": ["WiFi"]
                 }
@@ -401,6 +422,7 @@
                   "moneda": "EUR",
                   "imagen": "imagenes/hotel-3.jpg",
                   "direccion": "Piazza San Marco, Venecia",
+                  "descripcion": "El Hotel San Marcos en Venecia ofrece alojamiento muy bueno con WiFi y desayuno incluido, ubicado en la emblemática Piazza San Marco, perfecto para descubrir los canales y monumentos históricos.",
                   "coordenadas": { "lat": 45.4340, "lng": 12.3380 },
                   "servicios": ["WiFi", "Desayuno incluido"]
                 },
@@ -414,6 +436,7 @@
                   "moneda": "EUR",
                   "imagen": "imagenes/hotel-4.jpg",
                   "direccion": "Sestiere San Polo, Venecia",
+                  "descripcion": "El Hostal Puente Rialto en Venecia proporciona un alojamiento económico y cómodo con WiFi, cercano al famoso Puente de Rialto y a los principales puntos turísticos de la ciudad.",
                   "coordenadas": { "lat": 45.4370, "lng": 12.3350 },
                   "servicios": ["WiFi"]
                 }
@@ -437,6 +460,7 @@
                   "moneda": "EUR",
                   "imagen": "imagenes/hotel-5.jpg",
                   "direccion": "Triq ir-Repubblika 12, La Valeta",
+                  "descripcion": "El Hotel Gran Puerto en La Valeta ofrece un alojamiento muy bueno con WiFi y restaurante, situado cerca del centro histórico y del puerto, ideal para explorar la ciudad y sus monumentos.",
                   "coordenadas": { "lat": 35.8989, "lng": 14.5146 },
                   "servicios": ["WiFi", "Restaurante"]
                 },
@@ -450,6 +474,7 @@
                   "moneda": "EUR",
                   "imagen": "imagenes/hotel-1.jpg",
                   "direccion": "Upper Barrakka Gardens, La Valeta",
+                  "descripcion": "El Hostal Barakka en La Valeta brinda un alojamiento cómodo y asequible con WiFi, ubicado cerca de los jardines Upper Barrakka y del casco antiguo, perfecto para viajeros que buscan economía y conveniencia.",
                   "coordenadas": { "lat": 35.8960, "lng": 14.5110 },
                   "servicios": ["WiFi"]
                 }
@@ -473,6 +498,7 @@
                   "moneda": "EUR",
                   "imagen": "imagenes/hotel-2.jpg",
                   "direccion": "Bryggen Wharf, Bergen",
+                  "descripcion": "El Hotel Bryggen en Bergen ofrece una estancia muy buena con WiFi y desayuno incluido, ubicado en el histórico muelle Bryggen, ideal para explorar la ciudad y sus pintorescos canales.",
                   "coordenadas": { "lat": 60.3971, "lng": 5.3243 },
                   "servicios": ["WiFi", "Desayuno incluido"]
                 },
@@ -486,6 +512,7 @@
                   "moneda": "EUR",
                   "imagen": "imagenes/hotel-3.jpg",
                   "direccion": "Nordnes, Bergen",
+                  "descripcion": "El Hostal Fiordo en Bergen proporciona un alojamiento cómodo con WiFi, situado cerca del centro y del puerto, perfecto para viajeros que buscan una opción económica y práctica.",
                   "coordenadas": { "lat": 60.3950, "lng": 5.3170 },
                   "servicios": ["WiFi"]
                 }
@@ -509,6 +536,7 @@
                   "moneda": "EUR",
                   "imagen": "imagenes/hotel-4.jpg",
                   "direccion": "Herengracht 200, Ámsterdam",
+                  "descripcion": "El Hotel Canal Ring en Ámsterdam ofrece una estancia excelente con WiFi y restaurante, ubicado a orillas de los famosos canales, ideal para explorar el encanto urbano y cultural de la ciudad.",
                   "coordenadas": { "lat": 52.3702, "lng": 4.8952 },
                   "servicios": ["WiFi", "Restaurante"]
                 },
@@ -522,6 +550,7 @@
                   "moneda": "EUR",
                   "imagen": "imagenes/hotel-5.jpg",
                   "direccion": "Jordaan, Ámsterdam",
+                  "descripcion": "El Hostal Jordaan en Ámsterdam proporciona alojamiento cómodo con WiFi, situado en el pintoresco barrio de Jordaan, perfecto para viajeros que buscan un ambiente acogedor y económico.",
                   "coordenadas": { "lat": 52.3730, "lng": 4.8820 },
                   "servicios": ["WiFi"]
                 }
@@ -545,6 +574,7 @@
                   "moneda": "EUR",
                   "imagen": "imagenes/hotel-1.jpg",
                   "direccion": "Praça da Ribeira, Oporto",
+                  "descripcion": "El Hotel Ribeira en Oporto ofrece una estancia muy buena con WiFi y desayuno incluido, ubicado en la emblemática Praça da Ribeira, ideal para disfrutar de la historia y el ambiente del casco antiguo.",
                   "coordenadas": { "lat": 41.1413, "lng": -8.6110 },
                   "servicios": ["WiFi", "Desayuno incluido"]
                 },
@@ -558,6 +588,7 @@
                   "moneda": "EUR",
                   "imagen": "imagenes/hotel-2.jpg",
                   "direccion": "Vila Nova de Gaia, Oporto",
+                  "descripcion": "El Hostal Gaia en Oporto proporciona alojamiento decente con WiFi, situado en Vila Nova de Gaia, perfecto para viajeros que buscan comodidad y un acceso fácil a las bodegas y al río Duero.",
                   "coordenadas": { "lat": 41.1330, "lng": -8.6170 },
                   "servicios": ["WiFi"]
                 }
@@ -581,6 +612,7 @@
                   "moneda": "EUR",
                   "imagen": "imagenes/hotel-3.jpg",
                   "direccion": "South Bank, Londres",
+                  "descripcion": "El Hotel Thames View en Londres ofrece una experiencia excelente con WiFi y restaurante, ubicado en South Bank, ideal para disfrutar de vistas al río Támesis y proximidad a atracciones culturales.",
                   "coordenadas": { "lat": 51.5074, "lng": -0.1278 },
                   "servicios": ["WiFi", "Restaurante"]
                 },
@@ -594,6 +626,7 @@
                   "moneda": "EUR",
                   "imagen": "imagenes/hotel-4.jpg",
                   "direccion": "Camden Town, Londres",
+                  "descripcion": "El Hostal Camden en Londres proporciona alojamiento bueno con WiFi, situado en el vibrante barrio de Camden, perfecto para viajeros que buscan ambiente alternativo y fácil acceso al transporte público.",
                   "coordenadas": { "lat": 51.5390, "lng": -0.1420 },
                   "servicios": ["WiFi"]
                 }
@@ -612,6 +645,7 @@
                   "moneda": "EUR",
                   "imagen": "imagenes/hotel-5.jpg",
                   "direccion": "Royal Mile, Edimburgo",
+                  "descripcion": "El Hotel Royal Mile en Edimburgo ofrece una estancia muy buena con WiFi y desayuno incluido, ubicado en la histórica Royal Mile, ideal para explorar el casco antiguo y los principales monumentos.",
                   "coordenadas": { "lat": 55.9497, "lng": -3.1910 },
                   "servicios": ["WiFi", "Desayuno incluido"]
                 },
@@ -625,6 +659,7 @@
                   "moneda": "EUR",
                   "imagen": "imagenes/hotel-1.jpg",
                   "direccion": "Calton Hill, Edimburgo",
+                  "descripcion": "El Hostal Calton Hill en Edimburgo proporciona alojamiento bueno con WiFi, situado cerca de Calton Hill, perfecto para viajeros que desean disfrutar de vistas panorámicas y un ambiente acogedor.",
                   "coordenadas": { "lat": 55.9550, "lng": -3.1820 },
                   "servicios": ["WiFi"]
                 }
@@ -648,6 +683,7 @@
                   "moneda": "EUR",
                   "imagen": "imagenes/hotel-2.jpg",
                   "direccion": "Karlův most, Praga",
+                  "descripcion": "El Hotel Puente de Carlos en Praga ofrece una experiencia excelente con WiFi y restaurante, ubicado junto al icónico Puente de Carlos, ideal para disfrutar de la historia y la belleza del centro de la ciudad.",
                   "coordenadas": { "lat": 50.0865, "lng": 14.4114 },
                   "servicios": ["WiFi", "Restaurante"]
                 },
@@ -661,6 +697,7 @@
                   "moneda": "EUR",
                   "imagen": "imagenes/hotel-3.jpg",
                   "direccion": "Malá Strana, Praga",
+                  "descripcion": "El Hostal Malá Strana en Praga proporciona alojamiento bueno con WiFi, situado en el pintoresco barrio de Malá Strana, perfecto para explorar la ciudad de forma económica y cómoda.",
                   "coordenadas": { "lat": 50.0860, "lng": 14.4040 },
                   "servicios": ["WiFi"]
                 }
@@ -684,6 +721,7 @@
                   "moneda": "EUR",
                   "imagen": "imagenes/hotel-4.jpg",
                   "direccion": "Kapellbrücke, Lucerna",
+                  "descripcion": "El Hotel Kapellbrücke en Lucerna ofrece una estancia muy buena con WiFi y desayuno incluido, ubicado cerca del famoso puente Kapellbrücke, ideal para disfrutar de la ciudad y sus paisajes lacustres.",
                   "coordenadas": { "lat": 47.0510, "lng": 8.3070 },
                   "servicios": ["WiFi", "Desayuno incluido"]
                 },
@@ -697,6 +735,7 @@
                   "moneda": "EUR",
                   "imagen": "imagenes/hotel-5.jpg",
                   "direccion": "Seebrücke, Lucerna",
+                  "descripcion": "El Hostal Lago de los Cuatro Cantones en Lucerna proporciona alojamiento bueno con WiFi, situado cerca del lago, perfecto para viajeros que buscan comodidad y cercanía a la naturaleza.",
                   "coordenadas": { "lat": 47.0525, "lng": 8.3110 },
                   "servicios": ["WiFi"]
                 }
@@ -715,6 +754,7 @@
                   "moneda": "EUR",
                   "imagen": "imagenes/hotel-1.jpg",
                   "direccion": "Limmatquai 90, Zúrich",
+                  "descripcion": "El Hotel Limmatquai en Zúrich ofrece una experiencia muy buena con WiFi y restaurante, situado en el centro de la ciudad, ideal para explorar la vida urbana y cultural.",
                   "coordenadas": { "lat": 47.3720, "lng": 8.5420 },
                   "servicios": ["WiFi", "Restaurante"]
                 },
@@ -728,6 +768,7 @@
                   "moneda": "EUR",
                   "imagen": "imagenes/hotel-2.jpg",
                   "direccion": "Neumarkt, Zúrich",
+                  "descripcion": "El Hostal Altstadt en Zúrich proporciona alojamiento bueno con WiFi, ubicado en el casco antiguo, perfecto para quienes buscan comodidad y un ambiente histórico.",
                   "coordenadas": { "lat": 47.3735, "lng": 8.5450 },
                   "servicios": ["WiFi"]
                 }
@@ -751,6 +792,7 @@
                   "moneda": "EUR",
                   "imagen": "imagenes/hotel-3.jpg",
                   "direccion": "Harpa Concert Hall, Reikiavik",
+                  "descripcion": "El Hotel Harpa en Reikiavik ofrece una estancia muy buena con WiFi y desayuno incluido, ubicado junto al famoso Harpa Concert Hall, ideal para disfrutar de la música y la cultura local.",
                   "coordenadas": { "lat": 64.1500, "lng": -21.9320 },
                   "servicios": ["WiFi", "Desayuno incluido"]
                 },
@@ -764,6 +806,7 @@
                   "moneda": "EUR",
                   "imagen": "imagenes/hotel-4.jpg",
                   "direccion": "Laugavegur 50, Reikiavik",
+                  "descripcion": "El Hostal Laugavegur en Reikiavik proporciona alojamiento bueno con WiFi, situado en una calle céntrica, perfecto para viajeros que buscan comodidad y acceso a tiendas y restaurantes.",
                   "coordenadas": { "lat": 64.1410, "lng": -21.9130 },
                   "servicios": ["WiFi"]
                 }
@@ -792,6 +835,7 @@
                   "moneda": "CNY",
                   "imagen": "imagenes/hotel-5l.jpg",
                   "direccion": "Dongcheng, Beijing",
+                  "descripcion": "El Hotel Ciudad Prohibida en Beijing ofrece una experiencia excelente con WiFi y restaurante, situado en el distrito de Dongcheng, ideal para explorar la historia y cultura de la ciudad.",
                   "coordenadas": { "lat": 39.9042, "lng": 116.4074 },
                   "servicios": ["WiFi", "Restaurante"]
                 },
@@ -805,6 +849,7 @@
                   "moneda": "CNY",
                   "imagen": "imagenes/hotel-1.jpg",
                   "direccion": "Xicheng, Beijing",
+                  "descripcion": "El Hostal Hutong en Beijing brinda una estancia buena con WiFi, ubicado en un tradicional barrio hutong, perfecto para quienes buscan una experiencia auténtica y asequible.",
                   "coordenadas": { "lat": 39.9130, "lng": 116.3900 },
                   "servicios": ["WiFi"]
                 }
@@ -823,6 +868,7 @@
                   "moneda": "HKD",
                   "imagen": "imagenes/hotel-2.jpg",
                   "direccion": "Tsim Sha Tsui, Hong Kong",
+                  "descripcion": "El Hotel Victoria Harbour en Hong Kong ofrece una experiencia excelente con WiFi y vistas al puerto, ubicado en Tsim Sha Tsui, ideal para disfrutar del vibrante skyline y la vida urbana.",
                   "coordenadas": { "lat": 22.3193, "lng": 114.1694 },
                   "servicios": ["WiFi", "Vistas al puerto"]
                 },
@@ -836,6 +882,7 @@
                   "moneda": "HKD",
                   "imagen": "imagenes/hotel-3.jpg",
                   "direccion": "Nathan Road, Kowloon",
+                  "descripcion": "El Hostal Kowloon en Hong Kong proporciona una estancia buena con WiFi, situado en Nathan Road, perfecto para viajeros que buscan comodidad y accesibilidad económica.",
                   "coordenadas": { "lat": 22.3160, "lng": 114.1700 },
                   "servicios": ["WiFi"]
                 }
@@ -859,6 +906,7 @@
                   "moneda": "KRW",
                   "imagen": "imagenes/hotel-4.jpg",
                   "direccion": "Gangnam-gu, Seúl",
+                  "descripcion": "El Hotel Gangnam en Seúl ofrece una estancia muy buena con WiFi y restaurante, ubicado en el moderno distrito de Gangnam-gu, ideal para explorar la ciudad y su cultura vibrante.",
                   "coordenadas": { "lat": 37.5665, "lng": 126.9780 },
                   "servicios": ["WiFi", "Restaurante"]
                 },
@@ -872,6 +920,7 @@
                   "moneda": "KRW",
                   "imagen": "imagenes/hotel-5.jpg",
                   "direccion": "Bukchon Hanok Village, Seúl",
+                  "descripcion": "El Hostal Bukchon en Seúl proporciona una estancia buena con WiFi, situado en Bukchon Hanok Village, perfecto para quienes buscan una experiencia auténtica y económica en la ciudad.",
                   "coordenadas": { "lat": 37.5820, "lng": 126.9830 },
                   "servicios": ["WiFi"]
                 }
@@ -895,6 +944,7 @@
                   "moneda": "INR",
                   "imagen": "imagenes/hotel-1.jpg",
                   "direccion": "Hawa Mahal Road, Jaipur",
+                  "descripcion": "El Hotel Hawa Mahal en Jaipur ofrece una estancia muy buena con WiFi y desayuno incluido, ubicado cerca del emblemático Hawa Mahal, ideal para explorar la riqueza cultural de la ciudad.",
                   "coordenadas": { "lat": 26.9124, "lng": 75.7873 },
                   "servicios": ["WiFi", "Desayuno incluido"]
                 },
@@ -908,6 +958,7 @@
                   "moneda": "INR",
                   "imagen": "imagenes/hotel-2.jpg",
                   "direccion": "Old City, Jaipur",
+                  "descripcion": "El Hostal Pink City en Jaipur proporciona una estancia decente con WiFi, situado en el casco antiguo, perfecto para viajeros que buscan comodidad económica y proximidad a los principales atractivos turísticos.",
                   "coordenadas": { "lat": 26.9150, "lng": 75.7850 },
                   "servicios": ["WiFi"]
                 }
@@ -931,6 +982,7 @@
                   "moneda": "JPY",
                   "imagen": "imagenes/hotel-3.jpg",
                   "direccion": "Distrito Gion, Kioto",
+                  "descripcion": "El Hotel Gion en Kioto ofrece una experiencia excelente con WiFi y restaurante, situado en el histórico distrito de Gion, ideal para sumergirse en la cultura tradicional japonesa.",
                   "coordenadas": { "lat": 35.0116, "lng": 135.7681 },
                   "servicios": ["WiFi", "Restaurante"]
                 },
@@ -944,6 +996,7 @@
                   "moneda": "JPY",
                   "imagen": "imagenes/hotel-4.jpg",
                   "direccion": "Arashiyama, Kioto",
+                  "descripcion": "El Hostal Arashiyama en Kioto proporciona una estancia buena con WiFi, ubicado cerca del famoso bosque de bambú de Arashiyama, perfecto para viajeros que buscan comodidad económica y proximidad a la naturaleza.",
                   "coordenadas": { "lat": 35.0090, "lng": 135.6660 },
                   "servicios": ["WiFi"]
                 }
@@ -967,6 +1020,7 @@
                   "moneda": "LAK",
                   "imagen": "imagenes/hotel-5.jpg",
                   "direccion": "Riverside, Luang Prabang",
+                  "descripcion": "El Hotel Mekong View en Luang Prabang ofrece una estancia muy buena con WiFi y desayuno incluido, ubicado a orillas del río Mekong, ideal para disfrutar de vistas pintorescas y la tranquilidad de la ciudad.",
                   "coordenadas": { "lat": 19.8841, "lng": 102.1416 },
                   "servicios": ["WiFi", "Desayuno incluido"]
                 },
@@ -980,6 +1034,7 @@
                   "moneda": "LAK",
                   "imagen": "imagenes/hotel-1.jpg",
                   "direccion": "Old Quarter, Luang Prabang",
+                  "descripcion": "El Hostal Monje en Luang Prabang proporciona alojamiento acogedor con WiFi, situado cerca del centro histórico, perfecto para viajeros que buscan comodidad y un ambiente auténtico local.",
                   "coordenadas": { "lat": 19.8860, "lng": 102.1350 },
                   "servicios": ["WiFi"]
                 }
@@ -1003,6 +1058,7 @@
                   "moneda": "LBP",
                   "imagen": "imagenes/hotel-2.jpg",
                   "direccion": "Corniche, Beirut",
+                  "descripcion": "El Hotel Mediterráneo en Beirut ofrece una estancia muy buena con WiFi y restaurante, ubicado en la Corniche, ideal para disfrutar de vistas al mar y la vida urbana de la ciudad.",
                   "coordenadas": { "lat": 33.8938, "lng": 35.5018 },
                   "servicios": ["WiFi", "Restaurante"]
                 },
@@ -1016,6 +1072,7 @@
                   "moneda": "LBP",
                   "imagen": "imagenes/hotel-3.jpg",
                   "direccion": "Souq, Beirut",
+                  "descripcion": "El Hostal Zoco en Beirut proporciona alojamiento acogedor con WiFi, situado cerca del centro y mercados locales, perfecto para viajeros que buscan comodidad y un ambiente auténtico.",
                   "coordenadas": { "lat": 33.8945, "lng": 35.5050 },
                   "servicios": ["WiFi"]
                 }
@@ -1039,6 +1096,7 @@
                   "moneda": "OMR",
                   "imagen": "imagenes/hotel-4.jpg",
                   "direccion": "Corniche, Mascate",
+                  "descripcion": "El Hotel Golfo de Omán en Mascate ofrece una estancia muy buena con WiFi y desayuno incluido, ubicado en la Corniche, ideal para disfrutar de vistas al mar y la tranquilidad de la ciudad.",
                   "coordenadas": { "lat": 23.5880, "lng": 58.3829 },
                   "servicios": ["WiFi", "Desayuno incluido"]
                 },
@@ -1052,6 +1110,7 @@
                   "moneda": "OMR",
                   "imagen": "imagenes/hotel-5.jpg",
                   "direccion": "Old Souq, Mascate",
+                  "descripcion": "El Hostal Zoco Mascate proporciona alojamiento acogedor con WiFi, situado cerca del centro y mercados locales, perfecto para viajeros que buscan comodidad y un ambiente auténtico.",
                   "coordenadas": { "lat": 23.5900, "lng": 58.3850 },
                   "servicios": ["WiFi"]
                 }
@@ -1075,6 +1134,7 @@
                   "moneda": "QAR",
                   "imagen": "imagenes/hotel-1.jpg",
                   "direccion": "Corniche, Doha",
+                  "descripcion": "El Hotel Corniche en Doha ofrece una estancia excelente con WiFi y restaurante, situado en la Corniche, ideal para disfrutar de vistas al mar y la vida urbana de la ciudad.",
                   "coordenadas": { "lat": 25.2854, "lng": 51.5310 },
                   "servicios": ["WiFi", "Restaurante"]
                 },
@@ -1088,6 +1148,7 @@
                   "moneda": "QAR",
                   "imagen": "imagenes/hotel-2.jpg",
                   "direccion": "Souq Waqif, Doha",
+                  "descripcion": "El Hostal Souq Waqif en Doha proporciona alojamiento cómodo con WiFi, ubicado cerca del famoso mercado Souq Waqif, perfecto para explorar la cultura local y gastronomía.",
                   "coordenadas": { "lat": 25.2870, "lng": 51.5330 },
                   "servicios": ["WiFi"]
                 }
@@ -1111,6 +1172,7 @@
                   "moneda": "THB",
                   "imagen": "imagenes/hotel-3.jpg",
                   "direccion": "Old City, Chiang Mai",
+                  "descripcion": "El Hotel Doi Suthep en Chiang Mai ofrece una estancia muy buena con WiFi y desayuno incluido, situado en la Ciudad Vieja, ideal para explorar templos y la cultura local.",
                   "coordenadas": { "lat": 18.7883, "lng": 98.9853 },
                   "servicios": ["WiFi", "Desayuno incluido"]
                 },
@@ -1124,6 +1186,7 @@
                   "moneda": "THB",
                   "imagen": "imagenes/hotel-4.jpg",
                   "direccion": "Night Bazaar, Chiang Mai",
+                  "descripcion": "El Hostal Night Bazaar en Chiang Mai proporciona alojamiento cómodo con WiFi, ubicado cerca del famoso mercado Night Bazaar, perfecto para compras y vida nocturna.",
                   "coordenadas": { "lat": 18.7870, "lng": 98.9900 },
                   "servicios": ["WiFi"]
                 }
@@ -1147,6 +1210,7 @@
                   "moneda": "VND",
                   "imagen": "imagenes/hotel-5.jpg",
                   "direccion": "Hoan Kiem, Hanoi",
+                  "descripcion": "El Hotel Lago Hoan Kiem en Hanoi ofrece una estancia muy buena con WiFi y restaurante, ubicado junto al lago Hoan Kiem, ideal para explorar el casco antiguo y la vida cultural de la ciudad.",
                   "coordenadas": { "lat": 21.0278, "lng": 105.8342 },
                   "servicios": ["WiFi", "Restaurante"]
                 },
@@ -1160,6 +1224,7 @@
                   "moneda": "VND",
                   "imagen": "imagenes/hotel-1.jpg",
                   "direccion": "Old Quarter, Hanoi",
+                  "descripcion": "El Hostal Barrio Antiguo en Hanoi proporciona alojamiento cómodo con WiFi, situado en el corazón del casco antiguo, perfecto para descubrir mercados locales y la historia de la ciudad.",
                   "coordenadas": { "lat": 21.0300, "lng": 105.8350 },
                   "servicios": ["WiFi"]
                 }
@@ -1183,6 +1248,7 @@
                   "moneda": "SGD",
                   "imagen": "imagenes/hotel-2.jpg",
                   "direccion": "Marina Bay, Singapur",
+                  "descripcion": "El Hotel Marina Bay en Singapur ofrece una experiencia excelente con WiFi, piscina y restaurante, ubicado en la icónica zona de Marina Bay, ideal para disfrutar de vistas panorámicas y atracciones cercanas.",
                   "coordenadas": { "lat": 1.2830, "lng": 103.8600 },
                   "servicios": ["WiFi", "Piscina", "Restaurante"]
                 },
@@ -1196,6 +1262,7 @@
                   "moneda": "SGD",
                   "imagen": "imagenes/hotel-3.jpg",
                   "direccion": "Chinatown, Singapur",
+                  "descripcion": "El Hostal Chinatown en Singapur brinda alojamiento cómodo con WiFi, situado en el vibrante barrio de Chinatown, perfecto para explorar mercados locales, cultura y gastronomía.",
                   "coordenadas": { "lat": 1.2840, "lng": 103.8430 },
                   "servicios": ["WiFi"]
                 }
@@ -1224,6 +1291,7 @@
                   "moneda": "MAD",
                   "imagen": "imagenes/hotel-4.jpg",
                   "direccion": "Medina, Chefchaouen",
+                  "descripcion": "El Hotel Medina Azul en Chefchaouen ofrece alojamiento muy bueno con WiFi y desayuno incluido, ubicado en la pintoresca Medina, ideal para explorar la ciudad azul y su entorno natural.",
                   "coordenadas": { "lat": 35.1680, "lng": -5.2697 },
                   "servicios": ["WiFi", "Desayuno incluido"]
                 },
@@ -1237,6 +1305,7 @@
                   "moneda": "MAD",
                   "imagen": "imagenes/hotel-5.jpg",
                   "direccion": "Barrio Azul, Chefchaouen",
+                  "descripcion": "El Hostal Rif en Chefchaouen brinda un alojamiento acogedor con WiFi, situado cerca del centro histórico, perfecto para descubrir la cultura local y disfrutar de la tranquilidad de la ciudad.",
                   "coordenadas": { "lat": 35.1700, "lng": -5.2650 },
                   "servicios": ["WiFi"]
                 }
@@ -1260,6 +1329,7 @@
                   "moneda": "ZAR",
                   "imagen": "imagenes/hotel-1.jpg",
                   "direccion": "Waterfront, Ciudad del Cabo",
+                  "descripcion": "El Hotel Table Mountain en Ciudad del Cabo ofrece alojamiento excelente con WiFi y restaurante, ubicado en el Waterfront, ideal para explorar la ciudad y disfrutar de vistas espectaculares de la Montaña de la Mesa.",
                   "coordenadas": { "lat": -33.9249, "lng": 18.4241 },
                   "servicios": ["WiFi", "Restaurante"]
                 },
@@ -1273,6 +1343,7 @@
                   "moneda": "ZAR",
                   "imagen": "imagenes/hotel-2.jpg",
                   "direccion": "Bo-Kaap, Ciudad del Cabo",
+                  "descripcion": "El Hostal Bo-Kaap en Ciudad del Cabo brinda un alojamiento acogedor con WiFi, situado en el colorido barrio Bo-Kaap, perfecto para experimentar la cultura local y la historia de la ciudad.",
                   "coordenadas": { "lat": -33.9255, "lng": 18.4170 },
                   "servicios": ["WiFi"]
                 }
@@ -1301,6 +1372,7 @@
                   "moneda": "AUD",
                   "imagen": "imagenes/hotel-3.jpg",
                   "direccion": "Circular Quay, Sídney",
+                  "descripcion": "El Hotel Opera House en Sídney ofrece alojamiento excelente con WiFi, piscina y restaurante, ubicado en Circular Quay, con vistas privilegiadas a la icónica Ópera de Sídney.",
                   "coordenadas": { "lat": -33.8568, "lng": 151.2153 },
                   "servicios": ["WiFi", "Piscina", "Restaurante"]
                 },
@@ -1314,6 +1386,7 @@
                   "moneda": "AUD",
                   "imagen": "imagenes/hotel-4.jpg",
                   "direccion": "Bondi Beach, Sídney",
+                  "descripcion": "El Hostal Bondi en Sídney proporciona un alojamiento acogedor con WiFi, situado cerca de la famosa playa Bondi, ideal para disfrutar del sol, el mar y la vibrante vida local.",
                   "coordenadas": { "lat": -33.8908, "lng": 151.2743 },
                   "servicios": ["WiFi"]
                 }
@@ -1337,6 +1410,7 @@
                   "moneda": "NZD",
                   "imagen": "imagenes/hotel-5.jpg",
                   "direccion": "Lago Wakatipu, Queenstown",
+                  "descripcion": "El Hotel Lago Wakatipu en Queenstown ofrece alojamiento muy bueno con WiFi y desayuno incluido, ubicado frente al impresionante Lago Wakatipu, ideal para disfrutar de paisajes naturales y actividades al aire libre.",
                   "coordenadas": { "lat": -45.0312, "lng": 168.6626 },
                   "servicios": ["WiFi", "Desayuno incluido"]
                 },
@@ -1350,6 +1424,7 @@
                   "moneda": "NZD",
                   "imagen": "imagenes/hotel-1.jpg",
                   "direccion": "The Remarkables, Queenstown",
+                  "descripcion": "El Hostal Remarkables en Queenstown proporciona un alojamiento acogedor con WiFi, situado cerca de las montañas Remarkables, perfecto para amantes del senderismo y los deportes de aventura.",
                   "coordenadas": { "lat": -45.0330, "lng": 168.6500 },
                   "servicios": ["WiFi"]
                 }
@@ -1378,6 +1453,7 @@
                   "moneda": "CAD",
                   "imagen": "imagenes/hotel-2.jpg",
                   "direccion": "Casco histórico, Quebec",
+                  "descripcion": "El Hotel Viejo Quebec en Ciudad de Quebec ofrece alojamiento muy bueno con WiFi y desayuno incluido, situado en el casco histórico, ideal para explorar la rica historia y arquitectura de la ciudad.",
                   "coordenadas": { "lat": 46.8139, "lng": -71.2080 },
                   "servicios": ["WiFi", "Desayuno incluido"]
                 },
@@ -1391,6 +1467,7 @@
                   "moneda": "CAD",
                   "imagen": "imagenes/hotel-3.jpg",
                   "direccion": "Barrio Petit Champlain, Quebec",
+                  "descripcion": "El Hostal San Lorenzo en Ciudad de Quebec brinda un alojamiento acogedor con WiFi, ubicado cerca de los principales puntos turísticos, perfecto para viajeros que buscan comodidad y conveniencia.",
                   "coordenadas": { "lat": 46.8150, "lng": -71.2050 },
                   "servicios": ["WiFi"]
                 }
@@ -1414,6 +1491,7 @@
                   "moneda": "CUP",
                   "imagen": "imagenes/hotel-4.jpg",
                   "direccion": "Malecón, La Habana",
+                  "descripcion": "El Hotel Malecón en La Habana ofrece alojamiento muy bueno con WiFi y restaurante, ubicado frente al famoso Malecón, ideal para disfrutar de vistas al mar y del encanto de la ciudad.",
                   "coordenadas": { "lat": 23.1136, "lng": -82.3666 },
                   "servicios": ["WiFi", "Restaurante"]
                 },
@@ -1427,6 +1505,7 @@
                   "moneda": "CUP",
                   "imagen": "imagenes/hotel-5.jpg",
                   "direccion": "Habana Vieja, La Habana",
+                  "descripcion": "El Hostal Vieja Habana brinda un alojamiento acogedor con WiFi, situado en el corazón del casco histórico, perfecto para explorar la cultura y arquitectura colonial de La Habana.",
                   "coordenadas": { "lat": 23.1150, "lng": -82.3640 },
                   "servicios": ["WiFi"]
                 }
@@ -1450,6 +1529,7 @@
                   "moneda": "USD",
                   "imagen": "imagenes/hotel-1.jpg",
                   "direccion": "Manhattan, Nueva York",
+                  "descripcion": "El Hotel Central Park en Nueva York ofrece alojamiento excelente con WiFi y restaurante, situado en Manhattan cerca del icónico Central Park, ideal para turistas y viajeros de negocios.",
                   "coordenadas": { "lat": 40.7128, "lng": -74.0060 },
                   "servicios": ["WiFi", "Restaurante"]
                 },
@@ -1463,6 +1543,7 @@
                   "moneda": "USD",
                   "imagen": "imagenes/hotel-2.jpg",
                   "direccion": "Brooklyn, Nueva York",
+                  "descripcion": "El Hostal Brooklyn brinda un alojamiento cómodo con WiFi, ubicado en el vibrante barrio de Brooklyn, perfecto para explorar la vida cultural y artística de la ciudad.",
                   "coordenadas": { "lat": 40.6782, "lng": -73.9442 },
                   "servicios": ["WiFi"]
                 }
@@ -1481,6 +1562,7 @@
                   "moneda": "USD",
                   "imagen": "imagenes/hotel-3.jpg",
                   "direccion": "Golden Gate, San Francisco",
+                  "descripcion": "El Hotel Golden Gate en San Francisco ofrece alojamiento muy bueno con WiFi y desayuno incluido, ubicado cerca del icónico puente Golden Gate, ideal para turistas que desean explorar la ciudad.",
                   "coordenadas": { "lat": 37.7749, "lng": -122.4194 },
                   "servicios": ["WiFi", "Desayuno incluido"]
                 },
@@ -1494,6 +1576,7 @@
                   "moneda": "USD",
                   "imagen": "imagenes/hotel-4.jpg",
                   "direccion": "Fisherman's Wharf, San Francisco",
+                  "descripcion": "El Hostal Fisherman brinda alojamiento cómodo con WiFi, situado en la zona de Fisherman's Wharf, perfecto para disfrutar de restaurantes, tiendas y vistas al mar.",
                   "coordenadas": { "lat": 37.8080, "lng": -122.4177 },
                   "servicios": ["WiFi"]
                 }
@@ -1517,6 +1600,7 @@
                   "moneda": "MXN",
                   "imagen": "imagenes/hotel-5.jpg",
                   "direccion": "Centro histórico, San Miguel de Allende",
+                  "descripcion": "El Hotel Parroquia en San Miguel de Allende ofrece alojamiento muy bueno con WiFi y desayuno incluido, ubicado en el centro histórico, ideal para explorar la arquitectura colonial y la vida cultural de la ciudad.",
                   "coordenadas": { "lat": 20.9140, "lng": -100.7430 },
                   "servicios": ["WiFi", "Desayuno incluido"]
                 },
@@ -1530,6 +1614,7 @@
                   "moneda": "MXN",
                   "imagen": "imagenes/hotel-1.jpg",
                   "direccion": "Barrio Colonial, San Miguel de Allende",
+                  "descripcion": "El Hostal Colonial proporciona alojamiento cómodo con WiFi, situado cerca del corazón de San Miguel de Allende, perfecto para viajeros que buscan una estancia accesible y céntrica.",
                   "coordenadas": { "lat": 20.9150, "lng": -100.7400 },
                   "servicios": ["WiFi"]
                 }
@@ -1558,6 +1643,7 @@
                   "moneda": "ARS",
                   "imagen": "imagenes/hotel-2.jpg",
                   "direccion": "Avenida 9 de Julio, Buenos Aires",
+                  "descripcion": "El Hotel Obelisco en Buenos Aires ofrece alojamiento excelente con WiFi y restaurante, ubicado en la emblemática Avenida 9 de Julio, ideal para explorar la ciudad y sus atractivos culturales.",
                   "coordenadas": { "lat": -34.6037, "lng": -58.3816 },
                   "servicios": ["WiFi", "Restaurante"]
                 },
@@ -1571,6 +1657,7 @@
                   "moneda": "ARS",
                   "imagen": "imagenes/hotel-3.jpg",
                   "direccion": "Barrio San Telmo, Buenos Aires",
+                  "descripcion": "El Hostal San Telmo proporciona alojamiento cómodo con WiFi, situado en el pintoresco barrio de San Telmo, perfecto para viajeros que buscan una estancia céntrica y cercana a la vida cultural y nocturna de Buenos Aires.",
                   "coordenadas": { "lat": -34.6210, "lng": -58.3730 },
                   "servicios": ["WiFi"]
                 }
@@ -1594,6 +1681,7 @@
                   "moneda": "BRL",
                   "imagen": "imagenes/hotel-4.jpg",
                   "direccion": "Copacabana, Río de Janeiro",
+                  "descripcion": "El Hotel Copacabana en Río de Janeiro ofrece alojamiento excelente con WiFi, piscina y restaurante, ubicado frente a la famosa playa de Copacabana, ideal para disfrutar del mar y la vida urbana.",
                   "coordenadas": { "lat": -22.9711, "lng": -43.1822 },
                   "servicios": ["WiFi", "Piscina", "Restaurante"]
                 },
@@ -1607,6 +1695,7 @@
                   "moneda": "BRL",
                   "imagen": "imagenes/hotel-5.jpg",
                   "direccion": "Barrio Lapa, Río de Janeiro",
+                  "descripcion": "El Hostal Lapa proporciona alojamiento cómodo con WiFi, situado en el animado barrio de Lapa, perfecto para explorar la vida nocturna y la cultura local de Río de Janeiro.",
                   "coordenadas": { "lat": -22.9122, "lng": -43.1790 },
                   "servicios": ["WiFi"]
                 }
@@ -1630,6 +1719,7 @@
                   "moneda": "COP",
                   "imagen": "imagenes/hotel-1.jpg",
                   "direccion": "Ciudad Amurallada, Cartagena",
+                  "descripcion": "El Hotel Murallas en Cartagena ofrece alojamiento muy bueno con WiFi y restaurante, ubicado en la histórica Ciudad Amurallada, ideal para explorar la cultura y arquitectura colonial.",
                   "coordenadas": { "lat": 10.3910, "lng": -75.4794 },
                   "servicios": ["WiFi", "Restaurante"]
                 },
@@ -1643,6 +1733,7 @@
                   "moneda": "COP",
                   "imagen": "imagenes/hotel-2.jpg",
                   "direccion": "Barrio Getsemaní, Cartagena",
+                  "descripcion": "El Hostal Getsemaní brinda alojamiento cómodo con WiFi, situado en el vibrante barrio de Getsemaní, perfecto para disfrutar del arte urbano y la vida nocturna de Cartagena.",
                   "coordenadas": { "lat": 10.4230, "lng": -75.5470 },
                   "servicios": ["WiFi"]
                 }
@@ -1666,6 +1757,7 @@
                   "moneda": "USD",
                   "imagen": "imagenes/hotel-3.jpg",
                   "direccion": "Casco Histórico, Quito",
+                  "descripcion": "El Hotel Centro Histórico en Quito ofrece alojamiento muy bueno con WiFi y desayuno incluido, ubicado en el corazón del casco histórico, ideal para explorar la arquitectura colonial y plazas emblemáticas.",
                   "coordenadas": { "lat": -0.2200, "lng": -78.5120 },
                   "servicios": ["WiFi", "Desayuno incluido"]
                 },
@@ -1679,6 +1771,7 @@
                   "moneda": "USD",
                   "imagen": "imagenes/hotel-4.jpg",
                   "direccion": "Cerca del Panecillo, Quito",
+                  "descripcion": "El Hostal El Panecillo brinda alojamiento cómodo con WiFi, situado cerca del famoso mirador del Panecillo, perfecto para disfrutar de vistas panorámicas de Quito y su ciudad antigua.",
                   "coordenadas": { "lat": -0.2340, "lng": -78.5180 },
                   "servicios": ["WiFi"]
                 }
@@ -1702,6 +1795,7 @@
                   "moneda": "PEN",
                   "imagen": "imagenes/hotel-5.jpg",
                   "direccion": "Plaza de Armas, Cuzco",
+                  "descripcion": "El Hotel Plaza de Armas en Cuzco ofrece alojamiento muy bueno con WiFi y desayuno incluido, ubicado en el centro histórico cerca de la Plaza de Armas, ideal para explorar la ciudad y sus alrededores.",
                   "coordenadas": { "lat": -13.5320, "lng": -71.9675 },
                   "servicios": ["WiFi", "Desayuno incluido"]
                 },
@@ -1715,6 +1809,7 @@
                   "moneda": "PEN",
                   "imagen": "imagenes/hotel-1.jpg",
                   "direccion": "Barrio San Blas, Cuzco",
+                  "descripcion": "El Hostal San Blas proporciona un ambiente acogedor con WiFi, situado en el barrio artístico de San Blas, perfecto para quienes buscan cercanía a tiendas de artesanía y una experiencia local auténtica.",
                   "coordenadas": { "lat": -13.5280, "lng": -71.9630 },
                   "servicios": ["WiFi"]
                 }
