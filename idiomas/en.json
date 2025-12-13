@@ -55,5 +55,18 @@
         "text": "About Us | Privacy Policy | Help",
         "newsletter": "Want to subscribe to the newsletter?",
         "subscribe-button": "Subscribe"
+    },
+
+    "destinations-page": {
+        "title": "Discover Unforgettable Destinations",
+        "text": "Choose your destination",
+        "select-continent": "Select a continent",
+        "select-country": "Choose a country",
+        "breadcrumbs-main": "Main Page",
+        "back-button": "← Back to Search",
+        "capital-city": "Capital city",
+        "population": "Population",
+        "cities": "Cities",
+        "events": "Main events and holidays of the month"
     }
 }

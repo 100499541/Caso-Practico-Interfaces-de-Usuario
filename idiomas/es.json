@@ -55,5 +55,18 @@
         "text": "Sobre Nosotros | Política de Privacidad | Ayuda",
         "newsletter": "¿Quieres suscribirte al newsletter?",
         "subscribe-button": "Suscribirse"
+    },
+
+    "destinations-page": {
+        "title": "Descubre destinos inolvidables",
+        "text": "Elige tu destino",
+        "select-continent": "Selecciona un continente",
+        "select-country": "Elige un país",
+        "breadcrumbs-main": "Página principal",
+        "back-button": "← Volver al buscador",
+        "capital-city": "Capital",
+        "population": "Población",
+        "cities": "Ciudades",
+        "events": "Eventos y festivos más importantes del mes"
     }
 }
