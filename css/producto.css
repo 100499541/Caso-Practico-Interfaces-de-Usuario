@@ -1,0 +1,172 @@
+/* Breadcrumbs */
+.breadcrumbs {
+  color: #666;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+  font-size: 1em;
+}
+.breadcrumbs a {
+  text-decoration: none;
+  color: #0097A7;
+}
+
+/* Título contextual */
+.titulo-producto {
+  margin: 10px 40px 30px;
+  font-size: 28px;
+  color: #0097A7;
+}
+
+/* Layout general */
+.producto-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.columna-izquierda,
+.columna-derecha {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Imagen principal grande */
+.imagen-principal img {
+  width: 100%;
+  max-height: 500px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* Descripción */
+.descripcion h3 {
+  font-size: 26px;
+  margin-bottom: 10px;
+  color: #00707d;
+}
+
+.descripcion p {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Valoración y precio */
+.valoracion-precio {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.rating-box {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.puntuacion {
+  font-size: 24px;
+  font-weight: bold;
+  color: #0097A7;
+}
+
+#rating-text {
+  font-size: 16px;
+  color: #555;
+}
+
+#valoraciones {
+  font-size: 14px;
+  color: #777;
+}
+
+.precio-box {
+  font-size: 24px;
+  font-weight: bold;
+  color: #00707d;
+}
+
+/* Servicios */
+.info-servicios h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #00707d;
+}
+
+#servicios-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#servicios-lista li {
+  background: #e0f7fa;
+  padding: 8px 12px;
+  margin-bottom: 6px;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #00707d;
+}
+
+/* Check-in / Check-out */
+.checkin-checkout {
+  margin-top: 20px;
+  font-size: 19px;
+  color: #333;
+}
+
+/* Qué se incluye */
+.incluye h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #00707d;
+}
+
+.incluye-imagenes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.incluye-imagenes img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+  margin-bottom: 30px;
+}
+
+.incluye-imagenes img:hover {
+  transform: scale(1.05);
+}
+
+/* Botones de acción */
+.acciones {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+.acciones button {
+  padding: 12px 24px;
+  background-color: #0097A7;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.acciones button:hover {
+  background-color: #00707d;
+}

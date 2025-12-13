@@ -92,6 +92,13 @@
 
 .texto-relleno { font-family: 'Courier New', monospace; font-size: 0.85em; color: #666; margin-top: 15px; text-align: justify; }
 
+.breadcrumbs {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+}
+.breadcrumbs a { text-decoration: none; color: #0097A7; }
+
 /* --- TABLET (min-width: 600px) --- */
 @media (min-width: 600px) {
     .gallery-grid { grid-template-columns: repeat(2, 1fr); }
