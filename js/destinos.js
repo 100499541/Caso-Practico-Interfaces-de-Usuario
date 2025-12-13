@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .then(res => res.json())
       .then(datosMundo => {
           inicializar(datosMundo);
+          cargarPorParametros(datosMundo); // <-- nueva función para parámetros en URL
       })
       .catch(err => console.error("Error cargando JSON:", err));
 
@@ -100,5 +101,32 @@ document.addEventListener("DOMContentLoaded", () => {
             `;
             grid.appendChild(card);
         });
+    }
+
+    // NUEVA FUNCIÓN: cargar destino directamente desde parámetros de la URL
+    function cargarPorParametros(datosMundo) {
+        const params = new URLSearchParams(window.location.search);
+        const ciudadParam = params.get("ciudad");
+        const paisParam = params.get("pais");
+
+        if (!ciudadParam || !paisParam) return;
+
+        let paisData = null;
+
+        datosMundo.continents.forEach(cont => {
+            cont.countries.forEach(country => {
+                if (country.name.toLowerCase() === paisParam.toLowerCase()) {
+                    paisData = country;
+                }
+            });
+        });
+
+        if (paisData) {
+            cargarDetallePais(paisData);
+            sectionSelector.classList.add("hidden");
+            sectionDetalle.classList.remove("hidden");
+            breadCurrent.textContent = `Destinos > ${paisData.name}`;
+            document.getElementById("bread-pais-name").textContent = paisData.name;
+        }
     }
 });

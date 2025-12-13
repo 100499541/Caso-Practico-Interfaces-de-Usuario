@@ -240,4 +240,64 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const carouselAlojamientos = document.querySelector(".mejores-ofertas .carousel");
+
+  fetch("/js/alojamientos-del-mundo.json")
+    .then(res => res.json())
+    .then(data => {
+      let alojamientos = [];
+
+      // Recorrer continentes → países → ciudades → alojamientos
+      data.continents.forEach(cont => {
+        cont.countries.forEach(country => {
+          country.cities.forEach(city => {
+            city.alojamientos.forEach(aloj => {
+              alojamientos.push({
+                nombre: aloj.nombre,
+                ciudad: city.name,
+                pais: country.name,
+                imagen: aloj.imagen || "imagenes/default.jpg",
+                precio: `${aloj.precio} ${aloj.moneda} pp`,
+                rating: aloj.rating,
+                puntuacion: aloj.puntuacion,
+                valoraciones: aloj.valoraciones
+              });
+            });
+          });
+        });
+      });
+
+      // Seleccionar aleatorios (ejemplo: 6)
+      const aleatorias = [];
+      while (aleatorias.length < 6 && alojamientos.length > 0) {
+        const idx = Math.floor(Math.random() * alojamientos.length);
+        aleatorias.push(alojamientos.splice(idx, 1)[0]);
+      }
+
+      // Renderizar cards
+      aleatorias.forEach(a => {
+        const card = document.createElement("div");
+        card.classList.add("card");
+        card.innerHTML = `
+          <img src="${a.imagen}" alt="${a.nombre}">
+          <div class="alojamiento-info superpuesta">
+            <h4>${a.nombre}</h4>
+            <p>${a.ciudad}, ${a.pais}</p>
+            <p>${a.rating} – ${a.puntuacion}/10 (${a.valoraciones} valoraciones)</p>
+            <p class="precio">${a.precio}</p>
+            <button class="ver-alojamiento">Ver alojamiento</button>
+          </div>
+        `;
+        card.querySelector(".ver-alojamiento").addEventListener("click", () => {
+          window.location.href = `producto.html?ciudad=${encodeURIComponent(a.ciudad)}&nombre=${encodeURIComponent(a.nombre)}`;
+        });
+        carouselAlojamientos.appendChild(card);
+      });
+    })
+    .catch(err => {
+      console.error("Error cargando alojamientos:", err);
+      carouselAlojamientos.innerHTML = "<p>Error al cargar alojamientos.</p>";
+    });
+});
 

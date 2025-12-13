@@ -96,3 +96,25 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const params = new URLSearchParams(window.location.search);
+
+  const tipo = params.get("tipo") || "hotel";
+  const ciudad = params.get("ciudad");   // <-- usa la ciudad
+  const inicio = params.get("inicio") || "";
+  const fin = params.get("fin") || "";
+
+  const breadcrumbBusqueda = document.getElementById("breadcrumb-busqueda");
+  if (breadcrumbBusqueda && ciudad) {
+    breadcrumbBusqueda.href = `busquedaDeProducto.html?tipo=${tipo}&destino=${encodeURIComponent(ciudad)}&inicio=${inicio}&fin=${fin}`;
+  }
+
+  const nombre = params.get("nombre");
+  const breadcrumbProducto = document.getElementById("breadcrumb-producto");
+  if (breadcrumbProducto) {
+    breadcrumbProducto.textContent = nombre || ciudad || "Producto";
+  }
+});
+
+
+

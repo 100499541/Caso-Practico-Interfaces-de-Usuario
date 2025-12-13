@@ -333,6 +333,52 @@ header nav a {
   background: #0056b3;
 }
 
+.card .alojamiento-info.superpuesta {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  color: white;
+  text-align: left;
+  box-sizing: border-box;
+  border-radius: 0 0 12px 12px;
+}
+
+.card .alojamiento-info.superpuesta h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.card .alojamiento-info.superpuesta p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #eee;
+}
+
+.card .alojamiento-info.superpuesta .precio {
+  font-weight: bold;
+  color: #ffd700;
+}
+
+.card .alojamiento-info.superpuesta .ver-alojamiento {
+  margin-top: 8px;
+  padding: 6px 12px;
+  background-color: #00707d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.card .alojamiento-info.superpuesta .ver-alojamiento:hover {
+  background-color: #005f63;
+}
+
 /* Flechas laterales del carrusel */
 .carousel-arrow {
   position: absolute;
@@ -365,6 +411,44 @@ header nav a {
 .carousel-arrow.right {
   right: 10px;
 }
+
+/* Carrusel de alojamiento */
+.alojamiento-info {
+  padding: 10px;
+  text-align: center;
+}
+
+.alojamiento-info h4 {
+  margin: 8px 0 4px;
+  font-size: 16px;
+  color: #00707d;
+}
+
+.alojamiento-info p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.alojamiento-info .precio {
+  font-weight: bold;
+  color: #0097A7;
+}
+
+.alojamiento-info .ver-alojamiento {
+  margin-top: 8px;
+  padding: 6px 12px;
+  background-color: #00707d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.alojamiento-info .ver-alojamiento:hover {
+  background-color: #005f63;
+}
+
 
 /* Flechas para carrusel reseñas y rankings */
 .carousel-arrow-small {

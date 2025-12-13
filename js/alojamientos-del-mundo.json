@@ -833,7 +833,7 @@
                   "valoraciones": 300,
                   "precio": 280,
                   "moneda": "CNY",
-                  "imagen": "imagenes/hotel-5l.jpg",
+                  "imagen": "imagenes/hotel-5.jpg",
                   "direccion": "Dongcheng, Beijing",
                   "descripcion": "El Hotel Ciudad Prohibida en Beijing ofrece una experiencia excelente con WiFi y restaurante, situado en el distrito de Dongcheng, ideal para explorar la historia y cultura de la ciudad.",
                   "coordenadas": { "lat": 39.9042, "lng": 116.4074 },
