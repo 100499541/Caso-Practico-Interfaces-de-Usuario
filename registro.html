@@ -12,13 +12,13 @@
 
   <!-- Header registro -->
   <div class="registro-header">
-    <h2>Registro de usuario</h2>
+    <h2 data-section="registration" data-value="title">Registro de usuario</h2>
     <div class="registro-header-right">
       <div class="idioma">
-        <label for="idioma">Idioma:</label>
-        <select id="idioma">
-          <option value="es">Español</option>
-          <option value="en">English</option>
+        <label for="idioma" data-section="header" data-value="language">Idioma:</label>
+        <select id="idioma" data-language-selector>
+          <option value="es" data-language="es">Español</option>
+          <option value="en" data-language="en">English</option>
           <option value="en">Français</option>
         </select>
       </div>
@@ -30,42 +30,43 @@
 
   <!-- Formulario -->
   <form class="registro-form" id="registroForm">
-    <label for="usuario">Usuario*</label>
+    <label for="usuario" data-section="registration" data-value="username">Usuario*</label>
     <input type="text" id="usuario" name="usuario" required>
 
-    <label for="nombre">Nombre*</label>
+    <label for="nombre" data-section="registration" data-value="first-name">Nombre*</label>
     <input type="text" id="nombre" name="nombre" required>
 
-    <label for="apellidos">Apellidos*</label>
+    <label for="apellidos" data-section="registration" data-value="surname">Apellidos*</label>
     <input type="text" id="apellidos" name="apellidos" required>
 
-    <label for="password">Contraseña*</label>
+    <label for="password" data-section="registration" data-value="password">Contraseña*</label>
     <input type="password" id="password" name="password" required>
 
-    <label for="repassword">Repetir Contraseña*</label>
+    <label for="repassword" data-section="registration" data-value="repeat-password">Repetir Contraseña*</label>
     <input type="password" id="repassword" name="repassword" required>
 
-    <label for="email">Correo electrónico*</label>
+    <label for="email" data-section="registration" data-value="e-mail">Correo electrónico*</label>
     <input type="email" id="email" name="email" required>
 
-    <label for="reemail">Repetir correo electrónico*</label>
+    <label for="reemail" data-section="registration" data-value="repeat-e-mail">Repetir correo electrónico*</label>
     <input type="email" id="reemail" name="reemail" required>
 
-    <label for="fechaNacimiento">Fecha de nacimiento*</label>
+    <label for="fechaNacimiento" data-section="registration" data-value="birth-date">Fecha de nacimiento*</label>
     <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
 
-    <label for="foto">Foto de perfil*</label>
+    <label for="foto" data-section="registration" data-value="profile-picture">Foto de perfil*</label>
     <input type="file" id="foto" name="foto" accept="image/*">
 
     <div class="privacidad">
       <input type="checkbox" id="acepto" required>
-      <label for="acepto">Acepto la política de privacidad y uso*</label>
+      <label for="acepto" data-section="registration" data-value="privacy-policy">Acepto la política de privacidad y uso*</label>
     </div>
 
-    <button type="submit" id="crearCuenta">Crear cuenta y acceder</button>
+    <button type="submit" id="crearCuenta" data-section="registration" data-value="create-account">Crear cuenta y acceder</button>
   </form>
 </div>
 
 <script src="/js/registro.js"></script>
+<script src="/js/cambiar-idioma.js"></script>
 </body>
 </html>

@@ -55,5 +55,39 @@
         "text": "Sobre Nosotros | Política de Privacidad | Ayuda",
         "newsletter": "¿Quieres suscribirte al newsletter?",
         "subscribe-button": "Suscribirse"
+    },
+
+    "destinations-page": {
+        "title": "Descubre destinos inolvidables",
+        "text": "Elige tu destino",
+        "select-continent": "Selecciona un continente",
+        "select-country": "Elige un país",
+        "breadcrumbs-main": "Página principal",
+        "back-button": "← Volver al buscador",
+        "capital-city": "Capital",
+        "population": "Población",
+        "cities": "Ciudades",
+        "events": "Eventos y festivos más importantes del mes"
+    },
+
+    "login": {
+        "register": "Registrarme",
+        "no-account": "¿No tienes cuenta?",
+        "bottom-text": "¡No te pierdas nada nuevo!"
+    },
+
+    "registration": {
+        "title": "Registro de usuario",
+        "username": "Usuario*",
+        "first-name": "Nombre*",
+        "surname": "Apellidos*",
+        "password": "Contraseña*",
+        "repeat-password": "Repetir Contraseña*",
+        "e-mail": "Correo Electrónico*",
+        "repeat-e-mail": "Repetir Correo Electrónico*",
+        "birth-date": "Fecha de Nacimiento*",
+        "profile-picture": "Foto de Perfil*",
+        "privacy-policy": "Acepto la política de privacidad y uso*",
+        "create-account": "Crear Cuenta y acceder"
     }
 }

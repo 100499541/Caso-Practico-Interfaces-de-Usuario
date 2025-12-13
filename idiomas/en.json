@@ -55,5 +55,39 @@
         "text": "About Us | Privacy Policy | Help",
         "newsletter": "Want to subscribe to the newsletter?",
         "subscribe-button": "Subscribe"
+    },
+
+    "destinations-page": {
+        "title": "Discover Unforgettable Destinations",
+        "text": "Choose your destination",
+        "select-continent": "Select a continent",
+        "select-country": "Choose a country",
+        "breadcrumbs-main": "Main Page",
+        "back-button": "← Back to Search",
+        "capital-city": "Capital city",
+        "population": "Population",
+        "cities": "Cities",
+        "events": "Main events and holidays of the month"
+    },
+
+    "login": {
+        "register": "Sign up",
+        "no-account": "Don't have an account?",
+        "bottom-text": "Don't miss out on anything new!"
+    },
+
+    "registration": {
+        "title": "Create account",
+        "username": "Username*",
+        "first-name": "First Name*",
+        "surname": "Surname*",
+        "password": "Password*",
+        "repeat-password": "Repeat Password*",
+        "e-mail": "E-mail*",
+        "repeat-e-mail": "Repeat E-mail*",
+        "birth-date": "Birth Date*",
+        "profile-picture": "Profile Picture*",
+        "privacy-policy": "I accept the privacy and usage policy*",
+        "create-account": "Create Account and Log In"
     }
 }

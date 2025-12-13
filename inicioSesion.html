@@ -20,21 +20,21 @@
       <input type="password" id="contraseña" placeholder="Contraseña" required>
 
       <div class="botonera">
-        <button type="submit" class="btn-login">Iniciar sesión</button>
+        <button type="submit" class="btn-login" data-section="header" data-value="login">Iniciar sesión</button>
 
         <div class="registro-wrapper">
-          <p>¿No tienes cuenta?</p>
-          <a href="registro.html" class="btn-registrar">Registrarme</a>
+          <p data-section="login" data-value="no-account">¿No tienes cuenta?</p>
+          <a href="registro.html" class="btn-registrar" data-section="login" data-value="register">Registrarme</a>
         </div>
       </div>
     </form>
 
     <div class="idioma-login">
-      <label for="IdiomaLogin">Idioma</label>
-      <select id="IdiomaLogin" name="IdiomaLogin">
-        <option value="ES">Español</option>
+      <label for="IdiomaLogin" data-section="header" data-value="language">Idioma</label>
+      <select id="IdiomaLogin" name="IdiomaLogin" data-language-selector>
+        <option value="ES" data-language="es">Español</option>
         <option value="FR">Français</option>
-        <option value="EN">English</option>
+        <option value="EN" data-language="en">English</option>
       </select>
     </div>
 
@@ -56,10 +56,11 @@
             </svg>
         </a>
       </div>
-      <p>¡No te pierdas nada nuevo!</p>
+      <p data-section="login" data-value="bottom-text">¡No te pierdas nada nuevo!</p>
     </div>
   </div>
   
   <script src="/js/iniciarSesion.js"></script>
+  <script src="/js/cambiar-idioma.js"></script>
 </body>
 </html>
