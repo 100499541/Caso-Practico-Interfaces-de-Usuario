@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rutas del mundo - Perfil</title>
   <link rel="stylesheet" href="css/index.css">
-  <link rel="stylesheet" href="css/perfil.css">
+  <link rel="stylesheet" href="css/perfil.css"> 
 </head>
 <body>
 
-  <!-- HEADER (Igual que antes) -->
+  <!-- HEADER -->
   <header>
     <div class="menu-btn" id="menu-btn"><span></span><span></span><span></span></div>
     <h2 class="titulo-header">Rutas del mundo</h2>
@@ -44,73 +44,93 @@
         <!-- COLUMNA IZQUIERDA -->
         <main class="perfil-main">
             
-            <!-- VISTA 1: INFORMACIÓN PÚBLICA (Funcionalidad 5) -->
-            <div id="vista-informacion">
-                <div class="user-header">
-                    <div class="avatar-container">
-                        <!-- La imagen se carga por JS -->
-                        <img id="perfil-img" src="/imagenes/default-profile.jpg" alt="Avatar Usuario">
+            <!-- VISTA PÚBLICA DEL PERFIL -->
+            <div class="user-header vista-perfil">
+                <div class="avatar-container">
+                    <img id="perfil-img" src="" alt="Avatar Usuario">
+                </div>
+                <div class="user-info">
+                    <div class="user-title-row">
+                        <h2 id="perfil-nombre">USUARIO</h2>
+                        <!-- Botón Lápiz: Abre Editar Perfil (Foto/Bio) -->
+                        <button class="btn-edit-pencil" id="btn-pencil-edit" title="Editar perfil">✏️</button>
                     </div>
-                    <div class="user-info">
-                        <div class="user-title-row">
-                            <!-- Nombre y Usuario dinámicos -->
-                            <h2 id="perfil-nombre">Cargando...</h2>
-                            <span id="perfil-usuario" style="color:#666; font-size:0.9em;">@usuario</span>
-                            <button class="btn-edit-pencil" id="btn-pencil-edit" title="Editar perfil">✏️</button>
-                        </div>
-                        <div class="user-bio" id="perfil-bio">
-                            <p class="handwritten-text">Sin biografía.</p>
-                        </div>
+                    <div class="user-bio" id="perfil-bio">
+                        <p class="handwritten-text">Cargando...</p>
                     </div>
                 </div>
-
-                <!-- Botón móvil para ir a config -->
-                <button id="btn-config-mobile-trigger" class="btn-config-mobile">⚙️ Editar Datos</button>
-
-                <!-- Secciones de contenido -->
-                <section class="grid-section">
-                    <div class="section-title-row">
-                        <h3>Favoritos</h3>
-                        <h3 class="secondary-title">Mis Viajes</h3>
-                    </div>
-                    <div class="grid-cards" id="grid-favoritos">
-                        <!-- Se llena con JS -->
-                    </div>
-                </section>
-
-                <section class="grid-section">
-                    <h3>Historial de Compras y Reseñas</h3>
-                    <div class="grid-cards" id="grid-historial">
-                        <!-- Se llena con JS -->
-                    </div>
-                </section>
             </div>
 
-            <!-- VISTA 2: CONFIGURACIÓN / EDICIÓN (Funcionalidad 6) - Oculta por defecto -->
-            <div id="vista-editar" class="hidden">
-                <h2 style="color: #0097A7; margin-bottom: 20px;">Configuración de Usuario</h2>
-                <form id="form-editar-perfil" class="form-config">
-                    <label>Cambiar Foto</label>
-                    <input type="file" id="edit-foto" accept="image/*">
-                    
-                    <label>Nombre</label>
-                    <input type="text" id="edit-nombre" required>
-                    
-                    <label>Apellidos</label>
-                    <input type="text" id="edit-apellidos" required>
+            <!-- Botón Móvil: Abre Editar Perfil -->
+            <a href="#" class="btn-config-mobile vista-perfil" id="btn-config-mobile">⚙️ Editar Perfil</a>
 
-                    <label>Biografía</label>
-                    <textarea id="edit-bio" rows="3" placeholder="Cuéntanos algo sobre ti..."></textarea>
+            <section class="grid-section vista-perfil">
+                <div class="section-title-row">
+                    <h3>Favoritos</h3>
+                    <h3 class="secondary-title">Mis Viajes</h3>
+                </div>
+                <div class="grid-cards" id="grid-favoritos"></div>
+            </section>
 
-                    <label>Correo Electrónico</label>
-                    <input type="email" id="edit-correo" required>
+            <section class="grid-section vista-perfil">
+                <h3>Historial de Compras</h3>
+                <div class="grid-cards" id="grid-historial"></div>
+            </section>
 
-                    <label>Nueva Contraseña (dejar en blanco para no cambiar)</label>
-                    <input type="password" id="edit-pass" placeholder="********">
+
+            <!-- FORMULARIO 1: EDITAR PERFIL (Foto, Nombre, Bio) -->
+            <div id="seccion-editar-perfil" class="hidden">
+                <h2 style="color: #0097A7; margin-bottom: 20px;">Editar Perfil Público</h2>
+                
+                <form id="form-perfil" class="form-config">
+                    <div class="form-group">
+                        <label>Foto de perfil</label>
+                        <input type="file" id="edit-foto" accept="image/*">
+                    </div>
+                    <div class="form-group">
+                        <label>Nombre</label>
+                        <input type="text" id="edit-nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Apellidos</label>
+                        <input type="text" id="edit-apellidos" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Biografía</label>
+                        <textarea id="edit-bio" rows="4"></textarea>
+                    </div>
 
                     <div class="config-actions">
-                        <button type="button" id="btn-cancelar-edicion" class="btn-cancel">Cancelar</button>
-                        <button type="submit" class="btn-save">Guardar Cambios</button>
+                        <button type="button" class="btn-cancel btn-cerrar-forms">Cancelar</button>
+                        <button type="submit" class="btn-save">Guardar Perfil</button>
+                    </div>
+                </form>
+            </div>
+
+
+            <!-- FORMULARIO 2: CONFIGURACIÓN CUENTA (Correo, Contraseña) -->
+            <div id="seccion-configuracion-cuenta" class="hidden">
+                <h2 style="color: #0097A7; margin-bottom: 20px;">Configuración de Cuenta</h2>
+                
+                <form id="form-cuenta" class="form-config">
+                    <div class="form-group">
+                        <label>Correo Electrónico Actual</label>
+                        <input type="email" id="conf-correo" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Nueva Contraseña</label>
+                        <input type="password" id="conf-pass" placeholder="Escribe la nueva contraseña">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Repetir Nueva Contraseña</label>
+                        <input type="password" id="conf-repass" placeholder="Repite la contraseña">
+                    </div>
+
+                    <div class="config-actions">
+                        <button type="button" class="btn-cancel btn-cerrar-forms">Cancelar</button>
+                        <button type="submit" class="btn-save">Actualizar Cuenta</button>
                     </div>
                 </form>
             </div>
@@ -122,24 +142,17 @@
             <ul class="config-list">
                 <li>
                     <a href="#" id="link-editar-perfil">
-                        <span class="icon">✏️</span> Editar tu perfil / Datos
+                        <span class="icon">✏️</span> Editar perfil (Bio/Foto)
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <span class="icon">🔒</span> Privacidad y seguridad
+                    <!-- Este enlace abrirá el formulario de Correo/Pass -->
+                    <a href="#" id="link-configuracion">
+                        <span class="icon">⚙️</span> Configuración cuenta
                     </a>
                 </li>
-                <li>
-                    <a href="#">
-                        <span class="icon">🔔</span> Notificaciones
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="icon">♿</span> Accesibilidad
-                    </a>
-                </li>
+                <li><a href="#"><span class="icon">🔔</span> Notificaciones</a></li>
+                <li><a href="#"><span class="icon">♿</span> Accesibilidad</a></li>
                 <li class="delete-account">
                     <a href="#" id="link-eliminar-cuenta">
                         <span class="icon">🗑️</span> Eliminar cuenta
@@ -151,14 +164,10 @@
     </div>
   </div>
 
-  <!-- FOOTER (Igual que antes) -->
   <footer>
     <div class="footer-container">
       <div class="footer-left"><p>© 2025 Rutas del mundo</p></div>
       <div class="footer-center"><p>Sobre Nosotros | Política de Privacidad | Ayuda</p></div>
-      <div class="footer-socials">
-          <!-- Iconos... -->
-      </div>
     </div>
   </footer>
 
