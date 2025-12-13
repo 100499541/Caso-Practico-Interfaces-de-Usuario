@@ -289,6 +289,35 @@
     box-sizing: border-box;
 }
 
+/* --------------------------------------------------------- */
+/* Avisos en tiempo real: requisitos de contraseña */
+/* --------------------------------------------------------- */
+
+.pass-hints {
+    background: #f7fbfb;
+    border: 1px solid #b2ebf2;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 0.95em;
+}
+
+.pass-hints ul {
+    margin: 8px 0 0;
+    padding-left: 18px;
+}
+
+.pass-hints li {
+    margin: 4px 0;
+}
+
+.pass-hints li.ok {
+    color: #1b5e20;
+}
+
+.pass-hints li.bad {
+    color: #b71c1c;
+}
+
 .config-actions {
     display: flex;
     gap: 15px;

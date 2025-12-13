@@ -122,6 +122,19 @@
                         <label>Nueva Contraseña</label>
                         <input type="password" id="conf-pass" placeholder="Escribe la nueva contraseña">
                     </div>
+
+                    <!-- Avisos en tiempo real de requisitos de contraseña -->
+                    <div id="pass-hints" class="pass-hints hidden" aria-live="polite">
+                        <p><strong>Requisitos de contraseña:</strong></p>
+                        <ul>
+                            <li data-rule="len">❌ Mínimo 8 caracteres</li>
+                            <li data-rule="letters">❌ Al menos 4 letras</li>
+                            <li data-rule="upper">❌ Al menos 1 mayúscula</li>
+                            <li data-rule="nums">❌ Al menos 2 números</li>
+                            <li data-rule="special">❌ Al menos 1 carácter especial</li>
+                            <li data-rule="match">❌ Las contraseñas coinciden</li>
+                        </ul>
+                    </div>
                     
                     <div class="form-group">
                         <label>Repetir Nueva Contraseña</label>

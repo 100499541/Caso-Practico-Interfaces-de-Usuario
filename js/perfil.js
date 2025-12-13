@@ -64,6 +64,73 @@ document.addEventListener("DOMContentLoaded", () => {
     const inpRePass = document.getElementById("conf-repass");
     const formCuenta = document.getElementById("form-cuenta");
 
+    // --- Feedback en tiempo real: requisitos contraseña (mismas reglas que registro) ---
+    const passHints = document.getElementById("pass-hints");
+
+    function evaluarPassword(pw) {
+        return {
+            len: pw.length >= 8,
+            letters: (pw.match(/[A-Za-z]/g) || []).length >= 4,
+            upper: (pw.match(/[A-Z]/g) || []).length >= 1,
+            nums: (pw.match(/[0-9]/g) || []).length >= 2,
+            special: (pw.match(/[^A-Za-z0-9]/g) || []).length >= 1
+        };
+    }
+
+    function actualizarHints() {
+        if (!passHints) return;
+
+        const pw = (inpPass.value || "");
+        const rep = (inpRePass.value || "");
+
+        // Mostrar hints si el usuario ha empezado a escribir algo en cualquiera de los dos
+        const show = pw.trim() !== "" || rep.trim() !== "";
+        passHints.classList.toggle("hidden", !show);
+        if (!show) return;
+
+        const r = evaluarPassword(pw);
+
+        // Pintar cada regla (menos 'match')
+        Object.entries(r).forEach(([rule, ok]) => {
+            const li = passHints.querySelector(`li[data-rule="${rule}"]`);
+            if (!li) return;
+
+            li.classList.toggle("ok", ok);
+            li.classList.toggle("bad", !ok);
+
+            // Reescribir icono sin tocar el texto
+            const texto = li.textContent.replace(/^✅\s|^❌\s/, "");
+            li.textContent = `${ok ? "✅" : "❌"} ${texto}`;
+        });
+
+        // Coincidencia (solo exigir cuando el usuario ya haya escrito en repetir)
+        const liMatch = passHints.querySelector('li[data-rule="match"]');
+        if (liMatch) {
+            const ok = rep.trim() === "" ? true : (pw === rep);
+            liMatch.classList.toggle("ok", ok);
+            liMatch.classList.toggle("bad", !ok);
+            liMatch.textContent = `${ok ? "✅" : "❌"} Las contraseñas coinciden`;
+        }
+
+        // Validity del navegador (mensajes al intentar enviar / reportValidity)
+        const allOk = r.len && r.letters && r.upper && r.nums && r.special;
+
+        if (pw.trim() !== "" && !allOk) {
+            inpPass.setCustomValidity("La contraseña no cumple los requisitos.");
+        } else {
+            inpPass.setCustomValidity("");
+        }
+
+        if (rep.trim() !== "" && pw !== rep) {
+            inpRePass.setCustomValidity("Las contraseñas no coinciden.");
+        } else {
+            inpRePass.setCustomValidity("");
+        }
+    }
+
+    if (inpPass) inpPass.addEventListener("input", actualizarHints);
+    if (inpRePass) inpRePass.addEventListener("input", actualizarHints);
+
 
     // --- FUNCIONES DE NAVEGACIÓN ---
 
@@ -102,6 +169,11 @@ document.addEventListener("DOMContentLoaded", () => {
         inpCorreo.value = usuarioActivo.correo || "";
         inpPass.value = "";
         inpRePass.value = "";
+
+        // Reset hints/validity
+        if (passHints) passHints.classList.add("hidden");
+        inpPass.setCustomValidity("");
+        inpRePass.setCustomValidity("");
     }
 
     // Event Listeners Navegación
@@ -146,20 +218,31 @@ document.addEventListener("DOMContentLoaded", () => {
     formCuenta.addEventListener("submit", (e) => {
         e.preventDefault();
 
-        // Validar contraseñas
         const nuevaPass = inpPass.value.trim();
         const repPass = inpRePass.value.trim();
 
-        if (nuevaPass !== "" && nuevaPass !== repPass) {
-            alert("Las contraseñas no coinciden.");
-            return;
-        }
+        // Si intenta cambiar contraseña
+        if (nuevaPass !== "" || repPass !== "") {
+            const r = evaluarPassword(nuevaPass);
+            const allOk = r.len && r.letters && r.upper && r.nums && r.special;
 
-        // Actualizar objeto
-        usuarioActivo.correo = inpCorreo.value.trim();
-        if (nuevaPass !== "") {
+            if (!allOk) {
+                actualizarHints();
+                inpPass.reportValidity();
+                return;
+            }
+
+            if (nuevaPass !== repPass) {
+                actualizarHints();
+                inpRePass.reportValidity();
+                return;
+            }
+
             usuarioActivo.contrasena = nuevaPass;
         }
+
+        // Actualizar correo (siempre)
+        usuarioActivo.correo = inpCorreo.value.trim();
 
         guardarCambios("Configuración de cuenta actualizada.");
     });
