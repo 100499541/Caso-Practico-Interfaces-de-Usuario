@@ -68,5 +68,11 @@
         "population": "Población",
         "cities": "Ciudades",
         "events": "Eventos y festivos más importantes del mes"
+    },
+
+    "login": {
+        "register": "Registrarme",
+        "no-account": "¿No tienes cuenta?",
+        "bottom-text": "¡No te pierdas nada nuevo!"
     }
 }
