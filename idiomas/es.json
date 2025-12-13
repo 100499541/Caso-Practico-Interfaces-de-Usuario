@@ -74,5 +74,20 @@
         "register": "Registrarme",
         "no-account": "¿No tienes cuenta?",
         "bottom-text": "¡No te pierdas nada nuevo!"
+    },
+
+    "registration": {
+        "title": "Registro de usuario",
+        "username": "Usuario*",
+        "first-name": "Nombre*",
+        "surname": "Apellidos*",
+        "password": "Contraseña*",
+        "repeat-password": "Repetir Contraseña*",
+        "e-mail": "Correo Electrónico*",
+        "repeat-e-mail": "Repetir Correo Electrónico*",
+        "birth-date": "Fecha de Nacimiento*",
+        "profile-picture": "Foto de Perfil*",
+        "privacy-policy": "Acepto la política de privacidad y uso*",
+        "create-account": "Crear Cuenta y acceder"
     }
 }

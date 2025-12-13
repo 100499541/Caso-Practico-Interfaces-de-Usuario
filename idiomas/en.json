@@ -74,5 +74,20 @@
         "register": "Sign up",
         "no-account": "Don't have an account?",
         "bottom-text": "Don't miss out on anything new!"
+    },
+
+    "registration": {
+        "title": "Create account",
+        "username": "Username*",
+        "first-name": "First Name*",
+        "surname": "Surname*",
+        "password": "Password*",
+        "repeat-password": "Repeat Password*",
+        "e-mail": "E-mail*",
+        "repeat-e-mail": "Repeat E-mail*",
+        "birth-date": "Birth Date*",
+        "profile-picture": "Profile Picture*",
+        "privacy-policy": "I accept the privacy and usage policy*",
+        "create-account": "Create Account and Log In"
     }
 }
