@@ -1,9 +1,7 @@
-// js/perfil.js
-
 document.addEventListener("DOMContentLoaded", () => {
     
-    // 1. VERIFICAR AUTENTICACIÓN
-    // Leemos el usuario activo
+    // 1. VERIFICAR SESIÓN
+    // Recuperamos el usuario activo. Si no existe, al login.
     let usuarioActivo = JSON.parse(localStorage.getItem("usuarioActivo"));
 
     if (!usuarioActivo) {
@@ -13,182 +11,216 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Elementos del DOM
-    const nombreEl = document.getElementById("perfil-nombre");
-    const bioEl = document.getElementById("perfil-bio");
-    const imgEl = document.getElementById("perfil-imagen");
+    const vistaInfo = document.getElementById("vista-informacion");
+    const vistaEditar = document.getElementById("vista-editar");
     
-    // Modal elementos
-    const modal = document.getElementById("modal-editar");
-    const btnEditarRapido = document.getElementById("btn-editar-rapido");
-    const btnEditarCompleto = document.getElementById("btn-editar-completo");
-    const btnCerrarModal = document.getElementById("btn-cerrar-modal");
+    const perfilNombre = document.getElementById("perfil-nombre");
+    const perfilUsuario = document.getElementById("perfil-usuario");
+    const perfilBio = document.getElementById("perfil-bio");
+    const perfilImg = document.getElementById("perfil-img");
+    
+    // Inputs del formulario de edición
+    const inputNombre = document.getElementById("edit-nombre");
+    const inputApellidos = document.getElementById("edit-apellidos");
+    const inputCorreo = document.getElementById("edit-correo");
+    const inputBio = document.getElementById("edit-bio");
+    const inputPass = document.getElementById("edit-pass");
+    const inputFoto = document.getElementById("edit-foto");
+
+    // 2. FUNCIÓN PARA RENDERIZAR DATOS (Funcionalidad 5)
+    function renderizarPerfil() {
+        perfilNombre.textContent = `${usuarioActivo.nombre} ${usuarioActivo.apellidos}`;
+        perfilUsuario.textContent = `@${usuarioActivo.usuario}`;
+        
+        // Si no tiene bio, ponemos un texto por defecto
+        if (usuarioActivo.bio && usuarioActivo.bio.trim() !== "") {
+            perfilBio.innerHTML = `<p class="handwritten-text">${usuarioActivo.bio}</p>`;
+        } else {
+            perfilBio.innerHTML = `<p class="handwritten-text">¡Hola! Soy nuevo en Rutas del Mundo.</p>`;
+        }
+
+        // Si tiene foto, la ponemos
+        if (usuarioActivo.foto) {
+            perfilImg.src = usuarioActivo.foto;
+        }
+    }
+
+    // Ejecutamos renderizado inicial
+    renderizarPerfil();
+
+
+    // 3. CARGAR CONTENIDO DEMO (Favoritos y Historial)
+    // Esto es contenido simulado como pedía el diseño inicial, 
+    // pero ya dentro de la estructura dinámica.
+    cargarContenidoDemo();
+
+
+    // 4. LÓGICA DE EDICIÓN (Funcionalidad 6)
+    
+    // Botones para mostrar formulario
+    const btnPencil = document.getElementById("btn-pencil-edit");
+    const btnLinkEdit = document.getElementById("link-editar-perfil");
+    const btnMobileEdit = document.getElementById("btn-config-mobile-trigger");
+    const btnCancelar = document.getElementById("btn-cancelar-edicion");
+
+    // Función para mostrar/ocultar
+    function toggleEdicion(mostrar) {
+        if (mostrar) {
+            vistaInfo.classList.add("hidden");
+            vistaEditar.classList.remove("hidden");
+            
+            // Rellenar formulario con datos actuales
+            inputNombre.value = usuarioActivo.nombre;
+            inputApellidos.value = usuarioActivo.apellidos;
+            inputCorreo.value = usuarioActivo.correo;
+            inputBio.value = usuarioActivo.bio || "";
+            inputPass.value = ""; // La contraseña no se muestra por seguridad
+        } else {
+            vistaInfo.classList.remove("hidden");
+            vistaEditar.classList.add("hidden");
+        }
+    }
+
+    // Event listeners para abrir edición
+    btnPencil.addEventListener("click", () => toggleEdicion(true));
+    btnLinkEdit.addEventListener("click", (e) => { e.preventDefault(); toggleEdicion(true); });
+    if(btnMobileEdit) btnMobileEdit.addEventListener("click", () => toggleEdicion(true));
+    
+    // Cancelar edición
+    btnCancelar.addEventListener("click", () => toggleEdicion(false));
+
+    // GUARDAR CAMBIOS
     const formEditar = document.getElementById("form-editar-perfil");
     
-    // Inputs del form
-    const inputNombre = document.getElementById("edit-nombre");
-    const inputBio = document.getElementById("edit-bio");
-    const inputFotoUrl = document.getElementById("edit-foto-url");
-    const inputFotoFile = document.getElementById("edit-foto-input");
-
-    // 2. FUNCIÓN PARA CARGAR DATOS EN LA INTERFAZ
-    function cargarDatosPerfil() {
-        nombreEl.textContent = `${usuarioActivo.nombre} ${usuarioActivo.apellidos || ''}`;
-        
-        // Cargar Bio (si no existe, poner default)
-        if (usuarioActivo.bio) {
-            // Dividimos por saltos de línea para mantener formato
-            bioEl.innerHTML = usuarioActivo.bio.split('\n').map(line => `<p class="handwritten-text">${line}</p>`).join('');
-        } else {
-            bioEl.innerHTML = `<p class="handwritten-text">¡Hola! Soy nuevo en Rutas del Mundo.</p>`;
-        }
-
-        // Cargar Foto
-        if (usuarioActivo.foto) {
-            imgEl.src = usuarioActivo.foto;
-        }
-    }
-
-    // Inicializar carga
-    cargarDatosPerfil();
-
-    // 3. RENDERIZADO DE CARDS (FAVORITOS / HISTORIAL) - (Datos simulados por ahora)
-    const contenedorFavoritos = document.getElementById("grid-favoritos");
-    const imagenesFavoritos = [
-        "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=400",
-        "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=400"
-    ];
-
-    // Limpiar container
-    contenedorFavoritos.innerHTML = '';
-    
-    // Render Favoritos
-    imagenesFavoritos.forEach(url => {
-        const card = document.createElement("div");
-        card.className = "card-wireframe bg-x";
-        card.innerHTML = `<img src="${url}" alt="Favorito">`;
-        contenedorFavoritos.appendChild(card);
-    });
-    // Relleno wireframe
-    for(let i=0; i<2; i++){
-         const card = document.createElement("div");
-         card.className = "card-wireframe bg-x";
-         contenedorFavoritos.appendChild(card);
-    }
-
-    // Render Historial
-    const contenedorHistorial = document.getElementById("grid-historial");
-    contenedorHistorial.innerHTML = '';
-    const imagenesHistorial = [
-        "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=400", 
-        "https://images.unsplash.com/photo-1525874684015-58379d421a52?auto=format&fit=crop&w=400"
-    ];
-
-    imagenesHistorial.forEach(url => {
-        const card = document.createElement("div");
-        card.className = "card-wireframe bg-x";
-        card.innerHTML = `
-            <img src="${url}" alt="Historial">
-            <button class="btn-review">Ver Reseña</button>
-        `;
-        contenedorHistorial.appendChild(card);
-    });
-
-
-    // 4. LÓGICA DEL MODAL DE CONFIGURACIÓN
-    const abrirModal = (e) => {
-        if(e) e.preventDefault();
-        
-        // Pre-llenar datos en el formulario
-        inputNombre.value = usuarioActivo.nombre; // Solo nombre de pila para editar
-        inputBio.value = usuarioActivo.bio || "";
-        inputFotoUrl.value = ""; // Limpiar url
-        inputFotoFile.value = ""; // Limpiar archivo
-        
-        modal.classList.remove("hidden");
-    };
-
-    const cerrarModal = () => {
-        modal.classList.add("hidden");
-    };
-
-    btnEditarRapido.addEventListener("click", abrirModal);
-    btnEditarCompleto.addEventListener("click", abrirModal);
-    btnCerrarModal.addEventListener("click", cerrarModal);
-
-    // Cerrar al hacer clic fuera del modal
-    modal.addEventListener("click", (e) => {
-        if (e.target === modal) cerrarModal();
-    });
-
-    // 5. GUARDAR CAMBIOS (CONFIGURACIÓN)
     formEditar.addEventListener("submit", (e) => {
         e.preventDefault();
 
-        // Actualizar datos en memoria
-        usuarioActivo.nombre = inputNombre.value;
-        usuarioActivo.bio = inputBio.value;
+        // Actualizamos objeto local
+        usuarioActivo.nombre = inputNombre.value.trim();
+        usuarioActivo.apellidos = inputApellidos.value.trim();
+        usuarioActivo.correo = inputCorreo.value.trim();
+        usuarioActivo.bio = inputBio.value.trim();
 
-        // Función auxiliar para guardar y refrescar
-        const guardarYRefrescar = () => {
-            // 1. Actualizar usuarioActivo en localStorage
+        if (inputPass.value.trim() !== "") {
+            usuarioActivo.contrasena = inputPass.value.trim();
+        }
+
+        // Función auxiliar para guardar en localStorage
+        const guardarYSalir = () => {
+            // 1. Actualizar usuarioActivo en Storage
             localStorage.setItem("usuarioActivo", JSON.stringify(usuarioActivo));
 
-            // 2. Actualizar la lista global de usuariosRegistrados (para que el login futuro funcione con nuevos datos)
+            // 2. Actualizar la lista de usuariosRegistrados (buscar por el usuario original)
             let usuariosRegistrados = JSON.parse(localStorage.getItem("usuariosRegistrados")) || [];
+            
+            // Buscamos el índice del usuario actual
             const index = usuariosRegistrados.findIndex(u => u.usuario === usuarioActivo.usuario);
             if (index !== -1) {
-                // Mantenemos contraseña y otros datos, actualizamos solo lo editado
-                usuariosRegistrados[index] = { ...usuariosRegistrados[index], ...usuarioActivo };
+                usuariosRegistrados[index] = usuarioActivo;
                 localStorage.setItem("usuariosRegistrados", JSON.stringify(usuariosRegistrados));
             }
 
-            // 3. Refrescar interfaz
-            cargarDatosPerfil();
-            cerrarModal();
-            alert("Perfil actualizado correctamente.");
-            
-            // Recargar para actualizar header (foto mini)
-            location.reload(); 
+            // 3. Actualizar UI y salir
+            renderizarPerfil();
+            toggleEdicion(false);
+            alert("Datos actualizados correctamente.");
         };
 
         // Manejo de la foto
-        if (inputFotoFile.files && inputFotoFile.files[0]) {
-            // Si subió archivo, convertir a Base64
+        if (inputFoto.files && inputFoto.files[0]) {
             const reader = new FileReader();
             reader.onload = function (e) {
-                usuarioActivo.foto = e.target.result;
-                guardarYRefrescar();
-            }
-            reader.readAsDataURL(inputFotoFile.files[0]);
-        } else if (inputFotoUrl.value.trim() !== "") {
-            // Si puso URL
-            usuarioActivo.foto = inputFotoUrl.value.trim();
-            guardarYRefrescar();
+                usuarioActivo.foto = e.target.result; // Base64
+                guardarYSalir();
+            };
+            reader.readAsDataURL(inputFoto.files[0]);
         } else {
-            // Si no cambió foto
-            guardarYRefrescar();
+            // Si no cambia foto, guardamos directamente
+            guardarYSalir();
         }
     });
 
-    // 6. ELIMINAR CUENTA
-    const btnEliminar = document.getElementById("btn-eliminar-cuenta");
-    if(btnEliminar){
-        btnEliminar.addEventListener("click", (e) => {
-            e.preventDefault();
-            const confirmacion = confirm("⚠ ¿ESTÁS SEGURO? \nEsta acción eliminará tu cuenta permanentemente y no podrás recuperarla.");
+
+    // 5. ELIMINAR CUENTA (Funcionalidad 6)
+    const btnEliminar = document.getElementById("link-eliminar-cuenta");
+    
+    btnEliminar.addEventListener("click", (e) => {
+        e.preventDefault();
+        
+        const confirmacion = confirm("¿Estás SEGURO de que quieres eliminar tu cuenta? Esta acción es irreversible.");
+        
+        if (confirmacion) {
+            let usuariosRegistrados = JSON.parse(localStorage.getItem("usuariosRegistrados")) || [];
             
-            if(confirmacion) {
-                // Borrar de usuariosRegistrados
-                let usuariosRegistrados = JSON.parse(localStorage.getItem("usuariosRegistrados")) || [];
-                const nuevosUsuarios = usuariosRegistrados.filter(u => u.usuario !== usuarioActivo.usuario);
-                localStorage.setItem("usuariosRegistrados", JSON.stringify(nuevosUsuarios));
+            // Filtrar para quitar al usuario actual
+            const nuevosUsuarios = usuariosRegistrados.filter(u => u.usuario !== usuarioActivo.usuario);
+            
+            // Guardar nueva lista
+            localStorage.setItem("usuariosRegistrados", JSON.stringify(nuevosUsuarios));
+            
+            // Borrar sesión activa
+            localStorage.removeItem("usuarioActivo");
+            
+            alert("Tu cuenta ha sido eliminada. Esperamos verte pronto.");
+            window.location.href = "index.html";
+        }
+    });
 
-                // Borrar sesión activa
-                localStorage.removeItem("usuarioActivo");
 
-                alert("Tu cuenta ha sido eliminada. Esperamos verte pronto.");
-                window.location.href = "index.html";
-            }
+    // --- FUNCIONES AUXILIARES PARA RELLENAR CARDS (VISUAL) ---
+    function cargarContenidoDemo() {
+        const contenedorFavoritos = document.getElementById("grid-favoritos");
+        const contenedorHistorial = document.getElementById("grid-historial");
+
+        // Limpiar
+        contenedorFavoritos.innerHTML = "";
+        contenedorHistorial.innerHTML = "";
+
+        // Cards de Favoritos
+        const imagenesFavoritos = [
+            "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=400", 
+            "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=400"
+        ];
+        
+        imagenesFavoritos.forEach(url => {
+            const card = document.createElement("div");
+            card.className = "card-wireframe bg-x"; 
+            card.innerHTML = `<img src="${url}" alt="Favorito">`;
+            contenedorFavoritos.appendChild(card);
+        });
+        // Relleno vacíos
+        for(let i=0; i<2; i++){
+             const card = document.createElement("div");
+             card.className = "card-wireframe bg-x";
+             contenedorFavoritos.appendChild(card);
+        }
+
+        // Cards Historial
+        const imagenesHistorial = [
+            "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=400",
+            "https://images.unsplash.com/photo-1525874684015-58379d421a52?auto=format&fit=crop&w=400"
+        ];
+        imagenesHistorial.forEach(url => {
+            const card = document.createElement("div");
+            card.className = "card-wireframe bg-x";
+            card.innerHTML = `
+                <img src="${url}" alt="Historial">
+                <button class="btn-review">Escribir Reseña</button>
+            `;
+            contenedorHistorial.appendChild(card);
+        });
+        // Relleno vacíos
+        for(let i=0; i<2; i++){
+             const card = document.createElement("div");
+             card.className = "card-wireframe bg-x";
+             card.innerHTML = `<button class="btn-review">Escribir Reseña</button>`;
+             contenedorHistorial.appendChild(card);
+        }
+
+        // Click en reseñas (demo)
+        document.querySelectorAll(".btn-review").forEach(btn => {
+            btn.addEventListener("click", () => alert("Funcionalidad de reseñas en desarrollo..."));
         });
     }
+
 });
