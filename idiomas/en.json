@@ -68,5 +68,11 @@
         "population": "Population",
         "cities": "Cities",
         "events": "Main events and holidays of the month"
+    },
+
+    "login": {
+        "register": "Sign up",
+        "no-account": "Don't have an account?",
+        "bottom-text": "Don't miss out on anything new!"
     }
 }
