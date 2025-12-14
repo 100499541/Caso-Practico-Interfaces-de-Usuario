@@ -1,0 +1,132 @@
+{
+    "header": {
+        "home": "Accueil",
+        "destinations": "Destinations",
+        "shared-trips": "Voyages Partagés",
+        "social": "Social",
+        "login": "Se Connecter",
+        "language": "Langue"
+    },
+
+    "search-bar": {
+        "title": "Trouvez votre prochaine destination",
+        "type": "Type de produit",
+        "hotel": "Hôtel",
+        "flight": "Vol",
+        "hotel-flight": "Hôtel + Vol",
+        "destination": "Destination",
+        "trip-period": "Période de voyage",
+        "search-button": "Rechercher"
+    },
+
+    "carousel-1": {
+        "title": "Découvrez les destinations les plus célèbres"
+
+    },
+
+    "carousel-2": {
+        "title": "Les meilleures offres"
+
+    },
+
+    "carousel-3": {
+        "title": "Rejoignez d'autres aventuriers",
+        "destination": "Voir la destination",
+        "name-1": "Chiang Mai, Thaïlande",
+        "name-2": "Hanoï, Vietnam",
+        "name-3": "Queenstown, N. Zélande",
+        "name-4": "Reykjavik, Islande"
+    },
+
+    "reviews": {
+        "title": "Découvrez ce que les autres disent",
+        "city-1": "Madrid, Espagne",
+        "city-2": "Barcelone, Espagne"
+    },
+
+    "tops": {
+        "title": "Nos voyageurs les plus expérimentés",
+        "ranking-1": "Top des voyageurs avec le plus de voyages",
+        "ranking-2": "Top des voyageurs avec le plus d'amis",
+        "ranking-3": "Top des destinations les plus visitées"
+    },
+
+    "footer": {
+        "text": "À Propos de Nous | Politique de Confidentialité | Aide",
+        "newsletter": "Voulez-vous vous abonner à la newsletter ?",
+        "subscribe-button": "S'abonner"
+    },
+
+    "destinations-page": {
+        "title": "Découvrez des destinations inoubliables",
+        "text": "Choisissez votre destination",
+        "select-continent": "Sélectionnez un continent",
+        "select-country": "Choisissez un pays",
+        "breadcrumbs-main": "Page d'accueil",
+        "back-button": "← Retour au moteur de recherche",
+        "capital-city": "Capitale",
+        "population": "Population",
+        "cities": "Villes",
+        "events": "Événements et fêtes importants du mois"
+    },
+
+    "login": {
+        "register": "S'inscrire",
+        "no-account": "Vous n'avez pas de compte ?",
+        "bottom-text": "Ne manquez aucune nouveauté !"
+    },
+
+    "registration": {
+        "title": "Enregistrement de l'utilisateur",
+        "username": "Nom d'utilisateur*",
+        "first-name": "Prénom*",
+        "surname": "Nom de famille*",
+        "password": "Mot de passe*",
+        "repeat-password": "Répéter le mot de passe*",
+        "e-mail": "E-mail*",
+        "repeat-e-mail": "Répéter l'e-mail*",
+        "birth-date": "Date de naissance*",
+        "profile-picture": "Photo de profil*",
+        "privacy-policy": "J'accepte la politique de confidentialité et d'utilisation*",
+        "create-account": "Créer un compte et accéder"
+    },
+
+        "product-result": {
+            "breadcrumbs-product": "Détails du produit",
+            "title": "Détails de l'hébergement",
+            "info": "Informations et commodités",
+            "reviews": "Voir les avis",
+            "whats-included": "Ce qui est inclus",
+            "book-now": "Réserver maintenant",
+            "favourite": "Ajouter aux favoris"
+        },
+
+        "product-search": {
+            "breadcrumbs-search": "Recherche",
+            "map-button": "Afficher les aéroports"
+        },
+
+        "profile": {
+            "breadcrumbs-profile": "Profil",
+            "my-trips": "Mes voyages",
+            "favourites": "Favoris",
+            "purchase-history": "Historique des achats",
+            "edit-public-profile": "Modifier le profil public",
+            "profile-picture": "Photo de profil",
+            "first-name": "Prénom",
+            "surname": "Nom de famille",
+            "biography": "Biographie",
+            "cancel-button": "Annuler",
+            "save-profile-button": "Enregistrer le profil",
+            "account-settings": "Paramètres du compte",
+            "e-mail": "E-mail",
+            "new-password": "Nouveau mot de passe",
+            "repeat-new-password": "Répéter le nouveau mot de passe",
+            "password-requirements": "Exigences du mot de passe:",
+            "update-account-button": "Mettre à jour le compte",
+            "edit-profile-button": "Modifier le profil (Bio/Photo)",
+            "notifications": "Notifications",
+            "accesibility": "Accessibilité",
+            "delete-account": "Supprimer le compte"
+        }
+}

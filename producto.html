@@ -28,7 +28,7 @@
       <label for="Idioma" data-section="header" data-value="language">Idioma</label>
       <select id="Idioma" name="Idioma" data-language-selector>
         <option value="ES" data-language="es">Español</option>
-        <option value="FR">Français</option>
+        <option value="FR" data-language="fr">Français</option>
         <option value="EN" data-language="en">English</option>
       </select>
     </div>
@@ -112,7 +112,7 @@
         <p>© 2025 Rutas del mundo</p>
       </div>
       <div class="footer-center">
-        <p>Sobre Nosotros | Política de Privacidad | Ayuda</p>
+        <p data-section="footer" data-value="text">Sobre Nosotros | Política de Privacidad | Ayuda</p>
       </div>
       <div class="footer-socials">
         <a href="https://www.facebook.com" aria-label="Facebook">
@@ -127,9 +127,9 @@
       </div>
       <div class="footer-right">
         <form class="newsletter">
-          <label for="email">¿Quieres suscribirte al newsletter?</label><br>
+          <label for="email" data-section="footer" data-value="newsletter">¿Quieres suscribirte al newsletter?</label><br>
           <input type="email" id="email" placeholder="Introduce tu correo">
-          <button type="submit">Suscribirse</button>
+          <button type="submit" data-section="footer" data-value="subscribe-button">Suscribirse</button>
         </form>
       </div>
     </div>

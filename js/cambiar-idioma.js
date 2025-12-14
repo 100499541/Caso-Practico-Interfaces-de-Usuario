@@ -7,7 +7,7 @@ const languageSelect = document.querySelector("[data-language-selector]");
 const textsToChange = document.querySelectorAll("[data-section]");
 
 // Esperamos a que el usuario cambie el idioma mediante el selector
-languageSelect.addEventListener("change", () => {ç
+languageSelect.addEventListener("change", () => {
     // Obtenemos la opcion seleccionada
     const selectedOption =
         languageSelect.options[languageSelect.selectedIndex];
@@ -35,8 +35,8 @@ languageSelect.addEventListener("change", () => {ç
 // Al cargar la pagina, verificamos si hay un idioma guardado en el localStorage
 document.addEventListener("DOMContentLoaded", () => {
     const savedLanguage = localStorage.getItem("language");
+
     // Si hay un idioma guardado, seleccionamos la opcion correspondiente en el selector
-    
     if (savedLanguage) {
         const option = languageSelect.querySelector(
             `option[data-language="${savedLanguage}"]`

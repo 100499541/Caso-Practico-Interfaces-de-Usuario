@@ -99,6 +99,33 @@
             "whats-included": "Qué se incluye",
             "book-now": "Reservar ahora",
             "favourite": "Guardar en favoritos"
+        },
+        "product-search": {
+            "breadcrumbs-search": "Busqueda",
+            "map-button": "Mostrar aeropuertos"
+        },
 
+        "profile": {
+            "breadcrumbs-profile": "Perfil",
+            "my-trips": "Mis viajes",
+            "favourites": "Favoritos",
+            "purchase-history": "Historial de compras",
+            "edit-public-profile": "Editar perfil público",
+            "profile-picture": "Foto de perfil",
+            "first-name": "Nombre",
+            "surname": "Apellidos",
+            "biography": "Biografía",
+            "cancel-button": "Cancelar",
+            "save-profile-button": "Guardar perfil",
+            "account-settings": " Configuración cuenta",
+            "e-mail": "Correo electrónico actual",
+            "new-password": "Nueva contraseña",
+            "repeat-new-password": "Repetir nueva contraseña",
+            "password-requirements": "Requisitos de contraseña:",
+            "update-account-button": "Actualizar cuenta",
+            "edit-profile-button": "Editar perfil (Bio/Foto)",
+            "notifications": "Notificaciones",
+            "accesibility": " Accesibilidad",
+            "delete-account": "Eliminar cuenta"
         }
 }

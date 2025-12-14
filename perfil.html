@@ -19,14 +19,15 @@
     <h2 class="titulo-header">Rutas del mundo</h2>
 
     <div class="login-btn">
-      <a href="/inicioSesion.html">Iniciar sesión</a>
+      <a href="/inicioSesion.html" data-section="header" data-value="login">Iniciar sesión</a>
     </div>
 
     <div class="idioma">
-      <label for="Idioma">Idioma</label>
+      <label for="Idioma" data-section="header" data-value="language">Idioma</label>
       <select id="Idioma" name="Idioma" data-language-selector>
         <option value="ES" data-language="es">Español</option>
         <option value="EN" data-language="en">English</option>
+        <option value="FR" data-language="fr">Français</option>
       </select>
     </div>
 
@@ -35,24 +36,24 @@
     </div>
 
     <nav id="nav">
-      <a href="index.html"><h4>Inicio</h4></a>
-      <a href="destinos.html"><h4>Destinos</h4></a>
-      <a href="viajesCompartidos.html"><h4>Viajes Compartidos</h4></a>
-      <a href="social.html"><h4>Social</h4></a>
+      <a href="index.html" data-section="header" data-value="home"><h4>Inicio</h4></a>
+      <a href="destinos.html" data-section="header" data-value="destinations"><h4>Destinos</h4></a>
+      <a href="viajesCompartidos.html" data-section="header" data-value="shared-trips"><h4>Viajes Compartidos</h4></a>
+      <a href="social.html" data-section="header" data-value="social"><h4>Social</h4></a>
     </nav>
   </header>
 
   <!-- MENU MOVIL GENERAL -->
   <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html">Inicio</a>
-    <a href="destinos.html">Destinos</a>
-    <a href="viajesCompartidos.html">Viajes Compartidos</a>
-    <a href="social.html">Social</a>
+    <a href="index.html" data-section="header" data-value="home">Inicio</a>
+    <a href="destinos.html" data-section="header" data-value="destinations">Destinos</a>
+    <a href="viajesCompartidos.html" data-section="header" data-value="shared-trips">Viajes Compartidos</a>
+    <a href="social.html" data-section="header" data-value="social">Social</a>
   </div>
 
   <div class="container-perfil">
     <div class="breadcrumbs">
-      <a href="index.html">Página principal</a> > <span>Perfil</span>
+      <a href="index.html" data-section="destinations-page" data-value="breadcrumbs-main">Página principal</a> > <span span data-section="profile" data-value="breadcrumbs-profile">Perfil</span>
     </div>
 
     <div class="perfil-layout">
@@ -90,49 +91,49 @@
         <a href="#" class="btn-config-mobile vista-perfil" id="btn-config-mobile">⚙️ Editar Perfil</a>
 
         <!-- TITULO MIS VIAJES -->
-        <h2 class="mis-viajes-titulo vista-perfil">Mis Viajes</h2>
+        <h2 class="mis-viajes-titulo vista-perfil" data-section="profile" data-value="my-trips">Mis Viajes</h2>
 
         <!-- FAVORITOS -->
         <section class="grid-section vista-perfil">
-          <h3>Favoritos</h3>
+          <h3 data-section="profile" data-value="favourites">Favoritos</h3>
           <div class="grid-cards" id="grid-favoritos"></div>
         </section>
 
         <!-- HISTORIAL DE COMPRAS -->
         <section class="grid-section vista-perfil">
-          <h3>Historial de Compras</h3>
+          <h3 data-section="profile" data-value="purchase-history">Historial de Compras</h3>
           <div class="grid-cards" id="grid-historial"></div>
         </section>
 
 
         <!-- FORMULARIO 1: EDITAR PERFIL (Foto, Nombre, Bio) -->
         <div id="seccion-editar-perfil" class="hidden">
-          <h2 style="color:#0097A7; margin-bottom:20px;">Editar Perfil Público</h2>
+          <h2 style="color:#0097A7; margin-bottom:20px;" data-section="profile" data-value="edit-public-profile">Editar Perfil Público</h2>
 
           <form id="form-perfil" class="form-config">
             <div class="form-group">
-              <label>Foto de perfil</label>
+              <label data-section="profile" data-value="profile-picture">Foto de perfil</label>
               <input type="file" id="edit-foto" accept="image/*" />
             </div>
 
             <div class="form-group">
-              <label>Nombre</label>
+              <label data-section="profile" data-value="first-name">Nombre</label>
               <input type="text" id="edit-nombre" required />
             </div>
 
             <div class="form-group">
-              <label>Apellidos</label>
+              <label data-section="profile" data-value="surname">Apellidos</label>
               <input type="text" id="edit-apellidos" required />
             </div>
 
             <div class="form-group">
-              <label>Biografía</label>
+              <label data-section="profile" data-value="biography">Biografía</label>
               <textarea id="edit-bio" rows="4"></textarea>
             </div>
 
             <div class="config-actions">
-              <button type="button" class="btn-cancel btn-cerrar-forms">Cancelar</button>
-              <button type="submit" class="btn-save">Guardar Perfil</button>
+              <button type="button" class="btn-cancel btn-cerrar-forms" data-section="profile" data-value="cancel-button">Cancelar</button>
+              <button type="submit" class="btn-save" data-section="profile" data-value="save-profile-button">Guardar Perfil</button>
             </div>
           </form>
         </div>
@@ -140,22 +141,22 @@
 
         <!-- FORMULARIO 2: CONFIGURACIÓN CUENTA (Correo, Contraseña) -->
         <div id="seccion-configuracion-cuenta" class="hidden">
-          <h2 style="color:#0097A7; margin-bottom:20px;">Configuración de Cuenta</h2>
+          <h2 style="color:#0097A7; margin-bottom:20px;" data-section="profile" data-value="account-settings">Configuración de Cuenta</h2>
 
           <form id="form-cuenta" class="form-config">
             <div class="form-group">
-              <label>Correo Electrónico Actual</label>
+              <label data-section="profile" data-value="e-mail">Correo Electrónico Actual</label>
               <input type="email" id="conf-correo" required />
             </div>
 
             <div class="form-group">
-              <label>Nueva Contraseña</label>
+              <label data-section="profile" data-value="new-password">Nueva Contraseña</label>
               <input type="password" id="conf-pass" placeholder="Escribe la nueva contraseña" />
             </div>
 
             <!-- Checklist en vivo -->
             <div id="pass-hints" class="pass-hints hidden" aria-live="polite">
-              <p><strong>Requisitos de contraseña:</strong></p>
+              <p><strong data-section="profile" data-value="password-requirements">Requisitos de contraseña:</strong></p>
               <ul>
                 <li data-rule="len">❌ Mínimo 8 caracteres</li>
                 <li data-rule="letters">❌ Al menos 4 letras</li>
@@ -167,13 +168,13 @@
             </div>
 
             <div class="form-group">
-              <label>Repetir Nueva Contraseña</label>
+              <label data-section="profile" data-value="repeat-new-password">Repetir Nueva Contraseña</label>
               <input type="password" id="conf-repass" placeholder="Repite la contraseña" />
             </div>
 
             <div class="config-actions">
-              <button type="button" class="btn-cancel btn-cerrar-forms">Cancelar</button>
-              <button type="submit" class="btn-save">Actualizar Cuenta</button>
+              <button type="button" class="btn-cancel btn-cerrar-forms" data-section="profile" data-value="cancel-button">Cancelar</button>
+              <button type="submit" class="btn-save" data-section="profile" data-value="update-account-button">Actualizar Cuenta</button>
             </div>
           </form>
         </div>
@@ -202,8 +203,30 @@
 
   <footer>
     <div class="footer-container">
-      <div class="footer-left"><p>© 2025 Rutas del mundo</p></div>
-      <div class="footer-center"><p>Sobre Nosotros | Política de Privacidad | Ayuda</p></div>
+      <div class="footer-left">
+        <p>© 2025 Rutas del mundo</p>
+      </div>
+      <div class="footer-center">
+        <p data-section="footer" data-value="text" data-section="footer" data-value="text">Sobre Nosotros | Política de Privacidad | Ayuda</p>
+      </div>
+      <div class="footer-socials">
+        <a href="https://www.facebook.com" aria-label="Facebook">
+          <!-- SVG Facebook -->
+        </a>
+        <a href="https://twitter.com" aria-label="Twitter">
+          <!-- SVG Twitter -->
+        </a>
+        <a href="https://www.instagram.com" aria-label="Instagram">
+          <!-- SVG Instagram -->
+        </a>
+      </div>
+      <div class="footer-right">
+        <form class="newsletter">
+          <label for="email" data-section="footer" data-value="newsletter">¿Quieres suscribirte al newsletter?</label><br>
+          <input type="email" id="email" placeholder="Introduce tu correo">
+          <button type="submit" data-section="footer" data-value="subscribe-button">Suscribirse</button>
+        </form>
+      </div>
     </div>
   </footer>
 
