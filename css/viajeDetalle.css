@@ -289,7 +289,7 @@
   font-size: 0.9rem;
 }
 
-@media (max-width: 950px) {
+@media (max-width: 768px) {
   .layout { grid-template-columns: 1fr; }
   .hero-top { grid-template-columns: 1fr; }
   .grid-add { grid-template-columns: 1fr; }

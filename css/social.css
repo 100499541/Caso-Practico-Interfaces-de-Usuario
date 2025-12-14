@@ -870,7 +870,7 @@
 /* --- RESPONSIVE --- */
 
 /* Tablet y Móvil (Stacked) */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
     .social-layout {
         display: flex;
         flex-direction: column;
