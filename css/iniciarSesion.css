@@ -20,7 +20,7 @@ body {
   text-align: center;
 }
 
-/* -------------------- TITULO Y LOGO -------------------- */
+/* -------------------- TÍTULO Y LOGO -------------------- */
 .titulo-web {
   font-size: 2em;
   margin-bottom: 20px;
@@ -52,11 +52,12 @@ body {
   display: flex;
   gap: 15px;
   justify-content: center;
-  align-items: flex-end; /* <-- alinea los botones por la base */
-  flex-wrap: wrap; /* para móvil */
+  align-items: flex-end;
+  flex-wrap: wrap;
 }
 
-.btn-login, .btn-registrar {
+.btn-login,
+.btn-registrar {
   background: #0097A7;
   color: white;
   font-weight: bold;
@@ -70,16 +71,17 @@ body {
   align-items: center;
   text-decoration: none;
   transition: background 0.2s, transform 0.2s;
-  width: 160px;  /* ancho fijo idéntico */
-  height: 45px;  /* altura fija idéntica */
+  width: 160px;
+  height: 45px;
 }
 
-.btn-login:hover, .btn-registrar:hover {
+.btn-login:hover,
+.btn-registrar:hover {
   background: #00707d;
   transform: scale(1.02);
 }
 
-/* Wrapper para registrar con texto encima */
+/* Wrapper registrar */
 .registro-wrapper {
   display: flex;
   flex-direction: column;
@@ -87,13 +89,12 @@ body {
   gap: 5px;
 }
 
-/* Texto encima del botón de registrarse */
 .registro-wrapper p {
   margin: 0;
   font-size: 14px;
 }
 
-/* MENSAJES DE ERROR */
+/* -------------------- MENSAJES DE ERROR -------------------- */
 .error-msg {
   color: red;
   font-size: 14px;
@@ -148,8 +149,15 @@ body {
   color: #555;
 }
 
-/* -------------------- RESPONSIVE -------------------- */
-@media (max-width: 500px) {
+/* -------------------- RESPONSIVE TABLET (≤ 768px) -------------------- */
+
+@media (max-width: 768px) {
+
+}
+
+/* -------------------- RESPONSIVE MÓVIL (≤ 600px) -------------------- */
+
+@media (max-width: 600px) {
   .login-container {
     padding: 20px 15px;
   }
@@ -168,9 +176,10 @@ body {
     align-items: center;
   }
 
-  .btn-login, .btn-registrar {
+  .btn-login,
+  .btn-registrar {
     width: 100%;
-    height: 45px; /* altura consistente en móvil */
+    height: 45px;
   }
 
   .registro-wrapper {

@@ -1,4 +1,6 @@
-/* Breadcrumbs */
+/* ===========================
+   BREADCRUMBS
+   =========================== */
 .breadcrumbs {
   color: #666;
   margin-top: 10px;
@@ -6,19 +8,24 @@
   margin-left: 10px;
   font-size: 1em;
 }
+
 .breadcrumbs a {
   text-decoration: none;
   color: #0097A7;
 }
 
-/* Título contextual */
+/* ===========================
+   TÍTULO CONTEXTUAL
+   =========================== */
 .titulo-producto {
   margin: 10px 40px 30px;
   font-size: 28px;
   color: #0097A7;
 }
 
-/* Layout general */
+/* ===========================
+   LAYOUT GENERAL (DESKTOP)
+   =========================== */
 .producto-layout {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -35,7 +42,9 @@
   gap: 30px;
 }
 
-/* Imagen principal grande */
+/* ===========================
+   IMAGEN PRINCIPAL
+   =========================== */
 .imagen-principal img {
   width: 100%;
   max-height: 500px;
@@ -45,7 +54,9 @@
   box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 }
 
-/* Descripción */
+/* ===========================
+   DESCRIPCIÓN
+   =========================== */
 .descripcion h3 {
   font-size: 26px;
   margin-bottom: 10px;
@@ -58,7 +69,9 @@
   line-height: 1.6;
 }
 
-/* Valoración y precio */
+/* ===========================
+   VALORACIÓN Y PRECIO
+   =========================== */
 .valoracion-precio {
   display: flex;
   flex-direction: column;
@@ -93,7 +106,9 @@
   color: #00707d;
 }
 
-/* Servicios */
+/* ===========================
+   SERVICIOS
+   =========================== */
 .info-servicios h4 {
   font-size: 18px;
   margin-bottom: 10px;
@@ -115,14 +130,18 @@
   color: #00707d;
 }
 
-/* Check-in / Check-out */
+/* ===========================
+   CHECK-IN / CHECK-OUT
+   =========================== */
 .checkin-checkout {
   margin-top: 20px;
   font-size: 19px;
   color: #333;
 }
 
-/* Qué se incluye */
+/* ===========================
+   QUÉ SE INCLUYE
+   =========================== */
 .incluye h4 {
   font-size: 18px;
   margin-bottom: 10px;
@@ -149,7 +168,9 @@
   transform: scale(1.05);
 }
 
-/* Botones de acción */
+/* ===========================
+   BOTONES DE ACCIÓN
+   =========================== */
 .acciones {
   margin-top: 30px;
   display: flex;
@@ -169,4 +190,63 @@
 
 .acciones button:hover {
   background-color: #00707d;
+}
+
+/* ===========================
+   RESPONSIVE – TABLET (≤ 768px)
+   =========================== */
+@media (max-width: 768px) {
+
+  /* Apilamos columnas */
+  .producto-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 24px;
+  }
+
+  .titulo-producto {
+    margin: 10px 24px 25px;
+    font-size: 26px;
+  }
+
+  .acciones {
+    flex-wrap: wrap;
+  }
+
+  .acciones button {
+    width: 100%;
+  }
+}
+
+/* ===========================
+   RESPONSIVE – MÓVIL (≤ 600px)
+   =========================== */
+@media (max-width: 600px) {
+
+  .producto-layout {
+    padding: 16px;
+    gap: 24px;
+  }
+
+  .titulo-producto {
+    margin: 10px 16px 20px;
+    font-size: 22px;
+  }
+
+  .descripcion h3 {
+    font-size: 22px;
+  }
+
+  .precio-box {
+    font-size: 20px;
+  }
+
+  .checkin-checkout {
+    font-size: 16px;
+  }
+
+  .incluye-imagenes img {
+    width: 100%;
+    height: auto;
+  }
 }

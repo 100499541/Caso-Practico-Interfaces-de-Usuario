@@ -1,3 +1,6 @@
+/* ===========================
+   BASE GENERAL
+   =========================== */
 body {
   font-family: Arial, sans-serif;
   background: #e9f4f5;
@@ -6,6 +9,9 @@ body {
   color: #334;
 }
 
+/* ===========================
+   CONTENEDOR DE REGISTRO
+   =========================== */
 .registro-container {
   max-width: 500px;
   margin: 50px auto;
@@ -15,6 +21,9 @@ body {
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
+/* ===========================
+   CABECERA
+   =========================== */
 .registro-header {
   display: flex;
   justify-content: space-between;
@@ -33,20 +42,27 @@ body {
   gap: 15px;
 }
 
-/* ----------------- LOGO ----------------- */
+/* ===========================
+   LOGO
+   =========================== */
 .registro-header-right .logo img {
-  width: 80px;      
+  width: 80px;
   height: auto;
   object-fit: contain;
   display: block;
 }
 
-/* ----------------- IDIOMA ----------------- */
+/* ===========================
+   IDIOMA
+   =========================== */
 .idioma select {
   padding: 5px;
   font-size: 15px;
 }
 
+/* ===========================
+   FORMULARIO
+   =========================== */
 .registro-form {
   display: flex;
   flex-direction: column;
@@ -72,12 +88,18 @@ body {
   box-sizing: border-box;
 }
 
+/* ===========================
+   PRIVACIDAD
+   =========================== */
 .privacidad {
   display: flex;
   align-items: center;
   gap: 5px;
 }
 
+/* ===========================
+   BOTÓN CREAR CUENTA
+   =========================== */
 button#crearCuenta {
   padding: 10px;
   background: #0097A7;
@@ -95,8 +117,18 @@ button#crearCuenta:hover {
   transform: scale(1.02);
 }
 
-/* Responsive */
-@media (max-width: 500px) {
+/* ===========================
+   RESPONSIVE – TABLET (≤ 768px)
+   =========================== */
+
+@media (max-width: 768px) {
+}
+
+/* ===========================
+   RESPONSIVE – MÓVIL (≤ 600px)
+   =========================== */
+@media (max-width: 600px) {
+
   .registro-container {
     margin: 20px;
     padding: 20px;
@@ -114,6 +146,6 @@ button#crearCuenta:hover {
   }
 
   .registro-header-right .logo img {
-    width: 80px;  /* un poco más pequeño en móvil */
+    width: 80px; 
   }
-}   
+}
