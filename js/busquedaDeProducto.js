@@ -19,11 +19,42 @@ document.addEventListener("DOMContentLoaded", () => {
     return "★".repeat(estrellas) + "☆".repeat(5 - estrellas);
   }
 
+  // --- Función para centrar el mapa en un país ---
+function centrarPaisEnMapa(paisNombre) {
+  const svg = document.querySelector("#mapa-container svg");
+  if (!svg) return;
+
+  // Buscar el país por id o por class
+  let pais = document.getElementById(paisNombre);
+  if (!pais) pais = svg.querySelector(`.${paisNombre}`);
+  if (!pais) {
+    console.warn("No se encontró país en el SVG:", paisNombre);
+    return;
+  }
+
+  // Obtener bounding box del path
+  const bbox = pais.getBBox();
+
+  // Ajustar viewBox para centrar y hacer zoom
+  const margen = 20;
+  const x = bbox.x - margen;
+  const y = bbox.y - margen;
+  const width = bbox.width + margen * 2;
+  const height = bbox.height + margen * 2;
+
+  svg.setAttribute("viewBox", `${x} ${y} ${width} ${height}`);
+  svg.removeAttribute("preserveAspectRatio"); // ← clave para que se aplique el zoom
+
+  // Resaltar el país
+  pais.classList.add("highlight");
+}
+
   // Cargar alojamientos desde el JSON
   fetch("/js/alojamientos-del-mundo.json")
     .then(res => res.json())
     .then(data => {
       let resultados = [];
+      let paisDelDestino = null;
 
       // Recorrer continentes → países → ciudades
       data.continents.forEach(cont => {
@@ -31,6 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
           country.cities.forEach(city => {
             if (city.name.toLowerCase() === destino.toLowerCase()) {
               resultados = city.alojamientos;
+              paisDelDestino = country.name; // ← capturamos el país directamente
             }
           });
         });
@@ -64,6 +96,11 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
         contenedor.appendChild(card);
       });
+
+      // --- Centrar el mapa en el país del destino ---
+      if (paisDelDestino) {
+        centrarPaisEnMapa(paisDelDestino);
+      }
     })
     .catch(err => {
       console.error("Error cargando alojamientos:", err);
