@@ -301,3 +301,149 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+document.addEventListener("DOMContentLoaded", async () => {
+  const carousel = document.querySelector(".reseñas .carousel");
+
+  if (!carousel) {
+    console.warn("No se encontró el carrusel de reseñas.");
+    return;
+  }
+
+  try {
+    const res = await fetch("js/usuarios.json");
+    const data = await res.json();
+    const usuarios = data.usuarios || [];
+
+    carousel.innerHTML = ""; // Limpiar contenido estático
+
+    usuarios.forEach(usuario => {
+      const fotoUsuario = usuario.foto || "/imagenes/default_user.png";
+      const nombre = usuario.nombre || "Usuario";
+      const edad = usuario.edad ? `, ${usuario.edad}` : "";
+      const experiencias = Array.isArray(usuario.experiencias) ? usuario.experiencias : [];
+
+      experiencias.forEach(exp => {
+        const ciudad = exp.lugar?.ciudad || "Ciudad desconocida";
+        const pais = exp.lugar?.pais || "País desconocido";
+        const reseña = exp.reseña || "";
+        const valoracion = exp.valoracion || "⭐⭐⭐";
+        const fotoViaje = exp.foto || "/images/default.jpg";
+
+        const card = document.createElement("div");
+        card.className = "review-card";
+
+        card.innerHTML = `
+          <div class="usuario-info">
+            <img src="${fotoUsuario}" alt="${nombre}">
+            <div class="usuario-datos">
+              <p class="nombre">${nombre}${edad}</p>
+              <p class="ciudad">${ciudad}, ${pais}</p>
+            </div>
+          </div>
+          <p class="texto-review">${reseña}</p>
+          <div class="estrellas">${valoracion}</div>
+          <img src="${fotoViaje}" alt="${ciudad}" class="imagen-viaje">
+        `;
+
+        carousel.appendChild(card);
+      });
+    });
+  } catch (err) {
+    console.error("Error cargando reseñas desde usuarios.json", err);
+  }
+});
+
+
+document.addEventListener("DOMContentLoaded", async () => {
+  const carousel = document.querySelector(".top-viajeros .carousel");
+  if (!carousel) return;
+
+  try {
+    const [resUsuarios, resCiudades] = await Promise.all([
+      fetch("js/usuarios.json"),
+      fetch("js/ciudades-del-mundo.json")
+    ]);
+
+    const usuarios = (await resUsuarios.json()).usuarios || [];
+    const continentes = (await resCiudades.json()).continents || [];
+
+    // --- Ranking 1: más viajes ---
+    const viajerosViajes = usuarios.map(u => ({
+      nombre: u.nombre,
+      foto: u.foto || "/imagenes/default_user.png",
+      viajes: u.viajes || 0
+    }));
+    const topViajes = viajerosViajes.sort((a, b) => b.viajes - a.viajes).slice(0, 3);
+
+    const ranking1 = document.createElement("div");
+    ranking1.className = "ranking-card";
+    ranking1.innerHTML = `<h4>Top viajeros con más viajes</h4><ol></ol>`;
+    topViajes.forEach(v => {
+      ranking1.querySelector("ol").innerHTML += `
+        <li>${v.nombre} - ${v.viajes} viajes <img src="${v.foto}" alt="${v.nombre}"></li>
+      `;
+    });
+
+    // --- Ranking 2: más amigos ---
+    const viajerosAmigos = usuarios.map(u => ({
+      nombre: u.nombre,
+      foto: u.foto || "/imagenes/default_user.png",
+      amigos: u.amigos || 0
+    }));
+    const topAmigos = viajerosAmigos.sort((a, b) => b.amigos - a.amigos).slice(0, 3);
+
+    const ranking2 = document.createElement("div");
+    ranking2.className = "ranking-card";
+    ranking2.innerHTML = `<h4>Top viajeros con más amigos</h4><ol></ol>`;
+    topAmigos.forEach(v => {
+      ranking2.querySelector("ol").innerHTML += `
+        <li>${v.nombre} - ${v.amigos} amigos <img src="${v.foto}" alt="${v.nombre}"></li>
+      `;
+    });
+
+    // --- Ranking 3: destinos más visitados (aleatorios desde ciudades-del-mundo.json) ---
+    // Recoger todos los países del archivo
+    const todosPaises = [];
+    continentes.forEach(cont => {
+      cont.countries.forEach(c => {
+        todosPaises.push({
+          nombre: c.name,
+          imagen: c.image?.url || "/images/default.jpg"
+        });
+      });
+    });
+
+    // Seleccionar 3 países aleatorios distintos
+    const paisesAleatorios = [];
+    while (paisesAleatorios.length < 3 && todosPaises.length > 0) {
+      const idx = Math.floor(Math.random() * todosPaises.length);
+      paisesAleatorios.push(todosPaises.splice(idx, 1)[0]);
+    }
+
+    // Asignar visitas aleatorias ordenadas
+    const base = Math.floor(Math.random() * 50) + 100;
+    paisesAleatorios[0].visitas = base;
+    paisesAleatorios[1].visitas = base - Math.floor(Math.random() * 20 + 10);
+    paisesAleatorios[2].visitas = paisesAleatorios[1].visitas - Math.floor(Math.random() * 10 + 5);
+
+    const ranking3 = document.createElement("div");
+    ranking3.className = "ranking-card";
+    ranking3.innerHTML = `<h4>Top destinos más visitados</h4><ol></ol>`;
+    paisesAleatorios.forEach(p => {
+      ranking3.querySelector("ol").innerHTML += `
+        <li>${p.nombre} - ${p.visitas} visitas <img src="${p.imagen}" alt="${p.nombre}"></li>
+      `;
+    });
+
+    // Añadir rankings al carrusel
+    carousel.innerHTML = "";
+    carousel.appendChild(ranking1);
+    carousel.appendChild(ranking2);
+    carousel.appendChild(ranking3);
+  } catch (err) {
+    console.error("Error cargando rankings de viajeros", err);
+  }
+});
+
+
+
