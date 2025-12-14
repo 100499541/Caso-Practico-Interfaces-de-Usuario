@@ -552,15 +552,55 @@ aside {
 
 /* --------------------- MAPA INTERACTIVO --------------------- */
 .mapa-interactivo {
-  margin: 20px 0;
-  height: 300px;
+  margin: 40px 0;
+  padding: 20px;
   background: #cce5ff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border-radius: 12px;
   font-weight: bold;
   color: #00707d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  overflow: hidden; /* ← evita que el mapa se salga visualmente */
+}
+
+.mapa-interactivo h3 {
+  margin: 0;
+  font-size: 1.6em;
+  text-align: center;
+}
+
+.mapa-interactivo #mapa-container {
+  width: 125%;
+  max-width: 1400px;
+  height: auto;
+  display: flex;
+  margin-right: 25px;
+  justify-content: center; /* ← centra el SVG horizontalmente */
+}
+
+.mapa-interactivo svg {
+  width: 180%; /* ← ocupa el contenedor sin desbordar */
+  height: auto;
+}
+
+.mapa-interactivo path {
+  fill: #ccc;
+  stroke: #333;
+  stroke-width: 0.5;
+  transition: fill 0.3s ease, stroke 0.3s ease, filter 0.3s ease;
+}
+
+/* Iluminación robusta: aplica si la clase está en <path> o en <g> (con herencia) */
+.mapa-interactivo .highlight,
+.mapa-interactivo .highlight path,
+.mapa-interactivo .highlight polygon,
+.mapa-interactivo .highlight circle {
+  fill: #ff5722 !important; /* naranja intenso visible */
+  stroke: #222 !important;
+  stroke-width: 2 !important;
+  filter: drop-shadow(0 0 4px #ff5722);
 }
 
 /* --------------------- FOOTER --------------------- */

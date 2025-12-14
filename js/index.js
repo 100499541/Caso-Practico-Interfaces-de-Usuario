@@ -122,6 +122,23 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
+    // Convertir a objetos Date para comparar
+    const hoy = new Date();
+    hoy.setHours(0, 0, 0, 0); // normalizar al inicio del día
+    const fechaInicio = new Date(inicio);
+    const fechaFin = new Date(fin);
+
+    // Validaciones de fechas
+    if (fechaInicio < hoy || fechaFin < hoy) {
+      alert("Las fechas no pueden ser anteriores al día actual.");
+      return;
+    }
+
+    if (fechaInicio >= fechaFin) {
+      alert("La fecha de inicio debe ser anterior a la fecha de fin (y no pueden ser el mismo día).");
+      return;
+    }
+
     // Si es hotel o hotel+avión → redirige a busquedaDeProducto.html
     if (tipoProducto === "hotel" || tipoProducto === "hotel-avion") {
       // Pasamos los datos por querystring para usarlos en la otra página
@@ -355,23 +372,62 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 
 document.addEventListener("DOMContentLoaded", async () => {
-  const carousel = document.querySelector(".top-viajeros .carousel");
-  if (!carousel) return;
+  // Scope estricto a la sección top-viajeros
+  const sectionTop = document.querySelector(".top-viajeros");
+  const carousel = sectionTop?.querySelector(".carousel");
+  const flechaIzq = sectionTop?.querySelector(".carousel-arrow.left");
+  const flechaDer = sectionTop?.querySelector(".carousel-arrow.right");
+
+  // Scope del mapa
+  const contenedorMapa = document.getElementById("mapa-container");
 
   try {
-    const [resUsuarios, resCiudades] = await Promise.all([
+    // Carga paralela de datos
+    const [resUsuarios, resCiudades, resMapa] = await Promise.all([
       fetch("js/usuarios.json"),
-      fetch("js/ciudades-del-mundo.json")
+      fetch("js/ciudades-del-mundo.json"),
+      fetch("maps/world.svg")
     ]);
 
     const usuarios = (await resUsuarios.json()).usuarios || [];
     const continentes = (await resCiudades.json()).continents || [];
+    const svgText = await resMapa.text();
+
+    // Insertar el SVG en el DOM
+    contenedorMapa.innerHTML = svgText;
+    const svgRoot = contenedorMapa.querySelector("svg");
+    if (svgRoot && !svgRoot.id) svgRoot.id = "mapa-mundo";
+
+    // Función de iluminación
+    function iluminarPaisesPorISO(codigos) {
+      // Limpiar anteriores
+      contenedorMapa.querySelectorAll("svg .highlight").forEach(el => el.classList.remove("highlight"));
+
+      (codigos || []).forEach(code => {
+        if (!code) return;
+
+        // Buscar por id
+        let el = document.getElementById(code);
+
+        // Si no existe id, buscar por class
+        if (!el) {
+          el = contenedorMapa.querySelector(`.${code}`);
+        }
+
+        if (el) {
+          el.classList.add("highlight");
+        } else {
+          console.warn("No se encontró país en SVG con id o class:", code);
+        }
+      });
+    }
 
     // --- Ranking 1: más viajes ---
     const viajerosViajes = usuarios.map(u => ({
       nombre: u.nombre,
       foto: u.foto || "/imagenes/default_user.png",
-      viajes: u.viajes || 0
+      viajes: Number(u.viajes) || 0,
+      pais: u.pais || null
     }));
     const topViajes = viajerosViajes.sort((a, b) => b.viajes - a.viajes).slice(0, 3);
 
@@ -388,7 +444,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     const viajerosAmigos = usuarios.map(u => ({
       nombre: u.nombre,
       foto: u.foto || "/imagenes/default_user.png",
-      amigos: u.amigos || 0
+      amigos: Number(u.amigos) || 0,
+      pais: u.pais || null
     }));
     const topAmigos = viajerosAmigos.sort((a, b) => b.amigos - a.amigos).slice(0, 3);
 
@@ -401,30 +458,29 @@ document.addEventListener("DOMContentLoaded", async () => {
       `;
     });
 
-    // --- Ranking 3: destinos más visitados (aleatorios desde ciudades-del-mundo.json) ---
-    // Recoger todos los países del archivo
+    // --- Ranking 3: destinos más visitados ---
     const todosPaises = [];
     continentes.forEach(cont => {
-      cont.countries.forEach(c => {
+      (cont.countries || []).forEach(c => {
         todosPaises.push({
           nombre: c.name,
-          imagen: c.image?.url || "/images/default.jpg"
+          imagen: c.image?.url || "/images/default.jpg",
+          iso: c.isoCode || paisNombreToISO[c.name] || null
         });
       });
     });
 
-    // Seleccionar 3 países aleatorios distintos
+    const pool = [...todosPaises];
     const paisesAleatorios = [];
-    while (paisesAleatorios.length < 3 && todosPaises.length > 0) {
-      const idx = Math.floor(Math.random() * todosPaises.length);
-      paisesAleatorios.push(todosPaises.splice(idx, 1)[0]);
+    while (paisesAleatorios.length < 3 && pool.length > 0) {
+      const idx = Math.floor(Math.random() * pool.length);
+      paisesAleatorios.push(pool.splice(idx, 1)[0]);
     }
 
-    // Asignar visitas aleatorias ordenadas
     const base = Math.floor(Math.random() * 50) + 100;
-    paisesAleatorios[0].visitas = base;
-    paisesAleatorios[1].visitas = base - Math.floor(Math.random() * 20 + 10);
-    paisesAleatorios[2].visitas = paisesAleatorios[1].visitas - Math.floor(Math.random() * 10 + 5);
+    if (paisesAleatorios[0]) paisesAleatorios[0].visitas = base;
+    if (paisesAleatorios[1]) paisesAleatorios[1].visitas = base - Math.floor(Math.random() * 20 + 10);
+    if (paisesAleatorios[2]) paisesAleatorios[2].visitas = (paisesAleatorios[1]?.visitas ?? base) - Math.floor(Math.random() * 10 + 5);
 
     const ranking3 = document.createElement("div");
     ranking3.className = "ranking-card";
@@ -440,8 +496,52 @@ document.addEventListener("DOMContentLoaded", async () => {
     carousel.appendChild(ranking1);
     carousel.appendChild(ranking2);
     carousel.appendChild(ranking3);
+
+    // --- Control de carrusel y sincronización con el mapa ---
+    let rankingIndex = 0;
+    const rankingCards = carousel.querySelectorAll(".ranking-card");
+
+    function codigosISODeRanking(index) {
+      if (index === 0) {
+        return topViajes.map(v => paisNombreToISO[v.pais]).filter(Boolean);
+      } else if (index === 1) {
+        return topAmigos.map(v => paisNombreToISO[v.pais]).filter(Boolean);
+      } else if (index === 2) {
+        return paisesAleatorios.map(p => p.iso).filter(Boolean);
+      }
+      return [];
+    }
+
+    function mostrarRanking(index) {
+      rankingCards.forEach((card, i) => {
+        card.style.display = i === index ? "block" : "none";
+      });
+      const isoCodes = codigosISODeRanking(index);
+      iluminarPaisesPorISO(isoCodes);
+      // Depuración útil: ver qué se intenta iluminar y si existen
+      console.log("Ranking activo:", index, "ISO:", isoCodes);
+      isoCodes.forEach(code => {
+        const found = !!document.getElementById(code);
+        if (!found) console.warn("ID no encontrado en SVG:", code);
+      });
+    }
+
+    // Inicializar vista
+    mostrarRanking(rankingIndex);
+
+    // Eventos de flechas
+    flechaIzq.addEventListener("click", () => {
+      rankingIndex = (rankingIndex - 1 + rankingCards.length) % rankingCards.length;
+      mostrarRanking(rankingIndex);
+    });
+
+    flechaDer.addEventListener("click", () => {
+      rankingIndex = (rankingIndex + 1) % rankingCards.length;
+      mostrarRanking(rankingIndex);
+    });
+
   } catch (err) {
-    console.error("Error cargando rankings de viajeros", err);
+    console.error("Error cargando rankings/mapa", err);
   }
 });
 

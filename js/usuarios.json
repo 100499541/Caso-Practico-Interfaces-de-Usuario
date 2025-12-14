@@ -7,6 +7,7 @@
       "amigoInicial": true,
       "viajes": 12,
       "amigos": 20,
+      "pais_nacimiento": "España",
       "experiencias": [
         {
           "lugar": { "ciudad": "París", "pais": "Francia" },
@@ -31,6 +32,7 @@
       "amigoInicial": true,
       "viajes": 18,
       "amigos": 35,
+      "pais_nacimiento": "Francia",
       "experiencias": [
         {
           "lugar": { "ciudad": "Roma", "pais": "Italia" },
@@ -55,6 +57,7 @@
       "amigoInicial": false,
       "viajes": 10,
       "amigos": 15,
+      "pais_nacimiento": "Argentina",
       "experiencias": [
         {
           "lugar": { "ciudad": "Nueva York", "pais": "Estados Unidos" },
@@ -79,6 +82,7 @@
       "amigoInicial": false,
       "viajes": 22,
       "amigos": 28,
+      "pais_nacimiento": "Colombia",
       "experiencias": [
         {
           "lugar": { "ciudad": "Berlín", "pais": "Alemania" },
@@ -103,6 +107,7 @@
       "amigoInicial": false,
       "viajes": 8,
       "amigos": 12,
+      "pais_nacimiento": "Perú",
       "experiencias": [
         {
           "lugar": { "ciudad": "Buenos Aires", "pais": "Argentina" },
@@ -127,6 +132,7 @@
       "amigoInicial": false,
       "viajes": 25,
       "amigos": 40,
+      "pais_nacimiento": "India",
       "experiencias": [
         {
           "lugar": { "ciudad": "Sídney", "pais": "Australia" },
@@ -151,6 +157,7 @@
       "amigoInicial": false,
       "viajes": 17,
       "amigos": 29,
+      "pais_nacimiento": "Japón",
       "experiencias": [
         {
           "lugar": { "ciudad": "Reikiavik", "pais": "Islandia" },
