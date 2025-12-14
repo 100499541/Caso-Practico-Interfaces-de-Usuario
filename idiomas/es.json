@@ -127,5 +127,20 @@
             "notifications": "Notificaciones",
             "accesibility": " Accesibilidad",
             "delete-account": "Eliminar cuenta"
+        },
+
+        "product-purchase": {
+            "breadcrumbs-purchase": "Compra",
+            "title": "Compra del alojamiento",
+            "form": "Formulario de compra",
+            "name": "Nombre",
+            "e-mail": "Correo electrónico",
+            "card-type": "Tipo de tarjeta",
+            "select-card": "Seleccione",
+            "card-number": "Número de tarjeta",
+            "card-holder": "Nombre del titular",
+            "expiry-date": "Fecha de caducidad",
+            "purchase-button": "Comprar",
+            "clear-button": "Borrar"
         }
 }

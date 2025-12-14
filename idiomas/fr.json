@@ -91,42 +91,57 @@
         "create-account": "Créer un compte et accéder"
     },
 
-        "product-result": {
-            "breadcrumbs-product": "Détails du produit",
-            "title": "Détails de l'hébergement",
-            "info": "Informations et commodités",
-            "reviews": "Voir les avis",
-            "whats-included": "Ce qui est inclus",
-            "book-now": "Réserver maintenant",
-            "favourite": "Ajouter aux favoris"
-        },
+    "product-result": {
+        "breadcrumbs-product": "Détails du produit",
+        "title": "Détails de l'hébergement",
+        "info": "Informations et commodités",
+        "reviews": "Voir les avis",
+        "whats-included": "Ce qui est inclus",
+        "book-now": "Réserver maintenant",
+        "favourite": "Ajouter aux favoris"
+    },
 
-        "product-search": {
-            "breadcrumbs-search": "Recherche",
-            "map-button": "Afficher les aéroports"
-        },
+    "product-search": {
+        "breadcrumbs-search": "Recherche",
+        "map-button": "Afficher les aéroports"
+    },
 
-        "profile": {
-            "breadcrumbs-profile": "Profil",
-            "my-trips": "Mes voyages",
-            "favourites": "Favoris",
-            "purchase-history": "Historique des achats",
-            "edit-public-profile": "Modifier le profil public",
-            "profile-picture": "Photo de profil",
-            "first-name": "Prénom",
-            "surname": "Nom de famille",
-            "biography": "Biographie",
-            "cancel-button": "Annuler",
-            "save-profile-button": "Enregistrer le profil",
-            "account-settings": "Paramètres du compte",
-            "e-mail": "E-mail",
-            "new-password": "Nouveau mot de passe",
-            "repeat-new-password": "Répéter le nouveau mot de passe",
-            "password-requirements": "Exigences du mot de passe:",
-            "update-account-button": "Mettre à jour le compte",
-            "edit-profile-button": "Modifier le profil (Bio/Photo)",
-            "notifications": "Notifications",
-            "accesibility": "Accessibilité",
-            "delete-account": "Supprimer le compte"
-        }
+    "profile": {
+        "breadcrumbs-profile": "Profil",
+        "my-trips": "Mes voyages",
+        "favourites": "Favoris",
+        "purchase-history": "Historique des achats",
+        "edit-public-profile": "Modifier le profil public",
+        "profile-picture": "Photo de profil",
+        "first-name": "Prénom",
+        "surname": "Nom de famille",
+        "biography": "Biographie",
+        "cancel-button": "Annuler",
+        "save-profile-button": "Enregistrer le profil",
+        "account-settings": "Paramètres du compte",
+        "e-mail": "E-mail",
+        "new-password": "Nouveau mot de passe",
+        "repeat-new-password": "Répéter le nouveau mot de passe",
+        "password-requirements": "Exigences du mot de passe:",
+        "update-account-button": "Mettre à jour le compte",
+        "edit-profile-button": "Modifier le profil (Bio/Photo)",
+        "notifications": "Notifications",
+        "accesibility": "Accessibilité",
+        "delete-account": "Supprimer le compte"
+    },
+
+    "product-purchase": {
+        "breadcrumbs-purchase": "Achat",
+        "title": "Achat de l'hébergement",
+        "form": "Formulaire d'achat",
+        "name": "Nom",
+        "e-mail": "E-mail",
+        "card-type": "Type de carte",
+        "select-card": "Sélectionner",
+        "card-number": "Numéro de carte",
+        "card-holder": "Titulaire de la carte",
+        "expiry-date": "Date d'expiration",
+        "purchase-button": "Acheter",
+        "clear-button": "Effacer"
+    }
 }

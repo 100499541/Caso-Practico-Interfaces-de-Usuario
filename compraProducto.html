@@ -29,8 +29,8 @@
       <label for="Idioma" data-section="header" data-value="language">Idioma</label>
       <select id="Idioma" name="Idioma" data-language-selector>
         <option value="ES" data-language="es">Español</option>
-        <option value="FR">Français</option>
         <option value="EN" data-language="en">English</option>
+        <option value="FR" data-language="fr">Français</option>
       </select>
     </div>
 
@@ -48,13 +48,13 @@
 
   <!-- Miga de pan -->
   <div class="breadcrumbs">
-    <a href="index.html">Página principal</a> >
-    <a href="busquedaDeProducto.html">Búsqueda de producto</a> >
-    <span>Compra</span>
+    <a href="index.html" data-section="destinations-page" data-value="breadcrumbs-main">Página principal</a> >
+    <a href="busquedaDeProducto.html" data-section="product-search" data-value="breadcrumbs-search">Búsqueda</a> >
+    <span data-section="product-purchase" data-value="breadcrumbs-purchase">Compra</span>
   </div>
 
   <!-- Título contextual -->
-  <h2 class="titulo-producto">Compra del alojamiento</h2>
+  <h2 class="titulo-producto" data-section="product-purchase" data-value="title">Compra del alojamiento</h2>
 
   <!-- CONTENIDO PRINCIPAL -->
   <main class="producto-layout">
@@ -71,7 +71,7 @@
       </div>
 
       <div class="info-servicios">
-        <h4>Información y comodidades</h4>
+        <h4 data-section="product-result" data-value="info">Información y comodidades</h4>
         <ul id="servicios-lista"></ul>
         <div class="checkin-checkout">
           <label>Check-in:</label> <span id="checkin">14:00</span><br />
@@ -86,37 +86,37 @@
 
     <!-- Columna derecha: formulario de compra -->
     <div class="columna-derecha">
-      <h4>Formulario de compra</h4>
+      <h4 data-section="product-purchase" data-value="form">Formulario de compra</h4>
       <form class="formulario-compra">
-        <label for="nombre">Nombre:</label>
+        <label for="nombre" data-section="product-purchase" data-value="name">Nombre</label>
         <input type="text" id="nombre" required />
 
-        <label for="correo">Correo electrónico:</label>
+        <label for="correo" data-section="product-purchase" data-value="e-mail">Correo electrónico</label>
         <input type="email" id="correo" required />
 
-        <label for="tipo-tarjeta">Tipo de tarjeta:</label>
+        <label for="tipo-tarjeta" data-section="product-purchase" data-value="card-type">Tipo de tarjeta</label>
         <select id="tipo-tarjeta" required>
-          <option value="">Seleccione</option>
+          <option value="" data-section="product-purchase" data-value="select-card">Seleccione</option>
           <option value="visa">Visa</option>
           <option value="mastercard">Mastercard</option>
           <option value="amex">American Express</option>
         </select>
 
-        <label for="numero-tarjeta">Número de tarjeta:</label>
+        <label for="numero-tarjeta" data-section="product-purchase" data-value="card-number">Número de tarjeta</label>
         <input type="text" id="numero-tarjeta" maxlength="16" required />
 
-        <label for="titular">Nombre del titular:</label>
+        <label for="titular" data-section="product-purchase" data-value="card-holder">Nombre del titular</label>
         <input type="text" id="titular" required />
 
-        <label for="caducidad">Fecha de caducidad:</label>
+        <label for="caducidad" data-section="product-purchase" data-value="expiry-date">Fecha de caducidad</label>
         <input type="month" id="caducidad" required />
 
-        <label for="cvv">CVV:</label>
+        <label for="cvv">CVV</label>
         <input type="text" id="cvv" maxlength="4" required />
 
         <div class="acciones">
-          <button type="submit">Comprar</button>
-          <button type="reset">Borrar</button>
+          <button type="submit" data-section="product-purchase" data-value="purchase-button">Comprar</button>
+          <button type="reset" data-section="product-purchase" data-value="clear-button">Borrar</button>
         </div>
       </form>
     </div>
@@ -129,7 +129,7 @@
         <p>© 2025 Rutas del mundo</p>
       </div>
       <div class="footer-center">
-        <p>Sobre Nosotros | Política de Privacidad | Ayuda</p>
+        <p data-section="footer" data-value="text">Sobre Nosotros | Política de Privacidad | Ayuda</p>
       </div>
       <div class="footer-socials">
         <a href="https://www.facebook.com" aria-label="Facebook">
@@ -144,9 +144,9 @@
       </div>
       <div class="footer-right">
         <form class="newsletter">
-          <label for="email">¿Quieres suscribirte al newsletter?</label><br>
+          <label for="email" data-section="footer" data-value="newsletter">¿Quieres suscribirte al newsletter?</label><br>
           <input type="email" id="email" placeholder="Introduce tu correo">
-          <button type="submit">Suscribirse</button>
+          <button type="submit" data-section="footer" data-value="subscribe-button">Suscribirse</button>
         </form>
       </div>
     </div>

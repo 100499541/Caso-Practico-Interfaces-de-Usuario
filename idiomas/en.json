@@ -127,5 +127,20 @@
         "notifications": "Notifications",
         "accesibility": "Accessibility",
         "delete-account": "Delete Account"
+    },
+
+    "product-purchase": {
+        "breadcrumbs-purchase": "Purchase",
+        "title": "Purchase Accommodation",
+        "form": "Purchase Form",
+        "name": "Name",
+        "e-mail": "E-mail",
+        "card-type": "Card Type",
+        "select-card": "Select",
+        "card-number": "Card Number",
+        "card-holder": "Card Holder",
+        "expiry-date": "Expiry Date",
+        "purchase-button": "Purchase",
+        "clear-button": "Clear"
     }
 }
