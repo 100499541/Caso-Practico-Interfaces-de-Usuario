@@ -1,6 +1,6 @@
-/* css/destinos.css */
-
-/* --- BASE (MÓVIL < 600px) --- */
+/* ===========================
+   BASE (MÓVIL)
+   =========================== */
 .container-destinos {
     width: 100%;
     padding: 15px;
@@ -8,6 +8,9 @@
     min-height: 80vh;
 }
 
+/* ===========================
+   BREADCRUMBS
+   =========================== */
 /* Ocultar breadcrumbs generales en detalle, usaremos los internos */
 .detalle-container .breadcrumbs { display: none; }
 .breadcrumbs-detalle { margin-bottom: 10px; color: #0097A7; font-weight: bold; }
@@ -15,7 +18,9 @@
 
 .hidden { display: none !important; }
 
-/* Selector */
+/* ===========================
+   SELECTOR (HERO)
+   =========================== */
 .selector-container h1 { text-align: center; color: #333; margin-bottom: 20px; }
 .hero-selector {
     background: #f4f4f4;
@@ -32,14 +37,18 @@
     display: flex; flex-direction: column; gap: 10px; width: 100%; max-width: 300px;
 }
 
-/* --- DETALLE PAÍS (Layout Móvil) --- */
+/* ===========================
+   DETALLE PAÍS (LAYOUT MÓVIL)
+   =========================== */
 .btn-back { background: none; border: none; color: #0097A7; cursor: pointer; margin-bottom: 10px; font-weight: bold; }
 
 .pais-header h1, #pais-nombre {
     font-size: 2.2em; margin-bottom: 15px; color: #000;
 }
 
-/* Contenedor Imagen + Stats */
+/* ===========================
+   IMAGEN + STATS
+   =========================== */
 .pais-visual-block { margin-bottom: 20px; }
 
 .pais-hero-image {
@@ -53,7 +62,9 @@
 }
 .pais-hero-image img { width: 100%; height: 100%; object-fit: cover; }
 
-/* Stats (Debajo de la imagen, estilo tabla limpia) */
+/* ===========================
+   STATS (TABLA)
+   =========================== */
 .pais-stats {
     display: flex; justify-content: space-between;
     padding: 10px 0; border-bottom: 2px solid #333; /* Linea inferior */
@@ -62,10 +73,14 @@
 .stat-label { font-size: 0.8em; color: #555; }
 .stat-value { font-weight: bold; font-size: 0.95em; }
 
-/* Descripción */
+/* ===========================
+   DESCRIPCIÓN
+   =========================== */
 .texto-intro { font-family: 'Courier New', Courier, monospace; line-height: 1.4; color: #555; }
 
-/* Experiencias Grid */
+/* ===========================
+   EXPERIENCIAS / GRID
+   =========================== */
 .titulo-seccion { border-bottom: 2px solid #333; padding-bottom: 5px; margin-top: 30px; margin-bottom: 15px; }
 .gallery-grid {
   display: flex;
@@ -81,6 +96,9 @@
   text-align: center;
 }
 
+/* ===========================
+   CARD SIMPLE
+   =========================== */
 .card-simple {
   display: flex;
   flex-direction: row;
@@ -125,7 +143,9 @@
   line-height: 1.5;
 }
 
-/* Sidebar (Calendario) */
+/* ===========================
+   SIDEBAR (CALENDARIO)
+   =========================== */
 .calendar-widget {
   border: 2px solid #333;
   padding: 15px;
@@ -183,59 +203,53 @@
 }
 .breadcrumbs a { text-decoration: none; color: #0097A7; }
 
-/* --- TABLET (min-width: 600px) --- */
+/* ===========================
+   RESPONSIVE
+   =========================== */
 @media (min-width: 600px) {
     .gallery-grid { grid-template-columns: repeat(2, 1fr); }
     .pais-hero-image { height: 300px; }
 }
 
-/* --- DESKTOP (Wireframe Exacto > 1024px) --- */
 @media (min-width: 1024px) {
     .container-destinos { max-width: 1200px; margin: 0 auto; }
 
-    /* LAYOUT PRINCIPAL: 2 Columnas separadas por línea */
     .layout-pais-body {
         display: grid;
-        grid-template-columns: 2fr 1fr; /* 66% izq - 33% der */
-        gap: 0; /* Sin gap porque usaremos padding y borde */
+        grid-template-columns: 2fr 1fr;
+        gap: 0;
     }
 
-    /* COLUMNA IZQUIERDA */
     .columna-principal {
-        padding-right: 40px; /* Espacio antes de la línea */
+        padding-right: 40px;
     }
 
-    /* DIVISIÓN SUPERIOR: Imagen | Texto */
     .pais-top-section {
         display: grid;
-        grid-template-columns: 1fr 1fr; /* 50% Imagen - 50% Texto */
+        grid-template-columns: 1fr 1fr;
         gap: 30px;
         margin-bottom: 40px;
     }
     
     .pais-visual-block {
-        /* La imagen y los stats van juntos a la izquierda */
         display: flex; flex-direction: column;
     }
 
-    /* Stats integrados en la caja visual */
     .pais-stats {
-        border: none; /* Quitamos borde inferior global */
+        border: none;
         padding-top: 10px;
     }
     .stat-item {
-        align-items: flex-start; /* Alinear a la izquierda */
+        align-items: flex-start;
     }
     .stat-label { font-size: 0.7em; }
     .stat-value { font-size: 1em; }
 
-    /* Texto garabateado a la derecha */
     .pais-description-block {
         display: flex; align-items: center;
     }
     .texto-intro {
         font-size: 1.1em;
-        /* Efecto visual de "texto escrito" */
         background: repeating-linear-gradient(
             transparent,
             transparent 29px,
@@ -244,22 +258,19 @@
         line-height: 30px;
     }
 
-    /* Grid Experiencias */
     .gallery-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+        grid-template-columns: repeat(3, 1fr);
         gap: 20px;
     }
 
-    /* COLUMNA DERECHA (SIDEBAR) */
-    .columna-lateral {/* LA LÍNEA VERTICAL DEL WIREFRAME */
+    .columna-lateral {
         padding-left: 40px;
         display: flex;
         flex-direction: column;
         gap: 30px;
     }
     
-    /* El calendario no necesita cambios, solo su contenedor */
     .calendar-widget {
-        box-shadow: 3px 3px 0px rgba(0,0,0,0.1); /* Toque visual */
+        box-shadow: 3px 3px 0px rgba(0,0,0,0.1);
     }
 }
