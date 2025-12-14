@@ -45,6 +45,66 @@
     </div>
   </div>
 
+  <!-- Panel lateral de Chats -->
+  <div id="panel-chats" class="chats-sidebar oculto">
+    <button id="cerrar-panel-chats" class="btn-cerrar-panel">❌</button>
+    <h3 style="margin-bottom:20px;">Chats</h3>
+
+    <!-- Amigos en horizontal -->
+    <div id="amigos-horizontal" class="amigos-scroll">
+      <!-- Se rellena con JS -->
+    </div>
+
+    <!-- Lista de chats -->
+    <div id="lista-chats-panel" class="chat-panel-lista">
+      <!-- Se rellena con JS -->
+    </div>
+    <!-- Vista interna del chat -->
+    <div id="chat-conversacion" class="chat-conversacion oculto">
+      <button id="cerrar-chat-conversacion" class="btn-cerrar-panel">❌</button>
+      <div id="chat-encabezado" class="chat-encabezado"></div>
+      <div id="chat-mensajes" class="chat-mensajes"></div>
+      <div class="chat-input">
+        <input type="text" id="mensaje-input" placeholder="Escribe un mensaje...">
+        <button id="enviar-mensaje">Enviar</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Modal Crear Grupo -->
+  <div id="modal-grupo" class="modal-grupo oculto">
+    <div class="modal-contenido">
+      <h3>Crear nuevo grupo</h3>
+      <form id="form-nuevo-grupo">
+        <!-- Nombre obligatorio -->
+        <label for="nombre-grupo">Nombre del grupo *</label>
+        <input type="text" id="nombre-grupo" name="nombre-grupo" required minlength="1">
+
+        <!-- Descripción opcional -->
+        <label for="descripcion-grupo">Descripción</label>
+        <textarea id="descripcion-grupo" name="descripcion-grupo"></textarea>
+
+        <!-- Foto de perfil opcional -->
+        <label for="foto-grupo">Foto de perfil (jpg/png)</label>
+        <input type="file" id="foto-grupo" name="foto-grupo" accept=".jpg,.jpeg,.png">
+
+        <!-- Invitación de amigos -->
+        <label for="invitar-amigos">Invitar amigos</label>
+        <select id="invitar-amigos" name="invitar-amigos" multiple>
+          <!-- Aquí se llenan con JS los amigos añadidos -->
+        </select>
+
+        <!-- Botones -->
+        <div class="modal-botones">
+          <button type="submit">Crear</button>
+          <button type="button" id="cerrar-modal">Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
   <!-- HEADER -->
   <header>
     <div class="menu-btn" id="menu-btn">
@@ -101,12 +161,6 @@
 
         <!-- COLUMNA IZQUIERDA (FEED) -->
         <main class="feed-column">
-            
-            <!-- Buscador -->
-            <div class="search-bar-social">
-                <span class="search-icon">🔍</span>
-                <input type="text" placeholder="Busca viajeros y grupos...">
-            </div>
 
             <!-- Sección 1: Anuncios Oficiales -->
             <section class="feed-section">
@@ -118,23 +172,10 @@
 
             <!-- Sección 2: Experiencias de amigos -->
             <section class="feed-section">
-                <h3>Experiencias de tus amigos</h3>
-                <div class="cards-grid">
-                    <div class="wireframe-card">
-                        <div class="wf-image-box"></div>
-                        <div class="wf-text-lines">
-                            <span class="line full"></span>
-                            <span class="line long"></span>
-                        </div>
-                    </div>
-                    <div class="wireframe-card">
-                        <div class="wf-image-box"></div>
-                        <div class="wf-text-lines">
-                            <span class="line full"></span>
-                            <span class="line long"></span>
-                        </div>
-                    </div>
-                </div>
+              <h3>Experiencias de tus amigos</h3>
+              <div class="experiencias-carrusel" id="carrusel-experiencias">
+                <!-- Se llena con JS -->
+              </div>
             </section>
 
             <!-- Sección 3: Viajeros Similares -->
@@ -152,7 +193,7 @@
             
             <!-- Botones de Acción (Iconos Superiores) -->
             <div class="action-buttons-row">
-                <button class="action-btn">
+                <button class="action-btn" id="btn-chats">
                     <div class="icon-circle">✉️</div>
                     <span>Mensajes</span>
                 </button>
@@ -179,7 +220,7 @@
 
             <!-- Chats (Vertical con Scroll) -->
             <div class="sidebar-section full-height">
-                <h4>Chats</h4>
+                <h4>Preview de chats</h4>
                 <div class="chat-list-container">
                     <div class="chat-list-scroll" id="lista-chats">
                         <!-- Se llena con JS -->

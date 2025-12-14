@@ -4,43 +4,155 @@
       "id": "usr01",
       "nombre": "Carlos Viajero",
       "foto": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=100",
-      "amigoInicial": true
+      "amigoInicial": true,
+      "experiencias": [
+        {
+          "lugar": { "ciudad": "París", "pais": "Francia" },
+          "fecha": "2023-05-14",
+          "reseña": "Una ciudad llena de arte y cultura, caminar por el Sena fue inolvidable.",
+          "valoracion": "⭐⭐⭐⭐⭐",
+          "foto": "https://www.landingdos.com/wp-content/uploads/2024/11/Paris-Francia-kanskuva_p-1024x768.jpg"
+        },
+        {
+          "lugar": { "ciudad": "Madrid", "pais": "España" },
+          "fecha": "2024-03-22",
+          "reseña": "Ambiente vibrante y excelente gastronomía, me encantó recorrer el centro histórico.",
+          "valoracion": "⭐⭐⭐⭐",
+          "foto": "https://images.contentstack.io/v3/assets/blt06f605a34f1194ff/bltdb42d0af0dddb0dd/65006732539fa162b64ae755/0_-_BCC-2023-MADRID-LANDMARKS-0.webp?fit=crop&disable=upscale&auto=webp&quality=60&crop=smart"
+        }
+      ]
     },
     {
       "id": "usr02",
       "nombre": "Ana López",
       "foto": "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?auto=format&fit=crop&w=100",
-      "amigoInicial": true
+      "amigoInicial": true,
+      "experiencias": [
+        {
+          "lugar": { "ciudad": "Roma", "pais": "Italia" },
+          "fecha": "2022-09-10",
+          "reseña": "El Coliseo y la Fontana di Trevi fueron espectaculares, historia viva en cada rincón.",
+          "valoracion": "⭐⭐⭐⭐⭐",
+          "foto": "https://assets.voxcity.com/uploads/blog_images/Do-you-think-Rome-is-the-most-beautiful-city-in-the-world-image-main_original.jpg"
+        },
+        {
+          "lugar": { "ciudad": "Tokio", "pais": "Japón" },
+          "fecha": "2023-11-05",
+          "reseña": "Una mezcla fascinante de tradición y modernidad, los templos me impresionaron mucho.",
+          "valoracion": "⭐⭐⭐⭐",
+          "foto": "https://japon-secreto.com/wp-content/uploads/2025/09/shinjuku-kabukichoichibangai02_1200x1069.jpg.webp"
+        }
+      ]
     },
     {
       "id": "usr03",
       "nombre": "Marta Guía",
       "foto": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100",
-      "amigoInicial": false
+      "amigoInicial": false,
+      "experiencias": [
+        {
+          "lugar": { "ciudad": "Nueva York", "pais": "Estados Unidos" },
+          "fecha": "2023-07-18",
+          "reseña": "Times Square y Central Park fueron increíbles, la ciudad nunca duerme.",
+          "valoracion": "⭐⭐⭐⭐",
+          "foto": "https://upload.wikimedia.org/wikipedia/commons/4/47/New_york_times_square-terabass.jpg"
+        },
+        {
+          "lugar": { "ciudad": "Barcelona", "pais": "España" },
+          "fecha": "2024-02-12",
+          "reseña": "La Sagrada Familia y las playas me dejaron sin palabras.",
+          "valoracion": "⭐⭐⭐⭐⭐",
+          "foto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrB299NJ_XfZR41v2w5bgzBLdcf5MQm5jqWA&s"
+        }
+      ]
     },
     {
       "id": "usr04",
       "nombre": "Luis Mochilero",
       "foto": "https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=crop&w=100",
-      "amigoInicial": false
+      "amigoInicial": false,
+      "experiencias": [
+        {
+          "lugar": { "ciudad": "Berlín", "pais": "Alemania" },
+          "fecha": "2023-04-09",
+          "reseña": "La historia del Muro y la vida nocturna fueron lo mejor.",
+          "valoracion": "⭐⭐⭐⭐",
+          "foto": "https://www.berlin-welcomecard.de/system/files/styles/theme_bwc_hero_low_full_xs_1x/private/images/blick_auf_die_berliner_innenstadt_mit_dem_fernsehturm_web.jpg?h=1c9b88c9&itok=3UkwLSI1"
+        },
+        {
+          "lugar": { "ciudad": "Lisboa", "pais": "Portugal" },
+          "fecha": "2024-06-01",
+          "reseña": "Tranvías amarillos y miradores espectaculares, una ciudad muy acogedora.",
+          "valoracion": "⭐⭐⭐⭐⭐",
+          "foto": "https://cdn2.civitatis.com/portugal/lisboa/guia/lisbon-tram-seo.jpg"
+        }
+      ]
     },
     {
       "id": "usr05",
       "nombre": "Sofía Trekker",
       "foto": "https://media.istockphoto.com/id/1386479313/es/foto/feliz-mujer-de-negocios-afroamericana-millennial-posando-aislada-en-blanco.jpg?s=612x612&w=0&k=20&c=JP0NBxlxG2-bdpTRPlTXBbX13zkNj0mR5g1KoOdbtO4=",
-      "amigoInicial": false
+      "amigoInicial": false,
+      "experiencias": [
+        {
+          "lugar": { "ciudad": "Buenos Aires", "pais": "Argentina" },
+          "fecha": "2022-12-15",
+          "reseña": "El tango y la comida fueron experiencias únicas.",
+          "valoracion": "⭐⭐⭐⭐",
+          "foto": "https://www.viajesyfotografia.com/wp-content/uploads/2018/03/BAsDSC_8803.1023_result.jpg"
+        },
+        {
+          "lugar": { "ciudad": "Ciudad de México", "pais": "México" },
+          "fecha": "2023-08-20",
+          "reseña": "La cultura y la historia en cada esquina, me encantó visitar Teotihuacán.",
+          "valoracion": "⭐⭐⭐⭐⭐",
+          "foto": "https://media.traveler.es/photos/61376d14cb06ad0f20e1263c/master/w_1600%2Cc_limit/138975.jpg"
+        }
+      ]
     },
     {
       "id": "usr06",
       "nombre": "Diego Explorador",
       "foto": "https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&w=100",
-      "amigoInicial": false
+      "amigoInicial": false,
+      "experiencias": [
+        {
+          "lugar": { "ciudad": "Sídney", "pais": "Australia" },
+          "fecha": "2023-01-30",
+          "reseña": "La Ópera y las playas fueron espectaculares.",
+          "valoracion": "⭐⭐⭐⭐⭐",
+          "foto": "https://www.civitatis.com/blog/wp-content/uploads/2018/01/vista-opera-house-sidney.jpg"
+        },
+        {
+          "lugar": { "ciudad": "El Cairo", "pais": "Egipto" },
+          "fecha": "2024-05-11",
+          "reseña": "Las pirámides y la historia antigua me dejaron impresionado.",
+          "valoracion": "⭐⭐⭐⭐",
+          "foto": "https://www.civitatis.com/blog/wp-content/uploads/2025/01/que-ver-cairo-egipto.jpg"
+        }
+      ]
     },
     {
       "id": "usr07",
       "nombre": "Valeria Senderista",
       "foto": "https://img.freepik.com/foto-gratis/cicatrizarse-mujer-asiatica-exterior_23-2149032779.jpg?semt=ais_hybrid&w=740&q=80",
-      "amigoInicial": false
+      "amigoInicial": false,
+      "experiencias": [
+        {
+          "lugar": { "ciudad": "Reikiavik", "pais": "Islandia" },
+          "fecha": "2023-09-25",
+          "reseña": "Auroras boreales y paisajes naturales impresionantes.",
+          "valoracion": "⭐⭐⭐⭐⭐",
+          "foto": "https://media.traveler.es/photos/613768896936668f30c3e829/16:9/w_2560%2Cc_limit/162294.jpg"
+        },
+        {
+          "lugar": { "ciudad": "Estambul", "pais": "Turquía" },
+          "fecha": "2024-07-07",
+          "reseña": "Una mezcla única de culturas y arquitectura fascinante.",
+          "valoracion": "⭐⭐⭐⭐",
+          "foto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1CA8C6lPDPObc-xbUoEkAXqk99tJ-RjRXrQ&s"
+        }
+      ]
     }
   ]
 }
