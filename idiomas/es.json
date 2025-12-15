@@ -142,5 +142,21 @@
             "expiry-date": "Fecha de caducidad",
             "purchase-button": "Comprar",
             "clear-button": "Borrar"
-        }
+        },
+
+    "map": {
+        "title": "Mapa interactivo"
+    },
+
+    "shared-trips": {
+        "title": "Encuentra a tus compañeros de aventura",
+        "subtitle": "Únete a grupos abiertos o crea el tuyo propio para compartir gastos y experiencias.",
+        "create-trip-button": "Crear nuevo viaje",
+        "pending-invitarions": "Invitaciones pendientes",
+        "refresh-button": "Refrescar",
+        "dates-filter": "Fechas",
+        "max-budget-filter": "Presupuesto máximo",
+        "any": "Cualquiera"
+    }
+
 }

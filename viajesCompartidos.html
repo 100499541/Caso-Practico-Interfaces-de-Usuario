@@ -20,7 +20,7 @@
     <h2 class="titulo-header">Rutas del mundo</h2>
 
     <div class="login-btn">
-      <a href="/inicioSesion.html">Iniciar sesión</a>
+      <a href="/inicioSesion.html" data-section="header" data-value="login">Iniciar sesión</a>
     </div>
 
     <div class="idioma">
@@ -37,19 +37,19 @@
     </div>
 
     <nav id="nav">
-      <a href="index.html"><h4>Inicio</h4></a>
-      <a href="destinos.html"><h4>Destinos</h4></a>
-      <a href="viajesCompartidos.html"><h4>Viajes Compartidos</h4></a>
-      <a href="social.html"><h4>Social</h4></a>
+      <a href="index.html" data-section="header" data-value="home"><h4>Inicio</h4></a>
+      <a href="destinos.html" data-section="header" data-value="destinations"><h4>Destinos</h4></a>
+      <a href="viajesCompartidos.html" data-section="header" data-value="shared-trips"><h4>Viajes Compartidos</h4></a>
+      <a href="social.html" data-section="header" data-value="social"><h4>Social</h4></a>
     </nav>
   </header>
 
   <!-- MENU MOVIL -->
   <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html">Inicio</a>
-    <a href="destinos.html">Destinos</a>
-    <a href="viajesCompartidos.html">Viajes Compartidos</a>
-    <a href="social.html">Social</a>
+    <a href="index.html" data-section="header" data-value="home">Inicio</a>
+    <a href="destinos.html" data-section="header" data-value="destinations">Destinos</a>
+    <a href="viajesCompartidos.html" data-section="header" data-value="shared-trips">Viajes Compartidos</a>
+    <a href="social.html" data-section="header" data-value="social">Social</a>
   </div>
 
   <!-- CONTENEDOR PRINCIPAL -->
@@ -57,7 +57,8 @@
 
     <!-- Miga de pan -->
     <div class="breadcrumbs">
-      <a href="index.html">Página principal</a> > <span>Viajes Compartidos</span>
+      <a href="index.html" data-section="destinations-page" data-value="breadcrumbs-main">Página principal</a> > 
+      <span data-section="header" data-value="shared-trips">Viajes Compartidos</span>
     </div>
 
     <!-- HERO -->
@@ -67,7 +68,7 @@
         <p>Únete a grupos abiertos o crea el tuyo propio para compartir gastos y experiencias.</p>
       </div>
       <button class="btn-crear-viaje" id="btnCrear">
-        <span class="plus-icon">+</span> Crear nuevo viaje
+        <span class="plus-icon">+</span> <span>Crear nuevo viaje</span>
       </button>
     </section>
 
@@ -83,7 +84,7 @@
     <!-- FILTROS -->
     <section class="filtros-container">
       <div class="filtro-item">
-        <label for="filtroDestino">Destino</label>
+        <label for="filtroDestino" data-section="search-bar" data-value="destination">Destino</label>
         <input id="filtroDestino" type="text" placeholder="Ej: Japón, Perú...">
       </div>
 
@@ -104,8 +105,8 @@
         </select>
       </div>
 
-      <button class="btn-buscar" id="btnBuscar">Buscar</button>
-      <button class="btn-limpiar" id="btnLimpiar">Limpiar</button>
+      <button class="btn-buscar" id="btnBuscar" data-section="search-bar" data-value="search-button">Buscar</button>
+      <button class="btn-limpiar" id="btnLimpiar" data-section="product-purchase" data-value="clear-button">Borrar</button>
     </section>
 
     <!-- GRID VIAJES -->

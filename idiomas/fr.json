@@ -143,5 +143,21 @@
         "expiry-date": "Date d'expiration",
         "purchase-button": "Acheter",
         "clear-button": "Effacer"
+    },
+
+    "map": {
+        "title": "Carte interactive"
+    },
+
+    "shared-trips": {
+        "title": "Voyages Partagés",
+        "subtitle": "Planifiez des voyages avec d'autres utilisateurs",
+        "create-trip-button": "Créer un nouveau voyage",
+        "pending-invitarions": "Invitations en attente",
+        "refresh-button": "Rafraîchir",
+        "dates-filter": "Dates",
+        "max-budget-filter": "Budget maximum",
+        "any": "N'importe quel prix"
     }
+
 }
