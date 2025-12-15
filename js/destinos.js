@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("pais-nombre").textContent = pais.name;
 
     // Imagen principal del país
-    const img = document.getElementById("pais-img-principal");ç
+    const img = document.getElementById("pais-img-principal");
     if (pais.image && pais.image.url) {
       img.src = pais.image.url;
       img.alt = pais.image.alt || pais.name;
