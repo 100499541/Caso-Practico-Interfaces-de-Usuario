@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const LS_TRIPS = "viajesCompartidosData";
   const LS_INV = "invitacionesViajes"; // { userId: [ {viajeId, fromId, fecha} ] }
 
+  // ----------- FUNCIONES PARA LA CARGA DE USUARIO, ID Y FECHAS ACTUALES -----------
   function load(key, fallback) {
     try {
       const v = JSON.parse(localStorage.getItem(key));
@@ -210,6 +211,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     return { id, nombre: id || "Usuario", foto: "/imagenes/default-profile.jpg" };
   }
 
+  // cargar invitiaciones
   function renderInvitaciones() {
     if (!panelInv || !invList) return;
 
@@ -227,12 +229,15 @@ document.addEventListener("DOMContentLoaded", async () => {
     panelInv.classList.remove("hidden");
     invList.innerHTML = "";
 
+    // Recorre la lista de invitaciones
     list.forEach(inv => {
       const viaje = trips.find(t => t.id === inv.viajeId);
       if (!viaje) return;
 
+      // Obtiene el usuario que envió la invitación
       const from = findUserById(inv.fromId);
 
+      // Crea la tarjeta de invitación con datos del viaje y botones de acción
       const card = document.createElement("div");
       card.className = "inv-card";
       card.innerHTML = `
@@ -248,6 +253,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       invList.appendChild(card);
     });
 
+    // Añade eventos a los botones de aceptar/rechazar
     invList.querySelectorAll("button[data-acc]").forEach(btn => {
       btn.addEventListener("click", () => {
         const acc = btn.dataset.acc;
@@ -258,6 +264,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   }
 
+  // Funciónes para aceptar y rechazar las invitaciones
   function aceptarInvitacion(viajeId) {
     if (!activeId) return;
 
@@ -289,7 +296,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   // -------------------------
-  // Create modal
+  // Crear y definir el modal
   // -------------------------
   function openModal() {
     if (!modalOverlay) return;
@@ -330,7 +337,7 @@ document.addEventListener("DOMContentLoaded", async () => {
           <small>${a.id}</small>
         </div>
       `;
-      // mover checkbox al principio (estética)
+      // mover checkbox al principio (por estética)
       const cb = div.querySelector("input");
       cb.style.width = "18px";
       cb.style.height = "18px";
@@ -373,6 +380,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   }
 
+  // Cargar los viajes
   function renderViajes(list) {
     if (!contenedor) return;
 
@@ -388,7 +396,9 @@ document.addEventListener("DOMContentLoaded", async () => {
       return;
     }
 
+    // Recorre la lista de viajes
     list.forEach(viaje => {
+      // Crea la tarjeta del viaje
       const card = document.createElement("div");
       card.className = "viaje-card";
       card.tabIndex = 0;
@@ -401,6 +411,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       const estado = (viaje.privacidad === "publico") ? "Abierto" : "Privado";
 
+       // Contenido de la tarjeta
       card.innerHTML = `
         <div class="viaje-img-container">
           <img src="${viaje.imagen || "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900"}" alt="${viaje.titulo}">
@@ -443,10 +454,12 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
       }
 
+      // Añade la tarjeta al contenedor
       contenedor.appendChild(card);
     });
   }
 
+  // Funcion para cargar los botones de acciones y las caracteristicas de la tarjeta
   function renderBotonAccion(viaje) {
     const isLogged = !!activeId;
 
@@ -474,6 +487,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     return `<button class="btn-unirse" data-action="privado" disabled>Privado</button>`;
   }
 
+  // Función de control de acciones dependiendo de la sesión 
   function handleTripAction(action, viajeId) {
     if (action === "login") {
       alert("Debes iniciar sesión para unirte a viajes.");
@@ -511,6 +525,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     invitaciones[toUserId] = list;
   }
 
+  // Función para validar las fechas introducidas
   function validateDates(inicio, fin) {
     const di = new Date(inicio);
     const df = new Date(fin);
@@ -520,7 +535,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   // -------------------------
-  // Events
+  // Eventos y control del modal
   // -------------------------
   if (btnCrear) {
     btnCrear.addEventListener("click", () => {
@@ -555,6 +570,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       if (!usuarioActivo) return;
 
+      // Recoge datos del formulario
       const titulo = cvTitulo.value.trim();
       const destino = cvDestino.value.trim();
       const inicio = cvInicio.value;
@@ -565,6 +581,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       const privacidad = (formCrear.querySelector('input[name="cvPrivacidad"]:checked')?.value) || "publico";
 
+      // Validación básica
       if (!titulo || !destino || !inicio || !fin || !Number.isFinite(presupuesto)) {
         alert("Completa título, destino, fechas y presupuesto.");
         return;
@@ -573,6 +590,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       const err = validateDates(inicio, fin);
       if (err) { alert(err); return; }
 
+      // Crea objeto viaje
       const newTrip = {
         id: uid(),
         titulo,
@@ -611,6 +629,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   }
 
+  // Botones de filtros e invitaciones
   if (btnBuscar) btnBuscar.addEventListener("click", () => renderViajes(getFilteredTrips()));
   if (btnLimpiar) {
     btnLimpiar.addEventListener("click", () => {

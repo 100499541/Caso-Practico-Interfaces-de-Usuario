@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Menú móvil
+  // Menú móvil: abre/cierra el menú y actualiza aria-expanded
   const menuBtn = document.getElementById('menu-btn');
   const mobileMenu = document.getElementById('mobileMenu');
   if (menuBtn && mobileMenu) {
@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
       menuBtn.setAttribute('aria-expanded', String(!expanded));
     });
+    // Cierra el menú si se hace clic fuera
     document.addEventListener('click', (e) => {
       if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
         mobileMenu.classList.remove('visible');
@@ -17,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Carruseles
+  // Asegura que las flechas sean clicables
   const wrappers = document.querySelectorAll('.carousel-wrapper');
 
   wrappers.forEach((wrapper) => {
@@ -34,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
       arrow.style.zIndex = '1000';
     });
 
-    // Desplazamiento: ancho de la primera card + gap del carrusel
+    // Calcula desplazamiento (ancho card + gap)
     const getScrollAmount = () => {
       const first = carousel.children[0];
       if (!first) return 0;
@@ -43,6 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return cardWidth + gap;
     };
 
+    // Eventos de flechas
     if (leftArrow) {
       leftArrow.addEventListener('click', (e) => {
         e.preventDefault();
@@ -116,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const inicio = document.getElementById("inicio-viaje").value;
     const fin = document.getElementById("fin-viaje").value;
 
-    // Validación básica
+    // Validación básica de datos de entrada
     if (!destino || !inicio || !fin) {
       alert("Por favor, completa todos los campos de búsqueda.");
       return;
@@ -152,7 +154,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Autocompletado y consejos de busquedas
-
 document.addEventListener("DOMContentLoaded", () => {
   const destinoInput = document.getElementById("destino");
   const sugerenciasDiv = document.getElementById("sugerencias");
@@ -182,6 +183,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (texto.length < 2) return;
 
+    // Ayuda de busqueda con autocompletar nombre de destino
     const coincidencias = ciudades.filter(c =>
       c.ciudad.toLowerCase().startsWith(texto) ||
       c.pais.toLowerCase().startsWith(texto)
@@ -206,9 +208,11 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// Carrusel de destinos con acceso rápido a información de cada destino
 document.addEventListener("DOMContentLoaded", () => {
   const carousel = document.querySelector(".destinos-famosos .carousel");
 
+  // Obtener destinos de JSON
   fetch("/js/ciudades-del-mundo.json")
     .then(res => res.json())
     .then(data => {
@@ -244,7 +248,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <button class="ver-destino">Ver destino</button>
           <div class="destino-nombre">${c.nombre}, ${c.pais}</div>
         `;
-        // Acción del botón
+        // Acción del botón para llevarnos al destino dentro de la sección Destinos
         card.querySelector(".ver-destino").addEventListener("click", () => {
           window.location.href = `destinos.html?ciudad=${encodeURIComponent(c.nombre)}&pais=${encodeURIComponent(c.pais)}`;
         });
@@ -257,9 +261,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+// Carrusel de mejores ofertas con acceso rápido a estas
 document.addEventListener("DOMContentLoaded", () => {
   const carouselAlojamientos = document.querySelector(".mejores-ofertas .carousel");
 
+  // Obtener ofertas de alojamientos de JSON
   fetch("/js/alojamientos-del-mundo.json")
     .then(res => res.json())
     .then(data => {
@@ -306,6 +312,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <button class="ver-alojamiento">Ver alojamiento</button>
           </div>
         `;
+        // Acción del botón para llevarnos al alojamiento dentro de la sección Producto
         card.querySelector(".ver-alojamiento").addEventListener("click", () => {
           window.location.href = `producto.html?ciudad=${encodeURIComponent(a.ciudad)}&nombre=${encodeURIComponent(a.nombre)}`;
         });
@@ -318,6 +325,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+// Carrusel de mejores reseñas de usuarios
 document.addEventListener("DOMContentLoaded", async () => {
   const carousel = document.querySelector(".reseñas .carousel");
 
@@ -333,6 +341,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     carousel.innerHTML = ""; // Limpiar contenido estático
 
+    // Mostrar para cada usuario su nombre, foto de perfil, valoración y texto de reseña
     usuarios.forEach(usuario => {
       const fotoUsuario = usuario.foto || "/imagenes/default_user.png";
       const nombre = usuario.nombre || "Usuario";
@@ -370,7 +379,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 });
 
-
+// Carrusel de rankings
 document.addEventListener("DOMContentLoaded", async () => {
   // Scope estricto a la sección top-viajeros
   const sectionTop = document.querySelector(".top-viajeros");
@@ -477,6 +486,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       paisesAleatorios.push(pool.splice(idx, 1)[0]);
     }
 
+    // Calcular visitas aleatorias de paises para ranking 3
     const base = Math.floor(Math.random() * 50) + 100;
     if (paisesAleatorios[0]) paisesAleatorios[0].visitas = base;
     if (paisesAleatorios[1]) paisesAleatorios[1].visitas = base - Math.floor(Math.random() * 20 + 10);
@@ -512,6 +522,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       return [];
     }
 
+    // Función para mostrar los rankings
     function mostrarRanking(index) {
       rankingCards.forEach((card, i) => {
         card.style.display = i === index ? "block" : "none";

@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("registroForm");
 
+  // Datos de entrada del formulario
   const usuario = document.getElementById("usuario");
   const nombre = document.getElementById("nombre");
   const apellidos = document.getElementById("apellidos");
@@ -21,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const isEmpty = (v) => !v || v.trim() === "";
   const soloLetras = /^[A-Za-zÁÉÍÓÚáéíóúÑñ]+$/;
 
+  // ------- FUNCIONES DE VALIDACION DE CAMPOS -------- 
   function validarUsuario(v) {
     if (isEmpty(v)) return "Campo obligatorio";
     if (v.length < 5) return "El usuario debe tener al menos 5 caracteres";
@@ -93,6 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return ok ? "" : "La foto debe ser JPG o PNG";
   }
 
+  // Crear errores para mostrar al usuario
   function setError(input, mensaje) {
     input.setCustomValidity(mensaje);
     input.reportValidity();
@@ -111,10 +114,10 @@ document.addEventListener("DOMContentLoaded", () => {
     reader.readAsDataURL(file);
   }
 
-  // --- NUEVO: obtener amigos iniciales desde JSON externo ---
+  // Obtener amigos iniciales desde JSON externo 
   async function obtenerAmigosIniciales() {
     try {
-      const res = await fetch("/js/usuarios.json"); // ruta al JSON ficticio
+      const res = await fetch("/js/usuarios.json"); 
       const data = await res.json();
       return data.usuarios.filter(u => u.amigoInicial).map(u => u.id);
     } catch (err) {
@@ -123,6 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // Checkeo de campos de registro
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
@@ -190,6 +194,7 @@ document.addEventListener("DOMContentLoaded", () => {
       window.location.href = "index.html";
     };
 
+    // Si no se ha puesto foto de perfil propia, poner foto por defecto
     if (foto.files[0]) {
       convertirImagenABase64(foto.files[0], guardarUsuario);
     } else {
@@ -197,6 +202,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // Llamadas a validaciones
   [
     [usuario, validarUsuario],
     [nombre, validarNombre],

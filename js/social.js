@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const usuarioActivo = JSON.parse(localStorage.getItem("usuarioActivo"));
     if (!usuarioActivo || !usuarioActivo.amigos) return;
 
+    // Cargar usuarios ficticios de usuarios.json
     const usuariosFicticios = await cargarUsuariosFicticios();
     const amigos = usuariosFicticios.filter(u => usuarioActivo.amigos.includes(u.id));
 
@@ -74,6 +75,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
     }
 
+    // Función para iniciar chat con un usuario
     function abrirChatConUsuario(usuario) {
     const encabezado = document.getElementById("chat-encabezado");
     const mensajes = document.getElementById("chat-mensajes");
@@ -92,6 +94,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         </div>
     `;
 
+    // El usuario actual es el de sesión
     usuarioActual = usuario;
 
     mensajes.innerHTML = "";
@@ -117,15 +120,16 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
 
     conversacion.classList.remove("oculto");
-    lista.style.display = "none";     // 👈 oculta lista de chats
-    amigos.style.display = "none";    // 👈 oculta amigos
+    lista.style.display = "none";     // oculta lista de chats
+    amigos.style.display = "none";    // oculta amigos
     }
 
-    // 👇 Funcionalidad para enviar mensajes al chat
+    // Funcionalidad para enviar mensajes al chat
     const inputMensaje = document.getElementById("mensaje-input");
     const btnEnviar = document.getElementById("enviar-mensaje");
     const contenedorMensajes = document.getElementById("chat-mensajes");
 
+    // Función para enviar mensajes en los chats
     function enviarMensaje() {
     const texto = inputMensaje.value.trim();
     if (!texto || !usuarioActivo || !usuarioActual) return;
@@ -137,7 +141,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     inputMensaje.value = "";
     contenedorMensajes.scrollTop = contenedorMensajes.scrollHeight;
 
-    // 👇 Guardar en localStorage
+    // Guardar las converasciones en localStorage para que no desaparezcan
     const conversaciones = JSON.parse(localStorage.getItem("conversaciones")) || {};
     const userID = usuarioActivo.id;
     const contactoID = usuarioActual.id;
@@ -158,6 +162,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
     });
 
+    // Función para cargar el apartado de viajeros sugeridos
   async function cargarViajerosSugeridos() {
     try {
       const res = await fetch("js/usuarios.json");
@@ -172,6 +177,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       viajerosContainer.innerHTML = "";
 
+      // Cada viajero con su nombre y foto de perfil
       sugeridos.forEach(usuario => {
         const div = document.createElement("div");
         div.className = "avatar-item";
@@ -211,6 +217,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       </div>
     `;
 
+    // Asignación específica de css para no liarse
     Object.assign(popup.style, {
       position: "fixed",
       top: "50%",
@@ -231,6 +238,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const btnCerrar = popup.querySelector("#btn-cerrar");
     const btnSolicitud = popup.querySelector("#btn-solicitud");
 
+    // Hacer click para cerrar
     btnCerrar.addEventListener("click", () => {
       popup.remove();
     });
@@ -285,6 +293,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   // 2. Tus amigos (sidebar) desde LocalStorage + JSON
   const amigosContainer = document.getElementById("lista-amigos");
 
+  // Función para cargar los usuarios desde usuarios.json
   async function cargarUsuariosFicticios() {
     try {
       const res = await fetch("js/usuarios.json");
@@ -296,6 +305,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   }
 
+  // Función para mostrar tus amigos/contactos
   async function mostrarAmigos() {
     const usuarioActivo = JSON.parse(localStorage.getItem("usuarioActivo"));
     if (!usuarioActivo || !usuarioActivo.amigos) return;
@@ -341,6 +351,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       </div>
     `;
 
+    // Asignación específica de css para no liarse
     Object.assign(popup.style, {
       position: "fixed",
       top: "50%",
@@ -361,6 +372,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const btnCerrar = popup.querySelector("#btn-cerrar");
     const btnEliminar = popup.querySelector("#btn-eliminar");
 
+    // Hacer click para cerrar
     btnCerrar.addEventListener("click", () => {
       popup.remove();
     });
@@ -423,18 +435,18 @@ document.addEventListener("DOMContentLoaded", async () => {
         // Rellenar solicitudes
         mostrarSolicitudes();
 
-        // ✅ Marcar todas las notificaciones como vistas
+        // Marcar todas las notificaciones como vistas
         let notificaciones = JSON.parse(localStorage.getItem("notificaciones")) || [];
         notificaciones = notificaciones.map(n => ({ ...n, visto: true }));
         localStorage.setItem("notificaciones", JSON.stringify(notificaciones));
 
-        // ✅ Reiniciar contador al abrir el panel
+        // Reiniciar contador al abrir el panel
         actualizarContadorSolicitudes();
     });
     }
 
 
-    // ✅ Cerrar panel con la X
+    // Cerrar panel con la X
     const btnCerrarPanel = document.getElementById("cerrar-panel-notificaciones");
     if (btnCerrarPanel) {
     btnCerrarPanel.addEventListener("click", () => {
@@ -444,6 +456,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
 
+    // Función para mostrar notificaciones y solicitudes
   function mostrarSolicitudes() {
     const contenedor = document.getElementById("lista-solicitudes");
     if (!contenedor) return;
@@ -470,7 +483,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       });
   }
 
-  // 3.1 Contador rojo junto al 🔔
+  // 3.1 Contador rojo junto a la campana de Solicitudes
     function actualizarContadorSolicitudes() {
     const notificaciones = JSON.parse(localStorage.getItem("notificaciones")) || [];
     const noVistas = notificaciones.filter(n => !n.visto);
@@ -482,7 +495,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
 
-  // Inicializar contador al cargar
+  // Inicializar y actualizar contador al cargar
   actualizarContadorSolicitudes();
 
   // 4. Anuncios oficiales (carrusel)
@@ -496,6 +509,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       carrusel.innerHTML = "";
 
+      // Crear cada anuncio en el carrusel
       anuncios.forEach(anuncio => {
         const card = document.createElement("div");
         card.className = "anuncio-card";
@@ -561,6 +575,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
     }
 
+  // Cargar anuncios y experiencias
   await cargarAnuncios();
   await cargarExperiencias();
 
@@ -591,7 +606,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
     }
 
-    // Buscar usuarios por nombre
+    // Buscar usuarios por nombre en barra de busqueda
     const btnBuscarAmigos = document.getElementById("btn-buscar-amigos");
     if (btnBuscarAmigos) {
     btnBuscarAmigos.addEventListener("click", async () => {
@@ -624,6 +639,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         if (resultados.length === 0) {
         resultadosContainer.innerHTML = `<div class="notificacion-item">No se encontraron usuarios.</div>`;
         } else {
+        // Mostrar usuarios encontrados en la busqueda
         resultados.forEach(usuario => {
             const div = document.createElement("div");
             div.className = "resultado-item";
@@ -648,6 +664,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
     }
 
+    // Boton de borrar busqueda para limpiar
     const btnBorrarBusqueda = document.getElementById("btn-borrar-busqueda");
     if (btnBorrarBusqueda) {
     btnBorrarBusqueda.addEventListener("click", () => {
@@ -664,7 +681,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     btnChats.addEventListener("click", () => {
         const panel = document.getElementById("panel-chats");
         if (!panel) return;
-        panel.classList.add("visible"); // 👈 muestra el panel lateral
+        panel.classList.add("visible"); // muestra el panel lateral
         mostrarChats();
     });
     }
@@ -678,7 +695,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
     }
 
-    // 👇 Aquí añades tu listener de cerrar conversación
+    // Aquí añades tu listener de cerrar conversación
     const btnCerrarConversacion = document.getElementById("cerrar-chat-conversacion");
     if (btnCerrarConversacion) {
         btnCerrarConversacion.addEventListener("click", () => {
@@ -688,6 +705,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
     }
 
+    // Función para abrir chats desde preview (no se logró hacer funcional)
     function abrirChatDesdeSidebar(contacto) {
     const btnChats = document.getElementById("btn-chats");
     if (!btnChats) return;
@@ -705,6 +723,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   });
 });
 
+// Escucha para crear nuevo grupo en el boton Crear Grupo
 document.addEventListener("DOMContentLoaded", async () => {
   const btnNuevoGrupo = document.querySelector(".btn-nuevo-grupo");
   const modal = document.getElementById("modal-grupo");
@@ -714,12 +733,13 @@ document.addEventListener("DOMContentLoaded", async () => {
   const listaChats = document.getElementById("lista-chats");
   const panelChat = document.getElementById("panel-chat");
 
+  // Comprobar que todos los campos estan bien para crear el modal
   if (!btnNuevoGrupo || !modal || !cerrarModal || !formGrupo || !selectAmigos || !listaChats || !panelChat) {
     console.warn("Faltan elementos del DOM para el modal de grupos o el panel de chat.");
     return;
   }
 
-  // 👉 Cargar amigos reales desde usuarioActivo
+  // Cargar amigos reales desde usuarioActivo
   const usuarioActivo = JSON.parse(localStorage.getItem("usuarioActivo"));
   const usuariosFicticios = await cargarUsuariosFicticios();
   const amigos = usuariosFicticios.filter(u => usuarioActivo?.amigos?.includes(u.id));
@@ -743,7 +763,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     modal.classList.add("oculto");
   });
 
-  // Crear grupo
+  // Crear grupo con nombre, descripcion, foto de perfil y usuarios invitados
   formGrupo.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -808,7 +828,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     formGrupo.reset();
   });
 
-  // --- Función para abrir un chat de grupo ---
+  // Función para abrir un chat de grupo
   function abrirChatGrupo(grupoID, nombre) {
     panelChat.innerHTML = `
       <h3>${nombre}</h3>
@@ -823,7 +843,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const inputMensaje = document.getElementById("mensaje-input");
     const mensajes = panelChat.querySelector(".mensajes");
 
-    // Cargar historial
+    // Cargar conversaciones con usuarios
     const conversaciones = JSON.parse(localStorage.getItem("conversaciones")) || {};
     const userID = usuarioActivo.id;
     const historial = conversaciones[userID]?.[grupoID] || [];
@@ -834,6 +854,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       mensajes.appendChild(msg);
     });
 
+    // Boton de enviar mensaje
     btnEnviar.addEventListener("click", () => {
       const texto = inputMensaje.value.trim();
       if (texto) {
