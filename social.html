@@ -9,7 +9,7 @@
 </head>
 <body>
 
-  <!-- ✅ PANEL LATERAL DE NOTIFICACIONES -->
+  <!-- PANEL LATERAL DE NOTIFICACIONES -->
   <div id="panel-notificaciones" class="notificaciones-sidebar oculto">
     <button id="cerrar-panel-notificaciones" class="btn-cerrar-panel">❌</button>
     <h3 style="margin-bottom:20px;">Solicitudes</h3>
@@ -71,39 +71,6 @@
     </div>
 
   </div>
-
-  <!-- Modal Crear Grupo -->
-  <div id="modal-grupo" class="modal-grupo oculto">
-    <div class="modal-contenido">
-      <h3>Crear nuevo grupo</h3>
-      <form id="form-nuevo-grupo">
-        <!-- Nombre obligatorio -->
-        <label for="nombre-grupo">Nombre del grupo *</label>
-        <input type="text" id="nombre-grupo" name="nombre-grupo" required minlength="1">
-
-        <!-- Descripción opcional -->
-        <label for="descripcion-grupo">Descripción</label>
-        <textarea id="descripcion-grupo" name="descripcion-grupo"></textarea>
-
-        <!-- Foto de perfil opcional -->
-        <label for="foto-grupo">Foto de perfil (jpg/png)</label>
-        <input type="file" id="foto-grupo" name="foto-grupo" accept=".jpg,.jpeg,.png">
-
-        <!-- Invitación de amigos -->
-        <label for="invitar-amigos">Invitar amigos</label>
-        <select id="invitar-amigos" name="invitar-amigos" multiple>
-          <!-- Aquí se llenan con JS los amigos añadidos -->
-        </select>
-
-        <!-- Botones -->
-        <div class="modal-botones">
-          <button type="submit">Crear</button>
-          <button type="button" id="cerrar-modal">Cancelar</button>
-        </div>
-      </form>
-    </div>
-  </div>
-
 
   <!-- HEADER -->
   <header>
@@ -228,15 +195,46 @@
                 </div>
                 
                 <!-- Botón Nuevo Grupo -->
-                <button class="btn-nuevo-grupo">
-                    <span>👥 Nuevo Grupo</span>
-                </button>
+                <a href="#" class="hero__cta">👥 Nuevo Grupo</a>
             </div>
 
         </aside>
 
     </div>
   </div>
+
+  <section class="modal">
+    <div class="modal__container">
+      <h2 class="modal__title">Crear nuevo viaje compartido</h2>
+      <form id="form-nuevo-grupo">
+        <!-- Nombre obligatorio -->
+        <label for="nombre-grupo">Nombre del grupo *</label>
+        <input type="text" id="nombre-grupo" name="nombre-grupo" required minlength="1">
+
+        <!-- Descripción opcional -->
+        <label for="descripcion-grupo">Descripción</label>
+        <textarea id="descripcion-grupo" name="descripcion-grupo"></textarea>
+
+        <!-- Foto de perfil opcional -->
+        <label for="foto-grupo">Foto de perfil (jpg/png)</label>
+        <input type="file" id="foto-grupo" name="foto-grupo" accept=".jpg,.jpeg,.png">
+
+        <!-- Invitación de amigos -->
+        <label for="invitar-amigos">Invitar amigos</label>
+        <select id="invitar-amigos" name="invitar-amigos" multiple>
+          <!-- Aquí se llenan con JS los amigos añadidos -->
+        </select>
+
+        <!-- Botones -->
+        <div class="modal-botones">
+          <button type="submit">Crear</button>
+          <button type="button" id="cerrar-modal">Cancelar</button>
+        </div>
+      </form>
+      <a href="#" class="modal__close">Salir</a>
+    </div>
+
+  </section>
 
   <!-- FOOTER -->
   <footer>
