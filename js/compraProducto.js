@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // Obtenemos los valores del formulario
-    const nombreInput = form.querySelector("#nombre");
+    const nombreInput = form.querySelector("#nombre-comprador");
     const correoInput = form.querySelector("#correo");
     const tipoTarjetaSelect = form.querySelector("#tipo-tarjeta");
     const numeroTarjetaInput = form.querySelector("#numero-tarjeta");

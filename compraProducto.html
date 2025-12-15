@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Compra del producto</title>
-  <link rel="stylesheet" href="css/index.css" />
-  <link rel="stylesheet" href="css/producto.css" />
-  <link rel="stylesheet" href="css/compraProducto.css" />
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/producto.css">
+  <link rel="stylesheet" href="css/compraProducto.css">
 </head>
 <body>
 
@@ -62,19 +62,19 @@
     <!-- Columna izquierda -->
     <div class="columna-izquierda">
       <div class="imagen-principal">
-        <img id="imagen-principal" src="" alt="Imagen del alojamiento" />
+        <img id="imagen-principal" src="imagenPrincipal.html" alt="Imagen del alojamiento">
       </div>
       <!-- Descripción del producto -->
       <div class="descripcion">
-        <h3 id="nombre"></h3>
-        <p id="descripcion"></p>
+        <h3 id="nombre">Este es el nombre del hotel</h3>
+        <p id="descripcion">Esta es una descripcion predeterminada.</p>
       </div>
       <!-- Información y servicios -->
       <div class="info-servicios">
         <h4 data-section="product-result" data-value="info">Información y comodidades</h4>
         <ul id="servicios-lista"></ul>
         <div class="checkin-checkout">
-          <label>Check-in:</label> <span id="checkin">14:00</span><br />
+          <label>Check-in:</label> <span id="checkin">14:00</span><br>
           <label>Check-out:</label> <span id="checkout">11:00</span>
         </div>
       </div>
@@ -88,11 +88,11 @@
     <div class="columna-derecha">
       <h4 data-section="product-purchase" data-value="form">Formulario de compra</h4>
       <form class="formulario-compra">
-        <label for="nombre" data-section="product-purchase" data-value="name">Nombre</label>
-        <input type="text" id="nombre" required />
+        <label data-section="product-purchase" data-value="name">Nombre</label>
+        <input type="text" id="nombre-comprador" required>
         <!-- Correo electrónico -->
         <label for="correo" data-section="product-purchase" data-value="e-mail">Correo electrónico</label>
-        <input type="email" id="correo" required />
+        <input type="email" id="correo" required>
         <!-- Datos de pago -->
         <label for="tipo-tarjeta" data-section="product-purchase" data-value="card-type">Tipo de tarjeta</label>
         <select id="tipo-tarjeta" required>
@@ -103,16 +103,16 @@
         </select>
         <!-- Número de tarjeta -->
         <label for="numero-tarjeta" data-section="product-purchase" data-value="card-number">Número de tarjeta</label>
-        <input type="text" id="numero-tarjeta" maxlength="16" required />
+        <input type="text" id="numero-tarjeta" maxlength="16" required>
         <!-- Titular, caducidad, CVV -->
         <label for="titular" data-section="product-purchase" data-value="card-holder">Nombre del titular</label>
-        <input type="text" id="titular" required />
+        <input type="text" id="titular" required>
         <!-- Caducidad -->
         <label for="caducidad" data-section="product-purchase" data-value="expiry-date">Fecha de caducidad</label>
-        <input type="month" id="caducidad" required />
+        <input type="month" id="caducidad" required>
         <!-- CVV -->
         <label for="cvv">CVV</label>
-        <input type="text" id="cvv" maxlength="4" required />
+        <input type="text" id="cvv" maxlength="4" required>
         <!-- Botones -->
         <div class="acciones">
           <button type="submit" data-section="product-purchase" data-value="purchase-button">Comprar</button>
