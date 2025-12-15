@@ -5,6 +5,9 @@
       "nombre": "Carlos Viajero",
       "foto": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=100",
       "amigoInicial": true,
+      "viajes": 12,
+      "amigos": 20,
+      "pais_nacimiento": "España",
       "experiencias": [
         {
           "lugar": { "ciudad": "París", "pais": "Francia" },
@@ -27,6 +30,9 @@
       "nombre": "Ana López",
       "foto": "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?auto=format&fit=crop&w=100",
       "amigoInicial": true,
+      "viajes": 18,
+      "amigos": 35,
+      "pais_nacimiento": "Francia",
       "experiencias": [
         {
           "lugar": { "ciudad": "Roma", "pais": "Italia" },
@@ -49,6 +55,9 @@
       "nombre": "Marta Guía",
       "foto": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=100",
       "amigoInicial": false,
+      "viajes": 10,
+      "amigos": 15,
+      "pais_nacimiento": "Argentina",
       "experiencias": [
         {
           "lugar": { "ciudad": "Nueva York", "pais": "Estados Unidos" },
@@ -71,6 +80,9 @@
       "nombre": "Luis Mochilero",
       "foto": "https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=crop&w=100",
       "amigoInicial": false,
+      "viajes": 22,
+      "amigos": 28,
+      "pais_nacimiento": "Colombia",
       "experiencias": [
         {
           "lugar": { "ciudad": "Berlín", "pais": "Alemania" },
@@ -93,6 +105,9 @@
       "nombre": "Sofía Trekker",
       "foto": "https://media.istockphoto.com/id/1386479313/es/foto/feliz-mujer-de-negocios-afroamericana-millennial-posando-aislada-en-blanco.jpg?s=612x612&w=0&k=20&c=JP0NBxlxG2-bdpTRPlTXBbX13zkNj0mR5g1KoOdbtO4=",
       "amigoInicial": false,
+      "viajes": 8,
+      "amigos": 12,
+      "pais_nacimiento": "Perú",
       "experiencias": [
         {
           "lugar": { "ciudad": "Buenos Aires", "pais": "Argentina" },
@@ -115,6 +130,9 @@
       "nombre": "Diego Explorador",
       "foto": "https://images.unsplash.com/photo-1599566150163-29194dcaad36?auto=format&fit=crop&w=100",
       "amigoInicial": false,
+      "viajes": 25,
+      "amigos": 40,
+      "pais_nacimiento": "India",
       "experiencias": [
         {
           "lugar": { "ciudad": "Sídney", "pais": "Australia" },
@@ -137,6 +155,9 @@
       "nombre": "Valeria Senderista",
       "foto": "https://img.freepik.com/foto-gratis/cicatrizarse-mujer-asiatica-exterior_23-2149032779.jpg?semt=ais_hybrid&w=740&q=80",
       "amigoInicial": false,
+      "viajes": 17,
+      "amigos": 29,
+      "pais_nacimiento": "Japón",
       "experiencias": [
         {
           "lugar": { "ciudad": "Reikiavik", "pais": "Islandia" },

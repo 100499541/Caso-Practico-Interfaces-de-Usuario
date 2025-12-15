@@ -56,13 +56,41 @@
 .mapa-interactivo {
   background: #cce5ff;
   border-radius: 12px;
-  height: 100%;
+  padding: 20px;
+  margin: 40px 0;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-weight: bold;
   color: #00707d;
+  max-height: 500px;
+  overflow: hidden;
 }
+
+.mapa-interactivo h3,
+.mapa-interactivo p {
+  margin: 0 0 10px;
+  font-size: 1.4em;
+  text-align: center;
+}
+
+.mapa-interactivo .mostrar-aeropuertos {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #00707d;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.mapa-interactivo .mostrar-aeropuertos:hover {
+  background-color: #005a66;
+}
+
 
 .breadcrumbs {
     color: #666;

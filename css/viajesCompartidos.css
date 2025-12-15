@@ -446,7 +446,7 @@
 .btn-secundario:hover { background: #e7f0f2; }
 
 /* RESPONSIVE */
-@media (max-width: 1000px) {
+@media (max-width: 768px) {
   .grid-viajes { grid-template-columns: repeat(2, 1fr); }
   .filtros-container {
     grid-template-columns: 1fr 1fr;
@@ -454,7 +454,7 @@
   .btn-buscar, .btn-limpiar { width: 100%; }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 600px) {
   .hero-viajes { flex-direction: column; align-items: flex-start; }
   .grid-viajes { grid-template-columns: 1fr; }
   .amigos-grid { grid-template-columns: 1fr; }

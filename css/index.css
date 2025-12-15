@@ -217,7 +217,6 @@ header nav a {
 }
 
 /* Ayuda de completado de busquedas */
-
 .sugerencias {
   position: absolute;
   background: #fff;
@@ -383,8 +382,8 @@ header nav a {
 .carousel-arrow {
   position: absolute;
   top: 50%;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   background: rgba(0, 112, 125, 0.8);
   color: white;
   font-size: 30px;
@@ -448,7 +447,6 @@ header nav a {
 .alojamiento-info .ver-alojamiento:hover {
   background-color: #005f63;
 }
-
 
 /* Flechas para carrusel reseñas y rankings */
 .carousel-arrow-small {
@@ -543,8 +541,8 @@ aside {
 }
 
 .review-card .imagen-viaje {
-  width: 80px;
-  height: 60px;
+  width: 300px;
+  height: 150px;
   object-fit: cover;
   border-radius: 8px;
   margin-top: 5px;
@@ -552,15 +550,55 @@ aside {
 
 /* --------------------- MAPA INTERACTIVO --------------------- */
 .mapa-interactivo {
-  margin: 20px 0;
-  height: 300px;
+  margin: 40px 0;
+  padding: 20px;
   background: #cce5ff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border-radius: 12px;
   font-weight: bold;
   color: #00707d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  overflow: hidden; /* ← evita que el mapa se salga visualmente */
+}
+
+.mapa-interactivo h3 {
+  margin: 0;
+  font-size: 1.6em;
+  text-align: center;
+}
+
+.mapa-interactivo #mapa-container {
+  width: 125%;
+  max-width: 1400px;
+  height: auto;
+  display: flex;
+  margin-right: 25px;
+  justify-content: center; /* ← centra el SVG horizontalmente */
+}
+
+.mapa-interactivo svg {
+  width: 180%; /* ← ocupa el contenedor sin desbordar */
+  height: auto;
+}
+
+.mapa-interactivo path {
+  fill: #ccc;
+  stroke: #333;
+  stroke-width: 0.5;
+  transition: fill 0.3s ease, stroke 0.3s ease, filter 0.3s ease;
+}
+
+/* Iluminación robusta: aplica si la clase está en <path> o en <g> (con herencia) */
+.mapa-interactivo .highlight,
+.mapa-interactivo .highlight path,
+.mapa-interactivo .highlight polygon,
+.mapa-interactivo .highlight circle {
+  fill: #ff5722 !important; /* naranja intenso visible */
+  stroke: #222 !important;
+  stroke-width: 2 !important;
+  filter: drop-shadow(0 0 4px #ff5722);
 }
 
 /* --------------------- FOOTER --------------------- */
@@ -627,8 +665,8 @@ footer {
   transition: transform 0.2s, background 0.2s;
 }
 
-/* --------------------- RESPONSIVE --------------------- */
-@media (max-width: 900px) {
+/* --------------------- RESPONSIVE (TABLET <= 768px) --------------------- */
+@media (max-width: 768px) {
   .menu-btn {
     display: flex; /* solo aparece en móvil */
   }
@@ -944,8 +982,8 @@ footer {
 .top-viajeros .carousel-arrow.left { left: -10px; }
 .top-viajeros .carousel-arrow.right { right: -10px; }
 
-/* Mostrar menú solo en móvil */
-@media (max-width: 900px) {
+/* Mostrar menú solo en móvil/tablet */
+@media (max-width: 768px) {
   .mobile-menu.visible {
     display: flex;
   }

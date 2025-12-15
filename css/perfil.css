@@ -1,8 +1,7 @@
-/* css/perfil.css - COMPLETO */
 
-/* --------------------------------------------------------- */
-/* 1. ESTRUCTURA BASE Y LAYOUT */
-/* --------------------------------------------------------- */
+/* ----------------------------- */
+/* 1. ESTRUCTURA BASE Y LAYOUT  
+/* ----------------------------- */
 
 .container-perfil {
     max-width: 1200px;
@@ -63,8 +62,10 @@
     z-index: 999;
 }
 
-/* Móvil: aside se convierte en drawer */
-@media (max-width: 899px) {
+/* --------------------------------------------------------- */
+/* RESPONSIVE - TABLET (<= 768px)
+/* --------------------------------------------------------- */
+@media (max-width: 768px) {
     .perfil-drawer-btn {
         display: flex;
         position: sticky;
@@ -469,10 +470,17 @@
 .btn-cancel:hover { background: #d0d0d0; }
 
 /* --------------------------------------------------------- */
-/* 6. RESPONSIVE DESKTOP */
+/* RESPONSIVE - MÓVIL (<= 600px)
+/* --------------------------------------------------------- */
+@media (max-width: 600px) {
+    /* Intencionalmente vacío para NO modificar la base */
+}
+
+/* --------------------------------------------------------- */
+/* RESPONSIVE - DESKTOP 
 /* --------------------------------------------------------- */
 
-@media (min-width: 900px) {
+@media (min-width: 768px) {
     .perfil-layout {
         display: grid;
         grid-template-columns: 2fr 1fr;

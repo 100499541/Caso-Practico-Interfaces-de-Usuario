@@ -1,4 +1,6 @@
-/* Layout general */
+/* ===========================
+   LAYOUT GENERAL
+   =========================== */
 .producto-layout {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -15,7 +17,9 @@
   gap: 30px;
 }
 
-/* Imagen principal */
+/* ===========================
+   IMAGEN PRINCIPAL
+   =========================== */
 .imagen-principal img {
   width: 100%;
   max-height: 500px;
@@ -24,7 +28,9 @@
   box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 }
 
-/* Descripción */
+/* ===========================
+   DESCRIPCIÓN
+   =========================== */
 .descripcion h3 {
   font-size: 26px;
   margin-bottom: 10px;
@@ -37,7 +43,9 @@
   line-height: 1.6;
 }
 
-/* Servicios */
+/* ===========================
+   SERVICIOS
+   =========================== */
 .info-servicios h4 {
   font-size: 18px;
   margin-bottom: 10px;
@@ -59,21 +67,27 @@
   color: #00707d;
 }
 
-/* Check-in / Check-out */
+/* ===========================
+   CHECK-IN / CHECK-OUT
+   =========================== */
 .checkin-checkout {
   margin-top: 20px;
   font-size: 19px;
   color: #333;
 }
 
-/* Precio */
+/* ===========================
+   PRECIO
+   =========================== */
 .precio-box {
   font-size: 24px;
   font-weight: bold;
   color: #00707d;
 }
 
-/* Formulario de compra */
+/* ===========================
+   FORMULARIO DE COMPRA
+   =========================== */
 .columna-derecha h4 {
   font-size: 20px;
   color: #00707d;
@@ -107,7 +121,9 @@
   box-shadow: 0 0 4px rgba(0,151,167,0.4);
 }
 
-/* Botones */
+/* ===========================
+   BOTONES
+   =========================== */
 .acciones {
   display: flex;
   gap: 20px;
@@ -129,14 +145,18 @@
   background-color: #00707d;
 }
 
-/* Título contextual */
+/* ===========================
+   TÍTULO CONTEXTUAL
+   =========================== */
 .titulo-producto {
   margin: 10px 40px 30px;
   font-size: 28px;
   color: #0097A7;
 }
 
-/* Breadcrumbs */
+/* ===========================
+   BREADCRUMBS
+   =========================== */
 .breadcrumbs {
   color: #666;
   margin-top: 10px;
@@ -150,8 +170,76 @@
   color: #0097A7;
 }
 
+/* ===========================
+   ESTADOS DE ERROR
+   =========================== */
 input.error,
 select.error {
   border: 2px solid #e53935;
   background-color: #ffebee;
+}
+
+/* ===========================
+   RESPONSIVE - TABLET (<= 768px)
+   =========================== */
+@media (max-width: 768px) {
+  .producto-layout {
+    grid-template-columns: 1fr; /* apila columnas */
+    gap: 24px;
+    padding: 24px;
+  }
+
+  .titulo-producto {
+    margin: 10px 24px 20px;
+    font-size: 26px;
+  }
+
+  .imagen-principal img {
+    max-height: 420px;
+  }
+
+  .acciones {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .acciones button {
+    width: 100%;
+  }
+}
+
+/* ===========================
+   RESPONSIVE - MÓVIL (<= 600px)
+   =========================== */
+@media (max-width: 600px) {
+  .producto-layout {
+    padding: 14px;
+    gap: 18px;
+  }
+
+  .titulo-producto {
+    margin: 10px 14px 16px;
+    font-size: 22px;
+  }
+
+  .descripcion h3 {
+    font-size: 22px;
+  }
+
+  .checkin-checkout {
+    font-size: 16px;
+  }
+
+  .precio-box {
+    font-size: 20px;
+  }
+
+  .imagen-principal img {
+    max-height: 320px;
+  }
+
+  .breadcrumbs {
+    margin-left: 6px;
+    font-size: 0.9em;
+  }
 }

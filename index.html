@@ -151,30 +151,7 @@
         <div class="carousel-wrapper">
           <div class="carousel-arrow left">&#10094;</div>
           <div class="carousel">
-            <div class="review-card">
-              <div class="usuario-info">
-                <img src="/imagenes/default_user.png" alt="Usuario 1">
-                <div class="usuario-datos">
-                  <p class="nombre">Ana, 28</p>
-                  <p class="ciudad" data-section="reviews" data-value="city-1">Madrid, España</p>
-                </div>
-              </div>
-              <p class="texto-review">¡Me encantó el viaje a París! Todo perfecto.</p>
-              <div class="estrellas">⭐⭐⭐⭐⭐</div>
-              <img src="/images/paris.jpg" alt="París" class="imagen-viaje">
-            </div>
-            <div class="review-card">
-              <div class="usuario-info">
-                <img src="/imagenes/default_user.png" alt="Usuario 2">
-                <div class="usuario-datos">
-                  <p class="nombre">Luis, 34</p>
-                  <p class="ciudad" data-section="reviews" data-value="city-2">Barcelona, España</p>
-                </div>
-              </div>
-              <p class="texto-review">Gran experiencia en Roma, muy recomendable.</p>
-              <div class="estrellas">⭐⭐⭐⭐</div>
-              <img src="/images/roma.jpg" alt="Roma" class="imagen-viaje">
-            </div>
+            <!-- Aquí se insertan las review-card con JS -->
           </div>
           <div class="carousel-arrow right">&#10095;</div>
         </div>
@@ -186,37 +163,7 @@
         <div class="carousel-wrapper">
           <div class="carousel-arrow left">&#10094;</div>
           <div class="carousel">
-            
-            <!-- Ranking 1 -->
-            <div class="ranking-card">
-              <h4 data-section="tops" data-value="ranking-1">Top viajeros con más viajes</h4>
-              <ol>
-                <li>User123 - 15 viajes <img src="/imagenes/default_user.png" alt="User123"></li>
-                <li>User257 - 12 viajes <img src="/imagenes/default_user.png" alt="User257"></li>
-                <li>User841 - 10 viajes <img src="/imagenes/default_user.png" alt="User841"></li>
-              </ol>
-            </div>
-
-            <!-- Ranking 2 -->
-            <div class="ranking-card">
-              <h4 data-section="tops" data-value="ranking-2">Top viajeros con más amigos</h4>
-              <ol>
-                <li>User555 - 50 amigos <img src="/imagenes/default_user.png" alt="User555"></li>
-                <li>User777 - 45 amigos <img src="/imagenes/default_user.png" alt="User777"></li>
-                <li>User888 - 40 amigos <img src="/imagenes/default_user.png" alt="User888"></li>
-              </ol>
-            </div>
-
-            <!-- Ranking 3 -->
-            <div class="ranking-card">
-              <h4 data-section="tops" data-value="ranking-3">Top destinos más visitados</h4>
-              <ol>
-                <li>París - 120 visitas <img src="/images/paris.jpg" alt="París"></li>
-                <li>Roma - 95 visitas <img src="/images/roma.jpg" alt="Roma"></li>
-                <li>Tokio - 80 visitas <img src="/images/tokio.jpg" alt="Tokio"></li>
-              </ol>
-            </div>
-
+            <!-- Aquí se insertan los ranking-card con JS -->
           </div>
           <div class="carousel-arrow right">&#10095;</div>
         </div>
@@ -224,7 +171,8 @@
 
       <!-- MAPA INTERACTIVO -->
       <section class="mapa-interactivo">
-        <p>Aquí irá el mapa interactivo con gradientes de países según top viajeros.</p>
+        <h3>Mapa interactivo</h3>
+        <div id="mapa-container"></div>
       </section>
 
     </aside>
