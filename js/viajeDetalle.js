@@ -1,13 +1,13 @@
-// ===========================
-// VIAJE DETALLE
+// Este codigo se encarga de
 // - Lee id de querystring
 // - Carga viaje desde localStorage (viajesCompartidosData)
 // - Chat / Actividades / Alojamientos / Presupuesto
-// ===========================
 
+// Utilidades y carga de datos
 document.addEventListener("DOMContentLoaded", async () => {
   const LS_TRIPS = "viajesCompartidosData";
 
+  // Funciones de almacenamiento en localStorage
   function load(key, fallback) {
     try {
       const v = JSON.parse(localStorage.getItem(key));
@@ -16,13 +16,16 @@ document.addEventListener("DOMContentLoaded", async () => {
       return fallback;
     }
   }
+  // Guarda un valor en localStorage
   function save(key, value) {
     localStorage.setItem(key, JSON.stringify(value));
   }
 
+  // Obtiene el usuario activo desde localStorage
   function getUsuarioActivo() {
     try { return JSON.parse(localStorage.getItem("usuarioActivo")); } catch { return null; }
   }
+  // Obtiene un identificador único del usuario
   function getUserId(user) {
     if (!user) return null;
     if (user.id) return user.id;
@@ -30,6 +33,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     return null;
   }
 
+  // Carga usuarios ficticios desde JSON
   async function cargarUsuariosFicticios() {
     try {
       const res = await fetch("/js/usuarios.json");
@@ -40,11 +44,15 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   }
 
+  // Mapa de usuarios ficticios
   const usuariosFicticios = await cargarUsuariosFicticios();
 
+  // Busca un usuario ficticio por id
   function findUserById(id) {
     const u = usuariosFicticios.find(x => x.id === id);
+    // Si lo encontramos, devolvemos datos completos
     if (u) return { id: u.id, nombre: u.nombre, foto: u.foto };
+    // Si no, devolvemos datos por defecto
     if (id && id.startsWith("local:")) {
       const username = id.slice("local:".length);
       return { id, nombre: username, foto: "/imagenes/default-profile.jpg" };
@@ -52,10 +60,12 @@ document.addEventListener("DOMContentLoaded", async () => {
     return { id, nombre: id || "Usuario", foto: "/imagenes/default-profile.jpg" };
   }
 
+  // Formatea número a euros
   function euros(n) {
     const x = Number(n || 0);
     return `${x}€`;
   }
+  // Formatea fecha AAAA-MM-DD a DD/MM/AAAA
   function formatDate(d) {
     if (!d) return "";
     const [y, m, day] = d.split("-");
@@ -68,6 +78,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   let trips = load(LS_TRIPS, []);
   let viaje = trips.find(t => t.id === id);
 
+  // Si no existe el viaje, redirigimos
   if (!id || !viaje) {
     alert("Viaje no encontrado.");
     window.location.href = "viajesCompartidos.html";
@@ -100,23 +111,23 @@ document.addEventListener("DOMContentLoaded", async () => {
   const participants = document.getElementById("participants");
   const budgetBox = document.getElementById("budgetBox");
 
-  // -------------------------
+
   // Guardar el viaje actualizado dentro del array
-  // -------------------------
   function persist() {
     trips = trips.map(t => (t.id === viaje.id ? viaje : t));
     save(LS_TRIPS, trips);
   }
 
-  // -------------------------
   // Render HERO
-  // -------------------------
+  // Se encarga de pintar la sección superior con los datos del viaje
   function renderHero() {
+    // Si existe el título en el breadcrumb, actualizar texto
     if (breadTitle) breadTitle.textContent = viaje.titulo;
 
     const estado = (viaje.privacidad === "publico") ? "Público" : "Privado";
     const num = (viaje.participantes || []).length;
 
+    // Pintar contenido
     hero.innerHTML = `
       <div class="hero-top">
         <div class="hero-img">
@@ -137,9 +148,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     `;
   }
 
-  // -------------------------
+
   // Render Participants
-  // -------------------------
+  // Esta funcion se encarga de pintar la lista de participantes del viaje
   function renderParticipants() {
     participants.innerHTML = "";
     (viaje.participantes || []).forEach(pid => {
@@ -157,9 +168,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   }
 
-  // -------------------------
   // Render Budget
-  // -------------------------
+  // Esta funcion se encarga de pintar el presupuesto del viaje
   function renderBudget() {
     const n = (viaje.participantes || []).length || 1;
     const total = Number(viaje.presupuesto || 0) * n;
@@ -171,9 +181,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     `;
   }
 
-  // -------------------------
   // Chat
-  // -------------------------
+  // Esta funcion se encarga de pintar los mensajes del chat
   function renderChat() {
     chatBox.innerHTML = "";
     const msgs = viaje.chat || [];
@@ -183,6 +192,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       return;
     }
 
+    // Ordenar por fecha y pintar
     msgs
       .slice()
       .sort((a, b) => (a.ts || 0) - (b.ts || 0))
@@ -204,6 +214,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     chatBox.scrollTop = chatBox.scrollHeight;
   }
 
+  // Esta funcion se encarga de escapar texto para evitar inyecciones HTML
   function escapeHtml(str) {
     return String(str)
       .replaceAll("&", "&amp;")
@@ -213,12 +224,14 @@ document.addEventListener("DOMContentLoaded", async () => {
       .replaceAll("'", "&#039;");
   }
 
+  // Esta funcion comprueba si el usuario puede interactuar (participante u organizador)
   function canInteract() {
     // Solo participan o el organizador
     if (!myId) return false;
     return (viaje.participantes || []).includes(myId) || viaje.organizadorId === myId;
   }
 
+  // Esta funcion requiere que el usuario pueda interactuar
   function requireInteract() {
     if (!canInteract()) {
       alert("Solo los participantes pueden usar el chat/añadir actividades/alojamientos.");
@@ -227,6 +240,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     return true;
   }
 
+  // Ahora configuramos los eventos
   chatSend.addEventListener("click", () => {
     if (!requireInteract()) return;
     const text = (chatInput.value || "").trim();
@@ -239,13 +253,13 @@ document.addEventListener("DOMContentLoaded", async () => {
     renderChat();
   });
 
+  // Permitir enviar con Enter
   chatInput.addEventListener("keydown", (e) => {
     if (e.key === "Enter") chatSend.click();
   });
 
-  // -------------------------
   // Actividades
-  // -------------------------
+  // Esta funcion se encarga de pintar la lista de actividades
   function renderActs() {
     actList.innerHTML = "";
     const list = viaje.actividades || [];
@@ -255,6 +269,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       return;
     }
 
+    // Pintar actividades
     list.forEach((a, idx) => {
       const u = findUserById(a.byId);
       const div = document.createElement("div");
@@ -272,6 +287,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       actList.appendChild(div);
     });
 
+    // Añadir eventos a botones
     actList.querySelectorAll("button[data-act]").forEach(btn => {
       btn.addEventListener("click", () => {
         if (!requireInteract()) return;
@@ -279,6 +295,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         const idx = Number(btn.dataset.idx);
         const type = btn.dataset.act;
 
+        // Acción según tipo
         if (type === "toggle") {
           viaje.actividades[idx].done = !viaje.actividades[idx].done;
         } else if (type === "del") {
@@ -290,6 +307,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   }
 
+  // Añadir actividad
   actAdd.addEventListener("click", () => {
     if (!requireInteract()) return;
 
@@ -304,18 +322,19 @@ document.addEventListener("DOMContentLoaded", async () => {
     renderActs();
   });
 
-  // -------------------------
   // Alojamientos
-  // -------------------------
+  // Esta funcion se encarga de pintar la lista de alojamientos
   function renderAlojs() {
     alojList.innerHTML = "";
     const list = viaje.alojamientos || [];
 
+    // Si no hay alojamientos, mostramos mensaje
     if (!list.length) {
       alojList.innerHTML = `<div class="item"><div class="item-left"><div class="item-title">Sin alojamientos</div><div class="item-sub">Añade propuestas y enlaces.</div></div></div>`;
       return;
     }
 
+    // Pintar alojamientos
     list.forEach((a, idx) => {
       const u = findUserById(a.byId);
       const linkHtml = a.link ? `<a href="${a.link}" target="_blank" rel="noopener">Ver link</a>` : "Sin link";
@@ -334,10 +353,12 @@ document.addEventListener("DOMContentLoaded", async () => {
       alojList.appendChild(div);
     });
 
+    // Añadir eventos a botones
     alojList.querySelectorAll("button[data-al='del']").forEach(btn => {
       btn.addEventListener("click", () => {
         if (!requireInteract()) return;
 
+        // Eliminar alojamiento
         const idx = Number(btn.dataset.idx);
         viaje.alojamientos.splice(idx, 1);
         persist();
@@ -346,18 +367,22 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   }
 
+  // Añadir alojamiento
   alojAdd.addEventListener("click", () => {
     if (!requireInteract()) return;
 
+    // Leer datos
     const nombre = (alojNombre.value || "").trim();
     const precio = Number(alojPrecio.value || 0);
     const link = (alojLink.value || "").trim();
 
+    // Validar
     if (!nombre || !Number.isFinite(precio) || precio < 0) {
       alert("Rellena nombre y un precio válido.");
       return;
     }
 
+    // Añadir alojamiento
     viaje.alojamientos = viaje.alojamientos || [];
     viaje.alojamientos.push({ nombre, precioNoche: precio, link, byId: myId, ts: Date.now() });
     persist();
@@ -368,9 +393,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     renderAlojs();
   });
 
-  // -------------------------
-  // Init render
-  // -------------------------
+  // Finalmente, renderizamos todo
   renderHero();
   renderParticipants();
   renderBudget();

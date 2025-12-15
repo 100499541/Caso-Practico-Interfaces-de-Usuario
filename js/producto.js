@@ -272,7 +272,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Breadcrumb producto
   const nombre = params.get("nombre");
   const breadcrumbProducto = document.getElementById("breadcrumb-producto");
-  // Si existe el breadcrumb de producto, actualizar textos
+  // Si existe el breadcrumb de producto, actualizar textose
   if (breadcrumbProducto) {
     breadcrumbProducto.textContent = nombre || ciudad || "Producto";
   }

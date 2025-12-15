@@ -5,7 +5,6 @@ body {
   background: #e9f4f5;
   color: #334;
   overflow-x: hidden; /* Evita desplazamiento horizontal */
-  display: grid;
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
   min-height: 100dvh;
@@ -554,8 +553,10 @@ aside {
 
 /* --------------------- MAPA INTERACTIVO --------------------- */
 .mapa-interactivo {
+  max-width: 100%;
+  width: 100%;
   margin: 40px 0;
-  padding: 20px;
+
   background: #cce5ff;
   border-radius: 12px;
   font-weight: bold;
@@ -574,7 +575,7 @@ aside {
 }
 
 .mapa-interactivo #mapa-container {
-  width: 125%;
+  width: 100%;
   max-width: 1400px;
   height: auto;
   display: flex;
