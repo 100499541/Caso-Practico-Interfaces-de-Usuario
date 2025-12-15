@@ -14,13 +14,13 @@
     <div class="menu-btn" id="menu-btn">
       <span></span><span></span><span></span>
     </div>
-
+    <!-- Título del sitio -->
     <h2 class="titulo-header">Rutas del mundo</h2>
-
+    <!-- Botón de inicio de sesión -->
     <div class="login-btn">
       <a href="/inicioSesion.html">Iniciar sesión</a>
     </div>
-
+    <!-- Selector de idioma -->
     <div class="idioma">
       <label for="Idioma">Idioma</label>
       <select id="Idioma" name="Idioma" data-language-selector>
@@ -29,11 +29,11 @@
         <option value="EN" data-language="en">English</option>
       </select>
     </div>
-
+    <!-- Logo -->
     <div class="logo">
       <img src="/imagenes/logo.png" alt="Logo">
     </div>
-
+    <!-- Navegación -->
     <nav id="nav">
       <a href="index.html"><h4>Inicio</h4></a>
       <a href="destinos.html"><h4>Destinos</h4></a>
@@ -73,9 +73,9 @@
           <div class="card-header">
             <h3>Chat del grupo</h3>
           </div>
-
+          <!-- Chat box -->
           <div class="chat-box" id="chatBox"></div>
-
+          <!-- Input chat -->
           <div class="chat-input">
             <input id="chatInput" type="text" placeholder="Escribe un mensaje..." />
             <button id="chatSend">Enviar</button>
@@ -88,12 +88,12 @@
           <div class="card-header">
             <h3>Actividades conjuntas</h3>
           </div>
-
+          <!-- Add actividad -->
           <div class="row-add">
             <input id="actInput" type="text" placeholder="Ej: Excursión a ..." />
             <button id="actAdd">Añadir</button>
           </div>
-
+          <!-- Lista actividades -->
           <div class="list" id="actList"></div>
         </section>
 
@@ -102,7 +102,7 @@
           <div class="card-header">
             <h3>Alojamiento</h3>
           </div>
-
+          <!-- Add alojamiento -->
           <div class="grid-add">
             <input id="alojNombre" type="text" placeholder="Nombre alojamiento" />
             <input id="alojPrecio" type="number" min="0" step="1" placeholder="€/noche" />
@@ -117,14 +117,14 @@
 
       <!-- Sidebar derecha -->
       <aside class="col-side">
-
+        <!-- Participantes -->
         <section class="card">
           <div class="card-header">
             <h3>Participantes</h3>
           </div>
           <div class="participants" id="participants"></div>
         </section>
-
+        <!-- Presupuesto -->
         <section class="card">
           <div class="card-header">
             <h3>Presupuesto</h3>
@@ -132,7 +132,7 @@
           <div class="budget" id="budgetBox"></div>
           <p class="mini-hint">Reparto simple: presupuesto × nº participantes.</p>
         </section>
-
+        
       </aside>
 
     </div>
