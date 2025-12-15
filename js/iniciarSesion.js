@@ -1,3 +1,6 @@
+// Este codigo se encarga de gestionar el inicio de sesión de usuarios.
+
+// Primero, esperamos a que el DOM esté cargado
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.querySelector(".login-form");
   const usuarioInput = document.getElementById("usuario");
@@ -8,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   errorMsg.classList.add("error-msg");
   form.appendChild(errorMsg);
 
+  // Manejador del evento submit del formulario
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 

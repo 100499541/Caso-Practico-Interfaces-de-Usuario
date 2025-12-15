@@ -1,12 +1,12 @@
-// ---------------------------
-// PRODUCTO
+// Este codigo:
 // - Carga alojamiento desde JSON
 // - Permite ir a compra
 // - Guarda / quita favoritos por usuario (localStorage)
-// ---------------------------
 
+// Alojamiento actualmente mostrado
 let alojamientoActual = null;
 
+// Funciones de almacenamiento en localStorage
 function cargarMapa(key) {
   try {
     return JSON.parse(localStorage.getItem(key)) || {};
@@ -15,10 +15,12 @@ function cargarMapa(key) {
   }
 }
 
+// Guarda un objeto como mapa en localStorage
 function guardarMapa(key, obj) {
   localStorage.setItem(key, JSON.stringify(obj));
 }
 
+// Obtiene el usuario activo desde localStorage
 function getUsuarioActivo() {
   try {
     return JSON.parse(localStorage.getItem("usuarioActivo"));
@@ -27,9 +29,11 @@ function getUsuarioActivo() {
   }
 }
 
+// Esta funcion comprueba si un alojamiento está en favoritos
 function isFavorito(username, ciudad, nombre) {
   const favs = cargarMapa("viajesFavoritos");
   const lista = favs[username] || [];
+  // Buscar coincidencia
   return lista.some(
     (v) =>
       (v.ciudad || "").toLowerCase() === (ciudad || "").toLowerCase() &&
@@ -37,6 +41,7 @@ function isFavorito(username, ciudad, nombre) {
   );
 }
 
+// Esta funcion añade o quita un alojamiento de favoritos
 function toggleFavorito(username, item) {
   const favs = cargarMapa("viajesFavoritos");
   const lista = favs[username] || [];
@@ -46,6 +51,7 @@ function toggleFavorito(username, item) {
       v.nombre === item.nombre
   );
 
+  // Si ya está, lo quitamos
   if (idx >= 0) {
     lista.splice(idx, 1);
     favs[username] = lista;
@@ -53,6 +59,7 @@ function toggleFavorito(username, item) {
     return { added: false };
   }
 
+  // Si no está, lo añadimos
   lista.unshift(item);
   favs[username] = lista;
   guardarMapa("viajesFavoritos", favs);
@@ -74,6 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
       data.continents.forEach((cont) => {
         cont.countries.forEach((country) => {
           country.cities.forEach((city) => {
+            // Comparamos ignorando mayusculas/minusculas
             if ((city.name || "").toLowerCase() === (ciudad || "").toLowerCase()) {
               city.alojamientos.forEach((a) => {
                 if (a.nombre === nombre) alojamiento = a;
@@ -83,11 +91,13 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       });
 
+      // Si no se encuentra, mostrar mensaje
       if (!alojamiento) {
         document.querySelector("main").innerHTML = "<p>Alojamiento no encontrado.</p>";
         return;
       }
 
+      // Guardar alojamiento actual
       alojamientoActual = alojamiento;
 
       // Rellenar campos
@@ -112,12 +122,14 @@ document.addEventListener("DOMContentLoaded", () => {
       // Botón favorito (texto según estado)
       const user = getUsuarioActivo();
       const btnFav = document.getElementById("guardar-favorito");
+      // Actualizar texto del botón
       if (btnFav && user && user.usuario) {
         btnFav.textContent = isFavorito(user.usuario, ciudad, nombre)
           ? "Quitar de favorito"
           : "Guardar en favorito";
       }
     })
+    // Captura errores de fetch
     .catch((err) => {
       console.error("Error cargando alojamiento:", err);
       document.querySelector("main").innerHTML = "<p>Error al cargar el alojamiento.</p>";
@@ -136,16 +148,23 @@ const imagenesIncluye = [
   "imagenes/servicio-8.jpeg",
 ];
 
+// Seleccionar 3 imágenes aleatorias sin repetición
 const seleccionadas = [];
+// Mientras no tengamos 3 únicas
 while (seleccionadas.length < 3) {
+  // Selección aleatoria
   const aleatoria = imagenesIncluye[Math.floor(Math.random() * imagenesIncluye.length)];
+  // Si no está ya, la añadimos
   if (!seleccionadas.includes(aleatoria)) seleccionadas.push(aleatoria);
 }
 
+// Pintar las imágenes seleccionadas en el contenedor
 document.addEventListener("DOMContentLoaded", () => {
   const contenedorIncluye = document.getElementById("incluye-imagenes");
+  // Si incluye imagenes no existe, no hacemos nada
   if (!contenedorIncluye) return;
   contenedorIncluye.innerHTML = "";
+  // Añadir cada imagen
   seleccionadas.forEach((src, i) => {
     const img = document.createElement("img");
     img.src = src;
@@ -157,8 +176,10 @@ document.addEventListener("DOMContentLoaded", () => {
 // 3) Ir a compra
 document.addEventListener("DOMContentLoaded", () => {
   const btnEstancia = document.getElementById("elegir-estancia");
+  // Si no existe el botón, no hacemos nada
   if (!btnEstancia) return;
 
+  // Manejador del clic
   btnEstancia.addEventListener("click", () => {
     const params = new URLSearchParams(window.location.search);
     const ciudad = params.get("ciudad");
@@ -167,6 +188,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const inicio = params.get("inicio") || "";
     const fin = params.get("fin") || "";
 
+    // Redirigir a compra con parámetros
     window.location.href =
       `compraProducto.html?ciudad=${encodeURIComponent(ciudad)}` +
       `&nombre=${encodeURIComponent(nombre)}` +
@@ -179,8 +201,10 @@ document.addEventListener("DOMContentLoaded", () => {
 // 4) Guardar / quitar favorito
 document.addEventListener("DOMContentLoaded", () => {
   const btnFav = document.getElementById("guardar-favorito");
+  // Si no existe el botón, no hacemos nada
   if (!btnFav) return;
 
+  // Manejador del clic
   btnFav.addEventListener("click", () => {
     const user = getUsuarioActivo();
     if (!user || !user.usuario) {
@@ -189,6 +213,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
+    // Obtener parámetros actuales
     const params = new URLSearchParams(window.location.search);
     const ciudad = params.get("ciudad") || "";
     const nombre = params.get("nombre") || "";
@@ -196,11 +221,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const inicio = params.get("inicio") || "";
     const fin = params.get("fin") || "";
 
+    // Comprobar que el alojamiento actual está cargado
     if (!alojamientoActual) {
       alert("No se ha podido guardar el favorito (producto no cargado).");
       return;
     }
 
+    // Crear el objeto del favorito
     const item = {
       ciudad,
       nombre: alojamientoActual.nombre,
@@ -216,6 +243,7 @@ document.addEventListener("DOMContentLoaded", () => {
       guardadoEn: new Date().toISOString(),
     };
 
+    // Alternar favorito
     const { added } = toggleFavorito(user.usuario, item);
     btnFav.textContent = added ? "Quitar de favorito" : "Guardar en favorito";
     alert(added ? "Guardado en favoritos." : "Eliminado de favoritos.");
@@ -232,6 +260,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const fin = params.get("fin") || "";
 
   const breadcrumbBusqueda = document.getElementById("breadcrumb-busqueda");
+  // Si existe el breadcrumb de búsqueda, actualizar href
   if (breadcrumbBusqueda && ciudad) {
     breadcrumbBusqueda.href =
       `busquedaDeProducto.html?tipo=${encodeURIComponent(tipo)}` +
@@ -240,8 +269,10 @@ document.addEventListener("DOMContentLoaded", () => {
       `&fin=${encodeURIComponent(fin)}`;
   }
 
+  // Breadcrumb producto
   const nombre = params.get("nombre");
   const breadcrumbProducto = document.getElementById("breadcrumb-producto");
+  // Si existe el breadcrumb de producto, actualizar textos
   if (breadcrumbProducto) {
     breadcrumbProducto.textContent = nombre || ciudad || "Producto";
   }
