@@ -64,19 +64,19 @@
     <!-- HERO -->
     <section class="hero-viajes">
       <div class="hero-text">
-        <h1>Encuentra a tus compañeros de aventura</h1>
-        <p>Únete a grupos abiertos o crea el tuyo propio para compartir gastos y experiencias.</p>
+        <h1 data-section="shared-trips" data-value="title">Encuentra a tus compañeros de aventura</h1>
+        <p data-section="shared-trips" data-value="subtitle">Únete a grupos abiertos o crea el tuyo propio para compartir gastos y experiencias.</p>
       </div>
       <button class="btn-crear-viaje" id="btnCrear">
-        <span class="plus-icon">+</span> <span>Crear nuevo viaje</span>
+        <span class="plus-icon">+</span> <span data-section="shared-trips" data-value="create-trip-button">Crear nuevo viaje</span>
       </button>
     </section>
 
     <!-- PANEL: INVITACIONES (solo si hay sesión) -->
     <section class="panel-invitaciones hidden" id="panelInvitaciones">
       <div class="panel-invitaciones-header">
-        <h3>Invitaciones pendientes</h3>
-        <button class="btn-secundario" id="btnRefrescarInv">Refrescar</button>
+        <h3 data-section="shared-trips" data-value="pending-invitations">Invitaciones pendientes</h3>
+        <button class="btn-secundario" id="btnRefrescarInv" data-section="shared-trips" data-value="refresh-button">Refrescar</button>
       </div>
       <div class="invitaciones-list" id="invitacionesList"></div>
     </section>
@@ -89,14 +89,14 @@
       </div>
 
       <div class="filtro-item">
-        <label for="filtroMes">Fechas</label>
+        <label for="filtroMes" data-section="shared-trips" data-value="dates-filter">Fechas</label>
         <input id="filtroMes" type="month">
       </div>
 
       <div class="filtro-item">
-        <label for="filtroPresupuesto">Presupuesto Máx.</label>
+        <label for="filtroPresupuesto" data-section="shared-trips" data-value="max-budget-filter">Presupuesto Máx.</label>
         <select id="filtroPresupuesto">
-          <option value="">Cualquiera</option>
+          <option value="" data-section="shared-trips" data-value="any">Cualquiera</option>
           <option value="300">≤ 300€</option>
           <option value="600">≤ 600€</option>
           <option value="900">≤ 900€</option>
