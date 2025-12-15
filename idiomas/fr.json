@@ -153,10 +153,10 @@
         "title": "Voyages Partagés",
         "subtitle": "Planifiez des voyages avec d'autres utilisateurs",
         "create-trip-button": "Créer un nouveau voyage",
-        "pending-invitarions": "Invitations en attente",
+        "pending-invitations": "Invitations en attente",
         "refresh-button": "Rafraîchir",
         "dates-filter": "Dates",
-        "max-budget-filter": "Budget maximum",
+        "max-budget-filter": "Budget Maximal",
         "any": "N'importe quel prix"
     }
 

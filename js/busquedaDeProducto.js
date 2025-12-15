@@ -1,6 +1,11 @@
+// Este codigo se encarga de cargar y mostrar los resultados de búsqueda de productos (alojamientos)
+// basados en los parámetros de la URL (tipo, destino, fechas) y de centrar el mapa SVG en el país correspondiente.
+
+// Espera a que el DOM esté completamente cargado
 document.addEventListener("DOMContentLoaded", () => {
   const contenedor = document.querySelector(".resultados-scroll");
 
+  // Obtener parámetros de la URL
   const params = new URLSearchParams(window.location.search);
   const tipo = params.get("tipo");
   const destino = params.get("destino"); // ciudad
@@ -9,6 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Mostrar destino en título
   const titulo = document.querySelector(".resultados-scroll h3");
+
+  // Actualizar el título con el destino y fechas
   if (destino) {
     titulo.textContent = `Resultados para ${destino} (${inicio} - ${fin})`;
   }
@@ -19,14 +26,18 @@ document.addEventListener("DOMContentLoaded", () => {
     return "★".repeat(estrellas) + "☆".repeat(5 - estrellas);
   }
 
-  // --- Función para centrar el mapa en un país ---
+  // Función para centrar el mapa en un país
 function centrarPaisEnMapa(paisNombre) {
   const svg = document.querySelector("#mapa-container svg");
   if (!svg) return;
 
   // Buscar el país por id o por class
   let pais = document.getElementById(paisNombre);
+
+  // Si no se encuentra por id, buscar por class
   if (!pais) pais = svg.querySelector(`.${paisNombre}`);
+
+  // Si no se encuentra el país, salir
   if (!pais) {
     console.warn("No se encontró país en el SVG:", paisNombre);
     return;
@@ -42,8 +53,9 @@ function centrarPaisEnMapa(paisNombre) {
   const width = bbox.width + margen * 2;
   const height = bbox.height + margen * 2;
 
+  // Aplicar nuevo viewBox
   svg.setAttribute("viewBox", `${x} ${y} ${width} ${height}`);
-  svg.removeAttribute("preserveAspectRatio"); // ← clave para que se aplique el zoom
+  svg.removeAttribute("preserveAspectRatio"); // clave para que se aplique el zoom
 
   // Resaltar el país
   pais.classList.add("highlight");
@@ -62,7 +74,7 @@ function centrarPaisEnMapa(paisNombre) {
           country.cities.forEach(city => {
             if (city.name.toLowerCase() === destino.toLowerCase()) {
               resultados = city.alojamientos;
-              paisDelDestino = country.name; // ← capturamos el país directamente
+              paisDelDestino = country.name; // capturamos el país directamente
             }
           });
         });
@@ -74,10 +86,13 @@ function centrarPaisEnMapa(paisNombre) {
         return;
       }
 
+      // Limpiar contenedor antes de agregar resultados
       resultados.forEach(a => {
         const estrellas = generarEstrellas(a.puntuacion);
 
         const card = document.createElement("a");
+
+        // Crear card de resultado
         card.classList.add("resultado-card");
         card.href = `producto.html?ciudad=${encodeURIComponent(destino)}&nombre=${encodeURIComponent(a.nombre)}`;
         card.innerHTML = `
@@ -94,6 +109,8 @@ function centrarPaisEnMapa(paisNombre) {
             <p class="descripcion">${a.descripcion}</p>
           </div>
         `;
+
+        // Agregar card al contenedor
         contenedor.appendChild(card);
       });
 
@@ -102,6 +119,8 @@ function centrarPaisEnMapa(paisNombre) {
         centrarPaisEnMapa(paisDelDestino);
       }
     })
+
+    // Manejo de errores en la carga del JSON
     .catch(err => {
       console.error("Error cargando alojamientos:", err);
       contenedor.innerHTML = "<p>Error al cargar los alojamientos.</p>";
@@ -121,6 +140,7 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log("Inicio:", inicio);
   console.log("Fin:", fin);
 
+  // Mostrar en el título para verificar
   const resultados = document.querySelector(".resultados-scroll h3");
   if (destino) {
     resultados.textContent = `Resultados para ${destino} (${inicio} - ${fin})`;
