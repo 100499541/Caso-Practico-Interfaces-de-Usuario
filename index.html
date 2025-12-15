@@ -22,7 +22,7 @@
       <a href="/inicioSesion.html" 
       data-section="header" data-value="login">Iniciar sesión</a>
     </div>
-
+    <!-- Selector de idioma -->
     <div class="idioma">
       <label for="Idioma" data-section="header" data-value="language">Idioma</label>
       <select id="Idioma" name="Idioma" data-language-selector>
@@ -31,11 +31,11 @@
         <option value="FR" data-language="fr">Français</option>
       </select>
     </div>
-
+    <!-- Logo -->
     <div class="logo">
       <img src="/imagenes/logo.png" alt="Logo">
     </div>
-
+    <!-- Navegación principal -->
     <nav id="nav">
       <a href="index.html" data-section="header" data-value="home">Inicio</a>
       <a href="destinos.html" data-section="header" data-value="destinations">Destinos</a>
@@ -68,17 +68,17 @@
             <option value="avion" data-section="search-bar" data-value="flight">Vuelo</option>
             <option value="hotel-avion" data-section="search-bar" data-value="hotel-flight">Hotel + Vuelo</option>
           </select>
-
+          <!-- Campos para búsqueda de hotel -->
           <div class="campo-hotel">
             <label for="destino" data-section="search-bar" data-value="destination">Destino:</label>
             <input type="text" id="destino" name="destino" placeholder="Paris, Tokio..." autocomplete="off">
             <div id="sugerencias" class="sugerencias"></div>
-
+            <!-- Fecha de estancia -->
             <label for="periodo" data-section="search-bar" data-value="trip-period">Periodo de viaje:</label>
             <input type="date" id="inicio-viaje" name="inicio-viaje" placeholder="Saldría en...">
             <input type="date" id="fin-viaje" name="fin-viaje" placeholder="Volvería en...">
           </div>
-
+          <!-- Campos para búsqueda de vuelo -->
           <button type="submit" data-section="search-bar" data-value="search-button">Buscar</button>
         </form>
       </section>
@@ -151,7 +151,6 @@
         <div class="carousel-wrapper">
           <div class="carousel-arrow left">&#10094;</div>
           <div class="carousel">
-            <!-- Aquí se insertan las review-card con JS -->
           </div>
           <div class="carousel-arrow right">&#10095;</div>
         </div>
@@ -163,7 +162,6 @@
         <div class="carousel-wrapper">
           <div class="carousel-arrow left">&#10094;</div>
           <div class="carousel">
-            <!-- Aquí se insertan los ranking-card con JS -->
           </div>
           <div class="carousel-arrow right">&#10095;</div>
         </div>

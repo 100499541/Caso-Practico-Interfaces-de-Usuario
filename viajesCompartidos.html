@@ -16,13 +16,13 @@
       <span></span>
       <span></span>
     </div>
-
+    <!-- Título del sitio -->
     <h2 class="titulo-header">Rutas del mundo</h2>
-
+    <!-- Botón de inicio de sesión -->
     <div class="login-btn">
       <a href="/inicioSesion.html" data-section="header" data-value="login">Iniciar sesión</a>
     </div>
-
+    <!-- Selector de idioma -->
     <div class="idioma">
       <label for="Idioma">Idioma</label>
       <select id="Idioma" name="Idioma" data-language-selector>
@@ -31,11 +31,11 @@
         <option value="EN" data-language="en">English</option>
       </select>
     </div>
-
+    <!-- Logo -->
     <div class="logo">
       <img src="/imagenes/logo.png" alt="Logo">
     </div>
-
+    <!-- Navegación -->
     <nav id="nav">
       <a href="index.html" data-section="header" data-value="home"><h4>Inicio</h4></a>
       <a href="destinos.html" data-section="header" data-value="destinations"><h4>Destinos</h4></a>
@@ -87,12 +87,12 @@
         <label for="filtroDestino" data-section="search-bar" data-value="destination">Destino</label>
         <input id="filtroDestino" type="text" placeholder="Ej: Japón, Perú...">
       </div>
-
+      <!-- Fechas -->
       <div class="filtro-item">
         <label for="filtroMes">Fechas</label>
         <input id="filtroMes" type="month">
       </div>
-
+      <!-- Presupuesto -->
       <div class="filtro-item">
         <label for="filtroPresupuesto">Presupuesto Máx.</label>
         <select id="filtroPresupuesto">
@@ -104,7 +104,7 @@
           <option value="2000">≤ 2000€</option>
         </select>
       </div>
-
+      <!-- Botones -->
       <button class="btn-buscar" id="btnBuscar" data-section="search-bar" data-value="search-button">Buscar</button>
       <button class="btn-limpiar" id="btnLimpiar" data-section="product-purchase" data-value="clear-button">Borrar</button>
     </section>
@@ -121,18 +121,18 @@
         <h3 id="modalCrearTitle">Crear viaje compartido</h3>
         <button class="modal-close" id="modalCrearClose" aria-label="Cerrar">✕</button>
       </div>
-
+      <!-- Formulario crear viaje -->
       <form id="formCrearViaje" class="modal-body">
         <div class="form-row">
           <label for="cvTitulo">Título</label>
           <input id="cvTitulo" type="text" placeholder="Ej: Mochileros en Tailandia" required>
         </div>
-
+        <!--  Destino -->
         <div class="form-row">
           <label for="cvDestino">Destino</label>
           <input id="cvDestino" type="text" placeholder="Ej: Tailandia" required>
         </div>
-
+        <!-- Fechas -->
         <div class="form-row two">
           <div>
             <label for="cvInicio">Inicio</label>
@@ -143,22 +143,22 @@
             <input id="cvFin" type="date" required>
           </div>
         </div>
-
+        <!--  Presupuesto -->
         <div class="form-row">
           <label for="cvPresupuesto">Presupuesto por persona (€)</label>
           <input id="cvPresupuesto" type="number" min="0" step="1" placeholder="Ej: 850" required>
         </div>
-
+        <!-- Descripción -->
         <div class="form-row">
           <label for="cvDescripcion">Descripción</label>
           <textarea id="cvDescripcion" rows="3" placeholder="¿Qué plan tenéis?"></textarea>
         </div>
-
+        <!-- Imagen -->
         <div class="form-row">
           <label for="cvImagen">Imagen (URL opcional)</label>
           <input id="cvImagen" type="url" placeholder="https://...">
         </div>
-
+        <!-- Privacidad -->
         <div class="form-row">
           <label>Privacidad del viaje</label>
           <div class="radio-row">
@@ -172,13 +172,13 @@
             </label>
           </div>
         </div>
-
+        <!-- Invitar amigos -->
         <div class="form-row">
           <label>Invitar amigos (de tu lista inicial)</label>
           <div class="amigos-grid" id="cvAmigos"></div>
           <p class="hint">* Si no hay sesión o no tienes amigos, esta sección aparecerá vacía.</p>
         </div>
-
+        <!-- Acciones -->
         <div class="modal-actions">
           <button type="button" class="btn-secundario" id="btnCancelarCrear">Cancelar</button>
           <button type="submit" class="btn-primario">Crear viaje</button>
