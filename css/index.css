@@ -4,7 +4,7 @@ body {
   margin: 0;
   background: #e9f4f5;
   color: #334;
-  overflow-x: hidden; /* Evita desplazamiento horizontal */
+  overflow-x: hidden; 
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
   min-height: 100dvh;
@@ -23,7 +23,7 @@ header {
   flex-wrap: wrap;
   text-align: center;
   height: auto;
-  gap: 40px; /* Mayor espacio entre elementos del header */
+  gap: 40px; 
 }
 
 /* MENU ICONO DE TRES LINEAS */
@@ -72,11 +72,11 @@ header nav a {
 /* LOGO */
 .logo {
   order: 5; /* Escritorio: último */
-  margin-left: auto; /* empuja a la derecha */
+  margin-left: auto; 
 }
 
 .logo img {
-  width: 80px; /* tamaño reducido */
+  width: 80px; 
   height: auto;
   margin: 5px 0;
 }
@@ -145,7 +145,7 @@ header nav a {
   display: inline-block;
   text-align: center;
   font-family: Arial, sans-serif;
-  margin: 5px 0 5px 20px; /* mayor separación */
+  margin: 5px 0 5px 20px; 
 }
 
 .idioma label {
@@ -283,7 +283,6 @@ header nav a {
   position: relative;
 }
 
-/* --- Nuevo: para carrusel normal desplazamiento 1 elemento --- */
 .card {
   flex: 0 0 50%;
   max-width: 800px;
@@ -484,7 +483,7 @@ header nav a {
   right: 5px;
 }
 
-/* --- NUEVO: Carrusel de reseñas 1 elemento --- */
+/* ---  Carrusel de reseñas  --- */
 .reseñas .carousel {
   padding: 10px;
   gap: 10px;
@@ -565,7 +564,7 @@ aside {
   flex-direction: column;
   align-items: center;
   gap: 30px;
-  overflow: hidden; /* ← evita que el mapa se salga visualmente */
+  overflow: hidden; 
 }
 
 .mapa-interactivo h3 {
@@ -580,11 +579,11 @@ aside {
   height: auto;
   display: flex;
   margin-right: 25px;
-  justify-content: center; /* ← centra el SVG horizontalmente */
+  justify-content: center; 
 }
 
 .mapa-interactivo svg {
-  width: 180%; /* ← ocupa el contenedor sin desbordar */
+  width: 180%; 
   height: auto;
 }
 
@@ -595,12 +594,12 @@ aside {
   transition: fill 0.3s ease, stroke 0.3s ease, filter 0.3s ease;
 }
 
-/* Iluminación robusta: aplica si la clase está en <path> o en <g> (con herencia) */
+/* Iluminación: aplica si la clase está en <path> o en <g> (con herencia) */
 .mapa-interactivo .highlight,
 .mapa-interactivo .highlight path,
 .mapa-interactivo .highlight polygon,
 .mapa-interactivo .highlight circle {
-  fill: #ff5722 !important; /* naranja intenso visible */
+  fill: #ff5722 !important; 
   stroke: #222 !important;
   stroke-width: 2 !important;
   filter: drop-shadow(0 0 4px #ff5722);
@@ -724,10 +723,10 @@ footer {
   .container {
     display: flex;
     flex-direction: column;
-    align-items: center;     /* centra horizontalmente */
+    align-items: center;     
     width: 100%;
     margin: 0 auto;
-    padding: 0 10px;         /* margen lateral uniforme */
+    padding: 0 10px;         
     box-sizing: border-box;
   }
 
@@ -741,14 +740,14 @@ footer {
 
   aside {
     width: 100%;
-    margin: 0 auto; /* centra en pantalla */
+    margin: 0 auto;  
   }
 
   .search-form {
     flex-direction: column;
     align-items: stretch;
     width: 100%;
-    max-width: 500px;        /* limita ancho para centrado visual */
+    max-width: 500px;     
     margin: 0 auto;
     text-align: center;
     box-sizing: border-box;
@@ -759,7 +758,7 @@ footer {
   .search-form button {
     width: 100%;
     max-width: 100%;
-    margin: 10px auto;       /* centra cada control */
+    margin: 10px auto;      
     text-align: center;
     box-sizing: border-box;
   }
@@ -770,17 +769,17 @@ footer {
   }
 
   .carousel {
-    padding: 10px 0;         /* quita padding lateral excesivo */
-    justify-content: flex-start; /* centra las cards */
+    padding: 10px 0;         
+    justify-content: flex-start; 
   }
 
   .card {
     flex: 0 0 80%;
     height: 300px;
-    margin: 0;          /* centra cada tarjeta */
+    margin: 0;          
   }
 
-  /* Flechas visibles en móviles (si las usas) */
+  /* Flechas visibles en móviles */
   .carousel-arrow,
   .carousel-arrow-small {
     display: none;
@@ -819,7 +818,7 @@ footer {
   .card {
     flex: 0 0 90%;
     height: 250px;
-    margin: 0; /* refuerzo de centrado */
+    margin: 0; 
   }
 
   .review-card {
@@ -859,7 +858,7 @@ footer {
   display: none;
 }
 
-/* --------------------- NUEVO: FLECHAS FUNCIONALES --------------------- */
+/* --------------------- FLECHAS FUNCIONALES --------------------- */
 .carousel-wrapper {
   position: relative;
 }
@@ -868,7 +867,7 @@ footer {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 100; /* ya elevadas las flechas base a 1000 */
+  z-index: 100; 
 }
 
 .carousel-wrapper .carousel-arrow.left {
@@ -885,7 +884,7 @@ footer {
   flex-direction: column;
   background: #00707d;
   position: fixed;
-  top: 60px; /* ajusta según altura del header */
+  top: 60px; 
   left: 0;
   width: 100%;
   z-index: 999;

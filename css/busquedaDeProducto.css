@@ -1,3 +1,4 @@
+/* Busqueda principal */
 .busqueda-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -6,6 +7,7 @@
   min-height: 600px;
 }
 
+/* Sección de resultados */
 .resultados-scroll {
   overflow-y: auto;
   max-height: 80vh;
@@ -53,6 +55,7 @@
   margin-top: 5px;
 }
 
+/* Mapa interactivo */
 .mapa-interactivo {
   background: #cce5ff;
   border-radius: 12px;
@@ -91,7 +94,7 @@
   background-color: #005a66;
 }
 
-
+/* Breadcrumbs */
 .breadcrumbs {
     color: #666;
     margin-top: 10px;

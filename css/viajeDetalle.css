@@ -1,3 +1,4 @@
+/* Container principal */
 .container-detalle {
   width: 95%;
   max-width: 1200px;
@@ -5,6 +6,7 @@
   padding: 18px 0 40px;
 }
 
+/* Breadcrumbs */
 .breadcrumbs {
   margin: 12px 0 18px;
   color: #2b3a3d;
@@ -16,6 +18,7 @@
 }
 .breadcrumbs a:hover { text-decoration: underline; }
 
+/* Seccion principal */
 .hero {
   border-radius: 16px;
   overflow: hidden;
@@ -69,6 +72,7 @@
   line-height: 1.4;
 }
 
+/* Interfaz */
 .layout {
   display: grid;
   grid-template-columns: 1.6fr 1fr;
@@ -76,6 +80,7 @@
   align-items: start;
 }
 
+/* Tarjetas */
 .card {
   background: #fff;
   border-radius: 16px;
@@ -98,6 +103,7 @@
   color: #0b4d54;
 }
 
+/* Espacio para chat*/
 .chat-box {
   height: 230px;
   overflow: auto;
@@ -110,6 +116,7 @@
   gap: 8px;
 }
 
+/* Mensajes */
 .msg {
   max-width: 85%;
   padding: 10px 12px;
@@ -158,6 +165,7 @@
 }
 .chat-input button:hover { background: #006771; }
 
+/* Adicion de fila */
 .row-add {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -186,6 +194,7 @@
 }
 .row-add button:hover, .grid-add button:hover { background: #006771; }
 
+/* Rejilla e items */
 .grid-add {
   display: grid;
   grid-template-columns: 1.1fr 0.7fr 1.2fr auto;
@@ -227,6 +236,7 @@
   gap: 8px;
 }
 
+/* Botones */
 .btn-mini {
   background: #eef5f6;
   border: 1px solid #d8e6e8;
@@ -239,6 +249,7 @@
 .btn-mini.danger { border-color: #f2b8b8; }
 .btn-mini.danger:hover { background: #ffecec; }
 
+/* Usuarios participantes y sus datos */
 .participants {
   display: grid;
   gap: 10px;
@@ -268,6 +279,7 @@
   font-weight: 700;
 }
 
+/* Datos del viaje compartido */
 .budget {
   display: grid;
   gap: 10px;

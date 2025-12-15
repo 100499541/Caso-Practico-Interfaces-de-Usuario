@@ -1,5 +1,6 @@
 /* css/social.css */
 
+/* Contenedor principal */
 .container-social {
     max-width: 1200px;
     margin: 0 auto;
@@ -7,6 +8,7 @@
     min-height: 80vh;
 }
 
+/* Breadcrumbs */
 .breadcrumbs {
     margin-bottom: 20px;
     color: #666;
@@ -148,6 +150,7 @@
   color: #777;
 }
 
+/* MODAL */
 .modal {
   position: fixed;
   top: 0;
@@ -304,7 +307,7 @@
 }
 
 .large .wf-image-box {
-    height: 150px; /* Más altos para anuncios */
+    height: 150px; 
 }
 
 /* Líneas de texto simuladas */
@@ -327,14 +330,13 @@
   padding: 4px;
   scroll-snap-align: start;
   transition: transform 0.2s ease;
-  transform-origin: center; /* asegura que escale desde el centro */
+  transform-origin: center; 
 }
 
 .avatar-item:hover {
-  transform: scale(1.1); /* agranda todo el bloque (círculo + nombre) */
+  transform: scale(1.1); 
 }
 
-/* Sin efectos extra ni sombras en hover */
 .avatar-item,
 .avatar-item:hover {
   box-shadow: none;
@@ -351,7 +353,7 @@
   border: 2px solid #0097A7;
 }
 
-/* Imagen sin hover propio (deja el efecto al bloque) */
+/* Imagen sin hover propio */
 .avatar-circle img {
   width: 100%;
   height: 100%;
@@ -448,7 +450,6 @@
 }
 
 /* Panel de solicitudes */
-
 .notificaciones-sidebar {
   position: fixed;
   top: 0;
@@ -569,12 +570,11 @@
 }
 
 /* Panel de chats con amigos */
-
 .chats-sidebar {
   position: fixed;
   top: 0;
   right: 0;
-  width: 480px; /* más ancho que los otros */
+  width: 480px; 
   height: 100vh;
   background: #fff;
   border-left: 2px solid #0097A7;
@@ -669,7 +669,7 @@
 
 /* Vista interna del chat */
 .chat-conversacion {
-  flex: 1;                 /* ocupa todo el espacio disponible dentro del panel */
+  flex: 1;                 
   background: #fff;
   display: flex;
   flex-direction: column;
@@ -760,13 +760,13 @@
 
 /* Mensaje propio */
 .mensaje-propio {
-  align-self: flex-end;         /* 👈 alinea a la derecha */
-  background: #c8e6c9;          /* 👈 color diferente (verde claro) */
+  align-self: flex-end;         
+  background: #c8e6c9;          
   text-align: right;
 }
 
 
-/* === Tus amigos (vertical, compacto, sin recuadro) === */
+/* === Tus amigos === */
 
 .friends-horizontal-list {
   display: flex;
@@ -902,7 +902,7 @@
         gap: 30px;
     }
 
-    /* TRUCO: Movemos los botones de acción ARRIBA del todo usando order */
+    /* Movemos los botones de acción ARRIBA del todo usando order */
     .interaction-sidebar {
         order: -1; /* Sube arriba */
         border-left: none;
@@ -927,6 +927,6 @@
     }
 
     .chat-list-container {
-        height: 300px; /* Un poco menos alto en móvil */
+        height: 300px; 
     }
 }

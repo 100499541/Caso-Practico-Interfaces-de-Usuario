@@ -43,6 +43,7 @@
   color: #2b3a3d;
 }
 
+/* Boton crear viaje */
 .btn-crear-viaje {
   background: #007b86;
   color: #fff;
@@ -142,6 +143,7 @@
   box-shadow: 0 0 0 3px rgba(122,211,222,0.25);
 }
 
+/* Boton buscar */
 .btn-buscar {
   background: #222;
   color: #fff;
@@ -153,6 +155,7 @@
 }
 .btn-buscar:hover { opacity: 0.92; }
 
+/* Boton limpiar */
 .btn-limpiar {
   background: #eef5f6;
   color: #1f2b2d;
@@ -172,6 +175,7 @@
   gap: 18px;
 }
 
+/* Tarjetas de viajes */
 .viaje-card {
   background: #fff;
   border-radius: 16px;
@@ -256,6 +260,7 @@
   border-top: 1px solid #eef4f5;
 }
 
+/* Usuarios participantes */
 .participantes {
   display: flex;
   align-items: center;
@@ -270,6 +275,7 @@
 }
 .participante-avatar:first-child { margin-left: 0; }
 
+/* Boton unirse */
 .btn-unirse {
   background: #fff;
   color: #007b86;
@@ -343,6 +349,7 @@
   padding: 16px;
 }
 
+/* Formulario */
 .form-row { margin-bottom: 12px; }
 .form-row label {
   display: block;
@@ -384,6 +391,7 @@
 }
 .radio-pill input { margin-right: 8px; }
 
+/* Amigos */
 .amigos-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -410,6 +418,7 @@
 }
 .amigo-pill small { display: block; color: #66787a; font-weight: 600; }
 
+/* Hint y acciones de modal */
 .hint {
   margin: 8px 0 0;
   color: #66787a;
@@ -423,6 +432,7 @@
   padding-top: 8px;
 }
 
+/* Botones */
 .btn-primario {
   background: #007b86;
   color: #fff;
