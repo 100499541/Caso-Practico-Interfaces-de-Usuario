@@ -64,12 +64,12 @@
       <div class="imagen-principal">
         <img id="imagen-principal" src="" alt="Imagen del alojamiento" />
       </div>
-
+      <!-- Descripción del producto -->
       <div class="descripcion">
         <h3 id="nombre"></h3>
         <p id="descripcion"></p>
       </div>
-
+      <!-- Información y servicios -->
       <div class="info-servicios">
         <h4 data-section="product-result" data-value="info">Información y comodidades</h4>
         <ul id="servicios-lista"></ul>
@@ -78,7 +78,7 @@
           <label>Check-out:</label> <span id="checkout">11:00</span>
         </div>
       </div>
-
+      <!-- Precio -->
       <div class="precio-box">
         <span id="precio"></span>
       </div>
@@ -90,7 +90,7 @@
       <form class="formulario-compra">
         <label for="nombre" data-section="product-purchase" data-value="name">Nombre</label>
         <input type="text" id="nombre" required />
-
+        <!-- Correo electrónico -->
         <label for="correo" data-section="product-purchase" data-value="e-mail">Correo electrónico</label>
         <input type="email" id="correo" required />
         <!-- Datos de pago -->
@@ -104,16 +104,16 @@
         <!-- Número de tarjeta -->
         <label for="numero-tarjeta" data-section="product-purchase" data-value="card-number">Número de tarjeta</label>
         <input type="text" id="numero-tarjeta" maxlength="16" required />
-
+        <!-- Titular, caducidad, CVV -->
         <label for="titular" data-section="product-purchase" data-value="card-holder">Nombre del titular</label>
         <input type="text" id="titular" required />
-
+        <!-- Caducidad -->
         <label for="caducidad" data-section="product-purchase" data-value="expiry-date">Fecha de caducidad</label>
         <input type="month" id="caducidad" required />
-
+        <!-- CVV -->
         <label for="cvv">CVV</label>
         <input type="text" id="cvv" maxlength="4" required />
-
+        <!-- Botones -->
         <div class="acciones">
           <button type="submit" data-section="product-purchase" data-value="purchase-button">Comprar</button>
           <button type="reset" data-section="product-purchase" data-value="clear-button">Borrar</button>
